@@ -17,6 +17,15 @@
       "description": "Versão mais difícil com foco em 在 e 给, frases compostas e tradução.",
       "questionCount": 40,
       "audioCount": 10
+    },
+    {
+      "id": "basico-1-simulado-3",
+      "title": "Simulado 3",
+      "path": "./exams/basico-1-simulado-3.json",
+      "level": "Chinês Básico 1+",
+      "description": "Profissões, saudações, horários, números, nacionalidades e tradução.",
+      "questionCount": 30,
+      "audioCount": 10
     }
   ]
 }

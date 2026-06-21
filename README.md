@@ -35,6 +35,8 @@ node scripts/generate-audio.mjs --dry-run
 node scripts/generate-audio.mjs --force
 node scripts/generate-audio.mjs --exam exams/basico-1-simulado-2.json --prefix basico-1-simulado-2 --dry-run
 node scripts/generate-audio.mjs --exam exams/basico-1-simulado-2.json --prefix basico-1-simulado-2
+node scripts/generate-audio.mjs --exam exams/basico-1-simulado-3.json --prefix basico-1-simulado-3 --dry-run
+node scripts/generate-audio.mjs --exam exams/basico-1-simulado-3.json --prefix basico-1-simulado-3
 ```
 
 O script usa o endpoint de speech da OpenAI com `gpt-4o-mini-tts` e voz `marin`, configuráveis no `.env`.

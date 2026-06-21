@@ -1,0 +1,699 @@
+{
+  "id": "basico-1-simulado-3",
+  "title": "Simulado 3 - Chinês Básico 1",
+  "description": "30 questões para treinar profissões, saudações, horários, números, nacionalidades, leitura e tradução.",
+  "sections": [
+    {
+      "id": "parte-1-audio-vf",
+      "title": "一、听录音判断图片对错",
+      "shortTitle": "Áudio V/F",
+      "instructions": "Observe a imagem, ouça o áudio e marque se a frase do áudio corresponde à imagem.",
+      "questions": [
+        {
+          "id": 1,
+          "type": "true-false",
+          "prompt": "A frase do áudio corresponde à imagem?",
+          "image": {
+            "src": "./assets/images/professor-sala.png",
+            "alt": "Professor cumprimentando os alunos"
+          },
+          "audioText": "老师说：“大家好！”",
+          "audioSrc": "./assets/audio/basico-1-simulado-3-q01.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "true",
+          "answerLabel": "✓ 对",
+          "explanation": "老师说：“大家好！”= O professor diz: “Olá, pessoal!”",
+          "imageDescription": "Professor cumprimentando os alunos",
+          "help": "Imagem: Professor cumprimentando os alunos."
+        },
+        {
+          "id": 2,
+          "type": "true-false",
+          "prompt": "A frase do áudio corresponde à imagem?",
+          "image": {
+            "src": "./assets/images/medico.png",
+            "alt": "Médico em um hospital"
+          },
+          "audioText": "她是律师。",
+          "audioSrc": "./assets/audio/basico-1-simulado-3-q02.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "false",
+          "answerLabel": "✗ 错",
+          "explanation": "O áudio diz: 她是律师。= Ela é advogada.",
+          "imageDescription": "Médico em um hospital",
+          "help": "Imagem: Médico em um hospital."
+        },
+        {
+          "id": 3,
+          "type": "true-false",
+          "prompt": "A frase do áudio corresponde à imagem?",
+          "image": {
+            "src": "./assets/images/relogio-manha.png",
+            "alt": "Relógio marcando de manhã, sol nascendo"
+          },
+          "audioText": "现在是早上。",
+          "audioSrc": "./assets/audio/basico-1-simulado-3-q03.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "true",
+          "answerLabel": "✓ 对",
+          "explanation": "现在是早上。= Agora é de manhã.",
+          "imageDescription": "Relógio marcando de manhã, sol nascendo",
+          "help": "Imagem: Relógio marcando de manhã, sol nascendo."
+        },
+        {
+          "id": 4,
+          "type": "true-false",
+          "prompt": "A frase do áudio corresponde à imagem?",
+          "image": {
+            "src": "./assets/images/numero-cinco.png",
+            "alt": "Cartaz com o número 5"
+          },
+          "audioText": "这是七。",
+          "audioSrc": "./assets/audio/basico-1-simulado-3-q04.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "false",
+          "answerLabel": "✗ 错",
+          "explanation": "O áudio diz: 这是七。= Isto é sete (mas a imagem mostra o cinco).",
+          "imageDescription": "Cartaz com o número 5",
+          "help": "Imagem: Cartaz com o número 5."
+        },
+        {
+          "id": 5,
+          "type": "true-false",
+          "prompt": "A frase do áudio corresponde à imagem?",
+          "image": {
+            "src": "./assets/images/aluno-escrevendo.png",
+            "alt": "Aluno escrevendo caracteres chineses"
+          },
+          "audioText": "他在写汉字。",
+          "audioSrc": "./assets/audio/basico-1-simulado-3-q05.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "true",
+          "answerLabel": "✓ 对",
+          "explanation": "他在写汉字。= Ele está escrevendo caracteres chineses.",
+          "imageDescription": "Aluno escrevendo caracteres chineses",
+          "help": "Imagem: Aluno escrevendo caracteres chineses."
+        }
+      ]
+    },
+    {
+      "id": "parte-1-audio-imagem",
+      "title": "二、听录音选择图片",
+      "shortTitle": "Áudio imagem",
+      "instructions": "Ouça o áudio e selecione a imagem que corresponde ao que foi dito.",
+      "questions": [
+        {
+          "id": 6,
+          "type": "multiple-choice",
+          "prompt": "Ouça o áudio e selecione a imagem correta.",
+          "audioText": "她是医生。",
+          "audioSrc": "./assets/audio/basico-1-simulado-3-q06.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma médica em um hospital",
+              "image": {
+                "src": "./assets/images/medico.png",
+                "alt": "Médica em um hospital"
+              }
+            },
+            {
+              "id": "B",
+              "label": "uma professora em sala de aula",
+              "image": {
+                "src": "./assets/images/professora-sala.png",
+                "alt": "Professora em sala de aula"
+              }
+            }
+          ],
+          "answer": "A",
+          "explanation": "Ela é médica.",
+          "audioPrompt": "她是医生。"
+        },
+        {
+          "id": 7,
+          "type": "multiple-choice",
+          "prompt": "Ouça o áudio e selecione a imagem correta.",
+          "audioText": "我叫王明，是学生。",
+          "audioSrc": "./assets/audio/basico-1-simulado-3-q07.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "um aluno com mochila e livros",
+              "image": {
+                "src": "./assets/images/aluno-mochila.png",
+                "alt": "Aluno com mochila e livros"
+              }
+            },
+            {
+              "id": "B",
+              "label": "um motorista dirigindo um carro",
+              "image": {
+                "src": "./assets/images/motorista.png",
+                "alt": "Motorista dirigindo um carro"
+              }
+            }
+          ],
+          "answer": "A",
+          "explanation": "Eu me chamo Wang Ming, sou estudante.",
+          "audioPrompt": "我叫王明，是学生。"
+        },
+        {
+          "id": 8,
+          "type": "multiple-choice",
+          "prompt": "Ouça o áudio e selecione a imagem correta.",
+          "audioText": "现在是晚上，他们在睡觉。",
+          "audioSrc": "./assets/audio/basico-1-simulado-3-q08.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "pessoas dormindo à noite",
+              "image": {
+                "src": "./assets/images/dormindo-noite.png",
+                "alt": "Pessoas dormindo à noite"
+              }
+            },
+            {
+              "id": "B",
+              "label": "pessoas tomando café da manhã",
+              "image": {
+                "src": "./assets/images/cafe-manha.png",
+                "alt": "Pessoas tomando café da manhã"
+              }
+            }
+          ],
+          "answer": "A",
+          "explanation": "Agora é noite, eles estão dormindo.",
+          "audioPrompt": "现在是晚上，他们在睡觉。"
+        },
+        {
+          "id": 9,
+          "type": "multiple-choice",
+          "prompt": "Ouça o áudio e selecione a imagem correta.",
+          "audioText": "我们班有十个学生。",
+          "audioSrc": "./assets/audio/basico-1-simulado-3-q09.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma sala de aula com cinco alunos",
+              "image": {
+                "src": "./assets/images/sala-cinco-alunos.png",
+                "alt": "Sala de aula com cinco alunos"
+              }
+            },
+            {
+              "id": "B",
+              "label": "uma sala de aula com dez alunos",
+              "image": {
+                "src": "./assets/images/sala-dez-alunos.png",
+                "alt": "Sala de aula com dez alunos"
+              }
+            }
+          ],
+          "answer": "B",
+          "explanation": "Nossa turma tem dez alunos.",
+          "audioPrompt": "我们班有十个学生。"
+        },
+        {
+          "id": 10,
+          "type": "multiple-choice",
+          "prompt": "Ouça o áudio e selecione a imagem correta.",
+          "audioText": "他是加拿大人。",
+          "audioSrc": "./assets/audio/basico-1-simulado-3-q10.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "bandeira do Canadá",
+              "image": {
+                "src": "./assets/images/bandeira-canada.png",
+                "alt": "Bandeira do Canadá"
+              }
+            },
+            {
+              "id": "B",
+              "label": "bandeira do Brasil",
+              "image": {
+                "src": "./assets/images/bandeira-brasil.png",
+                "alt": "Bandeira do Brasil"
+              }
+            }
+          ],
+          "answer": "A",
+          "explanation": "Ele é canadense.",
+          "audioPrompt": "他是加拿大人。"
+        }
+      ]
+    },
+    {
+      "id": "parte-2-lacunas",
+      "title": "三、选词填空",
+      "shortTitle": "Lacunas",
+      "instructions": "Preencha as lacunas com as palavras abaixo. Você pode responder com a letra ou com a palavra.",
+      "sharedWordBank": [
+        {
+          "id": "A",
+          "text": "叫",
+          "pinyin": "jiào"
+        },
+        {
+          "id": "B",
+          "text": "也",
+          "pinyin": "yě"
+        },
+        {
+          "id": "C",
+          "text": "工程师",
+          "pinyin": "gōngchéngshī"
+        },
+        {
+          "id": "D",
+          "text": "呢",
+          "pinyin": "ne"
+        },
+        {
+          "id": "E",
+          "text": "再见",
+          "pinyin": "zàijiàn"
+        }
+      ],
+      "questions": [
+        {
+          "id": 11,
+          "type": "fill-blank",
+          "prompt": "你 ______ 什么名字？",
+          "answer": [
+            "A",
+            "叫"
+          ],
+          "answerLabel": "A - 叫",
+          "explanation": "你叫什么名字？= Qual é o seu nome?"
+        },
+        {
+          "id": 12,
+          "type": "fill-blank",
+          "prompt": "我是学生，她 ______ 是学生。",
+          "answer": [
+            "B",
+            "也"
+          ],
+          "answerLabel": "B - 也",
+          "explanation": "我是学生，她也是学生。= Eu sou estudante, ela também é estudante."
+        },
+        {
+          "id": 13,
+          "type": "fill-blank",
+          "prompt": "我爸爸是 ______，他在公司工作。",
+          "answer": [
+            "C",
+            "工程师"
+          ],
+          "answerLabel": "C - 工程师",
+          "explanation": "我爸爸是工程师，他在公司工作。= Meu pai é engenheiro, ele trabalha na empresa."
+        },
+        {
+          "id": 14,
+          "type": "fill-blank",
+          "prompt": "我是学生，你 ______？",
+          "answer": [
+            "D",
+            "呢"
+          ],
+          "answerLabel": "D - 呢",
+          "explanation": "我是学生，你呢？= Eu sou estudante, e você?"
+        },
+        {
+          "id": 15,
+          "type": "fill-blank",
+          "prompt": "老师，______！明天见。",
+          "answer": [
+            "E",
+            "再见"
+          ],
+          "answerLabel": "E - 再见",
+          "explanation": "老师，再见！明天见。= Professor, tchau! Até amanhã."
+        }
+      ]
+    },
+    {
+      "id": "parte-2-imagem-frase",
+      "title": "四、图文对应",
+      "shortTitle": "Imagem/frase",
+      "instructions": "Relacione cada frase com a imagem correta.",
+      "sharedOptions": [
+        {
+          "label": "A. uma médica em um hospital",
+          "image": {
+            "src": "./assets/images/medico.png",
+            "alt": "Médica em um hospital"
+          }
+        },
+        {
+          "label": "B. um professor na sala de aula",
+          "image": {
+            "src": "./assets/images/professor-sala.png",
+            "alt": "Professor na sala de aula"
+          }
+        },
+        {
+          "label": "C. um aluno escrevendo caracteres",
+          "image": {
+            "src": "./assets/images/aluno-escrevendo.png",
+            "alt": "Aluno escrevendo caracteres"
+          }
+        },
+        {
+          "label": "D. duas pessoas se despedindo",
+          "image": {
+            "src": "./assets/images/despedida.png",
+            "alt": "Duas pessoas se despedindo"
+          }
+        },
+        {
+          "label": "E. bandeira da China",
+          "image": {
+            "src": "./assets/images/bandeira-china.png",
+            "alt": "Bandeira da China"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": 16,
+          "type": "match",
+          "prompt": "我妈妈是医生。",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma médica em um hospital"
+            },
+            {
+              "id": "B",
+              "label": "um professor na sala de aula"
+            },
+            {
+              "id": "C",
+              "label": "um aluno escrevendo caracteres"
+            },
+            {
+              "id": "D",
+              "label": "duas pessoas se despedindo"
+            },
+            {
+              "id": "E",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "A",
+          "explanation": "Minha mãe é médica.",
+          "pinyin": "Wǒ māma shì yīshēng."
+        },
+        {
+          "id": 17,
+          "type": "match",
+          "prompt": "老师在上课。",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma médica em um hospital"
+            },
+            {
+              "id": "B",
+              "label": "um professor na sala de aula"
+            },
+            {
+              "id": "C",
+              "label": "um aluno escrevendo caracteres"
+            },
+            {
+              "id": "D",
+              "label": "duas pessoas se despedindo"
+            },
+            {
+              "id": "E",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "B",
+          "explanation": "O professor está dando aula.",
+          "pinyin": "Lǎoshī zài shàngkè."
+        },
+        {
+          "id": 18,
+          "type": "match",
+          "prompt": "他在写汉字。",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma médica em um hospital"
+            },
+            {
+              "id": "B",
+              "label": "um professor na sala de aula"
+            },
+            {
+              "id": "C",
+              "label": "um aluno escrevendo caracteres"
+            },
+            {
+              "id": "D",
+              "label": "duas pessoas se despedindo"
+            },
+            {
+              "id": "E",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "C",
+          "explanation": "Ele está escrevendo caracteres chineses.",
+          "pinyin": "Tā zài xiě Hànzì."
+        },
+        {
+          "id": 19,
+          "type": "match",
+          "prompt": "他们说：“再见！”",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma médica em um hospital"
+            },
+            {
+              "id": "B",
+              "label": "um professor na sala de aula"
+            },
+            {
+              "id": "C",
+              "label": "um aluno escrevendo caracteres"
+            },
+            {
+              "id": "D",
+              "label": "duas pessoas se despedindo"
+            },
+            {
+              "id": "E",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "D",
+          "explanation": "Eles dizem: “Tchau!”",
+          "pinyin": "Tāmen shuō: “Zàijiàn!”"
+        },
+        {
+          "id": 20,
+          "type": "match",
+          "prompt": "她是中国人。",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma médica em um hospital"
+            },
+            {
+              "id": "B",
+              "label": "um professor na sala de aula"
+            },
+            {
+              "id": "C",
+              "label": "um aluno escrevendo caracteres"
+            },
+            {
+              "id": "D",
+              "label": "duas pessoas se despedindo"
+            },
+            {
+              "id": "E",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "E",
+          "explanation": "Ela é chinesa.",
+          "pinyin": "Tā shì Zhōngguó rén."
+        }
+      ]
+    },
+    {
+      "id": "parte-2-ordem",
+      "title": "五、调整正确的语序",
+      "shortTitle": "Ordem",
+      "instructions": "Coloque as palavras na ordem correta.",
+      "questions": [
+        {
+          "id": 21,
+          "type": "word-order",
+          "prompt": "名字 / 你 / 什么 / 叫",
+          "answer": "你叫什么名字",
+          "answerLabel": "你叫什么名字？",
+          "explanation": "Nǐ jiào shénme míngzì?",
+          "answerPinyin": "Nǐ jiào shénme míngzì?",
+          "pinyin": "míngzì / nǐ / shénme / jiào"
+        },
+        {
+          "id": 22,
+          "type": "word-order",
+          "prompt": "工程师 / 我 / 不是 / 是医生",
+          "answer": "我不是工程师是医生",
+          "answerLabel": "我不是工程师，是医生。",
+          "explanation": "Wǒ bú shì gōngchéngshī, shì yīshēng.",
+          "answerPinyin": "Wǒ bú shì gōngchéngshī, shì yīshēng.",
+          "pinyin": "gōngchéngshī / wǒ / bú shì / shì yīshēng"
+        },
+        {
+          "id": 23,
+          "type": "word-order",
+          "prompt": "汉字 / 在 / 写 / 他们",
+          "answer": "他们在写汉字",
+          "answerLabel": "他们在写汉字。",
+          "explanation": "Tāmen zài xiě Hànzì.",
+          "answerPinyin": "Tāmen zài xiě Hànzì.",
+          "pinyin": "Hànzì / zài / xiě / tāmen"
+        },
+        {
+          "id": 24,
+          "type": "word-order",
+          "prompt": "学生 / 班 / 我们 / 有十个",
+          "answer": "我们班有十个学生",
+          "answerLabel": "我们班有十个学生。",
+          "explanation": "Wǒmen bān yǒu shí gè xuésheng.",
+          "answerPinyin": "Wǒmen bān yǒu shí gè xuésheng.",
+          "pinyin": "xuésheng / bān / wǒmen / yǒu shí gè"
+        },
+        {
+          "id": 25,
+          "type": "word-order",
+          "prompt": "哪国人 / 你 / 是",
+          "answer": "你是哪国人",
+          "answerLabel": "你是哪国人？",
+          "explanation": "Nǐ shì nǎ guó rén?",
+          "answerPinyin": "Nǐ shì nǎ guó rén?",
+          "pinyin": "nǎ guó rén / nǐ / shì"
+        }
+      ]
+    },
+    {
+      "id": "parte-3-traducao",
+      "title": "六、翻译",
+      "shortTitle": "Tradução",
+      "instructions": "Traduza as frases para o chinês.",
+      "questions": [
+        {
+          "id": 26,
+          "type": "translation",
+          "prompt": "Qual é o seu nome? Eu me chamo Mei Mei.",
+          "answer": [
+            "你叫什么名字我叫美美"
+          ],
+          "answerLabel": "你叫什么名字？我叫美美。",
+          "explanation": "Nǐ jiào shénme míngzì? Wǒ jiào Měiměi.",
+          "answerPinyin": "Nǐ jiào shénme míngzì? Wǒ jiào Měiměi."
+        },
+        {
+          "id": 27,
+          "type": "translation",
+          "prompt": "Ele é professor, ela também é professora.",
+          "answer": [
+            "他是老师她也是老师"
+          ],
+          "answerLabel": "他是老师，她也是老师。",
+          "explanation": "Tā shì lǎoshī, tā yě shì lǎoshī.",
+          "answerPinyin": "Tā shì lǎoshī, tā yě shì lǎoshī."
+        },
+        {
+          "id": 28,
+          "type": "translation",
+          "prompt": "Você é chinês ou brasileiro?",
+          "answer": [
+            "你是中国人还是巴西人"
+          ],
+          "answerLabel": "你是中国人还是巴西人？",
+          "explanation": "Nǐ shì Zhōngguó rén háishi Bāxī rén?",
+          "answerPinyin": "Nǐ shì Zhōngguó rén háishi Bāxī rén?"
+        },
+        {
+          "id": 29,
+          "type": "translation",
+          "prompt": "Eu tenho aula de manhã, à tarde e à noite.",
+          "answer": [
+            "我早上下午晚上都有课"
+          ],
+          "answerLabel": "我早上、下午、晚上都有课。",
+          "explanation": "Wǒ zǎoshang, xiàwǔ, wǎnshàng dōu yǒu kè.",
+          "answerPinyin": "Wǒ zǎoshang, xiàwǔ, wǎnshàng dōu yǒu kè."
+        },
+        {
+          "id": 30,
+          "type": "translation",
+          "prompt": "Desculpe! — Não foi nada.",
+          "answer": [
+            "对不起没关系"
+          ],
+          "answerLabel": "对不起！— 没关系。",
+          "explanation": "Duìbuqǐ! — Méiguānxi.",
+          "answerPinyin": "Duìbuqǐ! — Méiguānxi."
+        }
+      ]
+    }
+  ]
+}

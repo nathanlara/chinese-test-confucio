@@ -9,7 +9,7 @@ const progressText = document.querySelector("#progressText");
 const progressBar = document.querySelector("#progressBar");
 const sectionNav = document.querySelector("#sectionNav");
 
-const APP_VERSION = "2026-06-21-2";
+const APP_VERSION = "2026-06-21-3";
 const APP_VERSION_KEY = "chinese-test:app-version";
 
 let activeExam = null;
