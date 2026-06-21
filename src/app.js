@@ -64,7 +64,6 @@ function renderAudio(question) {
   return `
     <div class="audio-row">
       <span class="audio-missing">Áudio ainda não adicionado.</span>
-      ${question.audioText ? `<span class="audio-missing">Transcrição para estudo: ${escapeHtml(question.audioText)}</span>` : ""}
     </div>
   `;
 }
@@ -130,7 +129,7 @@ function renderQuestion(question) {
       <div class="question-header">
         <div class="question-title">
           <h3>${escapeHtml(question.prompt)}</h3>
-          ${question.pinyin && !question.audioSrc ? `<p class="pinyin">${escapeHtml(question.pinyin)}</p>` : ""}
+          ${shouldShowQuestionPinyin(question) ? `<p class="pinyin">${escapeHtml(question.pinyin)}</p>` : ""}
           ${question.help ? `<p>${escapeHtml(question.help)}</p>` : ""}
         </div>
         <span class="badge">${question.id}</span>
@@ -431,6 +430,13 @@ function escapeHtml(value) {
 
 function shouldShowOptionId(id) {
   return /^[A-Z0-9]{1,2}$/.test(String(id));
+}
+
+function shouldShowQuestionPinyin(question) {
+  if (!question.pinyin) return false;
+  if (question.audioSrc || question.audioText) return false;
+  if (question.type === "fill-blank") return false;
+  return true;
 }
 
 function getExamSlug(exam) {

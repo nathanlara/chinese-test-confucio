@@ -316,8 +316,7 @@
             "漂亮"
           ],
           "answerLabel": "A - 漂亮",
-          "explanation": "东方学院很大，也很漂亮。",
-          "pinyin": "Dōngfāng Xuéyuàn hěn dà, yě hěn piàoliang."
+          "explanation": "东方学院很大，也很漂亮。"
         },
         {
           "id": 12,
@@ -328,8 +327,7 @@
             "公司"
           ],
           "answerLabel": "B - 公司",
-          "explanation": "我在进出口公司工作。",
-          "pinyin": "Wǒ zài jìnchūkǒu gōngsī gōngzuò."
+          "explanation": "我在进出口公司工作。"
         },
         {
           "id": 13,
@@ -340,8 +338,7 @@
             "汉语"
           ],
           "answerLabel": "C - 汉语",
-          "explanation": "我学习汉语。",
-          "pinyin": "Wǒ xuéxí Hànyǔ."
+          "explanation": "我学习汉语。"
         },
         {
           "id": 14,
@@ -352,8 +349,7 @@
             "只"
           ],
           "answerLabel": "D - 只",
-          "explanation": "我妈妈只说葡萄牙语。",
-          "pinyin": "Wǒ māma zhǐ shuō Pútáoyáyǔ."
+          "explanation": "我妈妈只说葡萄牙语。"
         },
         {
           "id": 15,
@@ -364,8 +360,7 @@
             "还是"
           ],
           "answerLabel": "E - 还是",
-          "explanation": "你说汉语还是说法语？",
-          "pinyin": "Nǐ shuō Hànyǔ háishi shuō Fǎyǔ?"
+          "explanation": "你说汉语还是说法语？"
         }
       ]
     },
