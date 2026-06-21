@@ -1,0 +1,12 @@
+{
+  "exams": [
+    {
+      "title": "Prova Simulada - Chines Basico 1",
+      "path": "./exams/basico-1-simulado.json",
+      "level": "Basico 1",
+      "description": "Revisao com audio, lacunas, relacao imagem-frase, ordem correta e traducao.",
+      "questionCount": 30,
+      "audioCount": 10
+    }
+  ]
+}

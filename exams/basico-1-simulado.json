@@ -1,0 +1,657 @@
+{
+  "id": "basico-1-simulado",
+  "title": "Prova Simulada - Chines Basico 1",
+  "description": "30 questoes para treinar compreensao auditiva, leitura, ordem de frases e traducao. Quando voce adicionar arquivos de audio, preencha audioSrc com o caminho dentro do repo.",
+  "sections": [
+    {
+      "id": "parte-1-audio-vf",
+      "title": "一、听录音判断图片对错",
+      "shortTitle": "Audio V/F",
+      "instructions": "Ouça o audio e marque verdadeiro 对 ou falso 错.",
+      "questions": [
+        {
+          "id": 1,
+          "type": "true-false",
+          "prompt": "Imagem: uma mulher segurando a bandeira do Brasil.",
+          "image": {
+            "src": "./assets/images/brasil-mulher.png",
+            "alt": "Mulher segurando a bandeira do Brasil"
+          },
+          "audioText": "她是巴西人。",
+          "audioSrc": "./assets/audio/basico-1-q01.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "true",
+          "answerLabel": "✓ 对",
+          "explanation": "她是巴西人。= Ela e brasileira."
+        },
+        {
+          "id": 2,
+          "type": "true-false",
+          "prompt": "Imagem: uma universidade grande.",
+          "image": {
+            "src": "./assets/images/universidade.png",
+            "alt": "Universidade grande"
+          },
+          "audioText": "这是公司。",
+          "audioSrc": "./assets/audio/basico-1-q02.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "false",
+          "answerLabel": "✗ 错",
+          "explanation": "O audio diz: 这是公司。= Isto e uma empresa."
+        },
+        {
+          "id": 3,
+          "type": "true-false",
+          "prompt": "Imagem: uma professora em sala de aula.",
+          "image": {
+            "src": "./assets/images/professora-sala.png",
+            "alt": "Professora em sala de aula"
+          },
+          "audioText": "她是老师。",
+          "audioSrc": "./assets/audio/basico-1-q03.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "true",
+          "answerLabel": "✓ 对",
+          "explanation": "她是老师。= Ela e professora."
+        },
+        {
+          "id": 4,
+          "type": "true-false",
+          "prompt": "Imagem: uma pessoa falando ao telefone.",
+          "image": {
+            "src": "./assets/images/telefone.png",
+            "alt": "Pessoa falando ao telefone"
+          },
+          "audioText": "他在打电话。",
+          "audioSrc": "./assets/audio/basico-1-q04.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "true",
+          "answerLabel": "✓ 对",
+          "explanation": "他在打电话。= Ele esta telefonando."
+        },
+        {
+          "id": 5,
+          "type": "true-false",
+          "prompt": "Imagem: duas mulheres sorrindo.",
+          "image": {
+            "src": "./assets/images/mulheres-felizes.png",
+            "alt": "Duas mulheres sorrindo"
+          },
+          "audioText": "她们很高兴。",
+          "audioSrc": "./assets/audio/basico-1-q05.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "true",
+          "answerLabel": "✓ 对",
+          "explanation": "她们很高兴。= Elas estao muito felizes."
+        }
+      ]
+    },
+    {
+      "id": "parte-1-audio-imagem",
+      "title": "二、听录音选择图片",
+      "shortTitle": "Audio imagem",
+      "instructions": "Ouça o audio e escolha a imagem correspondente.",
+      "questions": [
+        {
+          "id": 6,
+          "type": "multiple-choice",
+          "prompt": "他在公司工作。",
+          "audioText": "他在公司工作。",
+          "audioSrc": "./assets/audio/basico-1-q06.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma escola / universidade",
+              "image": {
+                "src": "./assets/images/universidade.png",
+                "alt": "Escola ou universidade"
+              }
+            },
+            {
+              "id": "B",
+              "label": "uma empresa / escritorio",
+              "image": {
+                "src": "./assets/images/escritorio.png",
+                "alt": "Empresa ou escritorio"
+              }
+            }
+          ],
+          "answer": "B",
+          "explanation": "Ele trabalha na empresa."
+        },
+        {
+          "id": 7,
+          "type": "multiple-choice",
+          "prompt": "她在大学学习汉语。",
+          "audioText": "她在大学学习汉语。",
+          "audioSrc": "./assets/audio/basico-1-q07.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma escola / universidade",
+              "image": {
+                "src": "./assets/images/universidade.png",
+                "alt": "Escola ou universidade"
+              }
+            },
+            {
+              "id": "B",
+              "label": "uma empresa / escritorio",
+              "image": {
+                "src": "./assets/images/escritorio.png",
+                "alt": "Empresa ou escritorio"
+              }
+            }
+          ],
+          "answer": "A",
+          "explanation": "Ela estuda chines na universidade."
+        },
+        {
+          "id": 8,
+          "type": "multiple-choice",
+          "prompt": "我可以给你打电话吗？",
+          "audioText": "我可以给你打电话吗？",
+          "audioSrc": "./assets/audio/basico-1-q08.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma pessoa usando telefone",
+              "image": {
+                "src": "./assets/images/telefone.png",
+                "alt": "Pessoa usando telefone"
+              }
+            },
+            {
+              "id": "B",
+              "label": "uma pessoa escrevendo e-mail no computador",
+              "image": {
+                "src": "./assets/images/email-computador.png",
+                "alt": "Pessoa escrevendo e-mail no computador"
+              }
+            }
+          ],
+          "answer": "A",
+          "explanation": "Posso te ligar?"
+        },
+        {
+          "id": 9,
+          "type": "multiple-choice",
+          "prompt": "你可以给我发电子邮件。",
+          "audioText": "你可以给我发电子邮件。",
+          "audioSrc": "./assets/audio/basico-1-q09.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma pessoa usando telefone",
+              "image": {
+                "src": "./assets/images/telefone.png",
+                "alt": "Pessoa usando telefone"
+              }
+            },
+            {
+              "id": "B",
+              "label": "uma pessoa escrevendo e-mail no computador",
+              "image": {
+                "src": "./assets/images/email-computador.png",
+                "alt": "Pessoa escrevendo e-mail no computador"
+              }
+            }
+          ],
+          "answer": "B",
+          "explanation": "Voce pode me enviar um e-mail."
+        },
+        {
+          "id": 10,
+          "type": "multiple-choice",
+          "prompt": "他是中国人。",
+          "audioText": "他是中国人。",
+          "audioSrc": "./assets/audio/basico-1-q10.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "bandeira da China",
+              "image": {
+                "src": "./assets/images/bandeira-china.png",
+                "alt": "Bandeira da China"
+              }
+            },
+            {
+              "id": "B",
+              "label": "bandeira do Canada",
+              "image": {
+                "src": "./assets/images/bandeira-canada.png",
+                "alt": "Bandeira do Canada"
+              }
+            }
+          ],
+          "answer": "A",
+          "explanation": "Ele e chines."
+        }
+      ]
+    },
+    {
+      "id": "parte-2-lacunas",
+      "title": "三、选词填空",
+      "shortTitle": "Lacunas",
+      "instructions": "Preencha as lacunas com as palavras abaixo. Voce pode responder com a letra ou com a palavra.",
+      "sharedWordBank": [
+        {
+          "id": "A",
+          "text": "漂亮",
+          "pinyin": "piaoliang"
+        },
+        {
+          "id": "B",
+          "text": "公司",
+          "pinyin": "gongsi"
+        },
+        {
+          "id": "C",
+          "text": "汉语",
+          "pinyin": "Hanyu"
+        },
+        {
+          "id": "D",
+          "text": "只",
+          "pinyin": "zhi"
+        },
+        {
+          "id": "E",
+          "text": "还是",
+          "pinyin": "haishi"
+        }
+      ],
+      "questions": [
+        {
+          "id": 11,
+          "type": "fill-blank",
+          "prompt": "东方学院很大，也很 ______。",
+          "answer": [
+            "A",
+            "漂亮"
+          ],
+          "answerLabel": "A - 漂亮",
+          "explanation": "东方学院很大，也很漂亮。"
+        },
+        {
+          "id": 12,
+          "type": "fill-blank",
+          "prompt": "我在进出口 ______ 工作。",
+          "answer": [
+            "B",
+            "公司"
+          ],
+          "answerLabel": "B - 公司",
+          "explanation": "我在进出口公司工作。"
+        },
+        {
+          "id": 13,
+          "type": "fill-blank",
+          "prompt": "我学习 ______。",
+          "answer": [
+            "C",
+            "汉语"
+          ],
+          "answerLabel": "C - 汉语",
+          "explanation": "我学习汉语。"
+        },
+        {
+          "id": 14,
+          "type": "fill-blank",
+          "prompt": "我妈妈 ______ 说葡萄牙语。",
+          "answer": [
+            "D",
+            "只"
+          ],
+          "answerLabel": "D - 只",
+          "explanation": "我妈妈只说葡萄牙语。"
+        },
+        {
+          "id": 15,
+          "type": "fill-blank",
+          "prompt": "你说汉语 ______ 说法语？",
+          "answer": [
+            "E",
+            "还是"
+          ],
+          "answerLabel": "E - 还是",
+          "explanation": "你说汉语还是说法语？"
+        }
+      ]
+    },
+    {
+      "id": "parte-2-imagem-frase",
+      "title": "四、图文对应",
+      "shortTitle": "Imagem/frase",
+      "instructions": "Relacione cada frase com a imagem correta.",
+      "sharedOptions": [
+        {
+          "label": "A. duas pessoas se cumprimentando",
+          "image": {
+            "src": "./assets/images/cumprimento.png",
+            "alt": "Duas pessoas se cumprimentando"
+          }
+        },
+        {
+          "label": "B. uma universidade grande",
+          "image": {
+            "src": "./assets/images/universidade.png",
+            "alt": "Universidade grande"
+          }
+        },
+        {
+          "label": "C. uma pessoa trabalhando no escritorio",
+          "image": {
+            "src": "./assets/images/trabalho-escritorio.png",
+            "alt": "Pessoa trabalhando no escritorio"
+          }
+        },
+        {
+          "label": "D. uma pessoa falando ao telefone",
+          "image": {
+            "src": "./assets/images/telefone.png",
+            "alt": "Pessoa falando ao telefone"
+          }
+        },
+        {
+          "label": "E. duas amigas sorrindo",
+          "image": {
+            "src": "./assets/images/mulheres-felizes.png",
+            "alt": "Duas amigas sorrindo"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": 16,
+          "type": "match",
+          "prompt": "我们很高兴。",
+          "options": [
+            {
+              "id": "A",
+              "label": "duas pessoas se cumprimentando"
+            },
+            {
+              "id": "B",
+              "label": "uma universidade grande"
+            },
+            {
+              "id": "C",
+              "label": "uma pessoa trabalhando no escritorio"
+            },
+            {
+              "id": "D",
+              "label": "uma pessoa falando ao telefone"
+            },
+            {
+              "id": "E",
+              "label": "duas amigas sorrindo"
+            }
+          ],
+          "answer": "E",
+          "explanation": "Nos estamos muito felizes."
+        },
+        {
+          "id": 17,
+          "type": "match",
+          "prompt": "他在公司工作。",
+          "options": [
+            {
+              "id": "A",
+              "label": "duas pessoas se cumprimentando"
+            },
+            {
+              "id": "B",
+              "label": "uma universidade grande"
+            },
+            {
+              "id": "C",
+              "label": "uma pessoa trabalhando no escritorio"
+            },
+            {
+              "id": "D",
+              "label": "uma pessoa falando ao telefone"
+            },
+            {
+              "id": "E",
+              "label": "duas amigas sorrindo"
+            }
+          ],
+          "answer": "C",
+          "explanation": "Ele trabalha na empresa."
+        },
+        {
+          "id": 18,
+          "type": "match",
+          "prompt": "你可以给我打电话吗？",
+          "options": [
+            {
+              "id": "A",
+              "label": "duas pessoas se cumprimentando"
+            },
+            {
+              "id": "B",
+              "label": "uma universidade grande"
+            },
+            {
+              "id": "C",
+              "label": "uma pessoa trabalhando no escritorio"
+            },
+            {
+              "id": "D",
+              "label": "uma pessoa falando ao telefone"
+            },
+            {
+              "id": "E",
+              "label": "duas amigas sorrindo"
+            }
+          ],
+          "answer": "D",
+          "explanation": "Voce pode me ligar?"
+        },
+        {
+          "id": 19,
+          "type": "match",
+          "prompt": "我们大学很大，也很漂亮。",
+          "options": [
+            {
+              "id": "A",
+              "label": "duas pessoas se cumprimentando"
+            },
+            {
+              "id": "B",
+              "label": "uma universidade grande"
+            },
+            {
+              "id": "C",
+              "label": "uma pessoa trabalhando no escritorio"
+            },
+            {
+              "id": "D",
+              "label": "uma pessoa falando ao telefone"
+            },
+            {
+              "id": "E",
+              "label": "duas amigas sorrindo"
+            }
+          ],
+          "answer": "B",
+          "explanation": "Nossa universidade e grande e tambem bonita."
+        },
+        {
+          "id": 20,
+          "type": "match",
+          "prompt": "认识你很高兴。",
+          "options": [
+            {
+              "id": "A",
+              "label": "duas pessoas se cumprimentando"
+            },
+            {
+              "id": "B",
+              "label": "uma universidade grande"
+            },
+            {
+              "id": "C",
+              "label": "uma pessoa trabalhando no escritorio"
+            },
+            {
+              "id": "D",
+              "label": "uma pessoa falando ao telefone"
+            },
+            {
+              "id": "E",
+              "label": "duas amigas sorrindo"
+            }
+          ],
+          "answer": "A",
+          "explanation": "Prazer em te conhecer."
+        }
+      ]
+    },
+    {
+      "id": "parte-2-ordem",
+      "title": "五、调整正确的语序",
+      "shortTitle": "Ordem",
+      "instructions": "Coloque as palavras na ordem correta.",
+      "questions": [
+        {
+          "id": 21,
+          "type": "word-order",
+          "prompt": "巴西人 / 是 / 你 / 吗",
+          "answer": "你是巴西人吗",
+          "answerLabel": "你是巴西人吗？",
+          "explanation": "Nǐ shì Bāxī rén ma?"
+        },
+        {
+          "id": 22,
+          "type": "word-order",
+          "prompt": "她 / 汉语 / 学习 / 在中国",
+          "answer": "她在中国学习汉语",
+          "answerLabel": "她在中国学习汉语。",
+          "explanation": "Tā zài Zhōngguó xuéxí Hànyǔ."
+        },
+        {
+          "id": 23,
+          "type": "word-order",
+          "prompt": "说 / 只 / 我 / 葡萄牙语",
+          "answer": "我只说葡萄牙语",
+          "answerLabel": "我只说葡萄牙语。",
+          "explanation": "Wǒ zhǐ shuō Pútáoyáyǔ."
+        },
+        {
+          "id": 24,
+          "type": "word-order",
+          "prompt": "公司 / 工作 / 他 / 在",
+          "answer": "他在公司工作",
+          "answerLabel": "他在公司工作。",
+          "explanation": "Tā zài gōngsī gōngzuò."
+        },
+        {
+          "id": 25,
+          "type": "word-order",
+          "prompt": "你的 / 怎么样 / 大学",
+          "answer": "你的大学怎么样",
+          "answerLabel": "你的大学怎么样？",
+          "explanation": "Nǐ de dàxué zěnmeyàng?"
+        }
+      ]
+    },
+    {
+      "id": "parte-3-traducao",
+      "title": "六、翻译",
+      "shortTitle": "Traducao",
+      "instructions": "Traduza as frases para o chines.",
+      "questions": [
+        {
+          "id": 26,
+          "type": "translation",
+          "prompt": "Minha mae so fala portugues.",
+          "answer": "我妈妈只说葡萄牙语",
+          "answerLabel": "我妈妈只说葡萄牙语。",
+          "explanation": "Wǒ māma zhǐ shuō Pútáoyáyǔ."
+        },
+        {
+          "id": 27,
+          "type": "translation",
+          "prompt": "Elas estudam chines no Brasil.",
+          "answer": "她们在巴西学习汉语",
+          "answerLabel": "她们在巴西学习汉语。",
+          "explanation": "Tāmen zài Bāxī xuéxí Hànyǔ."
+        },
+        {
+          "id": 28,
+          "type": "translation",
+          "prompt": "Voce e brasileiro ou canadense?",
+          "answer": "你是巴西人还是加拿大人",
+          "answerLabel": "你是巴西人还是加拿大人？",
+          "explanation": "Nǐ shì Bāxī rén háishi Jiānádà rén?"
+        },
+        {
+          "id": 29,
+          "type": "translation",
+          "prompt": "A nossa universidade e grande e bonita.",
+          "answer": [
+            "我们大学很大也很漂亮",
+            "我们的大学很大也很漂亮"
+          ],
+          "answerLabel": "我们大学很大，也很漂亮。",
+          "explanation": "Wǒmen dàxué hěn dà, yě hěn piàoliang."
+        },
+        {
+          "id": 30,
+          "type": "translation",
+          "prompt": "Posso te enviar um e-mail?",
+          "answer": "我可以给你发电子邮件吗",
+          "answerLabel": "我可以给你发电子邮件吗？",
+          "explanation": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?"
+        }
+      ]
+    }
+  ]
+}
