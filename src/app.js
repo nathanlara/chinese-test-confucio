@@ -124,11 +124,12 @@ function renderInput(question) {
 }
 
 function renderQuestion(question) {
+  const prompt = question.displayPrompt || question.prompt;
   return `
     <article class="question" id="q-${question.id}" data-question-id="${question.id}">
       <div class="question-header">
         <div class="question-title">
-          <h3>${escapeHtml(question.prompt)}</h3>
+          <h3>${escapeHtml(prompt)}</h3>
           ${shouldShowQuestionPinyin(question) ? `<p class="pinyin">${escapeHtml(question.pinyin)}</p>` : ""}
           ${question.help ? `<p>${escapeHtml(question.help)}</p>` : ""}
         </div>
@@ -372,7 +373,7 @@ function gradeExam(event) {
           ({ question, correct }) => `
             <div class="result-item">
               <span class="${correct ? "correct" : "incorrect"}">${question.id}. ${correct ? "Correta" : "Revisar"}</span>
-              <span>${escapeHtml(question.prompt)}</span>
+              <span>${escapeHtml(question.displayPrompt || question.prompt)}</span>
             </div>
           `,
         )

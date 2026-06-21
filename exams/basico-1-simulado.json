@@ -7,12 +7,12 @@
       "id": "parte-1-audio-vf",
       "title": "一、听录音判断图片对错",
       "shortTitle": "Áudio V/F",
-      "instructions": "Ouça o áudio e marque verdadeiro 对 ou falso 错.",
+      "instructions": "Observe a imagem, ouça o áudio e marque se a frase do áudio corresponde à imagem.",
       "questions": [
         {
           "id": 1,
           "type": "true-false",
-          "prompt": "Imagem: uma mulher segurando a bandeira do Brasil.",
+          "prompt": "A frase do áudio corresponde à imagem?",
           "image": {
             "src": "./assets/images/brasil-mulher.png",
             "alt": "Mulher segurando a bandeira do Brasil"
@@ -31,12 +31,14 @@
           ],
           "answer": "true",
           "answerLabel": "✓ 对",
-          "explanation": "她是巴西人。= Ela é brasileira."
+          "explanation": "她是巴西人。= Ela é brasileira.",
+          "imageDescription": "Mulher segurando a bandeira do Brasil",
+          "help": "Imagem: Mulher segurando a bandeira do Brasil."
         },
         {
           "id": 2,
           "type": "true-false",
-          "prompt": "Imagem: uma universidade grande.",
+          "prompt": "A frase do áudio corresponde à imagem?",
           "image": {
             "src": "./assets/images/universidade.png",
             "alt": "Universidade grande"
@@ -55,12 +57,14 @@
           ],
           "answer": "false",
           "answerLabel": "✗ 错",
-          "explanation": "O áudio diz: 这是公司。= Isto é uma empresa."
+          "explanation": "O áudio diz: 这是公司。= Isto é uma empresa.",
+          "imageDescription": "Universidade grande",
+          "help": "Imagem: Universidade grande."
         },
         {
           "id": 3,
           "type": "true-false",
-          "prompt": "Imagem: uma professora em sala de aula.",
+          "prompt": "A frase do áudio corresponde à imagem?",
           "image": {
             "src": "./assets/images/professora-sala.png",
             "alt": "Professora em sala de aula"
@@ -79,12 +83,14 @@
           ],
           "answer": "true",
           "answerLabel": "✓ 对",
-          "explanation": "她是老师。= Ela é professora."
+          "explanation": "她是老师。= Ela é professora.",
+          "imageDescription": "Professora em sala de aula",
+          "help": "Imagem: Professora em sala de aula."
         },
         {
           "id": 4,
           "type": "true-false",
-          "prompt": "Imagem: uma pessoa falando ao telefone.",
+          "prompt": "A frase do áudio corresponde à imagem?",
           "image": {
             "src": "./assets/images/telefone.png",
             "alt": "Pessoa falando ao telefone"
@@ -103,12 +109,14 @@
           ],
           "answer": "true",
           "answerLabel": "✓ 对",
-          "explanation": "他在打电话。= Ele está telefonando."
+          "explanation": "他在打电话。= Ele está telefonando.",
+          "imageDescription": "Pessoa falando ao telefone",
+          "help": "Imagem: Pessoa falando ao telefone."
         },
         {
           "id": 5,
           "type": "true-false",
-          "prompt": "Imagem: duas mulheres sorrindo.",
+          "prompt": "A frase do áudio corresponde à imagem?",
           "image": {
             "src": "./assets/images/mulheres-felizes.png",
             "alt": "Duas mulheres sorrindo"
@@ -127,7 +135,9 @@
           ],
           "answer": "true",
           "answerLabel": "✓ 对",
-          "explanation": "她们很高兴。= Elas estão muito felizes."
+          "explanation": "她们很高兴。= Elas estão muito felizes.",
+          "imageDescription": "Duas mulheres sorrindo",
+          "help": "Imagem: Duas mulheres sorrindo."
         }
       ]
     },
@@ -135,12 +145,12 @@
       "id": "parte-1-audio-imagem",
       "title": "二、听录音选择图片",
       "shortTitle": "Áudio imagem",
-      "instructions": "Ouça o áudio e escolha a imagem correspondente.",
+      "instructions": "Ouça o áudio e selecione a imagem que corresponde ao que foi dito.",
       "questions": [
         {
           "id": 6,
           "type": "multiple-choice",
-          "prompt": "他在公司工作。",
+          "prompt": "Ouça o áudio e selecione a imagem correta.",
           "audioText": "他在公司工作。",
           "audioSrc": "./assets/audio/basico-1-q06.mp3",
           "options": [
@@ -162,12 +172,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "Ele trabalha na empresa."
+          "explanation": "Ele trabalha na empresa.",
+          "audioPrompt": "他在公司工作。"
         },
         {
           "id": 7,
           "type": "multiple-choice",
-          "prompt": "她在大学学习汉语。",
+          "prompt": "Ouça o áudio e selecione a imagem correta.",
           "audioText": "她在大学学习汉语。",
           "audioSrc": "./assets/audio/basico-1-q07.mp3",
           "options": [
@@ -189,12 +200,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "Ela estuda chinês na universidade."
+          "explanation": "Ela estuda chinês na universidade.",
+          "audioPrompt": "她在大学学习汉语。"
         },
         {
           "id": 8,
           "type": "multiple-choice",
-          "prompt": "我可以给你打电话吗？",
+          "prompt": "Ouça o áudio e selecione a imagem correta.",
           "audioText": "我可以给你打电话吗？",
           "audioSrc": "./assets/audio/basico-1-q08.mp3",
           "options": [
@@ -216,12 +228,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "Posso te ligar?"
+          "explanation": "Posso te ligar?",
+          "audioPrompt": "我可以给你打电话吗？"
         },
         {
           "id": 9,
           "type": "multiple-choice",
-          "prompt": "你可以给我发电子邮件。",
+          "prompt": "Ouça o áudio e selecione a imagem correta.",
           "audioText": "你可以给我发电子邮件。",
           "audioSrc": "./assets/audio/basico-1-q09.mp3",
           "options": [
@@ -243,12 +256,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "Você pode me enviar um e-mail."
+          "explanation": "Você pode me enviar um e-mail.",
+          "audioPrompt": "你可以给我发电子邮件。"
         },
         {
           "id": 10,
           "type": "multiple-choice",
-          "prompt": "他是中国人。",
+          "prompt": "Ouça o áudio e selecione a imagem correta.",
           "audioText": "他是中国人。",
           "audioSrc": "./assets/audio/basico-1-q10.mp3",
           "options": [
@@ -270,7 +284,8 @@
             }
           ],
           "answer": "A",
-          "explanation": "Ele é chinês."
+          "explanation": "Ele é chinês.",
+          "audioPrompt": "他是中国人。"
         }
       ]
     },
