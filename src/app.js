@@ -9,6 +9,9 @@ const progressText = document.querySelector("#progressText");
 const progressBar = document.querySelector("#progressBar");
 const sectionNav = document.querySelector("#sectionNav");
 
+const APP_VERSION = "2026-06-21-2";
+const APP_VERSION_KEY = "chinese-test:app-version";
+
 let activeExam = null;
 let gradedAnswers = null;
 let examIndex = null;
@@ -25,13 +28,13 @@ const normalizers = {
 };
 
 async function loadExamIndex() {
-  const response = await fetch("./exams/index.json");
+  const response = await fetch(withVersion("./exams/index.json"));
   if (!response.ok) throw new Error("Não foi possível carregar a lista de provas.");
   return response.json();
 }
 
 async function loadExam(path) {
-  const response = await fetch(path);
+  const response = await fetch(withVersion(path));
   if (!response.ok) throw new Error(`Não foi possível carregar ${path}.`);
   return response.json();
 }
@@ -42,6 +45,23 @@ function fieldName(question) {
 
 function storageKey(exam = activeExam) {
   return exam ? `chinese-test:${exam.id}:answers` : null;
+}
+
+function withVersion(path) {
+  const url = new URL(path, window.location.href);
+  url.searchParams.set("v", APP_VERSION);
+  return url;
+}
+
+function syncAppVersion() {
+  const savedVersion = localStorage.getItem(APP_VERSION_KEY);
+  if (savedVersion === APP_VERSION) return;
+
+  Object.keys(localStorage)
+    .filter((key) => key.startsWith("chinese-test:") && key !== APP_VERSION_KEY)
+    .forEach((key) => localStorage.removeItem(key));
+
+  localStorage.setItem(APP_VERSION_KEY, APP_VERSION);
 }
 
 function renderImageLike(item, className = "visual-prompt") {
@@ -468,6 +488,7 @@ function findExamByQuery(index) {
 
 async function boot() {
   try {
+    syncAppVersion();
     examIndex = await loadExamIndex();
     examSelect.innerHTML = [
       `<option value="">Escolha uma prova</option>`,
