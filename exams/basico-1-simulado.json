@@ -1,13 +1,13 @@
 {
   "id": "basico-1-simulado",
-  "title": "Prova Simulada - Chines Basico 1",
-  "description": "30 questoes para treinar compreensao auditiva, leitura, ordem de frases e traducao. Quando voce adicionar arquivos de audio, preencha audioSrc com o caminho dentro do repo.",
+  "title": "Simulado 1 - Chinês Básico 1",
+  "description": "30 questões para treinar compreensão auditiva, leitura, ordem de frases e tradução. Quando você adicionar arquivos de áudio, preencha audioSrc com o caminho dentro do repo.",
   "sections": [
     {
       "id": "parte-1-audio-vf",
       "title": "一、听录音判断图片对错",
-      "shortTitle": "Audio V/F",
-      "instructions": "Ouça o audio e marque verdadeiro 对 ou falso 错.",
+      "shortTitle": "Áudio V/F",
+      "instructions": "Ouça o áudio e marque verdadeiro 对 ou falso 错.",
       "questions": [
         {
           "id": 1,
@@ -31,7 +31,7 @@
           ],
           "answer": "true",
           "answerLabel": "✓ 对",
-          "explanation": "她是巴西人。= Ela e brasileira."
+          "explanation": "她是巴西人。= Ela é brasileira."
         },
         {
           "id": 2,
@@ -55,7 +55,7 @@
           ],
           "answer": "false",
           "answerLabel": "✗ 错",
-          "explanation": "O audio diz: 这是公司。= Isto e uma empresa."
+          "explanation": "O áudio diz: 这是公司。= Isto é uma empresa."
         },
         {
           "id": 3,
@@ -79,7 +79,7 @@
           ],
           "answer": "true",
           "answerLabel": "✓ 对",
-          "explanation": "她是老师。= Ela e professora."
+          "explanation": "她是老师。= Ela é professora."
         },
         {
           "id": 4,
@@ -103,7 +103,7 @@
           ],
           "answer": "true",
           "answerLabel": "✓ 对",
-          "explanation": "他在打电话。= Ele esta telefonando."
+          "explanation": "他在打电话。= Ele está telefonando."
         },
         {
           "id": 5,
@@ -127,15 +127,15 @@
           ],
           "answer": "true",
           "answerLabel": "✓ 对",
-          "explanation": "她们很高兴。= Elas estao muito felizes."
+          "explanation": "她们很高兴。= Elas estão muito felizes."
         }
       ]
     },
     {
       "id": "parte-1-audio-imagem",
       "title": "二、听录音选择图片",
-      "shortTitle": "Audio imagem",
-      "instructions": "Ouça o audio e escolha a imagem correspondente.",
+      "shortTitle": "Áudio imagem",
+      "instructions": "Ouça o áudio e escolha a imagem correspondente.",
       "questions": [
         {
           "id": 6,
@@ -154,10 +154,10 @@
             },
             {
               "id": "B",
-              "label": "uma empresa / escritorio",
+              "label": "uma empresa / escritório",
               "image": {
                 "src": "./assets/images/escritorio.png",
-                "alt": "Empresa ou escritorio"
+                "alt": "Empresa ou escritório"
               }
             }
           ],
@@ -181,15 +181,15 @@
             },
             {
               "id": "B",
-              "label": "uma empresa / escritorio",
+              "label": "uma empresa / escritório",
               "image": {
                 "src": "./assets/images/escritorio.png",
-                "alt": "Empresa ou escritorio"
+                "alt": "Empresa ou escritório"
               }
             }
           ],
           "answer": "A",
-          "explanation": "Ela estuda chines na universidade."
+          "explanation": "Ela estuda chinês na universidade."
         },
         {
           "id": 8,
@@ -243,7 +243,7 @@
             }
           ],
           "answer": "B",
-          "explanation": "Voce pode me enviar um e-mail."
+          "explanation": "Você pode me enviar um e-mail."
         },
         {
           "id": 10,
@@ -262,15 +262,15 @@
             },
             {
               "id": "B",
-              "label": "bandeira do Canada",
+              "label": "bandeira do Canadá",
               "image": {
                 "src": "./assets/images/bandeira-canada.png",
-                "alt": "Bandeira do Canada"
+                "alt": "Bandeira do Canadá"
               }
             }
           ],
           "answer": "A",
-          "explanation": "Ele e chines."
+          "explanation": "Ele é chinês."
         }
       ]
     },
@@ -278,32 +278,32 @@
       "id": "parte-2-lacunas",
       "title": "三、选词填空",
       "shortTitle": "Lacunas",
-      "instructions": "Preencha as lacunas com as palavras abaixo. Voce pode responder com a letra ou com a palavra.",
+      "instructions": "Preencha as lacunas com as palavras abaixo. Você pode responder com a letra ou com a palavra.",
       "sharedWordBank": [
         {
           "id": "A",
           "text": "漂亮",
-          "pinyin": "piaoliang"
+          "pinyin": "piàoliang"
         },
         {
           "id": "B",
           "text": "公司",
-          "pinyin": "gongsi"
+          "pinyin": "gōngsī"
         },
         {
           "id": "C",
           "text": "汉语",
-          "pinyin": "Hanyu"
+          "pinyin": "Hànyǔ"
         },
         {
           "id": "D",
           "text": "只",
-          "pinyin": "zhi"
+          "pinyin": "zhǐ"
         },
         {
           "id": "E",
           "text": "还是",
-          "pinyin": "haishi"
+          "pinyin": "háishi"
         }
       ],
       "questions": [
@@ -316,7 +316,8 @@
             "漂亮"
           ],
           "answerLabel": "A - 漂亮",
-          "explanation": "东方学院很大，也很漂亮。"
+          "explanation": "东方学院很大，也很漂亮。",
+          "pinyin": "Dōngfāng Xuéyuàn hěn dà, yě hěn piàoliang."
         },
         {
           "id": 12,
@@ -327,7 +328,8 @@
             "公司"
           ],
           "answerLabel": "B - 公司",
-          "explanation": "我在进出口公司工作。"
+          "explanation": "我在进出口公司工作。",
+          "pinyin": "Wǒ zài jìnchūkǒu gōngsī gōngzuò."
         },
         {
           "id": 13,
@@ -338,7 +340,8 @@
             "汉语"
           ],
           "answerLabel": "C - 汉语",
-          "explanation": "我学习汉语。"
+          "explanation": "我学习汉语。",
+          "pinyin": "Wǒ xuéxí Hànyǔ."
         },
         {
           "id": 14,
@@ -349,7 +352,8 @@
             "只"
           ],
           "answerLabel": "D - 只",
-          "explanation": "我妈妈只说葡萄牙语。"
+          "explanation": "我妈妈只说葡萄牙语。",
+          "pinyin": "Wǒ māma zhǐ shuō Pútáoyáyǔ."
         },
         {
           "id": 15,
@@ -360,7 +364,8 @@
             "还是"
           ],
           "answerLabel": "E - 还是",
-          "explanation": "你说汉语还是说法语？"
+          "explanation": "你说汉语还是说法语？",
+          "pinyin": "Nǐ shuō Hànyǔ háishi shuō Fǎyǔ?"
         }
       ]
     },
@@ -385,10 +390,10 @@
           }
         },
         {
-          "label": "C. uma pessoa trabalhando no escritorio",
+          "label": "C. uma pessoa trabalhando no escritório",
           "image": {
             "src": "./assets/images/trabalho-escritorio.png",
-            "alt": "Pessoa trabalhando no escritorio"
+            "alt": "Pessoa trabalhando no escritório"
           }
         },
         {
@@ -422,7 +427,7 @@
             },
             {
               "id": "C",
-              "label": "uma pessoa trabalhando no escritorio"
+              "label": "uma pessoa trabalhando no escritório"
             },
             {
               "id": "D",
@@ -434,7 +439,8 @@
             }
           ],
           "answer": "E",
-          "explanation": "Nos estamos muito felizes."
+          "explanation": "Nós estamos muito felizes.",
+          "pinyin": "Wǒmen hěn gāoxìng."
         },
         {
           "id": 17,
@@ -451,7 +457,7 @@
             },
             {
               "id": "C",
-              "label": "uma pessoa trabalhando no escritorio"
+              "label": "uma pessoa trabalhando no escritório"
             },
             {
               "id": "D",
@@ -463,7 +469,8 @@
             }
           ],
           "answer": "C",
-          "explanation": "Ele trabalha na empresa."
+          "explanation": "Ele trabalha na empresa.",
+          "pinyin": "Tā zài gōngsī gōngzuò."
         },
         {
           "id": 18,
@@ -480,7 +487,7 @@
             },
             {
               "id": "C",
-              "label": "uma pessoa trabalhando no escritorio"
+              "label": "uma pessoa trabalhando no escritório"
             },
             {
               "id": "D",
@@ -492,7 +499,8 @@
             }
           ],
           "answer": "D",
-          "explanation": "Voce pode me ligar?"
+          "explanation": "Você pode me ligar?",
+          "pinyin": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?"
         },
         {
           "id": 19,
@@ -509,7 +517,7 @@
             },
             {
               "id": "C",
-              "label": "uma pessoa trabalhando no escritorio"
+              "label": "uma pessoa trabalhando no escritório"
             },
             {
               "id": "D",
@@ -521,7 +529,8 @@
             }
           ],
           "answer": "B",
-          "explanation": "Nossa universidade e grande e tambem bonita."
+          "explanation": "Nossa universidade é grande e também bonita.",
+          "pinyin": "Wǒmen dàxué hěn dà, yě hěn piàoliang."
         },
         {
           "id": 20,
@@ -538,7 +547,7 @@
             },
             {
               "id": "C",
-              "label": "uma pessoa trabalhando no escritorio"
+              "label": "uma pessoa trabalhando no escritório"
             },
             {
               "id": "D",
@@ -550,7 +559,8 @@
             }
           ],
           "answer": "A",
-          "explanation": "Prazer em te conhecer."
+          "explanation": "Prazer em te conhecer.",
+          "pinyin": "Rènshi nǐ hěn gāoxìng."
         }
       ]
     },
@@ -566,7 +576,9 @@
           "prompt": "巴西人 / 是 / 你 / 吗",
           "answer": "你是巴西人吗",
           "answerLabel": "你是巴西人吗？",
-          "explanation": "Nǐ shì Bāxī rén ma?"
+          "explanation": "Nǐ shì Bāxī rén ma?",
+          "answerPinyin": "Nǐ shì Bāxī rén ma?",
+          "pinyin": "Bāxī rén / shì / nǐ / ma"
         },
         {
           "id": 22,
@@ -574,7 +586,9 @@
           "prompt": "她 / 汉语 / 学习 / 在中国",
           "answer": "她在中国学习汉语",
           "answerLabel": "她在中国学习汉语。",
-          "explanation": "Tā zài Zhōngguó xuéxí Hànyǔ."
+          "explanation": "Tā zài Zhōngguó xuéxí Hànyǔ.",
+          "answerPinyin": "Tā zài Zhōngguó xuéxí Hànyǔ.",
+          "pinyin": "tā / Hànyǔ / xuéxí / zài Zhōngguó"
         },
         {
           "id": 23,
@@ -582,7 +596,9 @@
           "prompt": "说 / 只 / 我 / 葡萄牙语",
           "answer": "我只说葡萄牙语",
           "answerLabel": "我只说葡萄牙语。",
-          "explanation": "Wǒ zhǐ shuō Pútáoyáyǔ."
+          "explanation": "Wǒ zhǐ shuō Pútáoyáyǔ.",
+          "answerPinyin": "Wǒ zhǐ shuō Pútáoyáyǔ.",
+          "pinyin": "shuō / zhǐ / wǒ / Pútáoyáyǔ"
         },
         {
           "id": 24,
@@ -590,7 +606,9 @@
           "prompt": "公司 / 工作 / 他 / 在",
           "answer": "他在公司工作",
           "answerLabel": "他在公司工作。",
-          "explanation": "Tā zài gōngsī gōngzuò."
+          "explanation": "Tā zài gōngsī gōngzuò.",
+          "answerPinyin": "Tā zài gōngsī gōngzuò.",
+          "pinyin": "gōngsī / gōngzuò / tā / zài"
         },
         {
           "id": 25,
@@ -598,50 +616,56 @@
           "prompt": "你的 / 怎么样 / 大学",
           "answer": "你的大学怎么样",
           "answerLabel": "你的大学怎么样？",
-          "explanation": "Nǐ de dàxué zěnmeyàng?"
+          "explanation": "Nǐ de dàxué zěnmeyàng?",
+          "answerPinyin": "Nǐ de dàxué zěnmeyàng?",
+          "pinyin": "nǐ de / zěnmeyàng / dàxué"
         }
       ]
     },
     {
       "id": "parte-3-traducao",
       "title": "六、翻译",
-      "shortTitle": "Traducao",
-      "instructions": "Traduza as frases para o chines.",
+      "shortTitle": "Tradução",
+      "instructions": "Traduza as frases para o chinês.",
       "questions": [
         {
           "id": 26,
           "type": "translation",
-          "prompt": "Minha mae so fala portugues.",
+          "prompt": "Minha mãe só fala português.",
           "answer": "我妈妈只说葡萄牙语",
           "answerLabel": "我妈妈只说葡萄牙语。",
-          "explanation": "Wǒ māma zhǐ shuō Pútáoyáyǔ."
+          "explanation": "Wǒ māma zhǐ shuō Pútáoyáyǔ.",
+          "answerPinyin": "Wǒ māma zhǐ shuō Pútáoyáyǔ."
         },
         {
           "id": 27,
           "type": "translation",
-          "prompt": "Elas estudam chines no Brasil.",
+          "prompt": "Elas estudam chinês no Brasil.",
           "answer": "她们在巴西学习汉语",
           "answerLabel": "她们在巴西学习汉语。",
-          "explanation": "Tāmen zài Bāxī xuéxí Hànyǔ."
+          "explanation": "Tāmen zài Bāxī xuéxí Hànyǔ.",
+          "answerPinyin": "Tāmen zài Bāxī xuéxí Hànyǔ."
         },
         {
           "id": 28,
           "type": "translation",
-          "prompt": "Voce e brasileiro ou canadense?",
+          "prompt": "Você é brasileiro ou canadense?",
           "answer": "你是巴西人还是加拿大人",
           "answerLabel": "你是巴西人还是加拿大人？",
-          "explanation": "Nǐ shì Bāxī rén háishi Jiānádà rén?"
+          "explanation": "Nǐ shì Bāxī rén háishi Jiānádà rén?",
+          "answerPinyin": "Nǐ shì Bāxī rén háishi Jiānádà rén?"
         },
         {
           "id": 29,
           "type": "translation",
-          "prompt": "A nossa universidade e grande e bonita.",
+          "prompt": "A nossa universidade é grande e bonita.",
           "answer": [
             "我们大学很大也很漂亮",
             "我们的大学很大也很漂亮"
           ],
           "answerLabel": "我们大学很大，也很漂亮。",
-          "explanation": "Wǒmen dàxué hěn dà, yě hěn piàoliang."
+          "explanation": "Wǒmen dàxué hěn dà, yě hěn piàoliang.",
+          "answerPinyin": "Wǒmen dàxué hěn dà, yě hěn piàoliang."
         },
         {
           "id": 30,
@@ -649,7 +673,8 @@
           "prompt": "Posso te enviar um e-mail?",
           "answer": "我可以给你发电子邮件吗",
           "answerLabel": "我可以给你发电子邮件吗？",
-          "explanation": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?"
+          "explanation": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?",
+          "answerPinyin": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?"
         }
       ]
     }

@@ -1,11 +1,21 @@
 {
   "exams": [
     {
-      "title": "Prova Simulada - Chines Basico 1",
+      "id": "basico-1-simulado",
+      "title": "Simulado 1",
       "path": "./exams/basico-1-simulado.json",
-      "level": "Basico 1",
-      "description": "Revisao com audio, lacunas, relacao imagem-frase, ordem correta e traducao.",
+      "level": "Chinês Básico 1",
+      "description": "Revisão com áudio, lacunas, relação imagem-frase, ordem correta e tradução.",
       "questionCount": 30,
+      "audioCount": 10
+    },
+    {
+      "id": "basico-1-simulado-2",
+      "title": "Simulado 2",
+      "path": "./exams/basico-1-simulado-2.json",
+      "level": "Chinês Básico 1+",
+      "description": "Versão mais difícil com foco em 在 e 给, frases compostas e tradução.",
+      "questionCount": 40,
       "audioCount": 10
     }
   ]

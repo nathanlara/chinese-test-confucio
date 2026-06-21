@@ -8,9 +8,12 @@ const envPath = path.join(rootDir, ".env");
 const defaultExamPath = path.join(rootDir, "exams", "basico-1-simulado.json");
 const outputDir = path.join(rootDir, "assets", "audio");
 
-const args = new Set(process.argv.slice(2));
+const rawArgs = process.argv.slice(2);
+const args = new Set(rawArgs);
 const dryRun = args.has("--dry-run");
 const force = args.has("--force");
+const examArg = getArgValue("--exam");
+const prefixArg = getArgValue("--prefix");
 
 loadEnv(envPath);
 
@@ -22,11 +25,13 @@ const instructions =
   "Speak Mandarin Chinese clearly and naturally for a beginner listening exam. Use a calm teacher-like pace, accurate pronunciation, and no extra words.";
 
 if (!dryRun && (!apiKey || apiKey === "coloque_sua_key_aqui" || apiKey === "sk-proj...")) {
-  console.error("OPENAI_API_KEY nao configurada. Edite .env antes de gerar os audios.");
+  console.error("OPENAI_API_KEY não configurada. Edite .env antes de gerar os áudios.");
   process.exit(1);
 }
 
-const exam = JSON.parse(await readFile(defaultExamPath, "utf8"));
+const examPath = examArg ? path.resolve(rootDir, examArg) : defaultExamPath;
+const exam = JSON.parse(await readFile(examPath, "utf8"));
+const filePrefix = prefixArg || exam.id || "basico-1";
 const audioQuestions = exam.sections
   .flatMap((section) => section.questions)
   .filter((question) => question.audioText);
@@ -34,7 +39,7 @@ const audioQuestions = exam.sections
 await mkdir(outputDir, { recursive: true });
 
 for (const question of audioQuestions) {
-  const fileName = `basico-1-q${String(question.id).padStart(2, "0")}.mp3`;
+  const fileName = `${filePrefix}-q${String(question.id).padStart(2, "0")}.mp3`;
   const outputPath = path.join(outputDir, fileName);
   const relativePath = `./assets/audio/${fileName}`;
 
@@ -62,14 +67,14 @@ for (const question of audioQuestions) {
 }
 
 if (!dryRun) {
-  await writeFile(defaultExamPath, `${JSON.stringify(exam, null, 2)}\n`);
+  await writeFile(examPath, `${JSON.stringify(exam, null, 2)}\n`);
 }
 
 if (dryRun) {
-  console.log("Dry run concluido. Nenhum audio foi gerado.");
+  console.log("Dry run concluído. Nenhum áudio foi gerado.");
 } else {
-  console.log(`Audios gerados em ${path.relative(rootDir, outputDir)}.`);
-  console.log(`JSON atualizado em ${path.relative(rootDir, defaultExamPath)}.`);
+  console.log(`Áudios gerados em ${path.relative(rootDir, outputDir)}.`);
+  console.log(`JSON atualizado em ${path.relative(rootDir, examPath)}.`);
 }
 
 async function createSpeech({ apiKey, model, voice, input, instructions }) {
@@ -119,6 +124,16 @@ function parseEnv(source) {
       return [key, value];
     })
     .filter(([key]) => key);
+}
+
+function getArgValue(name) {
+  const equalsArg = rawArgs.find((arg) => arg.startsWith(`${name}=`));
+  if (equalsArg) return equalsArg.slice(name.length + 1);
+
+  const index = rawArgs.indexOf(name);
+  if (index >= 0) return rawArgs[index + 1];
+
+  return null;
 }
 
 async function fileExists(filePath) {

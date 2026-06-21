@@ -343,9 +343,16 @@ h1 {
 
 .question-title p,
 .prompt-text,
-.explanation {
+.explanation,
+.pinyin {
   color: var(--muted);
   line-height: 1.6;
+}
+
+.pinyin {
+  margin: 0;
+  font-size: 0.92rem;
+  font-style: italic;
 }
 
 .badge {

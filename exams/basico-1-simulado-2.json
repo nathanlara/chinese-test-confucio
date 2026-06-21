@@ -1,0 +1,973 @@
+{
+  "id": "basico-1-simulado-2",
+  "title": "Simulado 2 - Chinês Básico 1 - 在 e 给",
+  "description": "Versão mais difícil com foco em 在, 给, frases compostas e vocabulário do Básico 1.",
+  "sections": [
+    {
+      "id": "parte-1-audio-vf",
+      "title": "一、听录音判断图片对错",
+      "shortTitle": "Áudio V/F",
+      "instructions": "Ouça o áudio e marque verdadeiro 对 ou falso 错.",
+      "questions": [
+        {
+          "id": 1,
+          "type": "true-false",
+          "prompt": "Imagem: uma mulher estudando em uma universidade.",
+          "image": {
+            "src": "./assets/images/mulher-estudando-universidade.png",
+            "alt": "Mulher estudando em uma universidade"
+          },
+          "audioText": "她在大学学习汉语。",
+          "audioSrc": "./assets/audio/basico-1-simulado-2-q01.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "true",
+          "answerLabel": "✓ 对",
+          "explanation": "她在大学学习汉语。= Ela estuda chinês na universidade."
+        },
+        {
+          "id": 2,
+          "type": "true-false",
+          "prompt": "Imagem: um homem trabalhando em um escritório.",
+          "image": {
+            "src": "./assets/images/homem-trabalhando-escritorio.png",
+            "alt": "Homem trabalhando em um escritório"
+          },
+          "audioText": "他在学校学习。",
+          "audioSrc": "./assets/audio/basico-1-simulado-2-q02.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "false",
+          "answerLabel": "✗ 错",
+          "explanation": "O áudio diz: 他在学校学习。= Ele estuda na escola. A imagem mostra trabalho no escritório."
+        },
+        {
+          "id": 3,
+          "type": "true-false",
+          "prompt": "Imagem: uma pessoa falando ao telefone.",
+          "image": {
+            "src": "./assets/images/telefone.png",
+            "alt": "Pessoa falando ao telefone"
+          },
+          "audioText": "我给你打电话。",
+          "audioSrc": "./assets/audio/basico-1-simulado-2-q03.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "true",
+          "answerLabel": "✓ 对",
+          "explanation": "我给你打电话。= Eu te ligo."
+        },
+        {
+          "id": 4,
+          "type": "true-false",
+          "prompt": "Imagem: uma pessoa escrevendo e-mail no computador.",
+          "image": {
+            "src": "./assets/images/email-computador.png",
+            "alt": "Pessoa escrevendo e-mail no computador"
+          },
+          "audioText": "他给我发电子邮件。",
+          "audioSrc": "./assets/audio/basico-1-simulado-2-q04.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "true",
+          "answerLabel": "✓ 对",
+          "explanation": "他给我发电子邮件。= Ele me envia um e-mail."
+        },
+        {
+          "id": 5,
+          "type": "true-false",
+          "prompt": "Imagem: uma bandeira do Canadá.",
+          "image": {
+            "src": "./assets/images/bandeira-canada.png",
+            "alt": "Bandeira do Canadá"
+          },
+          "audioText": "她不是加拿大人，她是中国人。",
+          "audioSrc": "./assets/audio/basico-1-simulado-2-q05.mp3",
+          "options": [
+            {
+              "id": "true",
+              "label": "✓ 对"
+            },
+            {
+              "id": "false",
+              "label": "✗ 错"
+            }
+          ],
+          "answer": "false",
+          "answerLabel": "✗ 错",
+          "explanation": "O áudio diz que ela não é canadense, é chinesa."
+        }
+      ]
+    },
+    {
+      "id": "parte-1-audio-imagem",
+      "title": "二、听录音选择图片",
+      "shortTitle": "Áudio imagem",
+      "instructions": "Ouça o áudio e escolha a imagem correspondente.",
+      "questions": [
+        {
+          "id": 6,
+          "type": "multiple-choice",
+          "prompt": "我在进出口公司工作。",
+          "audioText": "我在进出口公司工作。",
+          "audioSrc": "./assets/audio/basico-1-simulado-2-q06.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma universidade grande e bonita",
+              "image": {
+                "src": "./assets/images/universidade.png",
+                "alt": "Universidade grande e bonita"
+              }
+            },
+            {
+              "id": "B",
+              "label": "uma empresa / escritório",
+              "image": {
+                "src": "./assets/images/escritorio.png",
+                "alt": "Empresa ou escritório"
+              }
+            }
+          ],
+          "answer": "B",
+          "explanation": "我在进出口公司工作。= Eu trabalho em uma empresa de importação e exportação."
+        },
+        {
+          "id": 7,
+          "type": "multiple-choice",
+          "prompt": "我们大学很大，也很漂亮。",
+          "audioText": "我们大学很大，也很漂亮。",
+          "audioSrc": "./assets/audio/basico-1-simulado-2-q07.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma universidade grande e bonita",
+              "image": {
+                "src": "./assets/images/universidade.png",
+                "alt": "Universidade grande e bonita"
+              }
+            },
+            {
+              "id": "B",
+              "label": "uma empresa / escritório",
+              "image": {
+                "src": "./assets/images/escritorio.png",
+                "alt": "Empresa ou escritório"
+              }
+            }
+          ],
+          "answer": "A",
+          "explanation": "我们大学很大，也很漂亮。= Nossa universidade é grande e também bonita."
+        },
+        {
+          "id": 8,
+          "type": "multiple-choice",
+          "prompt": "你可以给我打电话吗？",
+          "audioText": "你可以给我打电话吗？",
+          "audioSrc": "./assets/audio/basico-1-simulado-2-q08.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma pessoa falando ao telefone",
+              "image": {
+                "src": "./assets/images/telefone.png",
+                "alt": "Pessoa falando ao telefone"
+              }
+            },
+            {
+              "id": "B",
+              "label": "uma pessoa enviando e-mail pelo computador",
+              "image": {
+                "src": "./assets/images/email-computador.png",
+                "alt": "Pessoa enviando e-mail pelo computador"
+              }
+            }
+          ],
+          "answer": "A",
+          "explanation": "你可以给我打电话吗？= Você pode me ligar?"
+        },
+        {
+          "id": 9,
+          "type": "multiple-choice",
+          "prompt": "我可以给你发电子邮件。",
+          "audioText": "我可以给你发电子邮件。",
+          "audioSrc": "./assets/audio/basico-1-simulado-2-q09.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma pessoa falando ao telefone",
+              "image": {
+                "src": "./assets/images/telefone.png",
+                "alt": "Pessoa falando ao telefone"
+              }
+            },
+            {
+              "id": "B",
+              "label": "uma pessoa enviando e-mail pelo computador",
+              "image": {
+                "src": "./assets/images/email-computador.png",
+                "alt": "Pessoa enviando e-mail pelo computador"
+              }
+            }
+          ],
+          "answer": "B",
+          "explanation": "我可以给你发电子邮件。= Posso te enviar um e-mail."
+        },
+        {
+          "id": 10,
+          "type": "multiple-choice",
+          "prompt": "认识你很高兴。",
+          "audioText": "认识你很高兴。",
+          "audioSrc": "./assets/audio/basico-1-simulado-2-q10.mp3",
+          "options": [
+            {
+              "id": "A",
+              "label": "uma sala de aula com professor",
+              "image": {
+                "src": "./assets/images/professora-sala.png",
+                "alt": "Sala de aula com professor"
+              }
+            },
+            {
+              "id": "B",
+              "label": "duas pessoas se cumprimentando",
+              "image": {
+                "src": "./assets/images/cumprimento.png",
+                "alt": "Duas pessoas se cumprimentando"
+              }
+            }
+          ],
+          "answer": "B",
+          "explanation": "认识你很高兴。= Prazer em te conhecer."
+        }
+      ]
+    },
+    {
+      "id": "parte-2-lacunas",
+      "title": "三、选词填空",
+      "shortTitle": "Lacunas",
+      "instructions": "Preencha as lacunas com as palavras abaixo. Você pode responder com a letra ou com a palavra.",
+      "sharedWordBank": [
+        {
+          "id": "A",
+          "text": "在",
+          "pinyin": "zài"
+        },
+        {
+          "id": "B",
+          "text": "给",
+          "pinyin": "gěi"
+        },
+        {
+          "id": "C",
+          "text": "只",
+          "pinyin": "zhǐ"
+        },
+        {
+          "id": "D",
+          "text": "还是",
+          "pinyin": "háishi"
+        },
+        {
+          "id": "E",
+          "text": "哪儿",
+          "pinyin": "nǎr"
+        },
+        {
+          "id": "F",
+          "text": "电子邮件",
+          "pinyin": "diànzǐ yóujiàn"
+        },
+        {
+          "id": "G",
+          "text": "电话号码",
+          "pinyin": "diànhuà hàomǎ"
+        }
+      ],
+      "questions": [
+        {
+          "id": 11,
+          "type": "fill-blank",
+          "prompt": "我 ______ 大学学习汉语。",
+          "pinyin": "Wǒ zài dàxué xuéxí Hànyǔ.",
+          "answer": [
+            "A",
+            "在"
+          ],
+          "answerLabel": "A - 在",
+          "explanation": "我在大学学习汉语。"
+        },
+        {
+          "id": 12,
+          "type": "fill-blank",
+          "prompt": "你可以 ______ 我打电话吗？",
+          "pinyin": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?",
+          "answer": [
+            "B",
+            "给"
+          ],
+          "answerLabel": "B - 给",
+          "explanation": "你可以给我打电话吗？"
+        },
+        {
+          "id": 13,
+          "type": "fill-blank",
+          "prompt": "我妈妈 ______ 说葡萄牙语。",
+          "pinyin": "Wǒ māma zhǐ shuō Pútáoyáyǔ.",
+          "answer": [
+            "C",
+            "只"
+          ],
+          "answerLabel": "C - 只",
+          "explanation": "我妈妈只说葡萄牙语。"
+        },
+        {
+          "id": 14,
+          "type": "fill-blank",
+          "prompt": "你说汉语 ______ 说法语？",
+          "pinyin": "Nǐ shuō Hànyǔ háishi shuō Fǎyǔ?",
+          "answer": [
+            "D",
+            "还是"
+          ],
+          "answerLabel": "D - 还是",
+          "explanation": "你说汉语还是说法语？"
+        },
+        {
+          "id": 15,
+          "type": "fill-blank",
+          "prompt": "你在 ______ 工作？",
+          "pinyin": "Nǐ zài nǎr gōngzuò?",
+          "answer": [
+            "E",
+            "哪儿"
+          ],
+          "answerLabel": "E - 哪儿",
+          "explanation": "你在哪儿工作？"
+        },
+        {
+          "id": 16,
+          "type": "fill-blank",
+          "prompt": "可以给我你的 ______ 吗？",
+          "pinyin": "Kěyǐ gěi wǒ nǐ de diànhuà hàomǎ ma?",
+          "answer": [
+            "G",
+            "电话号码"
+          ],
+          "answerLabel": "G - 电话号码",
+          "explanation": "可以给我你的电话号码吗？"
+        },
+        {
+          "id": 17,
+          "type": "fill-blank",
+          "prompt": "我可以给你发 ______。",
+          "pinyin": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn.",
+          "answer": [
+            "F",
+            "电子邮件"
+          ],
+          "answerLabel": "F - 电子邮件",
+          "explanation": "我可以给你发电子邮件。"
+        }
+      ]
+    },
+    {
+      "id": "parte-2-imagem-frase",
+      "title": "四、图文对应",
+      "shortTitle": "Imagem/frase",
+      "instructions": "Relacione cada frase com a imagem correta.",
+      "sharedOptions": [
+        {
+          "label": "A. pessoa estudando em uma universidade",
+          "image": {
+            "src": "./assets/images/mulher-estudando-universidade.png",
+            "alt": "Pessoa estudando em uma universidade"
+          }
+        },
+        {
+          "label": "B. pessoa trabalhando em uma empresa",
+          "image": {
+            "src": "./assets/images/homem-trabalhando-escritorio.png",
+            "alt": "Pessoa trabalhando em uma empresa"
+          }
+        },
+        {
+          "label": "C. pessoa falando ao telefone",
+          "image": {
+            "src": "./assets/images/telefone.png",
+            "alt": "Pessoa falando ao telefone"
+          }
+        },
+        {
+          "label": "D. pessoa enviando e-mail",
+          "image": {
+            "src": "./assets/images/email-computador.png",
+            "alt": "Pessoa enviando e-mail"
+          }
+        },
+        {
+          "label": "E. professor em sala de aula",
+          "image": {
+            "src": "./assets/images/professora-sala.png",
+            "alt": "Professor em sala de aula"
+          }
+        },
+        {
+          "label": "F. duas amigas sorrindo",
+          "image": {
+            "src": "./assets/images/mulheres-felizes.png",
+            "alt": "Duas amigas sorrindo"
+          }
+        },
+        {
+          "label": "G. bandeira do Brasil",
+          "image": {
+            "src": "./assets/images/brasil-mulher.png",
+            "alt": "Bandeira do Brasil"
+          }
+        },
+        {
+          "label": "H. bandeira da China",
+          "image": {
+            "src": "./assets/images/bandeira-china.png",
+            "alt": "Bandeira da China"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "id": 18,
+          "type": "match",
+          "prompt": "她在大学学习。",
+          "pinyin": "Tā zài dàxué xuéxí.",
+          "options": [
+            {
+              "id": "A",
+              "label": "pessoa estudando em uma universidade"
+            },
+            {
+              "id": "B",
+              "label": "pessoa trabalhando em uma empresa"
+            },
+            {
+              "id": "C",
+              "label": "pessoa falando ao telefone"
+            },
+            {
+              "id": "D",
+              "label": "pessoa enviando e-mail"
+            },
+            {
+              "id": "E",
+              "label": "professor em sala de aula"
+            },
+            {
+              "id": "F",
+              "label": "duas amigas sorrindo"
+            },
+            {
+              "id": "G",
+              "label": "bandeira do Brasil"
+            },
+            {
+              "id": "H",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "A",
+          "explanation": "Ela estuda na universidade."
+        },
+        {
+          "id": 19,
+          "type": "match",
+          "prompt": "他在公司工作。",
+          "pinyin": "Tā zài gōngsī gōngzuò.",
+          "options": [
+            {
+              "id": "A",
+              "label": "pessoa estudando em uma universidade"
+            },
+            {
+              "id": "B",
+              "label": "pessoa trabalhando em uma empresa"
+            },
+            {
+              "id": "C",
+              "label": "pessoa falando ao telefone"
+            },
+            {
+              "id": "D",
+              "label": "pessoa enviando e-mail"
+            },
+            {
+              "id": "E",
+              "label": "professor em sala de aula"
+            },
+            {
+              "id": "F",
+              "label": "duas amigas sorrindo"
+            },
+            {
+              "id": "G",
+              "label": "bandeira do Brasil"
+            },
+            {
+              "id": "H",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "B",
+          "explanation": "Ele trabalha na empresa."
+        },
+        {
+          "id": 20,
+          "type": "match",
+          "prompt": "我给你打电话。",
+          "pinyin": "Wǒ gěi nǐ dǎ diànhuà.",
+          "options": [
+            {
+              "id": "A",
+              "label": "pessoa estudando em uma universidade"
+            },
+            {
+              "id": "B",
+              "label": "pessoa trabalhando em uma empresa"
+            },
+            {
+              "id": "C",
+              "label": "pessoa falando ao telefone"
+            },
+            {
+              "id": "D",
+              "label": "pessoa enviando e-mail"
+            },
+            {
+              "id": "E",
+              "label": "professor em sala de aula"
+            },
+            {
+              "id": "F",
+              "label": "duas amigas sorrindo"
+            },
+            {
+              "id": "G",
+              "label": "bandeira do Brasil"
+            },
+            {
+              "id": "H",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "C",
+          "explanation": "Eu te ligo."
+        },
+        {
+          "id": 21,
+          "type": "match",
+          "prompt": "他给我发电子邮件。",
+          "pinyin": "Tā gěi wǒ fā diànzǐ yóujiàn.",
+          "options": [
+            {
+              "id": "A",
+              "label": "pessoa estudando em uma universidade"
+            },
+            {
+              "id": "B",
+              "label": "pessoa trabalhando em uma empresa"
+            },
+            {
+              "id": "C",
+              "label": "pessoa falando ao telefone"
+            },
+            {
+              "id": "D",
+              "label": "pessoa enviando e-mail"
+            },
+            {
+              "id": "E",
+              "label": "professor em sala de aula"
+            },
+            {
+              "id": "F",
+              "label": "duas amigas sorrindo"
+            },
+            {
+              "id": "G",
+              "label": "bandeira do Brasil"
+            },
+            {
+              "id": "H",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "D",
+          "explanation": "Ele me envia um e-mail."
+        },
+        {
+          "id": 22,
+          "type": "match",
+          "prompt": "她是老师。",
+          "pinyin": "Tā shì lǎoshī.",
+          "options": [
+            {
+              "id": "A",
+              "label": "pessoa estudando em uma universidade"
+            },
+            {
+              "id": "B",
+              "label": "pessoa trabalhando em uma empresa"
+            },
+            {
+              "id": "C",
+              "label": "pessoa falando ao telefone"
+            },
+            {
+              "id": "D",
+              "label": "pessoa enviando e-mail"
+            },
+            {
+              "id": "E",
+              "label": "professor em sala de aula"
+            },
+            {
+              "id": "F",
+              "label": "duas amigas sorrindo"
+            },
+            {
+              "id": "G",
+              "label": "bandeira do Brasil"
+            },
+            {
+              "id": "H",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "E",
+          "explanation": "Ela é professora."
+        },
+        {
+          "id": 23,
+          "type": "match",
+          "prompt": "她们很高兴。",
+          "pinyin": "Tāmen hěn gāoxìng.",
+          "options": [
+            {
+              "id": "A",
+              "label": "pessoa estudando em uma universidade"
+            },
+            {
+              "id": "B",
+              "label": "pessoa trabalhando em uma empresa"
+            },
+            {
+              "id": "C",
+              "label": "pessoa falando ao telefone"
+            },
+            {
+              "id": "D",
+              "label": "pessoa enviando e-mail"
+            },
+            {
+              "id": "E",
+              "label": "professor em sala de aula"
+            },
+            {
+              "id": "F",
+              "label": "duas amigas sorrindo"
+            },
+            {
+              "id": "G",
+              "label": "bandeira do Brasil"
+            },
+            {
+              "id": "H",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "F",
+          "explanation": "Elas estão muito felizes."
+        },
+        {
+          "id": 24,
+          "type": "match",
+          "prompt": "我是巴西人。",
+          "pinyin": "Wǒ shì Bāxī rén.",
+          "options": [
+            {
+              "id": "A",
+              "label": "pessoa estudando em uma universidade"
+            },
+            {
+              "id": "B",
+              "label": "pessoa trabalhando em uma empresa"
+            },
+            {
+              "id": "C",
+              "label": "pessoa falando ao telefone"
+            },
+            {
+              "id": "D",
+              "label": "pessoa enviando e-mail"
+            },
+            {
+              "id": "E",
+              "label": "professor em sala de aula"
+            },
+            {
+              "id": "F",
+              "label": "duas amigas sorrindo"
+            },
+            {
+              "id": "G",
+              "label": "bandeira do Brasil"
+            },
+            {
+              "id": "H",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "G",
+          "explanation": "Eu sou brasileiro."
+        },
+        {
+          "id": 25,
+          "type": "match",
+          "prompt": "他是中国人。",
+          "pinyin": "Tā shì Zhōngguó rén.",
+          "options": [
+            {
+              "id": "A",
+              "label": "pessoa estudando em uma universidade"
+            },
+            {
+              "id": "B",
+              "label": "pessoa trabalhando em uma empresa"
+            },
+            {
+              "id": "C",
+              "label": "pessoa falando ao telefone"
+            },
+            {
+              "id": "D",
+              "label": "pessoa enviando e-mail"
+            },
+            {
+              "id": "E",
+              "label": "professor em sala de aula"
+            },
+            {
+              "id": "F",
+              "label": "duas amigas sorrindo"
+            },
+            {
+              "id": "G",
+              "label": "bandeira do Brasil"
+            },
+            {
+              "id": "H",
+              "label": "bandeira da China"
+            }
+          ],
+          "answer": "H",
+          "explanation": "Ele é chinês."
+        }
+      ]
+    },
+    {
+      "id": "parte-2-ordem",
+      "title": "五、调整正确的语序",
+      "shortTitle": "Ordem",
+      "instructions": "Coloque as palavras na ordem correta.",
+      "questions": [
+        {
+          "id": 26,
+          "type": "word-order",
+          "prompt": "大学 / 在 / 我 / 学习 / 汉语",
+          "pinyin": "dàxué / zài / wǒ / xuéxí / Hànyǔ",
+          "answer": "我在大学学习汉语",
+          "answerLabel": "我在大学学习汉语。",
+          "answerPinyin": "Wǒ zài dàxué xuéxí Hànyǔ.",
+          "explanation": "Wǒ zài dàxué xuéxí Hànyǔ."
+        },
+        {
+          "id": 27,
+          "type": "word-order",
+          "prompt": "给 / 可以 / 我 / 你 / 打电话 / 吗",
+          "pinyin": "gěi / kěyǐ / wǒ / nǐ / dǎ diànhuà / ma",
+          "answer": "你可以给我打电话吗",
+          "answerLabel": "你可以给我打电话吗？",
+          "answerPinyin": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?",
+          "explanation": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?"
+        },
+        {
+          "id": 28,
+          "type": "word-order",
+          "prompt": "电子邮件 / 给 / 我 / 发 / 他",
+          "pinyin": "diànzǐ yóujiàn / gěi / wǒ / fā / tā",
+          "answer": "他给我发电子邮件",
+          "answerLabel": "他给我发电子邮件。",
+          "answerPinyin": "Tā gěi wǒ fā diànzǐ yóujiàn.",
+          "explanation": "Tā gěi wǒ fā diànzǐ yóujiàn."
+        },
+        {
+          "id": 29,
+          "type": "word-order",
+          "prompt": "在哪里 / 你 / 工作",
+          "pinyin": "zài nǎlǐ / nǐ / gōngzuò",
+          "answer": [
+            "你在哪里工作",
+            "你在哪儿工作"
+          ],
+          "answerLabel": "你在哪里工作？",
+          "answerPinyin": "Nǐ zài nǎlǐ gōngzuò?",
+          "explanation": "Nǐ zài nǎlǐ gōngzuò?"
+        },
+        {
+          "id": 30,
+          "type": "word-order",
+          "prompt": "只 / 葡萄牙语 / 我妈妈 / 说",
+          "pinyin": "zhǐ / Pútáoyáyǔ / wǒ māma / shuō",
+          "answer": "我妈妈只说葡萄牙语",
+          "answerLabel": "我妈妈只说葡萄牙语。",
+          "answerPinyin": "Wǒ māma zhǐ shuō Pútáoyáyǔ.",
+          "explanation": "Wǒ māma zhǐ shuō Pútáoyáyǔ."
+        },
+        {
+          "id": 31,
+          "type": "word-order",
+          "prompt": "公司 / 在 / 他 / 工作 / 进出口",
+          "pinyin": "gōngsī / zài / tā / gōngzuò / jìnchūkǒu",
+          "answer": "他在进出口公司工作",
+          "answerLabel": "他在进出口公司工作。",
+          "answerPinyin": "Tā zài jìnchūkǒu gōngsī gōngzuò.",
+          "explanation": "Tā zài jìnchūkǒu gōngsī gōngzuò."
+        },
+        {
+          "id": 32,
+          "type": "word-order",
+          "prompt": "电话号码 / 你的 / 可以 / 给我 / 吗",
+          "pinyin": "diànhuà hàomǎ / nǐ de / kěyǐ / gěi wǒ / ma",
+          "answer": "可以给我你的电话号码吗",
+          "answerLabel": "可以给我你的电话号码吗？",
+          "answerPinyin": "Kěyǐ gěi wǒ nǐ de diànhuà hàomǎ ma?",
+          "explanation": "Kěyǐ gěi wǒ nǐ de diànhuà hàomǎ ma?"
+        }
+      ]
+    },
+    {
+      "id": "parte-3-traducao",
+      "title": "六、翻译",
+      "shortTitle": "Tradução",
+      "instructions": "Traduza as frases para o chinês.",
+      "questions": [
+        {
+          "id": 33,
+          "type": "translation",
+          "prompt": "Eu estudo chinês na universidade.",
+          "answer": "我在大学学习汉语",
+          "answerLabel": "我在大学学习汉语。",
+          "answerPinyin": "Wǒ zài dàxué xuéxí Hànyǔ.",
+          "explanation": "Wǒ zài dàxué xuéxí Hànyǔ."
+        },
+        {
+          "id": 34,
+          "type": "translation",
+          "prompt": "Ele trabalha em uma empresa de importação e exportação.",
+          "answer": "他在进出口公司工作",
+          "answerLabel": "他在进出口公司工作。",
+          "answerPinyin": "Tā zài jìnchūkǒu gōngsī gōngzuò.",
+          "explanation": "Tā zài jìnchūkǒu gōngsī gōngzuò."
+        },
+        {
+          "id": 35,
+          "type": "translation",
+          "prompt": "Você pode me ligar?",
+          "answer": "你可以给我打电话吗",
+          "answerLabel": "你可以给我打电话吗？",
+          "answerPinyin": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?",
+          "explanation": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?"
+        },
+        {
+          "id": 36,
+          "type": "translation",
+          "prompt": "Posso te enviar um e-mail?",
+          "answer": "我可以给你发电子邮件吗",
+          "answerLabel": "我可以给你发电子邮件吗？",
+          "answerPinyin": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?",
+          "explanation": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?"
+        },
+        {
+          "id": 37,
+          "type": "translation",
+          "prompt": "Onde você estuda chinês?",
+          "answer": [
+            "你在哪儿学习汉语",
+            "你在哪里学习汉语"
+          ],
+          "answerLabel": "你在哪儿学习汉语？",
+          "answerPinyin": "Nǐ zài nǎr xuéxí Hànyǔ?",
+          "explanation": "Nǐ zài nǎr xuéxí Hànyǔ?"
+        },
+        {
+          "id": 38,
+          "type": "translation",
+          "prompt": "Minha mãe só fala português.",
+          "answer": "我妈妈只说葡萄牙语",
+          "answerLabel": "我妈妈只说葡萄牙语。",
+          "answerPinyin": "Wǒ māma zhǐ shuō Pútáoyáyǔ.",
+          "explanation": "Wǒ māma zhǐ shuō Pútáoyáyǔ."
+        },
+        {
+          "id": 39,
+          "type": "translation",
+          "prompt": "Ela é brasileira ou chinesa?",
+          "answer": "她是巴西人还是中国人",
+          "answerLabel": "她是巴西人还是中国人？",
+          "answerPinyin": "Tā shì Bāxī rén háishi Zhōngguó rén?",
+          "explanation": "Tā shì Bāxī rén háishi Zhōngguó rén?"
+        },
+        {
+          "id": 40,
+          "type": "translation",
+          "prompt": "Por favor, me dê seu número de telefone.",
+          "answer": "请给我你的电话号码",
+          "answerLabel": "请给我你的电话号码。",
+          "answerPinyin": "Qǐng gěi wǒ nǐ de diànhuà hàomǎ.",
+          "explanation": "Qǐng gěi wǒ nǐ de diànhuà hàomǎ."
+        }
+      ]
+    }
+  ]
+}

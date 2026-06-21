@@ -26,18 +26,22 @@ const normalizers = {
 
 async function loadExamIndex() {
   const response = await fetch("./exams/index.json");
-  if (!response.ok) throw new Error("Nao foi possivel carregar a lista de provas.");
+  if (!response.ok) throw new Error("Não foi possível carregar a lista de provas.");
   return response.json();
 }
 
 async function loadExam(path) {
   const response = await fetch(path);
-  if (!response.ok) throw new Error(`Nao foi possivel carregar ${path}.`);
+  if (!response.ok) throw new Error(`Não foi possível carregar ${path}.`);
   return response.json();
 }
 
 function fieldName(question) {
   return `question-${question.id}`;
+}
+
+function storageKey(exam = activeExam) {
+  return exam ? `chinese-test:${exam.id}:answers` : null;
 }
 
 function renderImageLike(item, className = "visual-prompt") {
@@ -59,8 +63,8 @@ function renderAudio(question) {
 
   return `
     <div class="audio-row">
-      <span class="audio-missing">Audio ainda nao adicionado.</span>
-      ${question.audioText ? `<span class="audio-missing">Transcricao para estudo: ${escapeHtml(question.audioText)}</span>` : ""}
+      <span class="audio-missing">Áudio ainda não adicionado.</span>
+      ${question.audioText ? `<span class="audio-missing">Transcrição para estudo: ${escapeHtml(question.audioText)}</span>` : ""}
     </div>
   `;
 }
@@ -101,7 +105,7 @@ function renderInput(question) {
   const name = fieldName(question);
 
   if (question.type === "translation" || question.type === "word-order") {
-    return `<textarea name="${name}" autocomplete="off" spellcheck="false" placeholder="Digite sua resposta em chines"></textarea>`;
+    return `<textarea name="${name}" autocomplete="off" spellcheck="false" placeholder="Digite sua resposta em chinês"></textarea>`;
   }
 
   if (question.type === "fill-blank") {
@@ -126,6 +130,7 @@ function renderQuestion(question) {
       <div class="question-header">
         <div class="question-title">
           <h3>${escapeHtml(question.prompt)}</h3>
+          ${question.pinyin && !question.audioSrc ? `<p class="pinyin">${escapeHtml(question.pinyin)}</p>` : ""}
           ${question.help ? `<p>${escapeHtml(question.help)}</p>` : ""}
         </div>
         <span class="badge">${question.id}</span>
@@ -170,7 +175,7 @@ function renderExam(exam) {
           <section class="section" id="${section.id}">
             <div class="section-heading">
               <h2>${escapeHtml(section.title)}</h2>
-              <span>${section.questions.length} questoes</span>
+              <span>${section.questions.length} questões</span>
             </div>
             ${section.instructions ? `<p class="prompt-text">${escapeHtml(section.instructions)}</p>` : ""}
             ${section.sharedWordBank ? renderSharedWordBank(section.sharedWordBank) : ""}
@@ -186,7 +191,8 @@ function renderExam(exam) {
     </div>
   `;
 
-  examForm.addEventListener("input", updateProgress, { once: false });
+  restoreAnswers();
+  examForm.addEventListener("input", handleAnswerInput, { once: false });
   document.querySelector("#clearBtn").addEventListener("click", clearAnswers);
   updateProgress();
 }
@@ -199,19 +205,19 @@ function renderExamCards(index) {
           <div>
             <span class="exam-card-kicker">${escapeHtml(exam.level || `Prova ${position + 1}`)}</span>
             <h3>${escapeHtml(exam.title)}</h3>
-            <p>${escapeHtml(exam.description || "Prova simulada com correcao automatica.")}</p>
+            <p>${escapeHtml(exam.description || "Prova simulada com correção automática.")}</p>
           </div>
           <dl class="exam-meta">
             <div>
-              <dt>Questoes</dt>
+              <dt>Questões</dt>
               <dd>${escapeHtml(exam.questionCount || "30")}</dd>
             </div>
             <div>
-              <dt>Audio</dt>
+              <dt>Áudio</dt>
               <dd>${escapeHtml(exam.audioCount || "10")}</dd>
             </div>
           </dl>
-          <button class="btn start-exam" type="button" data-exam-path="${escapeHtml(exam.path)}">Comecar prova</button>
+          <button class="btn start-exam" type="button" data-exam-path="${escapeHtml(exam.path)}">Começar prova</button>
         </article>
       `,
     )
@@ -228,6 +234,7 @@ async function startExam(path) {
   renderExam(exam);
   homeScreen.hidden = true;
   examScreen.hidden = false;
+  updateExamUrl(exam);
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -270,6 +277,47 @@ function getAnswer(question) {
   return String(data.get(fieldName(question)) || "").trim();
 }
 
+function getSavedAnswers() {
+  const answers = {};
+  getAllQuestions().forEach((question) => {
+    answers[fieldName(question)] = getAnswer(question);
+  });
+  return answers;
+}
+
+function saveAnswers() {
+  const key = storageKey();
+  if (!key) return;
+  localStorage.setItem(key, JSON.stringify(getSavedAnswers()));
+}
+
+function restoreAnswers() {
+  const key = storageKey();
+  if (!key) return;
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(key) || "{}");
+    Object.entries(saved).forEach(([name, value]) => {
+      const fields = examForm.elements[name];
+      if (!fields) return;
+
+      if (fields instanceof RadioNodeList) {
+        fields.value = value;
+        return;
+      }
+
+      fields.value = value;
+    });
+  } catch (error) {
+    localStorage.removeItem(key);
+  }
+}
+
+function handleAnswerInput() {
+  updateProgress();
+  saveAnswers();
+}
+
 function isCorrect(question, answer) {
   if (!answer) return false;
   const accepted = Array.isArray(question.answer) ? question.answer : [question.answer];
@@ -309,8 +357,9 @@ function gradeExam(event) {
       <span class="${correct ? "correct" : "incorrect"}">${correct ? "Correta" : "Revisar"}</span>
       <div>Sua resposta: ${escapeHtml(answer || "em branco")}</div>
       <div>Gabarito: ${escapeHtml(formatAnswer(question))}</div>
-      ${question.explanation ? `<div class="explanation">${escapeHtml(question.explanation)}</div>` : ""}
-      ${question.audioText ? `<div class="explanation">Audio: ${escapeHtml(question.audioText)}</div>` : ""}
+      ${question.answerPinyin ? `<div class="pinyin">${escapeHtml(question.answerPinyin)}</div>` : ""}
+      ${question.explanation && question.explanation !== question.answerPinyin ? `<div class="explanation">${escapeHtml(question.explanation)}</div>` : ""}
+      ${question.audioText ? `<div class="explanation">Áudio: ${escapeHtml(question.audioText)}</div>` : ""}
     `;
   });
 
@@ -343,8 +392,8 @@ function formatAnswer(question) {
 function getResultMessage(percent) {
   if (percent >= 90) return "Mandou muito bem.";
   if (percent >= 70) return "Boa base, vale revisar os erros.";
-  if (percent >= 50) return "Voce ja tem material para estudar com foco.";
-  return "Refaca com calma e compare cada resposta com o gabarito.";
+  if (percent >= 50) return "Você já tem material para estudar com foco.";
+  return "Refaça com calma e compare cada resposta com o gabarito.";
 }
 
 function updateProgress() {
@@ -358,6 +407,8 @@ function updateProgress() {
 function clearAnswers() {
   examForm.reset();
   gradedAnswers = null;
+  const key = storageKey();
+  if (key) localStorage.removeItem(key);
   document.querySelectorAll(".question").forEach((card) => {
     card.classList.remove("is-graded", "is-correct", "is-incorrect");
   });
@@ -382,6 +433,32 @@ function shouldShowOptionId(id) {
   return /^[A-Z0-9]{1,2}$/.test(String(id));
 }
 
+function getExamSlug(exam) {
+  return exam?.id || "";
+}
+
+function updateExamUrl(exam) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("exam", getExamSlug(exam));
+  window.history.replaceState({}, "", url);
+}
+
+function clearExamUrl() {
+  const url = new URL(window.location.href);
+  url.searchParams.delete("exam");
+  window.history.replaceState({}, "", url);
+}
+
+function findExamByQuery(index) {
+  const slug = new URLSearchParams(window.location.search).get("exam");
+  if (!slug) return null;
+
+  return index.exams.find((exam) => {
+    const pathSlug = exam.path.split("/").pop()?.replace(/\\.json$/, "");
+    return exam.id === slug || pathSlug === slug || exam.path === slug;
+  });
+}
+
 async function boot() {
   try {
     examIndex = await loadExamIndex();
@@ -396,12 +473,18 @@ async function boot() {
         activeExam = null;
         examScreen.hidden = true;
         homeScreen.hidden = false;
+        clearExamUrl();
         return;
       }
       await startExam(examSelect.value);
     });
 
     examForm.addEventListener("submit", gradeExam);
+
+    const linkedExam = findExamByQuery(examIndex);
+    if (linkedExam) {
+      await startExam(linkedExam.path);
+    }
   } catch (error) {
     homeScreen.innerHTML = `<div class="home-copy"><h2>Erro ao carregar</h2><p>${escapeHtml(error.message)}</p></div>`;
   }
