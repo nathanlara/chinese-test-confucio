@@ -9,7 +9,7 @@ const progressText = document.querySelector("#progressText");
 const progressBar = document.querySelector("#progressBar");
 const sectionNav = document.querySelector("#sectionNav");
 
-const APP_VERSION = "2026-06-22-1";
+const APP_VERSION = "2026-06-26-3";
 const APP_VERSION_KEY = "chinese-test:app-version";
 
 let activeExam = null;
@@ -120,15 +120,16 @@ function renderWordBank(question) {
   `;
 }
 
-function renderInput(question) {
+function renderInput(question, section) {
   const name = fieldName(question);
+  const placeholder = getAnswerPlaceholder(question, section);
 
   if (question.type === "translation" || question.type === "word-order") {
-    return `<textarea name="${name}" autocomplete="off" spellcheck="false" placeholder="Digite sua resposta em chinês"></textarea>`;
+    return `<textarea name="${name}" autocomplete="off" spellcheck="false" placeholder="${escapeHtml(placeholder)}"></textarea>`;
   }
 
   if (question.type === "fill-blank") {
-    return `<input type="text" name="${name}" autocomplete="off" placeholder="Letra ou palavra" />`;
+    return `<input type="text" name="${name}" autocomplete="off" placeholder="${escapeHtml(placeholder)}" />`;
   }
 
   if (question.type === "match") {
@@ -143,7 +144,22 @@ function renderInput(question) {
   return renderChoices(question);
 }
 
-function renderQuestion(question) {
+function getAnswerPlaceholder(question, section) {
+  if (question.placeholder) return question.placeholder;
+
+  if (activeExam?.uiVariant === "written-test") {
+    if (section?.id === "parte-1-vocabulario") return "Tradução em português";
+    if (question.type === "word-order") return "Escreva a frase completa";
+    if (question.type === "translation") return "Escreva em caracteres chineses";
+    return "Complete a lacuna";
+  }
+
+  if (question.type === "translation" || question.type === "word-order") return "Digite sua resposta em chinês";
+  if (question.type === "fill-blank") return "Resposta";
+  return "Resposta";
+}
+
+function renderQuestion(question, section) {
   const prompt = question.displayPrompt || question.prompt;
   return `
     <article class="question" id="q-${question.id}" data-question-id="${question.id}">
@@ -159,7 +175,7 @@ function renderQuestion(question) {
       ${question.audioSrc || question.audioText ? renderAudio(question) : ""}
       ${renderWordBank(question)}
       ${question.matchOptions ? renderMatchOptions(question.matchOptions) : ""}
-      ${renderInput(question)}
+      ${renderInput(question, section)}
       <div class="feedback" id="feedback-${question.id}"></div>
     </article>
   `;
@@ -178,10 +194,13 @@ function renderExam(exam) {
   gradedAnswers = null;
   results.hidden = true;
   results.innerHTML = "";
+  examScreen.dataset.variant = exam.uiVariant || "default";
+  examForm.className = `exam-form${exam.uiVariant ? ` ${exam.uiVariant}` : ""}`;
 
   examIntro.innerHTML = `
     <h2>${escapeHtml(exam.title)}</h2>
     <p>${escapeHtml(exam.description)}</p>
+    ${renderExamMeta(exam)}
   `;
 
   sectionNav.innerHTML = exam.sections
@@ -195,12 +214,12 @@ function renderExam(exam) {
           <section class="section" id="${section.id}">
             <div class="section-heading">
               <h2>${escapeHtml(section.title)}</h2>
-              <span>${section.questions.length} questões</span>
+              <span>${escapeHtml(formatSectionMeta(section))}</span>
             </div>
             ${section.instructions ? `<p class="prompt-text">${escapeHtml(section.instructions)}</p>` : ""}
             ${section.sharedWordBank ? renderSharedWordBank(section.sharedWordBank) : ""}
             ${section.sharedOptions ? renderSharedOptions(section.sharedOptions) : ""}
-            ${section.questions.map(renderQuestion).join("")}
+            ${section.questions.map((question) => renderQuestion(question, section)).join("")}
           </section>
         `,
       )
@@ -215,6 +234,26 @@ function renderExam(exam) {
   examForm.addEventListener("input", handleAnswerInput, { once: false });
   document.querySelector("#clearBtn").addEventListener("click", clearAnswers);
   updateProgress();
+}
+
+function renderExamMeta(exam) {
+  const meta = [
+    exam.suggestedTime ? ["Tempo sugerido", exam.suggestedTime] : null,
+    exam.totalPoints ? ["Total", exam.totalPoints] : null,
+  ].filter(Boolean);
+
+  if (!meta.length) return "";
+
+  return `
+    <dl class="written-meta">
+      ${meta.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}
+    </dl>
+  `;
+}
+
+function formatSectionMeta(section) {
+  if (section.points) return `${section.questions.length} questões · ${section.points}`;
+  return `${section.questions.length} questões`;
 }
 
 function renderExamCards(index) {
@@ -456,6 +495,7 @@ function shouldShowOptionId(id) {
 function shouldShowQuestionPinyin(question) {
   if (!question.pinyin) return false;
   if (question.audioSrc || question.audioText) return false;
+  if (activeExam?.uiVariant === "written-test") return true;
   if (question.type === "fill-blank") return false;
   return true;
 }

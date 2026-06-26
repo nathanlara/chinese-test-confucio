@@ -1,0 +1,694 @@
+{
+  "id": "basico-1-revisao-3-aula-16",
+  "title": "Revisão III - Aula 16 - Chinês Básico 1",
+  "description": "Prova de revisão com vocabulário, diálogos, partículas interrogativas, perguntas X不X, 在/给, demonstrativos, ordem de frases e tradução.",
+  "uiVariant": "written-test",
+  "suggestedTime": "60 min",
+  "totalPoints": "100 pontos",
+  "sections": [
+    {
+      "id": "parte-1-vocabulario",
+      "title": "Parte 1 - Vocabulário: escreva em português",
+      "shortTitle": "Vocabulário",
+      "instructions": "Traduza cada palavra para o português.",
+      "points": "10 pts",
+      "questions": [
+        {
+          "id": 1,
+          "type": "fill-blank",
+          "prompt": "老师 ->",
+          "pinyin": "lǎo shī",
+          "answer": ["professor", "professora", "professor(a)"],
+          "explanation": "老师 = professor(a)"
+        },
+        {
+          "id": 2,
+          "type": "fill-blank",
+          "prompt": "学生 ->",
+          "pinyin": "xué sheng",
+          "answer": ["estudante", "aluno", "aluna", "aluno(a)"],
+          "explanation": "学生 = estudante / aluno(a)"
+        },
+        {
+          "id": 3,
+          "type": "fill-blank",
+          "prompt": "朋友 ->",
+          "pinyin": "péng you",
+          "answer": ["amigo", "amiga", "amigo(a)"],
+          "explanation": "朋友 = amigo(a)"
+        },
+        {
+          "id": 4,
+          "type": "fill-blank",
+          "prompt": "公司 ->",
+          "pinyin": "gōng sī",
+          "answer": ["empresa", "companhia"],
+          "explanation": "公司 = empresa"
+        },
+        {
+          "id": 5,
+          "type": "fill-blank",
+          "prompt": "大学 ->",
+          "pinyin": "dà xué",
+          "answer": ["universidade", "faculdade"],
+          "explanation": "大学 = universidade"
+        },
+        {
+          "id": 6,
+          "type": "fill-blank",
+          "prompt": "电话号码 ->",
+          "pinyin": "diàn huà hào mǎ",
+          "answer": ["numero de telefone", "telefone", "número de telefone"],
+          "explanation": "电话号码 = número de telefone"
+        },
+        {
+          "id": 7,
+          "type": "fill-blank",
+          "prompt": "汉语 ->",
+          "pinyin": "hàn yǔ",
+          "answer": ["chines", "chinês", "idioma chines", "idioma chinês", "lingua chinesa", "língua chinesa"],
+          "explanation": "汉语 = chinês (idioma)"
+        },
+        {
+          "id": 8,
+          "type": "fill-blank",
+          "prompt": "学习 ->",
+          "pinyin": "xué xí",
+          "answer": ["estudar", "estudo"],
+          "explanation": "学习 = estudar"
+        },
+        {
+          "id": 9,
+          "type": "fill-blank",
+          "prompt": "漂亮 ->",
+          "pinyin": "piào liang",
+          "answer": ["bonito", "bonita", "bonito(a)", "lindo", "linda"],
+          "explanation": "漂亮 = bonito(a)"
+        },
+        {
+          "id": 10,
+          "type": "fill-blank",
+          "prompt": "高兴 ->",
+          "pinyin": "gāo xìng",
+          "answer": ["feliz", "contente", "alegre"],
+          "explanation": "高兴 = feliz / contente"
+        }
+      ]
+    },
+    {
+      "id": "parte-2-dialogos",
+      "title": "Parte 2 - Complete os diálogos",
+      "shortTitle": "Diálogos",
+      "instructions": "Complete com o verbo ou estrutura correta. Use cada item do banco uma vez.",
+      "points": "10 pts",
+      "sharedWordBank": [
+        {
+          "id": "1",
+          "text": "叫",
+          "pinyin": "jiào"
+        },
+        {
+          "id": "2",
+          "text": "是",
+          "pinyin": "shì"
+        },
+        {
+          "id": "3",
+          "text": "说",
+          "pinyin": "shuō"
+        },
+        {
+          "id": "4",
+          "text": "在",
+          "pinyin": "zài"
+        },
+        {
+          "id": "5",
+          "text": "喜欢",
+          "pinyin": "xǐ huan"
+        }
+      ],
+      "questions": [
+        {
+          "id": 11,
+          "type": "fill-blank",
+          "prompt": "你 ____ 什么名字？ - 我叫王月。",
+          "pinyin": "nǐ ____ shén me míng zi? - wǒ jiào Wáng Yuè.",
+          "answer": "叫",
+          "answerPinyin": "nǐ jiào shén me míng zi?",
+          "explanation": "你叫什么名字？"
+        },
+        {
+          "id": 12,
+          "type": "fill-blank",
+          "prompt": "你 ____ 哪国人？ - 我是中国人。",
+          "pinyin": "nǐ ____ nǎ guó rén? - wǒ shì Zhōng guó rén.",
+          "answer": "是",
+          "answerPinyin": "nǐ shì nǎ guó rén?",
+          "explanation": "你是哪国人？"
+        },
+        {
+          "id": 13,
+          "type": "fill-blank",
+          "prompt": "你 ____ 汉语吗？ - 我说汉语。",
+          "pinyin": "nǐ ____ hàn yǔ ma? - wǒ shuō hàn yǔ.",
+          "answer": "说",
+          "answerPinyin": "nǐ shuō hàn yǔ ma?",
+          "explanation": "你说汉语吗？"
+        },
+        {
+          "id": 14,
+          "type": "fill-blank",
+          "prompt": "你 ____ 哪里工作？ - 我在公司工作。",
+          "pinyin": "nǐ ____ nǎ lǐ gōng zuò? - wǒ zài gōng sī gōng zuò.",
+          "answer": "在",
+          "answerPinyin": "nǐ zài nǎ lǐ gōng zuò?",
+          "explanation": "你在哪里工作？"
+        },
+        {
+          "id": 15,
+          "type": "fill-blank",
+          "prompt": "你 ____ 喝茶吗？ - 我喜欢喝茶。",
+          "pinyin": "nǐ ____ hē chá ma? - wǒ xǐ huan hē chá.",
+          "answer": "喜欢",
+          "answerPinyin": "nǐ xǐ huan hē chá ma?",
+          "explanation": "你喜欢喝茶吗？"
+        }
+      ]
+    },
+    {
+      "id": "parte-3-particulas",
+      "title": "Parte 3 - Partículas interrogativas",
+      "shortTitle": "Partículas",
+      "instructions": "Preencha a lacuna. Use cada item do banco uma vez.",
+      "points": "12 pts",
+      "sharedWordBank": [
+        {
+          "id": "1",
+          "text": "吗",
+          "pinyin": "ma"
+        },
+        {
+          "id": "2",
+          "text": "呢",
+          "pinyin": "ne"
+        },
+        {
+          "id": "3",
+          "text": "哪",
+          "pinyin": "nǎ"
+        },
+        {
+          "id": "4",
+          "text": "什么",
+          "pinyin": "shén me"
+        },
+        {
+          "id": "5",
+          "text": "多少",
+          "pinyin": "duō shao"
+        },
+        {
+          "id": "6",
+          "text": "怎么样",
+          "pinyin": "zěn me yàng"
+        }
+      ],
+      "questions": [
+        {
+          "id": 16,
+          "type": "fill-blank",
+          "prompt": "你是老师 ____ ？",
+          "pinyin": "nǐ shì lǎo shī ____?",
+          "help": "Você é professor?",
+          "answer": "吗",
+          "answerPinyin": "nǐ shì lǎo shī ma?",
+          "explanation": "你是老师吗？"
+        },
+        {
+          "id": 17,
+          "type": "fill-blank",
+          "prompt": "你叫 ____ 名字？",
+          "pinyin": "nǐ jiào ____ míng zi?",
+          "help": "Como você se chama?",
+          "answer": "什么",
+          "answerPinyin": "nǐ jiào shén me míng zi?",
+          "explanation": "你叫什么名字？"
+        },
+        {
+          "id": 18,
+          "type": "fill-blank",
+          "prompt": "东方学院 ____ ？",
+          "pinyin": "Dōng fāng Xué yuàn ____?",
+          "help": "Como é o Instituto Oriental?",
+          "answer": "怎么样",
+          "answerPinyin": "Dōng fāng Xué yuàn zěn me yàng?",
+          "explanation": "东方学院怎么样？"
+        },
+        {
+          "id": 19,
+          "type": "fill-blank",
+          "prompt": "你是 ____ 国人？",
+          "pinyin": "nǐ shì ____ guó rén?",
+          "help": "De que país você é?",
+          "answer": "哪",
+          "answerPinyin": "nǐ shì nǎ guó rén?",
+          "explanation": "你是哪国人？"
+        },
+        {
+          "id": 20,
+          "type": "fill-blank",
+          "prompt": "我很好，你 ____ ？",
+          "pinyin": "wǒ hěn hǎo, nǐ ____?",
+          "help": "Eu estou bem, e você?",
+          "answer": "呢",
+          "answerPinyin": "wǒ hěn hǎo, nǐ ne?",
+          "explanation": "我很好，你呢？"
+        },
+        {
+          "id": 21,
+          "type": "fill-blank",
+          "prompt": "你的电话号码是 ____ ？",
+          "pinyin": "nǐ de diàn huà hào mǎ shì ____?",
+          "help": "Qual é o seu telefone?",
+          "answer": "多少",
+          "answerPinyin": "nǐ de diàn huà hào mǎ shì duō shao?",
+          "explanation": "你的电话号码是多少？"
+        }
+      ]
+    },
+    {
+      "id": "parte-4-x-bu-x",
+      "title": "Parte 4 - Perguntas X不X",
+      "shortTitle": "X不X",
+      "instructions": "Transforme a afirmação em pergunta. A pergunta X不X não leva 吗 no final; em adjetivos, o 很 some.",
+      "points": "12 pts",
+      "questions": [
+        {
+          "id": 22,
+          "type": "translation",
+          "prompt": "他是中国人。",
+          "pinyin": "tā shì Zhōng guó rén.",
+          "help": "Ele é chinês?",
+          "answer": "他是不是中国人？",
+          "answerPinyin": "tā shì bú shì Zhōng guó rén?",
+          "explanation": "Use 是不是, sem 吗."
+        },
+        {
+          "id": 23,
+          "type": "translation",
+          "prompt": "你喜欢喝茶。",
+          "pinyin": "nǐ xǐ huan hē chá.",
+          "help": "Você gosta de beber chá?",
+          "answer": ["你喜欢不喜欢喝茶？", "你喜不喜欢喝茶？"],
+          "answerPinyin": "nǐ xǐ huan bù xǐ huan hē chá?",
+          "explanation": "你喜欢不喜欢喝茶？ Também aceito: 你喜不喜欢喝茶？"
+        },
+        {
+          "id": 24,
+          "type": "translation",
+          "prompt": "学校大。",
+          "pinyin": "xué xiào dà.",
+          "help": "A escola é grande?",
+          "answer": "学校大不大？",
+          "answerPinyin": "xué xiào dà bu dà?",
+          "explanation": "Em perguntas X不X com adjetivo, não use 很."
+        },
+        {
+          "id": 25,
+          "type": "translation",
+          "prompt": "你说汉语。",
+          "pinyin": "nǐ shuō hàn yǔ.",
+          "help": "Você fala chinês?",
+          "answer": "你说不说汉语？",
+          "answerPinyin": "nǐ shuō bù shuō hàn yǔ?",
+          "explanation": "你说不说汉语？"
+        },
+        {
+          "id": 26,
+          "type": "translation",
+          "prompt": "东方学院漂亮。",
+          "pinyin": "Dōng fāng Xué yuàn piào liang.",
+          "help": "O Instituto Oriental é bonito?",
+          "answer": ["东方学院漂亮不漂亮？", "东方学院漂不漂亮？"],
+          "answerPinyin": "Dōng fāng Xué yuàn piào liang bù piào liang?",
+          "explanation": "东方学院漂亮不漂亮？ Também aceito: 东方学院漂不漂亮？"
+        },
+        {
+          "id": 27,
+          "type": "translation",
+          "prompt": "老师在。",
+          "pinyin": "lǎo shī zài.",
+          "help": "O professor está aqui?",
+          "answer": "老师在不在？",
+          "answerPinyin": "lǎo shī zài bú zài?",
+          "explanation": "老师在不在？"
+        }
+      ]
+    },
+    {
+      "id": "parte-5-zai-gei",
+      "title": "Parte 5 - Preencha com 在 ou 给",
+      "shortTitle": "在 / 给",
+      "instructions": "Escolha entre 在 (lugar / estar) e 给 (para alguém).",
+      "points": "10 pts",
+      "sharedWordBank": [
+        {
+          "id": "1",
+          "text": "在",
+          "pinyin": "zài"
+        },
+        {
+          "id": "2",
+          "text": "给",
+          "pinyin": "gěi"
+        }
+      ],
+      "questions": [
+        {
+          "id": 28,
+          "type": "fill-blank",
+          "prompt": "我 ____ 大学学习汉语。",
+          "pinyin": "wǒ ____ dà xué xué xí hàn yǔ.",
+          "help": "Estudo chinês na universidade.",
+          "answer": "在",
+          "answerPinyin": "wǒ zài dà xué xué xí hàn yǔ.",
+          "explanation": "我在大学学习汉语。"
+        },
+        {
+          "id": 29,
+          "type": "fill-blank",
+          "prompt": "老师 ____ 那里。",
+          "pinyin": "lǎo shī ____ nà lǐ.",
+          "help": "O professor está lá.",
+          "answer": "在",
+          "answerPinyin": "lǎo shī zài nà lǐ.",
+          "explanation": "老师在那里。"
+        },
+        {
+          "id": 30,
+          "type": "fill-blank",
+          "prompt": "可以 ____ 你打电话吗？",
+          "pinyin": "kě yǐ ____ nǐ dǎ diàn huà ma?",
+          "help": "Posso te ligar?",
+          "answer": "给",
+          "answerPinyin": "kě yǐ gěi nǐ dǎ diàn huà ma?",
+          "explanation": "可以给你打电话吗？"
+        },
+        {
+          "id": 31,
+          "type": "fill-blank",
+          "prompt": "你可以 ____ 我发电子邮件。",
+          "pinyin": "nǐ kě yǐ ____ wǒ fā diàn zǐ yóu jiàn.",
+          "help": "Você pode me enviar um e-mail.",
+          "answer": "给",
+          "answerPinyin": "nǐ kě yǐ gěi wǒ fā diàn zǐ yóu jiàn.",
+          "explanation": "你可以给我发电子邮件。"
+        },
+        {
+          "id": 32,
+          "type": "fill-blank",
+          "prompt": "你 ____ 哪儿学习？",
+          "pinyin": "nǐ ____ nǎr xué xí?",
+          "help": "Onde você estuda?",
+          "answer": "在",
+          "answerPinyin": "nǐ zài nǎr xué xí?",
+          "explanation": "你在哪儿学习？"
+        }
+      ]
+    },
+    {
+      "id": "parte-6-demonstrativos",
+      "title": "Parte 6 - Demonstrativos e lugar",
+      "shortTitle": "Demonstrativos",
+      "instructions": "Preencha a lacuna. Use cada item do banco uma vez.",
+      "points": "10 pts",
+      "sharedWordBank": [
+        {
+          "id": "1",
+          "text": "这",
+          "pinyin": "zhè"
+        },
+        {
+          "id": "2",
+          "text": "那",
+          "pinyin": "nà"
+        },
+        {
+          "id": "3",
+          "text": "这儿",
+          "pinyin": "zhèr"
+        },
+        {
+          "id": "4",
+          "text": "那里",
+          "pinyin": "nà lǐ"
+        },
+        {
+          "id": "5",
+          "text": "谁",
+          "pinyin": "shéi"
+        }
+      ],
+      "questions": [
+        {
+          "id": 33,
+          "type": "fill-blank",
+          "prompt": "____ 是我的朋友。",
+          "pinyin": "____ shì wǒ de péng you.",
+          "help": "Este é meu amigo.",
+          "answer": "这",
+          "answerPinyin": "zhè shì wǒ de péng you.",
+          "explanation": "这是我的朋友。"
+        },
+        {
+          "id": 34,
+          "type": "fill-blank",
+          "prompt": "____ 是王老师。",
+          "pinyin": "____ shì Wáng lǎo shī.",
+          "help": "Aquela é a professora Wang.",
+          "answer": "那",
+          "answerPinyin": "nà shì Wáng lǎo shī.",
+          "explanation": "那是王老师。"
+        },
+        {
+          "id": 35,
+          "type": "fill-blank",
+          "prompt": "我在 ____ 工作。",
+          "pinyin": "wǒ zài ____ gōng zuò.",
+          "help": "Eu trabalho aqui.",
+          "answer": "这儿",
+          "answerPinyin": "wǒ zài zhèr gōng zuò.",
+          "explanation": "我在这儿工作。"
+        },
+        {
+          "id": 36,
+          "type": "fill-blank",
+          "prompt": "老师在 ____ 。",
+          "pinyin": "lǎo shī zài ____.",
+          "help": "O professor está lá.",
+          "answer": "那里",
+          "answerPinyin": "lǎo shī zài nà lǐ.",
+          "explanation": "老师在那里。"
+        },
+        {
+          "id": 37,
+          "type": "fill-blank",
+          "prompt": "这是 ____ ？",
+          "pinyin": "zhè shì ____?",
+          "help": "Quem é este?",
+          "answer": "谁",
+          "answerPinyin": "zhè shì shéi?",
+          "explanation": "这是谁？"
+        }
+      ]
+    },
+    {
+      "id": "parte-7-hen-ye-xihuan",
+      "title": "Parte 7 - Preencha com 很, 也 ou 喜欢",
+      "shortTitle": "很 / 也 / 喜欢",
+      "instructions": "Complete cada frase com 很, 也 ou 喜欢.",
+      "points": "10 pts",
+      "sharedWordBank": [
+        {
+          "id": "1",
+          "text": "很",
+          "pinyin": "hěn"
+        },
+        {
+          "id": "2",
+          "text": "也",
+          "pinyin": "yě"
+        },
+        {
+          "id": "3",
+          "text": "喜欢",
+          "pinyin": "xǐ huan"
+        }
+      ],
+      "questions": [
+        {
+          "id": 38,
+          "type": "fill-blank",
+          "prompt": "孔子学院 ____ 好。",
+          "pinyin": "Kǒng zǐ Xué yuàn ____ hǎo.",
+          "help": "O Instituto Confúcio é muito bom.",
+          "answer": "很",
+          "answerPinyin": "Kǒng zǐ Xué yuàn hěn hǎo.",
+          "explanation": "孔子学院很好。"
+        },
+        {
+          "id": 39,
+          "type": "fill-blank",
+          "prompt": "东方学院很大，____ 很漂亮。",
+          "pinyin": "Dōng fāng Xué yuàn hěn dà, ____ hěn piào liang.",
+          "help": "... e também é bonito.",
+          "answer": "也",
+          "answerPinyin": "Dōng fāng Xué yuàn hěn dà, yě hěn piào liang.",
+          "explanation": "东方学院很大，也很漂亮。"
+        },
+        {
+          "id": 40,
+          "type": "fill-blank",
+          "prompt": "我 ____ 汉语。",
+          "pinyin": "wǒ ____ hàn yǔ.",
+          "help": "Eu gosto de chinês.",
+          "answer": "喜欢",
+          "answerPinyin": "wǒ xǐ huan hàn yǔ.",
+          "explanation": "我喜欢汉语。"
+        },
+        {
+          "id": 41,
+          "type": "fill-blank",
+          "prompt": "她 ____ 漂亮。",
+          "pinyin": "tā ____ piào liang.",
+          "help": "Ela é bonita.",
+          "answer": "很",
+          "answerPinyin": "tā hěn piào liang.",
+          "explanation": "她很漂亮。"
+        },
+        {
+          "id": 42,
+          "type": "fill-blank",
+          "prompt": "我喜欢喝茶，他 ____ 喜欢喝茶。",
+          "pinyin": "wǒ xǐ huan hē chá, tā ____ xǐ huan hē chá.",
+          "help": "... ele também gosta de beber chá.",
+          "answer": "也",
+          "answerPinyin": "wǒ xǐ huan hē chá, tā yě xǐ huan hē chá.",
+          "explanation": "我喜欢喝茶，他也喜欢喝茶。"
+        }
+      ]
+    },
+    {
+      "id": "parte-8-ordem",
+      "title": "Parte 8 - Ordene as palavras",
+      "shortTitle": "Ordem",
+      "instructions": "Escreva a frase completa, com pontuação.",
+      "points": "12 pts",
+      "questions": [
+        {
+          "id": 43,
+          "type": "word-order",
+          "prompt": "我 / 在 / 公司 / 工作",
+          "pinyin": "wǒ / zài / gōng sī / gōng zuò",
+          "answer": "我在公司工作。",
+          "answerPinyin": "wǒ zài gōng sī gōng zuò.",
+          "explanation": "我在公司工作。"
+        },
+        {
+          "id": 44,
+          "type": "word-order",
+          "prompt": "可以 / 给 / 你 / 打电话 / 吗",
+          "pinyin": "kě yǐ / gěi / nǐ / dǎ diàn huà / ma",
+          "answer": "可以给你打电话吗？",
+          "answerPinyin": "kě yǐ gěi nǐ dǎ diàn huà ma?",
+          "explanation": "可以给你打电话吗？"
+        },
+        {
+          "id": 45,
+          "type": "word-order",
+          "prompt": "你 / 喜欢 / 不 / 喜欢 / 喝茶",
+          "pinyin": "nǐ / xǐ huan / bù / xǐ huan / hē chá",
+          "answer": "你喜欢不喜欢喝茶？",
+          "answerPinyin": "nǐ xǐ huan bù xǐ huan hē chá?",
+          "explanation": "你喜欢不喜欢喝茶？"
+        },
+        {
+          "id": 46,
+          "type": "word-order",
+          "prompt": "东方学院 / 大 / 不 / 大",
+          "pinyin": "Dōng fāng Xué yuàn / dà / bu / dà",
+          "answer": "东方学院大不大？",
+          "answerPinyin": "Dōng fāng Xué yuàn dà bu dà?",
+          "explanation": "东方学院大不大？"
+        }
+      ]
+    },
+    {
+      "id": "parte-9-traducao",
+      "title": "Parte 9 - Tradução: português para chinês",
+      "shortTitle": "Tradução",
+      "instructions": "Escreva em caracteres chineses.",
+      "points": "14 pts",
+      "questions": [
+        {
+          "id": 47,
+          "type": "translation",
+          "prompt": "Eu sou brasileiro.",
+          "answer": ["我是巴西人。", "我是巴西的。"],
+          "answerPinyin": "wǒ shì Bā xī rén.",
+          "explanation": "我是巴西人。"
+        },
+        {
+          "id": 48,
+          "type": "translation",
+          "prompt": "Meu nome é Roberto.",
+          "answer": ["我叫罗伯特。", "我的名字是罗伯特。", "我叫Roberto。", "我叫 Roberto。"],
+          "answerPinyin": "wǒ jiào Luó bó tè.",
+          "explanation": "我叫罗伯特。 Também aceito: 我的名字是罗伯特 / 我叫 Roberto."
+        },
+        {
+          "id": 49,
+          "type": "translation",
+          "prompt": "A escola deles é grande e bonita.",
+          "answer": ["他们的学校很大，也很漂亮。", "他们学校很大，也很漂亮。", "他们的学校很大很漂亮。", "他们学校很大很漂亮。"],
+          "answerPinyin": "tā men de xué xiào hěn dà, yě hěn piào liang.",
+          "explanation": "他们的学校很大，也很漂亮。"
+        },
+        {
+          "id": 50,
+          "type": "translation",
+          "prompt": "Por favor, entre.",
+          "answer": "请进。",
+          "answerPinyin": "qǐng jìn.",
+          "explanation": "请进。"
+        },
+        {
+          "id": 51,
+          "type": "translation",
+          "prompt": "Posso te ligar?",
+          "answer": ["可以给你打电话吗？", "我可以给你打电话吗？"],
+          "answerPinyin": "kě yǐ gěi nǐ dǎ diàn huà ma?",
+          "explanation": "可以给你打电话吗？"
+        },
+        {
+          "id": 52,
+          "type": "translation",
+          "prompt": "Eu estudo chinês na universidade.",
+          "answer": ["我在大学学习汉语。", "我在大学学汉语。"],
+          "answerPinyin": "wǒ zài dà xué xué xí hàn yǔ.",
+          "explanation": "我在大学学习汉语。"
+        },
+        {
+          "id": 53,
+          "type": "translation",
+          "prompt": "Você gosta ou não de beber chá? Use X不X.",
+          "pinyin": "X bù X",
+          "answer": ["你喜欢不喜欢喝茶？", "你喜不喜欢喝茶？"],
+          "answerPinyin": "nǐ xǐ huan bù xǐ huan hē chá?",
+          "explanation": "你喜欢不喜欢喝茶？"
+        }
+      ]
+    }
+  ]
+}

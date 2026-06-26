@@ -26,6 +26,15 @@
       "description": "Profissões, saudações, horários, números, nacionalidades e tradução.",
       "questionCount": 30,
       "audioCount": 10
+    },
+    {
+      "id": "basico-1-revisao-3-aula-16",
+      "title": "Revisão III - Aula 16",
+      "path": "./exams/basico-1-revisao-3-aula-16.json",
+      "level": "Chinês Básico 1",
+      "description": "Prova de revisão com vocabulário, diálogos, partículas, X不X, 在/给, ordem de frases e tradução.",
+      "questionCount": 53,
+      "audioCount": 0
     }
   ]
 }
