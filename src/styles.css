@@ -279,6 +279,12 @@ body {
   overflow-wrap: anywhere;
 }
 
+.portal-copy h1 {
+  font-size: clamp(3.8rem, 7vw, 7rem);
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
 .page-intro {
   width: min(1180px, calc(100% - 2rem));
   margin: 0 auto;
