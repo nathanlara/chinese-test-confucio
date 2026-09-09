@@ -3,52 +3,46 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Prova de Chinês</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23b3262d'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='32' fill='white' font-family='Arial'%3EC%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./src/styles.css?v=2026-06-26-3" />
+    <title>Caderno de Exercícios Confúcio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23b3262d'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='32' fill='white' font-family='Arial'%3E习%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./src/styles.css?v=2026-09-09-8" />
   </head>
-  <body>
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">Estudo de Chinês</p>
-        <h1>Provas simuladas</h1>
-      </div>
-      <label class="exam-picker">
-        <span>Prova</span>
-        <select id="examSelect" aria-label="Selecionar prova"></select>
-      </label>
+  <body class="portal-body">
+    <header class="portal-nav">
+      <a class="portal-brand" href="./index.html">
+        <span>孔</span>
+        <div><strong>Caderno Confúcio</strong><small>Exercícios de chinês</small></div>
+      </a>
+      <nav aria-label="Navegação principal"><a href="./simulados.html">Testes</a><a href="./jogos.html">Jogos</a></nav>
     </header>
 
-    <main>
-      <section id="homeScreen" class="home-screen">
-        <div class="home-copy">
-          <p class="eyebrow">Central de prática</p>
-          <h2>Estude chinês com simulados feitos para revisar de verdade.</h2>
-          <p>Escolha um treino, responda no seu ritmo e veja o gabarito comentado ao final. Novos simulados e revisões podem entrar aqui conforme o curso avança.</p>
+    <main class="portal-home">
+      <section class="portal-hero">
+        <div class="portal-copy">
+          <p class="eyebrow">孔子学院 · Instituto Confúcio</p>
+          <h1>Caderno de<br />Exercícios Confúcio</h1>
+          <p>Um espaço para revisar o conteúdo das aulas, testar a compreensão e praticar chinês em pequenas sessões.</p>
         </div>
-        <div id="examCards" class="exam-cards" aria-label="Lista de provas"></div>
+        <div class="portal-seal" aria-hidden="true"><span>学</span><small>xué · aprender</small></div>
+      </section>
+
+      <section class="portal-destinations" aria-labelledby="destinationsTitle">
+        <div class="portal-section-heading"><p class="eyebrow">Por onde começar</p><h2 id="destinationsTitle">Escolha seu caderno</h2></div>
+        <div class="destination-list">
+          <a class="destination-link" href="./simulados.html">
+            <span class="destination-number">01</span>
+            <div><strong>Testes · Básico 1</strong><p>Simulados completos com áudio, imagens, tradução e correção comentada.</p></div>
+            <span class="destination-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="destination-link" href="./jogos.html">
+            <span class="destination-number">02</span>
+            <div><strong>Jogos · Classificadores</strong><p>20 classificadores e mais de 100 desafios com memória, lacunas, ordem, tradução e áudio.</p></div>
+            <span class="destination-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
       </section>
     </main>
 
-    <main id="examScreen" class="shell" hidden>
-      <aside class="sidebar" aria-label="Progresso da prova">
-        <div class="score-panel">
-          <span class="score-label">Progresso</span>
-          <strong id="progressText">0/0</strong>
-          <div class="progress-track" aria-hidden="true">
-            <div id="progressBar" class="progress-bar"></div>
-          </div>
-        </div>
-        <nav id="sectionNav" class="section-nav"></nav>
-      </aside>
-
-      <section class="workspace">
-        <div id="examIntro" class="exam-intro"></div>
-        <form id="examForm" class="exam-form"></form>
-        <section id="results" class="results" hidden></section>
-      </section>
-    </main>
-
-    <script src="./src/app.js?v=2026-06-26-3" type="module"></script>
+    <footer class="portal-footer"><span>中文练习</span><span>Aprenda no seu ritmo.</span></footer>
   </body>
 </html>

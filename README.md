@@ -1,6 +1,12 @@
 # Prova de Chinês
 
-App estático simples para estudar provas de chinês. Ele carrega provas em JSON, renderiza as questões e mostra a nota no final. Não usa banco de dados nem backend.
+Site estático de exercícios de chinês, organizado em três páginas:
+
+- `index.html`: portal Caderno de Exercícios Confúcio.
+- `simulados.html`: biblioteca de provas e revisões do Básico 1.
+- `jogos.html`: seis jogos, 20 classificadores e 106 desafios com correção imediata e áudio.
+
+Não usa banco de dados nem backend.
 
 ## Rodar localmente
 
@@ -10,7 +16,28 @@ Como o app usa `fetch` para ler os JSONs, rode um servidor local:
 python3 -m http.server 8000
 ```
 
-Depois acesse `http://localhost:8000`.
+Depois acesse `http://localhost:8000`. Use os links da capa para abrir os simulados ou os jogos.
+
+## Gerar áudios dos jogos com OpenRouter
+
+Os jogos usam o modelo `qwen/qwen-audio-3.0-tts-flash`, voz `loongjohn`, para gerar arquivos MP3.
+
+1. Adicione ao `.env`:
+
+```bash
+OPENROUTER_API_KEY=sua_chave
+OPENROUTER_TTS_MODEL=qwen/qwen-audio-3.0-tts-flash
+OPENROUTER_TTS_VOICE=loongjohn
+```
+
+2. Confira os 65 arquivos planejados e depois gere:
+
+```bash
+node scripts/generate-game-audio.mjs --dry-run
+node scripts/generate-game-audio.mjs
+```
+
+Os textos ficam em `games/classifier-audio.json` e os MP3 são salvos em `assets/audio/classifiers/`.
 
 ## Gerar áudios com OpenAI
 

@@ -1,7 +1,7 @@
 {
   "id": "basico-1-simulado",
   "title": "Simulado 1 - Chinês Básico 1",
-  "description": "30 questões para treinar compreensão auditiva, leitura, ordem de frases e tradução. Quando você adicionar arquivos de áudio, preencha audioSrc com o caminho dentro do repo.",
+  "description": "30 questões para treinar compreensão auditiva, leitura, ordem de frases e tradução.",
   "sections": [
     {
       "id": "parte-1-audio-vf",

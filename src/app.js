@@ -1,3 +1,13 @@
+import {
+  classifierLessons,
+  classifierPairs,
+  fillGameQuestions,
+  orderGameQuestions,
+  quickGameQuestions,
+  translateGameQuestions,
+  truthGameQuestions,
+} from "./classifier-content.js";
+
 const examSelect = document.querySelector("#examSelect");
 const examIntro = document.querySelector("#examIntro");
 const homeScreen = document.querySelector("#homeScreen");
@@ -8,13 +18,31 @@ const results = document.querySelector("#results");
 const progressText = document.querySelector("#progressText");
 const progressBar = document.querySelector("#progressBar");
 const sectionNav = document.querySelector("#sectionNav");
+const gameTabs = document.querySelector("#gameTabs");
+const gameWorkspace = document.querySelector("#gameWorkspace");
+const classifierGuide = document.querySelector("#classifierGuide");
 
-const APP_VERSION = "2026-06-26-3";
+const APP_VERSION = "2026-09-09-5";
 const APP_VERSION_KEY = "chinese-test:app-version";
 
 let activeExam = null;
 let gradedAnswers = null;
 let examIndex = null;
+let activeGame = "pairs";
+let pairGameState;
+let fillGameState = { index: 0, score: 0, answered: false };
+let quickGameState = { index: 0, score: 0, answered: false };
+let orderGameState = { index: 0, selected: [], score: 0, answered: false, tokens: [] };
+let translateGameState = { index: 0, score: 0, answered: false };
+let truthGameState = { index: 0, score: 0, answered: false };
+let activeGameAudio = null;
+
+pairGameState = createPairGameState();
+prepareQuestionDeck(fillGameQuestions, true);
+prepareQuestionDeck(quickGameQuestions, true);
+prepareQuestionDeck(orderGameQuestions);
+prepareQuestionDeck(translateGameQuestions, true);
+prepareQuestionDeck(truthGameQuestions);
 
 const normalizers = {
   text(value) {
@@ -294,7 +322,7 @@ async function startExam(path) {
   homeScreen.hidden = true;
   examScreen.hidden = false;
   updateExamUrl(exam);
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  examScreen.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function renderSharedWordBank(words) {
@@ -516,6 +544,569 @@ function clearExamUrl() {
   window.history.replaceState({}, "", url);
 }
 
+function createPairGameState() {
+  const roundPairs = shuffle(classifierPairs).slice(0, 12);
+  const cards = shuffle(
+    roundPairs.flatMap((pair) => [
+      { pairId: pair.id, kind: "classifier", label: pair.classifier, detail: pair.pinyin },
+      { pairId: pair.id, kind: "noun", label: pair.noun, detail: pair.phrase },
+    ]),
+  );
+
+  return { cards, pairCount: roundPairs.length, flipped: [], matched: [], attempts: 0, locked: false, lastMatch: null };
+}
+
+function shuffle(items) {
+  return [...items].sort(() => Math.random() - 0.5);
+}
+
+function prepareQuestionDeck(items, shuffleOptions = false) {
+  items.splice(0, items.length, ...shuffle(items));
+  if (shuffleOptions) {
+    items.forEach((item) => {
+      item.options = shuffle(item.options);
+    });
+  }
+}
+
+function renderClassifierEducation() {
+  const groups = classifierLessons.reduce((result, lesson) => {
+    if (!result.has(lesson.category)) result.set(lesson.category, []);
+    result.get(lesson.category).push(lesson);
+    return result;
+  }, new Map());
+
+  classifierGuide.innerHTML = [...groups.entries()]
+    .map(
+      ([category, lessons]) => `
+        <section class="lesson-group" aria-labelledby="lesson-${slugify(category)}">
+          <h3 id="lesson-${slugify(category)}">${escapeHtml(category)}</h3>
+          <div class="lesson-grid">
+            ${lessons
+              .map(
+                (lesson) => `
+                  <article class="classifier-lesson">
+                    <div class="lesson-symbol"><strong>${escapeHtml(lesson.classifier)}</strong><span>${escapeHtml(lesson.pinyin)}</span></div>
+                    <div class="lesson-copy">
+                      <h4>${escapeHtml(lesson.title)}</h4>
+                      <p>${escapeHtml(lesson.usage)}</p>
+                    </div>
+                    <ul class="lesson-examples" aria-label="Exemplos com ${escapeHtml(lesson.classifier)}">
+                      ${lesson.examples
+                        .map(
+                          ([hanzi, pinyin, translation]) => `
+                            <li><strong>${escapeHtml(hanzi)}</strong><span>${escapeHtml(pinyin)}</span><small>${escapeHtml(translation)}</small></li>
+                          `,
+                        )
+                        .join("")}
+                    </ul>
+                    ${renderGameAudio(lesson.audioSrc, `Ouvir ${lesson.examples[0][0]}`)}
+                  </article>
+                `,
+              )
+              .join("")}
+          </div>
+        </section>
+      `,
+    )
+    .join("");
+}
+
+function slugify(value) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function renderClassifierGames() {
+  const games = [
+    ["pairs", "Encontre os pares", "01 · memória · 12 pares"],
+    ["fill", "Complete a lacuna", `02 · frases · ${fillGameQuestions.length} rodadas`],
+    ["quick", "Escolha o classificador", `03 · escolha · ${quickGameQuestions.length} rodadas`],
+    ["order", "Monte a frase", `04 · ordem · ${orderGameQuestions.length} rodadas`],
+    ["translate", "Traduza rápido", `05 · tradução · ${translateGameQuestions.length} rodadas`],
+    ["truth", "Verdadeiro ou falso", `06 · revisão · ${truthGameQuestions.length} rodadas`],
+  ];
+
+  gameTabs.innerHTML = games
+    .map(
+      ([id, title, kicker]) => `
+        <button class="game-tab${activeGame === id ? " is-active" : ""}" type="button" role="tab" aria-selected="${activeGame === id}" data-game="${id}">
+          <span>${escapeHtml(kicker)}</span>
+          ${escapeHtml(title)}
+        </button>
+      `,
+    )
+    .join("");
+
+  gameTabs.querySelectorAll("[data-game]").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      activeGame = tab.dataset.game;
+      renderClassifierGames();
+    });
+  });
+
+  if (activeGame === "pairs") renderPairsGame();
+  if (activeGame === "fill") renderFillGame();
+  if (activeGame === "quick") renderQuickGame();
+  if (activeGame === "order") renderOrderGame();
+  if (activeGame === "translate") renderTranslateGame();
+  if (activeGame === "truth") renderTruthGame();
+}
+
+function renderPairsGame() {
+  const { cards, pairCount, flipped, matched, attempts, lastMatch } = pairGameState;
+  const isComplete = matched.length === cards.length;
+  const lastMatchedPair = classifierPairs.find((pair) => pair.id === lastMatch);
+
+  gameWorkspace.innerHTML = `
+    <div class="game-panel pairs-panel">
+      <div class="game-panel-copy">
+        <span class="game-index">01 / 06 · memória</span>
+        <h3>Encontre o par certo</h3>
+        <p>Vire uma peça de classificador e uma de substantivo. Quando combinarem, a expressão aparece completa.</p>
+        <div class="game-stats" aria-label="Progresso do jogo">
+          <span><strong>${matched.length / 2}</strong> / ${pairCount} pares</span>
+          <span><strong>${attempts}</strong> tentativas</span>
+        </div>
+        ${lastMatchedPair ? `<div class="match-listen"><strong>${escapeHtml(lastMatchedPair.phrase)}</strong>${renderGameAudio(lastMatchedPair.audioSrc, "Ouvir o par")}</div>` : ""}
+        <button class="btn secondary game-reset" type="button">Embaralhar de novo</button>
+      </div>
+      <div class="pairs-board" aria-label="Cartas para encontrar pares">
+        ${cards
+          .map((card, index) => {
+            const visible = flipped.includes(index) || matched.includes(index);
+            return `
+              <button class="pair-card${visible ? " is-visible" : ""}${matched.includes(index) ? " is-matched" : ""}" type="button" data-pair-index="${index}" aria-label="${visible ? escapeHtml(`${card.label} ${card.detail}`) : "Revelar carta"}" ${pairGameState.locked || matched.includes(index) ? "disabled" : ""}>
+                <span class="pair-card-back">?</span>
+                <span class="pair-card-front">
+                  <strong>${escapeHtml(card.label)}</strong>
+                  <small>${escapeHtml(card.detail)}</small>
+                </span>
+              </button>
+            `;
+          })
+          .join("")}
+      </div>
+      ${isComplete ? `<div class="game-success"><strong>Boa!</strong> Você encontrou todos os pares em ${attempts} tentativas.</div>` : ""}
+    </div>
+  `;
+
+  gameWorkspace.querySelector(".game-reset").addEventListener("click", () => {
+    pairGameState = createPairGameState();
+    renderPairsGame();
+  });
+
+  gameWorkspace.querySelectorAll("[data-pair-index]").forEach((card) => {
+    card.addEventListener("click", () => handlePairCardClick(Number(card.dataset.pairIndex)));
+  });
+}
+
+function handlePairCardClick(index) {
+  if (pairGameState.locked || pairGameState.flipped.includes(index) || pairGameState.matched.includes(index)) return;
+
+  pairGameState.flipped.push(index);
+  renderPairsGame();
+
+  if (pairGameState.flipped.length !== 2) return;
+
+  pairGameState.locked = true;
+  pairGameState.attempts += 1;
+  const [first, second] = pairGameState.flipped;
+  const isMatch = pairGameState.cards[first].pairId === pairGameState.cards[second].pairId;
+
+  window.setTimeout(() => {
+    if (isMatch) {
+      pairGameState.matched.push(first, second);
+      pairGameState.lastMatch = pairGameState.cards[first].pairId;
+    }
+    pairGameState.flipped = [];
+    pairGameState.locked = false;
+    renderPairsGame();
+  }, isMatch ? 420 : 760);
+}
+
+function renderFillGame() {
+  const question = fillGameQuestions[fillGameState.index];
+  if (!question) {
+    gameWorkspace.innerHTML = renderGameComplete("Lacunas completas", fillGameState.score, fillGameQuestions.length, "Você já praticou os classificadores mais comuns em frases.", "fill");
+    gameWorkspace.querySelector(".game-reset").addEventListener("click", resetFillGame);
+    return;
+  }
+
+  gameWorkspace.innerHTML = `
+    <div class="game-panel fill-panel">
+      <div class="game-panel-copy">
+        <span class="game-index">02 / 06 · frases</span>
+        <h3>Complete a lacuna</h3>
+        <p>Escolha o classificador que deixa a frase natural em chinês.</p>
+        <div class="game-stats"><span><strong>${fillGameState.index + 1}</strong> / ${fillGameQuestions.length}</span><span><strong>${fillGameState.score}</strong> acertos</span></div>
+      </div>
+      <div class="sentence-challenge">
+        <p class="challenge-sentence">${escapeHtml(question.sentence)}</p>
+        <p class="challenge-pinyin">${escapeHtml(question.pinyin)}</p>
+        ${renderGameAudio(question.audioSrc, "Ouvir a frase completa")}
+        <div class="answer-options" role="group" aria-label="Opções de resposta">
+          ${question.options.map((option) => `<button class="answer-option" type="button" data-fill-answer="${escapeHtml(option)}">${escapeHtml(option)}</button>`).join("")}
+        </div>
+        <div class="game-feedback" aria-live="polite"></div>
+      </div>
+    </div>
+  `;
+
+  gameWorkspace.querySelectorAll("[data-fill-answer]").forEach((button) => {
+    button.addEventListener("click", () => handleFillAnswer(button.dataset.fillAnswer));
+  });
+}
+
+function handleFillAnswer(answer) {
+  if (fillGameState.answered) return;
+  fillGameState.answered = true;
+  const question = fillGameQuestions[fillGameState.index];
+  const correct = answer === question.answer;
+  if (correct) fillGameState.score += 1;
+  renderFillGame();
+
+  const feedback = gameWorkspace.querySelector(".game-feedback");
+  feedback.className = `game-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+  feedback.innerHTML = `
+    <strong>${correct ? "Muito bem!" : `A resposta é ${escapeHtml(question.answer)}.`}</strong>
+    <span>${escapeHtml(question.translation)}</span>
+    <button class="btn${correct ? "" : " secondary"}" type="button" data-fill-next>${fillGameState.index + 1 === fillGameQuestions.length ? "Ver resultado" : "Próxima frase"}</button>
+  `;
+  gameWorkspace.querySelectorAll("[data-fill-answer]").forEach((button) => {
+    button.disabled = true;
+    button.classList.toggle("is-answer", button.dataset.fillAnswer === question.answer);
+    button.classList.toggle("is-selected", button.dataset.fillAnswer === answer);
+  });
+  gameWorkspace.querySelector("[data-fill-next]").addEventListener("click", () => {
+    fillGameState.index += 1;
+    fillGameState.answered = false;
+    renderFillGame();
+  });
+}
+
+function renderQuickGame() {
+  const question = quickGameQuestions[quickGameState.index];
+  if (!question) {
+    gameWorkspace.innerHTML = renderGameComplete("Rodada concluída", quickGameState.score, quickGameQuestions.length, "Repita a rodada para tentar superar sua pontuação.", "quick");
+    gameWorkspace.querySelector(".game-reset").addEventListener("click", resetQuickGame);
+    return;
+  }
+
+  gameWorkspace.innerHTML = `
+    <div class="game-panel quick-panel">
+      <div class="game-panel-copy">
+        <span class="game-index">03 / 06 · escolha</span>
+        <h3>Qual combina com ${escapeHtml(question.noun)}?</h3>
+        <p>Responda sem consultar a tabela. A rodada tem ${quickGameQuestions.length} perguntas.</p>
+        <div class="game-stats"><span><strong>${quickGameState.index + 1}</strong> / ${quickGameQuestions.length}</span><span><strong>${quickGameState.score}</strong> acertos</span></div>
+      </div>
+      <div class="quick-challenge">
+        <div class="noun-display"><strong>${escapeHtml(question.hanzi)}</strong><span>${escapeHtml(question.pinyin)} · ${escapeHtml(question.noun)}</span></div>
+        <div class="answer-options" role="group" aria-label="Escolher classificador">
+          ${question.options.map((option) => `<button class="answer-option" type="button" data-quick-answer="${escapeHtml(option)}">一${escapeHtml(option)}</button>`).join("")}
+        </div>
+        <div class="game-feedback" aria-live="polite"></div>
+      </div>
+    </div>
+  `;
+
+  gameWorkspace.querySelectorAll("[data-quick-answer]").forEach((button) => {
+    button.addEventListener("click", () => handleQuickAnswer(button.dataset.quickAnswer));
+  });
+}
+
+function handleQuickAnswer(answer) {
+  if (quickGameState.answered) return;
+  quickGameState.answered = true;
+  const question = quickGameQuestions[quickGameState.index];
+  const correct = answer === question.answer;
+  if (correct) quickGameState.score += 1;
+  renderQuickGame();
+
+  const feedback = gameWorkspace.querySelector(".game-feedback");
+  feedback.className = `game-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+  feedback.innerHTML = `
+    <strong>${correct ? "Acertou!" : `O correto é 一${escapeHtml(question.answer)}.`}</strong>
+    <span>${escapeHtml(question.hanzi)} = ${escapeHtml(question.noun)}</span>
+    ${renderGameAudio(question.audioSrc, "Ouvir expressão")}
+    <button class="btn${correct ? "" : " secondary"}" type="button" data-quick-next>${quickGameState.index + 1 === quickGameQuestions.length ? "Ver resultado" : "Próxima"}</button>
+  `;
+  gameWorkspace.querySelectorAll("[data-quick-answer]").forEach((button) => {
+    button.disabled = true;
+    button.classList.toggle("is-answer", button.dataset.quickAnswer === question.answer);
+    button.classList.toggle("is-selected", button.dataset.quickAnswer === answer);
+  });
+  gameWorkspace.querySelector("[data-quick-next]").addEventListener("click", () => {
+    quickGameState.index += 1;
+    quickGameState.answered = false;
+    renderQuickGame();
+  });
+}
+
+function renderOrderGame() {
+  const question = orderGameQuestions[orderGameState.index];
+  if (!question) {
+    gameWorkspace.innerHTML = renderGameComplete("Frases montadas", orderGameState.score, orderGameQuestions.length, "Você praticou a ordem básica de frases com classificadores.", "order");
+    gameWorkspace.querySelector(".game-reset").addEventListener("click", resetOrderGame);
+    return;
+  }
+
+  if (!orderGameState.tokens.length) {
+    orderGameState.tokens = shuffle(question.tokens.map((text, index) => ({ text, index })));
+  }
+
+  const selectedText = orderGameState.selected.map((index) => question.tokens[index]).join("") || "Clique nas peças para montar a frase";
+  gameWorkspace.innerHTML = `
+    <div class="game-panel order-panel">
+      <div class="game-panel-copy">
+        <span class="game-index">04 / 06 · ordem</span>
+        <h3>Monte a frase</h3>
+        <p>Use cada peça uma vez e organize a frase em chinês. A pista em português fica aqui ao lado.</p>
+        <div class="game-stats"><span><strong>${orderGameState.index + 1}</strong> / ${orderGameQuestions.length}</span><span><strong>${orderGameState.score}</strong> acertos</span></div>
+      </div>
+      <div class="order-challenge">
+        <p class="order-prompt">${escapeHtml(question.prompt)}</p>
+        <div class="order-answer${orderGameState.selected.length ? " has-tokens" : ""}">${escapeHtml(selectedText)}</div>
+        <div class="token-bank" role="group" aria-label="Peças da frase">
+          ${orderGameState.tokens.map((token) => `<button class="token-button${orderGameState.selected.includes(token.index) ? " is-used" : ""}" type="button" data-order-index="${token.index}" ${orderGameState.selected.includes(token.index) || orderGameState.answered ? "disabled" : ""}>${escapeHtml(token.text)}</button>`).join("")}
+        </div>
+        <div class="order-actions">
+          <button class="btn secondary" type="button" data-order-clear>Limpar</button>
+          <button class="btn" type="button" data-order-check ${orderGameState.selected.length !== question.tokens.length || orderGameState.answered ? "disabled" : ""}>Conferir</button>
+        </div>
+        <div class="game-feedback" aria-live="polite"></div>
+      </div>
+    </div>
+  `;
+
+  gameWorkspace.querySelectorAll("[data-order-index]").forEach((button) => {
+    button.addEventListener("click", () => {
+      orderGameState.selected.push(Number(button.dataset.orderIndex));
+      renderOrderGame();
+    });
+  });
+  gameWorkspace.querySelector("[data-order-clear]").addEventListener("click", () => {
+    orderGameState.selected = [];
+    renderOrderGame();
+  });
+  gameWorkspace.querySelector("[data-order-check]").addEventListener("click", checkOrderAnswer);
+}
+
+function checkOrderAnswer() {
+  if (orderGameState.answered) return;
+  const question = orderGameQuestions[orderGameState.index];
+  const answer = orderGameState.selected.map((index) => question.tokens[index]).join("");
+  const correct = answer === question.answer;
+  orderGameState.answered = true;
+  if (correct) orderGameState.score += 1;
+  renderOrderGame();
+
+  const feedback = gameWorkspace.querySelector(".game-feedback");
+  feedback.className = `game-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+  feedback.innerHTML = `
+    <strong>${correct ? "Frase correta!" : `A ordem é ${escapeHtml(question.answer)}`}</strong>
+    ${renderGameAudio(question.audioSrc, "Ouvir frase")}
+    <button class="btn${correct ? "" : " secondary"}" type="button" data-order-next>${orderGameState.index + 1 === orderGameQuestions.length ? "Ver resultado" : "Próxima frase"}</button>
+  `;
+  gameWorkspace.querySelector("[data-order-next]").addEventListener("click", () => {
+    orderGameState = { index: orderGameState.index + 1, selected: [], score: orderGameState.score, answered: false, tokens: [] };
+    renderOrderGame();
+  });
+}
+
+function renderTranslateGame() {
+  const question = translateGameQuestions[translateGameState.index];
+  if (!question) {
+    gameWorkspace.innerHTML = renderGameComplete("Traduções revisadas", translateGameState.score, translateGameQuestions.length, "Você revisou classificadores dentro de frases completas.", "translate");
+    gameWorkspace.querySelector(".game-reset").addEventListener("click", resetTranslateGame);
+    return;
+  }
+
+  gameWorkspace.innerHTML = `
+    <div class="game-panel translate-panel">
+      <div class="game-panel-copy">
+        <span class="game-index">05 / 06 · tradução</span>
+        <h3>Traduza rápido</h3>
+        <p>Leia a frase em português e escolha a versão correta em chinês.</p>
+        <div class="game-stats"><span><strong>${translateGameState.index + 1}</strong> / ${translateGameQuestions.length}</span><span><strong>${translateGameState.score}</strong> acertos</span></div>
+      </div>
+      <div class="translation-challenge">
+        <p class="translation-prompt">${escapeHtml(question.prompt)}</p>
+        <div class="translation-options" role="group" aria-label="Opções de tradução">
+          ${question.options.map((option) => `<button class="translation-option" type="button" data-translate-answer="${escapeHtml(option)}">${escapeHtml(option)}</button>`).join("")}
+        </div>
+        <div class="game-feedback" aria-live="polite"></div>
+      </div>
+    </div>
+  `;
+
+  gameWorkspace.querySelectorAll("[data-translate-answer]").forEach((button) => {
+    button.addEventListener("click", () => handleTranslateAnswer(button.dataset.translateAnswer));
+  });
+}
+
+function handleTranslateAnswer(answer) {
+  if (translateGameState.answered) return;
+  const question = translateGameQuestions[translateGameState.index];
+  const correct = answer === question.answer;
+  translateGameState.answered = true;
+  if (correct) translateGameState.score += 1;
+  renderTranslateGame();
+
+  const feedback = gameWorkspace.querySelector(".game-feedback");
+  feedback.className = `game-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+  feedback.innerHTML = `
+    <strong>${correct ? "Boa tradução!" : "Confira a frase correta."}</strong>
+    <span>${escapeHtml(question.answer)}</span>
+    ${renderGameAudio(question.audioSrc, "Ouvir frase")}
+    <button class="btn${correct ? "" : " secondary"}" type="button" data-translate-next>${translateGameState.index + 1 === translateGameQuestions.length ? "Ver resultado" : "Próxima"}</button>
+  `;
+  gameWorkspace.querySelectorAll("[data-translate-answer]").forEach((button) => {
+    button.disabled = true;
+    button.classList.toggle("is-answer", button.dataset.translateAnswer === question.answer);
+    button.classList.toggle("is-selected", button.dataset.translateAnswer === answer);
+  });
+  gameWorkspace.querySelector("[data-translate-next]").addEventListener("click", () => {
+    translateGameState = { index: translateGameState.index + 1, score: translateGameState.score, answered: false };
+    renderTranslateGame();
+  });
+}
+
+function renderTruthGame() {
+  const question = truthGameQuestions[truthGameState.index];
+  if (!question) {
+    gameWorkspace.innerHTML = renderGameComplete("Revisão concluída", truthGameState.score, truthGameQuestions.length, "Você conferiu usos corretos e erros comuns de classificadores.", "truth");
+    gameWorkspace.querySelector(".game-reset").addEventListener("click", resetTruthGame);
+    return;
+  }
+
+  gameWorkspace.innerHTML = `
+    <div class="game-panel truth-panel">
+      <div class="game-panel-copy">
+        <span class="game-index">06 / 06 · revisão</span>
+        <h3>Verdadeiro ou falso?</h3>
+        <p>Leia a expressão e decida se ela combina com a tradução apresentada.</p>
+        <div class="game-stats"><span><strong>${truthGameState.index + 1}</strong> / ${truthGameQuestions.length}</span><span><strong>${truthGameState.score}</strong> acertos</span></div>
+      </div>
+      <div class="truth-challenge">
+        <p class="truth-expression">${escapeHtml(question.sentence)}</p>
+        <p class="truth-translation">${escapeHtml(question.translation)}</p>
+        ${renderGameAudio(question.audioSrc, "Ouvir expressão")}
+        <div class="answer-options" role="group" aria-label="Responder verdadeiro ou falso">
+          <button class="answer-option" type="button" data-truth-answer="true">Verdadeiro</button>
+          <button class="answer-option" type="button" data-truth-answer="false">Falso</button>
+        </div>
+        <div class="game-feedback" aria-live="polite"></div>
+      </div>
+    </div>
+  `;
+
+  gameWorkspace.querySelectorAll("[data-truth-answer]").forEach((button) => {
+    button.addEventListener("click", () => handleTruthAnswer(button.dataset.truthAnswer === "true"));
+  });
+}
+
+function handleTruthAnswer(answer) {
+  if (truthGameState.answered) return;
+  const question = truthGameQuestions[truthGameState.index];
+  const correct = answer === question.answer;
+  truthGameState.answered = true;
+  if (correct) truthGameState.score += 1;
+  renderTruthGame();
+
+  const feedback = gameWorkspace.querySelector(".game-feedback");
+  feedback.className = `game-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+  feedback.innerHTML = `
+    <strong>${correct ? "Isso!" : "Ainda não."}</strong>
+    <span>${escapeHtml(question.explanation)}</span>
+    <button class="btn${correct ? "" : " secondary"}" type="button" data-truth-next>${truthGameState.index + 1 === truthGameQuestions.length ? "Ver resultado" : "Próxima"}</button>
+  `;
+  gameWorkspace.querySelectorAll("[data-truth-answer]").forEach((button) => {
+    button.disabled = true;
+    button.classList.toggle("is-answer", button.dataset.truthAnswer === String(question.answer));
+    button.classList.toggle("is-selected", button.dataset.truthAnswer === String(answer));
+  });
+  gameWorkspace.querySelector("[data-truth-next]").addEventListener("click", () => {
+    truthGameState = { index: truthGameState.index + 1, score: truthGameState.score, answered: false };
+    renderTruthGame();
+  });
+}
+
+function renderGameComplete(title, score, total, message, game) {
+  const step = { fill: "02", quick: "03", order: "04", translate: "05", truth: "06" }[game] || "03";
+  return `
+    <div class="game-panel game-complete">
+      <span class="game-index">${step} / 06 · resultado</span>
+      <div class="complete-mark">${score === total ? "满分" : `${score}/${total}`}</div>
+      <h3>${escapeHtml(title)}</h3>
+      <p>Você acertou <strong>${score} de ${total}</strong>. ${escapeHtml(message)}</p>
+      <button class="btn game-reset" type="button">Jogar novamente</button>
+    </div>
+  `;
+}
+
+function resetFillGame() {
+  prepareQuestionDeck(fillGameQuestions, true);
+  fillGameState = { index: 0, score: 0, answered: false };
+  renderFillGame();
+}
+
+function resetQuickGame() {
+  prepareQuestionDeck(quickGameQuestions, true);
+  quickGameState = { index: 0, score: 0, answered: false };
+  renderQuickGame();
+}
+
+function resetOrderGame() {
+  prepareQuestionDeck(orderGameQuestions);
+  orderGameState = { index: 0, selected: [], score: 0, answered: false, tokens: [] };
+  renderOrderGame();
+}
+
+function resetTranslateGame() {
+  prepareQuestionDeck(translateGameQuestions, true);
+  translateGameState = { index: 0, score: 0, answered: false };
+  renderTranslateGame();
+}
+
+function resetTruthGame() {
+  prepareQuestionDeck(truthGameQuestions);
+  truthGameState = { index: 0, score: 0, answered: false };
+  renderTruthGame();
+}
+
+function renderGameAudio(src, label) {
+  if (!src) return "";
+  return `<button class="audio-button" type="button" data-game-audio="${escapeHtml(src)}"><span aria-hidden="true">▶</span>${escapeHtml(label)}</button>`;
+}
+
+function handleGameAudioClick(event) {
+  const button = event.target.closest("[data-game-audio]");
+  if (!button) return;
+
+  if (activeGameAudio) activeGameAudio.pause();
+  activeGameAudio = new Audio(button.dataset.gameAudio);
+  const originalLabel = button.innerHTML;
+  button.classList.add("is-playing");
+  button.innerHTML = `<span aria-hidden="true">■</span> Tocando…`;
+
+  const restoreButton = () => {
+    button.classList.remove("is-playing");
+    button.innerHTML = originalLabel;
+  };
+  activeGameAudio.addEventListener("ended", restoreButton, { once: true });
+  activeGameAudio.addEventListener("error", () => {
+    restoreButton();
+    button.innerHTML = `<span aria-hidden="true">!</span> Áudio indisponível`;
+  }, { once: true });
+  activeGameAudio.play().catch(restoreButton);
+}
+
 function findExamByQuery(index) {
   const slug = new URLSearchParams(window.location.search).get("exam");
   if (!slug) return null;
@@ -542,6 +1133,7 @@ async function boot() {
         examScreen.hidden = true;
         homeScreen.hidden = false;
         clearExamUrl();
+        homeScreen.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
       await startExam(examSelect.value);
@@ -558,4 +1150,10 @@ async function boot() {
   }
 }
 
-boot();
+if (document.body.dataset.page === "exams") boot();
+if (document.body.dataset.page === "games") {
+  classifierGuide.addEventListener("click", handleGameAudioClick);
+  gameWorkspace.addEventListener("click", handleGameAudioClick);
+  renderClassifierEducation();
+  renderClassifierGames();
+}
