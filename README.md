@@ -1,12 +1,12 @@
-# Prova de Chinês
+# Caderno de Chinês
 
-Site estático de exercícios de chinês, organizado em três páginas:
+Site estático de estudos de chinês do Instituto Confúcio, organizado como uma experiência de caderno de aulas em três páginas:
 
-- `index.html`: portal Caderno de Exercícios Confúcio.
-- `simulados.html`: biblioteca de provas e revisões do Básico 1.
-- `jogos.html`: seis jogos, 20 classificadores e 106 desafios com correção imediata e áudio.
+- `index.html`: painel inicial com continuidade dos estudos, progresso, revisões, jogos e guia.
+- `simulados.html`: revisões e simulados do Básico 1 com correção automática e gabarito comentado.
+- `jogos.html`: seis jogos de classificadores (106 desafios) + guia de consulta com 20 verbetes e áudio.
 
-Não usa banco de dados nem backend.
+O progresso fica no `localStorage` do navegador: respostas, última nota e a última revisão aberta. Não usa banco de dados nem backend.
 
 ## Rodar localmente
 
@@ -16,7 +16,7 @@ Como o app usa `fetch` para ler os JSONs, rode um servidor local:
 python3 -m http.server 8000
 ```
 
-Depois acesse `http://localhost:8000`. Use os links da capa para abrir os simulados ou os jogos.
+Depois acesse `http://localhost:8000`. Use a navegação do topo para abrir as revisões ou os jogos.
 
 ## Gerar áudios dos jogos com OpenRouter
 

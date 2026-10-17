@@ -3,37 +3,75 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Testes Básico 1 · Caderno Confúcio</title>
+    <title>Revisões · Caderno Confúcio</title>
+    <meta name="description" content="Simulados e revisões do curso Básico 1 do Instituto Confúcio, com correção automática e respostas salvas." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23b3262d'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='32' fill='white' font-family='Arial'%3E习%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./src/styles.css?v=2026-09-09-8" />
+    <link rel="stylesheet" href="./src/styles.css?v=2026-10-17-6" />
   </head>
-  <body data-page="exams">
-    <header class="section-topbar">
-      <a class="portal-brand" href="./index.html"><span>孔</span><div><strong>Caderno Confúcio</strong><small>Exercícios de chinês</small></div></a>
-      <nav aria-label="Navegação principal"><a aria-current="page" href="./simulados.html">Testes</a><a href="./jogos.html">Jogos</a></nav>
-      <label class="exam-picker"><span>Ir para uma prova</span><select id="examSelect" aria-label="Selecionar prova"></select></label>
+  <body class="app-body" data-page="exams">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="./index.html" aria-label="Caderno Confúcio, ir para o início">
+          <span class="brand-seal" aria-hidden="true">孔</span>
+          <span class="brand-text"><strong>Caderno Confúcio</strong><small>Instituto Confúcio · Básico 1</small></span>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="./index.html">Início</a>
+          <a href="./simulados.html" aria-current="page">Revisões</a>
+          <a href="./jogos.html">Jogos</a>
+        </nav>
+      </div>
     </header>
 
-    <main class="exams-page">
+    <main class="app-main">
       <div id="homeScreen">
-        <section class="page-intro">
-          <p class="eyebrow">Caderno 01</p>
-          <h1>Testes<br />Básico 1</h1>
-          <p>Simulados e revisões para praticar compreensão auditiva, vocabulário, leitura e escrita.</p>
-        </section>
-        <section class="study-library" aria-labelledby="libraryTitle">
-          <div class="section-intro"><div><p class="eyebrow">Biblioteca</p><h2 id="libraryTitle">Escolha uma prova</h2></div><p>Seu progresso fica salvo neste navegador até você limpar as respostas.</p></div>
-          <div id="examCards" class="exam-cards" aria-label="Lista de provas"></div>
+        <header class="page-head">
+          <p class="eyebrow">Básico 1 · revisões</p>
+          <h1>Revisões</h1>
+          <p class="lede">Simulados e revisões para treinar compreensão auditiva, vocabulário, leitura e escrita. Escolha uma revisão, responda e corrija quando quiser.</p>
+        </header>
+
+        <section class="library" aria-labelledby="libraryTitle">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Todas as revisões</p>
+              <h2 id="libraryTitle">Escolha por onde continuar</h2>
+            </div>
+            <p class="helper-text">As respostas e a última nota ficam salvas neste navegador.</p>
+          </div>
+          <div id="examCards" class="exam-list" aria-label="Lista de revisões"></div>
         </section>
       </div>
-      <section id="examScreen" class="shell" hidden>
-        <aside class="sidebar" aria-label="Progresso da prova">
-          <div class="score-panel"><span class="score-label">Progresso</span><strong id="progressText">0/0</strong><div class="progress-track" aria-hidden="true"><div id="progressBar" class="progress-bar"></div></div></div>
-          <nav id="sectionNav" class="section-nav"></nav>
-        </aside>
-        <section class="workspace"><div id="examIntro" class="exam-intro"></div><form id="examForm" class="exam-form"></form><section id="results" class="results" hidden></section></section>
+
+      <section id="examScreen" class="exam-screen" hidden>
+        <div class="exam-sticky">
+          <div class="exam-topbar">
+            <button class="back-link" id="backToExams" type="button"><span aria-hidden="true">←</span> Todas as revisões</button>
+            <div class="exam-topbar-main">
+              <span class="exam-topbar-kicker" id="examToolbarKicker">Revisão</span>
+              <strong id="examToolbarTitle"></strong>
+            </div>
+            <div class="exam-topbar-progress" aria-live="polite">
+              <span id="progressText">0 de 0 respondidas</span>
+              <span class="progress-track" aria-hidden="true"><span id="progressBar" class="progress-bar"></span></span>
+            </div>
+          </div>
+          <nav id="sectionNav" class="section-tabs" aria-label="Seções da revisão"></nav>
+        </div>
+
+        <div class="exam-sheet">
+          <header id="examIntro" class="exam-intro"></header>
+          <form id="examForm" class="exam-form" novalidate></form>
+          <section id="results" class="results" aria-live="polite" hidden></section>
+        </div>
       </section>
     </main>
-    <script src="./src/app.js?v=2026-09-09-5" type="module"></script>
+
+    <footer class="site-footer">
+      <span>中文练习 · Caderno Confúcio</span>
+      <span>Correção automática · sem enviar nada para a internet.</span>
+    </footer>
+
+    <script src="./src/app.js?v=2026-10-17-6" type="module"></script>
   </body>
 </html>

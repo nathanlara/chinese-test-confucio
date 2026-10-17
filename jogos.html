@@ -3,50 +3,76 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jogos de Classificadores · Caderno Confúcio</title>
+    <title>Jogos · Caderno Confúcio</title>
+    <meta name="description" content="Jogos de classificadores chineses com áudio e correção imediata: memória, lacunas, escolha, ordem, tradução e verdadeiro ou falso." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23b3262d'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='32' fill='white' font-family='Arial'%3E习%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./src/styles.css?v=2026-09-09-9" />
+    <link rel="stylesheet" href="./src/styles.css?v=2026-10-17-6" />
   </head>
-  <body data-page="games">
-    <header class="section-topbar">
-      <a class="portal-brand" href="./index.html"><span>孔</span><div><strong>Caderno Confúcio</strong><small>Exercícios de chinês</small></div></a>
-      <nav aria-label="Navegação principal"><a href="./simulados.html">Testes</a><a aria-current="page" href="./jogos.html">Jogos</a></nav>
+  <body class="app-body" data-page="games">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="./index.html" aria-label="Caderno Confúcio, ir para o início">
+          <span class="brand-seal" aria-hidden="true">孔</span>
+          <span class="brand-text"><strong>Caderno Confúcio</strong><small>Instituto Confúcio · Básico 1</small></span>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="./index.html">Início</a>
+          <a href="./simulados.html">Revisões</a>
+          <a href="./jogos.html" aria-current="page">Jogos</a>
+        </nav>
+      </div>
     </header>
-    <main class="games-page">
-      <section class="page-intro games-intro">
-        <p class="eyebrow">Caderno 02</p>
-        <h1>Jogos de<br />Classificadores</h1>
-        <p>Treine 量词 com visão, memória, leitura e áudio. São 20 classificadores e mais de 100 desafios para avançar do básico ao uso cotidiano.</p>
+
+    <main class="app-main">
+      <header class="page-head">
+        <p class="eyebrow">Básico 1 · práticas</p>
+        <h1>Jogos de classificadores</h1>
+        <p class="lede">Seis formas curtas de treinar 量词: memória, lacunas, escolha, ordem, tradução e verdadeiro ou falso. Cada rodada corrige na hora e pode ser embaralhada de novo.</p>
+      </header>
+
+      <section id="classifierGames" class="games" aria-labelledby="gamesTitle">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Escolha uma prática</p>
+            <h2 id="gamesTitle">Seis jogos, 106 desafios</h2>
+          </div>
+          <p class="helper-text">Sem pressa. <a class="text-link" href="#guia">Consultar o guia ↓</a></p>
+        </div>
+        <div id="gameTabs" class="game-menu" role="group" aria-label="Escolher jogo"></div>
+        <div id="gameWorkspace" class="game-workspace" tabindex="-1"></div>
       </section>
-      <section id="classifierGames" class="classifier-games games-standalone" aria-labelledby="gamesTitle">
-        <div class="games-heading">
-          <div><p class="eyebrow">106 desafios em seis formatos</p><h2 id="gamesTitle">Escolha um jogo</h2></div>
-          <div class="games-heading-support">
-            <p>Ouça as palavras e frases, responda e receba a correção na hora. Embaralhe novamente para variar os pares.</p>
-            <a href="#educationTitle">Primeira vez com classificadores? Veja o guia ↓</a>
+
+      <section class="guide" id="guia" aria-labelledby="educationTitle">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Consulta</p>
+            <h2 id="educationTitle">Guia de classificadores</h2>
+          </div>
+          <p class="helper-text">Consulte quando precisar conferir um uso.</p>
+        </div>
+
+        <div class="guide-intro">
+          <p>Em chinês, o número não costuma vir diretamente antes do substantivo. Entre eles aparece uma palavra que indica o tipo, o formato ou a unidade do que está sendo contado. Leia a regra, compare os exemplos e use o áudio para repetir em voz alta.</p>
+          <div class="formula" aria-label="Fórmula: número mais classificador mais substantivo">
+            <div class="formula-part"><span>número</span><strong lang="zh-Hans">一</strong><small>yī · um</small></div>
+            <b aria-hidden="true">+</b>
+            <div class="formula-part"><span>classificador</span><strong lang="zh-Hans">本</strong><small>běn · para livros</small></div>
+            <b aria-hidden="true">+</b>
+            <div class="formula-part"><span>substantivo</span><strong lang="zh-Hans">书</strong><small>shū · livro</small></div>
+            <b aria-hidden="true">=</b>
+            <div class="formula-part is-result"><span>expressão</span><strong lang="zh-Hans">一本书</strong><small>yì běn shū · um livro</small></div>
           </div>
         </div>
-        <div id="gameTabs" class="game-tabs" role="tablist" aria-label="Escolher jogo"></div>
-        <div id="gameWorkspace" class="game-workspace"></div>
-      </section>
-      <section class="classifier-education" aria-labelledby="educationTitle">
-        <div class="education-heading">
-          <div><p class="eyebrow">Guia de apoio</p><h2 id="educationTitle">Como usar classificadores</h2></div>
-          <p>Em chinês, números não costumam vir diretamente antes do substantivo. Entre eles aparece uma palavra que indica o tipo, o formato ou a unidade do que está sendo contado.</p>
-        </div>
-        <div class="classifier-formula" aria-label="Fórmula: número mais classificador mais substantivo">
-          <div><span>Número</span><strong>一</strong><small>yī · um</small></div>
-          <b aria-hidden="true">+</b>
-          <div><span>Classificador</span><strong>本</strong><small>běn · para livros</small></div>
-          <b aria-hidden="true">+</b>
-          <div><span>Substantivo</span><strong>书</strong><small>shū · livro</small></div>
-          <b aria-hidden="true">=</b>
-          <div class="formula-result"><span>Expressão</span><strong>一本书</strong><small>yì běn shū · um livro</small></div>
-        </div>
-        <p class="education-note"><strong>Como estudar:</strong> leia a regra, compare os dois exemplos e use o botão de áudio para repetir a expressão em voz alta.</p>
+
         <div id="classifierGuide" class="classifier-guide"></div>
       </section>
     </main>
-    <script src="./src/app.js?v=2026-09-09-5" type="module"></script>
+
+    <footer class="site-footer">
+      <span>中文练习 · Caderno Confúcio</span>
+      <span>Áudios e correção rodam no navegador.</span>
+    </footer>
+
+    <script src="./src/app.js?v=2026-10-17-6" type="module"></script>
   </body>
 </html>
