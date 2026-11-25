@@ -28,7 +28,7 @@ const homeStatus = document.querySelector("#homeStatus");
 const homeExamCount = document.querySelector("#homeExamCount");
 const homeExamList = document.querySelector("#homeExamList");
 
-const APP_VERSION = "2026-11-25-3";
+const APP_VERSION = "2026-11-25-4";
 const STORAGE_VERSION = "2026-09-09-5";
 const STORAGE_VERSION_KEY = "chinese-test:app-version";
 const LAST_EXAM_KEY = "chinese-test:last-exam";
@@ -161,7 +161,7 @@ function renderImageLike(item, className = "visual-prompt") {
 
 function renderAudio(question) {
   if (question.audioSrc) {
-    return `<div class="audio-row">${renderGameAudio(question.audioSrc, "Ouvir o áudio")}</div>`;
+    return `<div class="audio-row">${renderGameAudio(withVersion(question.audioSrc), "Ouvir o áudio")}</div>`;
   }
 
   return `
