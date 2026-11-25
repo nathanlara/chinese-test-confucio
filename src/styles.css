@@ -635,6 +635,35 @@ button {
   margin-top: 8px;
 }
 
+.exam-level-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.exam-level-filter button {
+  min-height: 42px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-2);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.exam-level-filter button:hover {
+  border-color: var(--accent);
+}
+
+.exam-level-filter button[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
 .exam-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

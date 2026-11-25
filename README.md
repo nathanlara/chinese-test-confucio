@@ -3,7 +3,7 @@
 Site estático de estudos de chinês do Instituto Confúcio, organizado como uma experiência de caderno de aulas em três páginas:
 
 - `index.html`: painel inicial com continuidade dos estudos, progresso, revisões, jogos e guia.
-- `simulados.html`: revisões e simulados do Básico 1 com correção automática e gabarito comentado.
+- `simulados.html`: revisões e simulados do Básico 1 e do Básico 2 com correção automática e gabarito comentado.
 - `jogos.html`: seis jogos de classificadores (106 desafios) + guia de consulta com 20 verbetes e áudio.
 
 O progresso fica no `localStorage` do navegador: respostas, última nota e a última revisão aberta. Não usa banco de dados nem backend.

@@ -5,3 +5,4 @@
 .DS_Store
 node_modules/
 .playwright-cli/
+/materiais/basico-2/

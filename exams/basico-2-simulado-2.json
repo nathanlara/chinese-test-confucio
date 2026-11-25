@@ -1,0 +1,551 @@
+{
+  "id": "basico-2-simulado-2",
+  "title": "Simulado 2 · Compras, preços e restaurante",
+  "level": "Chinês Básico 2",
+  "description": "Lição 5. Roupas, preços, pedidos no restaurante, reduplicação verbal e uso de 的.",
+  "uiVariant": "written-test",
+  "suggestedTime": "35 min",
+  "sections": [
+    {
+      "id": "escuta",
+      "title": "Compreensão oral",
+      "shortTitle": "Escuta",
+      "instructions": "Ouça o áudio de cada questão e escolha a alternativa correspondente.",
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-choice",
+          "prompt": "Quanto custa a camisa?",
+          "options": [
+            {
+              "id": "A",
+              "label": "56 yuans"
+            },
+            {
+              "id": "B",
+              "label": "60 yuans"
+            },
+            {
+              "id": "C",
+              "label": "75 yuans"
+            },
+            {
+              "id": "D",
+              "label": "65 yuans"
+            }
+          ],
+          "answer": "D",
+          "explanation": "六十五 vale 65, e 块钱 é a forma coloquial de expressar o preço em yuans.",
+          "audioText": "这件衬衫六十五块钱。",
+          "audioSrc": "./assets/audio/basico-2-simulado-2-q01.mp3"
+        },
+        {
+          "id": 2,
+          "type": "multiple-choice",
+          "prompt": "O que a pessoa quer pedir?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Carne bovina e uma tigela de arroz"
+            },
+            {
+              "id": "B",
+              "label": "Peixe e uma tigela de arroz"
+            },
+            {
+              "id": "C",
+              "label": "Carne bovina e chá"
+            },
+            {
+              "id": "D",
+              "label": "Sopa e arroz"
+            }
+          ],
+          "answer": "A",
+          "explanation": "牛肉 é carne bovina. 还要 adiciona 一碗米饭, uma tigela de arroz.",
+          "audioText": "我要牛肉，还要一碗米饭。",
+          "audioSrc": "./assets/audio/basico-2-simulado-2-q02.mp3"
+        },
+        {
+          "id": 3,
+          "type": "multiple-choice",
+          "prompt": "O que a pessoa pede para fazer?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Comprar esta camisa"
+            },
+            {
+              "id": "B",
+              "label": "Provar aquela calça"
+            },
+            {
+              "id": "C",
+              "label": "Levar duas calças"
+            },
+            {
+              "id": "D",
+              "label": "Ver o preço de uma camisa"
+            }
+          ],
+          "answer": "B",
+          "explanation": "那条裤子 significa aquela calça. 试试 é experimentar.",
+          "audioText": "我能不能试试那条裤子？",
+          "audioSrc": "./assets/audio/basico-2-simulado-2-q03.mp3"
+        }
+      ]
+    },
+    {
+      "id": "compras-restaurante",
+      "title": "Compras, restaurante e gramática",
+      "shortTitle": "Compras e restaurante",
+      "instructions": "Escolha a alternativa que completa o sentido indicado ou escreva o caractere pedido.",
+      "questions": [
+        {
+          "id": 4,
+          "type": "multiple-choice",
+          "prompt": "Como se pergunta “Quanto custa esta camisa?”",
+          "options": [
+            {
+              "id": "A",
+              "label": "这件衬衫是谁的？"
+            },
+            {
+              "id": "B",
+              "label": "这件衬衫好看吗？"
+            },
+            {
+              "id": "C",
+              "label": "这件衬衫多少钱？"
+            },
+            {
+              "id": "D",
+              "label": "你要哪件衬衫？"
+            }
+          ],
+          "answer": "C",
+          "explanation": "多少钱 pergunta o preço de um produto."
+        },
+        {
+          "id": 5,
+          "type": "multiple-choice",
+          "prompt": "Qual opção indica 18,50 yuans?",
+          "options": [
+            {
+              "id": "A",
+              "label": "十八块五毛"
+            },
+            {
+              "id": "B",
+              "label": "八十块五毛"
+            },
+            {
+              "id": "C",
+              "label": "十八块五分"
+            },
+            {
+              "id": "D",
+              "label": "十五块八毛"
+            }
+          ],
+          "answer": "A",
+          "explanation": "十八块 são 18 yuans e 五毛 são cinco décimos de yuan."
+        },
+        {
+          "id": 6,
+          "type": "fill-blank",
+          "prompt": "我想吃鱼___米饭。（Complete com a palavra que liga os dois alimentos.）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "和"
+          ],
+          "explanation": "和 liga os dois substantivos, 鱼 e 米饭."
+        },
+        {
+          "id": 7,
+          "type": "multiple-choice",
+          "prompt": "Complete com o advérbio que indica um pedido adicional. 我要一碗汤，___要一碗米饭。",
+          "options": [
+            {
+              "id": "A",
+              "label": "和"
+            },
+            {
+              "id": "B",
+              "label": "都"
+            },
+            {
+              "id": "C",
+              "label": "最"
+            },
+            {
+              "id": "D",
+              "label": "还"
+            }
+          ],
+          "answer": "D",
+          "explanation": "还要 acrescenta algo ao pedido. 和 liga substantivos."
+        },
+        {
+          "id": 8,
+          "type": "multiple-choice",
+          "prompt": "Qual frase pede permissão para experimentar a camisa usando a reduplicação de 试?",
+          "options": [
+            {
+              "id": "A",
+              "label": "我会试这件衬衫。"
+            },
+            {
+              "id": "B",
+              "label": "我能不能试一试这件衬衫？"
+            },
+            {
+              "id": "C",
+              "label": "我能不能一试试这件衬衫？"
+            },
+            {
+              "id": "D",
+              "label": "你试这件衬衫吧。"
+            }
+          ],
+          "answer": "B",
+          "explanation": "试一试 segue o padrão verbo + 一 + verbo. 能不能 formula o pedido de permissão."
+        },
+        {
+          "id": 9,
+          "type": "multiple-choice",
+          "prompt": "Qual expressão significa “uma loja relativamente grande”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "一个比较大的商店"
+            },
+            {
+              "id": "B",
+              "label": "一个商店比较大"
+            },
+            {
+              "id": "C",
+              "label": "一个比较商店的"
+            },
+            {
+              "id": "D",
+              "label": "一个大的比较商店"
+            }
+          ],
+          "answer": "A",
+          "explanation": "比较大的 vem antes de 商店. O adjetivo modificado por 比较 pede 的 nessa função."
+        },
+        {
+          "id": 10,
+          "type": "multiple-choice",
+          "prompt": "Como se diz “o prato mais saboroso”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "好吃的菜最"
+            },
+            {
+              "id": "B",
+              "label": "最菜的好吃"
+            },
+            {
+              "id": "C",
+              "label": "最好吃的菜"
+            },
+            {
+              "id": "D",
+              "label": "菜最好吃的"
+            }
+          ],
+          "answer": "C",
+          "explanation": "最 modifica 好吃. A expressão 最好吃的 vem antes de 菜."
+        },
+        {
+          "id": 11,
+          "type": "multiple-choice",
+          "prompt": "Qual opção expressa a sugestão “Experimente esta calça”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "这条裤子是谁的？"
+            },
+            {
+              "id": "B",
+              "label": "这条裤子太贵了！"
+            },
+            {
+              "id": "C",
+              "label": "这条裤子多少钱？"
+            },
+            {
+              "id": "D",
+              "label": "您试试这条裤子吧。"
+            }
+          ],
+          "answer": "D",
+          "explanation": "吧 no fim da frase marca uma sugestão nesse contexto."
+        }
+      ]
+    },
+    {
+      "id": "hanzi",
+      "title": "Reconhecimento e escrita de caracteres",
+      "shortTitle": "Hanzi",
+      "instructions": "Observe a forma dos caracteres. Nas lacunas, digite o hanzi pedido.",
+      "questions": [
+        {
+          "id": 12,
+          "type": "multiple-choice",
+          "prompt": "Qual caractere significa “comprar”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "卖"
+            },
+            {
+              "id": "B",
+              "label": "买"
+            },
+            {
+              "id": "C",
+              "label": "来"
+            },
+            {
+              "id": "D",
+              "label": "米"
+            }
+          ],
+          "answer": "B",
+          "explanation": "买 (mǎi) é comprar. 卖 (mài) é vender."
+        },
+        {
+          "id": 13,
+          "type": "multiple-choice",
+          "prompt": "Qual par compartilha o componente 口 à esquerda?",
+          "options": [
+            {
+              "id": "A",
+              "label": "喝、吃"
+            },
+            {
+              "id": "B",
+              "label": "买、卖"
+            },
+            {
+              "id": "C",
+              "label": "饭、钱"
+            },
+            {
+              "id": "D",
+              "label": "店、点"
+            }
+          ],
+          "answer": "A",
+          "explanation": "喝 e 吃 têm 口 à esquerda, componente associado à boca."
+        },
+        {
+          "id": 14,
+          "type": "fill-blank",
+          "prompt": "Complete 便___ (piányi, barato).",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "宜"
+          ],
+          "explanation": "便宜 (piányi) significa barato. O segundo caractere é 宜."
+        },
+        {
+          "id": 15,
+          "type": "multiple-choice",
+          "prompt": "Qual caractere completa 米___ para formar “arroz cozido”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "反"
+            },
+            {
+              "id": "B",
+              "label": "办"
+            },
+            {
+              "id": "C",
+              "label": "饭"
+            },
+            {
+              "id": "D",
+              "label": "放"
+            }
+          ],
+          "answer": "C",
+          "explanation": "米饭 (mǐfàn) é arroz cozido. 饭 tem o componente 饣, ligado à comida."
+        },
+        {
+          "id": 16,
+          "type": "fill-blank",
+          "prompt": "Complete duōshao qián, “quanto custa”: 多少___？",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "钱"
+          ],
+          "explanation": "钱 (qián) significa dinheiro. A expressão 多少钱 pergunta quanto custa."
+        }
+      ]
+    },
+    {
+      "id": "leitura",
+      "title": "Compreensão de texto",
+      "shortTitle": "Leitura",
+      "instructions": "Leia o texto para responder às questões desta seção. 林小姐去商店买衣服。红衬衫八十块，白衬衫六十块。她喜欢红衬衫，但是觉得太贵了。她试了试白衬衫，觉得也很漂亮，就买了白衬衫。 (觉得 = achar, 就 = então.)",
+      "questions": [
+        {
+          "id": 17,
+          "type": "multiple-choice",
+          "prompt": "Por que a cliente não leva a camisa vermelha?",
+          "options": [
+            {
+              "id": "A",
+              "label": "A camisa não serviu."
+            },
+            {
+              "id": "B",
+              "label": "Ela achou a camisa cara demais."
+            },
+            {
+              "id": "C",
+              "label": "A loja não vendia a camisa."
+            },
+            {
+              "id": "D",
+              "label": "A camisa era branca."
+            }
+          ],
+          "answer": "B",
+          "explanation": "她喜欢红衬衫，但是觉得太贵了 indica que ela gostou da vermelha, mas a achou muito cara."
+        },
+        {
+          "id": 18,
+          "type": "multiple-choice",
+          "prompt": "Qual foi a diferença de preço entre as camisas?",
+          "options": [
+            {
+              "id": "A",
+              "label": "10 yuans"
+            },
+            {
+              "id": "B",
+              "label": "60 yuans"
+            },
+            {
+              "id": "C",
+              "label": "80 yuans"
+            },
+            {
+              "id": "D",
+              "label": "20 yuans"
+            }
+          ],
+          "answer": "D",
+          "explanation": "A vermelha custa 80 e a branca custa 60. A diferença é de 20 yuans."
+        },
+        {
+          "id": 19,
+          "type": "multiple-choice",
+          "prompt": "Que peça a cliente experimentou?",
+          "options": [
+            {
+              "id": "A",
+              "label": "A camisa vermelha"
+            },
+            {
+              "id": "B",
+              "label": "Uma calça branca"
+            },
+            {
+              "id": "C",
+              "label": "A camisa branca"
+            },
+            {
+              "id": "D",
+              "label": "Uma calça vermelha"
+            }
+          ],
+          "answer": "C",
+          "explanation": "她试了试白衬衫 indica que ela experimentou a camisa branca."
+        },
+        {
+          "id": 20,
+          "type": "multiple-choice",
+          "prompt": "O que a cliente achou da camisa branca?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Também achou bonita."
+            },
+            {
+              "id": "B",
+              "label": "Achou cara demais."
+            },
+            {
+              "id": "C",
+              "label": "Achou grande demais."
+            },
+            {
+              "id": "D",
+              "label": "Não gostou da cor."
+            }
+          ],
+          "answer": "A",
+          "explanation": "觉得也很漂亮 significa achar que ela também é bonita."
+        }
+      ]
+    },
+    {
+      "id": "escrita",
+      "title": "Ordem de palavras e tradução",
+      "shortTitle": "Escrita",
+      "instructions": "Responda em caracteres chineses simplificados. Nas questões de ordem, use todos os blocos. Nas traduções, siga a estrutura indicada quando houver.",
+      "questions": [
+        {
+          "id": 21,
+          "type": "word-order",
+          "prompt": "我要 ｜ 一件 ｜ 红衬衫 ｜ 买",
+          "answer": [
+            "我要买一件红衬衫"
+          ],
+          "explanation": "要 vem antes de 买. 一件红衬衫 é o objeto, com 红 antes de 衬衫."
+        },
+        {
+          "id": 22,
+          "type": "word-order",
+          "prompt": "这个菜 ｜ 贵 ｜ 了 ｜ 太",
+          "answer": [
+            "这个菜太贵了"
+          ],
+          "explanation": "太 + adjetivo + 了 expressa que algo é demais."
+        },
+        {
+          "id": 23,
+          "type": "translation",
+          "prompt": "Posso experimentar esta calça? Use 能不能 e repita 试.",
+          "answer": [
+            "我能不能试试这条裤子",
+            "我能不能试一试这条裤子",
+            "能不能试试这条裤子",
+            "能不能试一试这条裤子"
+          ],
+          "explanation": "能不能 pede permissão. 试试 e 试一试 são duas formas de reduplicar 试, e 条 classifica 裤子."
+        },
+        {
+          "id": 24,
+          "type": "translation",
+          "prompt": "Quero comer peixe e arroz. Use 鱼 e 米饭.",
+          "answer": [
+            "我想吃鱼和米饭",
+            "我要吃鱼和米饭"
+          ],
+          "explanation": "和 liga os substantivos 鱼 e 米饭 depois do verbo 吃."
+        }
+      ]
+    }
+  ]
+}

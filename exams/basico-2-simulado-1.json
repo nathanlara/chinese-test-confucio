@@ -1,0 +1,528 @@
+{
+  "id": "basico-2-simulado-1",
+  "title": "Simulado 1 · Família, números e classificadores",
+  "level": "Chinês Básico 2",
+  "description": "Lições 3 e 4. Família, idades, números, mapas, dicionários e pedidos de permissão.",
+  "uiVariant": "written-test",
+  "suggestedTime": "35 min",
+  "sections": [
+    {
+      "id": "escuta",
+      "title": "Compreensão oral",
+      "shortTitle": "Escuta",
+      "instructions": "Ouça o áudio de cada questão e escolha a alternativa correspondente.",
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-choice",
+          "prompt": "Quantas pessoas há na família de quem fala?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Três"
+            },
+            {
+              "id": "B",
+              "label": "Cinco"
+            },
+            {
+              "id": "C",
+              "label": "Quatro"
+            },
+            {
+              "id": "D",
+              "label": "Seis"
+            }
+          ],
+          "answer": "B",
+          "explanation": "五口人 significa cinco pessoas da família.",
+          "audioText": "我家有五口人。",
+          "audioSrc": "./assets/audio/basico-2-simulado-1-q01.mp3"
+        },
+        {
+          "id": 2,
+          "type": "multiple-choice",
+          "prompt": "Quantos alunos há na escola?",
+          "options": [
+            {
+              "id": "A",
+              "label": "80"
+            },
+            {
+              "id": "B",
+              "label": "8.000"
+            },
+            {
+              "id": "C",
+              "label": "800"
+            },
+            {
+              "id": "D",
+              "label": "18"
+            }
+          ],
+          "answer": "C",
+          "explanation": "八百 equivale a 8 × 100.",
+          "audioText": "我们学校有八百个学生。",
+          "audioSrc": "./assets/audio/basico-2-simulado-1-q02.mp3"
+        },
+        {
+          "id": 3,
+          "type": "multiple-choice",
+          "prompt": "O que a pessoa pede para usar?",
+          "options": [
+            {
+              "id": "A",
+              "label": "O mapa"
+            },
+            {
+              "id": "B",
+              "label": "A caneta"
+            },
+            {
+              "id": "C",
+              "label": "O livro"
+            },
+            {
+              "id": "D",
+              "label": "O dicionário"
+            }
+          ],
+          "answer": "A",
+          "explanation": "地图 é mapa. 能不能用一下 introduz um pedido para usar o objeto por um momento.",
+          "audioText": "我能不能用一下你的地图？",
+          "audioSrc": "./assets/audio/basico-2-simulado-1-q03.mp3"
+        }
+      ]
+    },
+    {
+      "id": "familia-numeros",
+      "title": "Família, idade e números",
+      "shortTitle": "Família e números",
+      "instructions": "Escolha a estrutura adequada ou complete a lacuna.",
+      "questions": [
+        {
+          "id": 4,
+          "type": "multiple-choice",
+          "prompt": "Qual pergunta quer saber a quantidade de pessoas da família?",
+          "options": [
+            {
+              "id": "A",
+              "label": "你爸爸多大？"
+            },
+            {
+              "id": "B",
+              "label": "你家有谁？"
+            },
+            {
+              "id": "C",
+              "label": "你家有几口人？"
+            },
+            {
+              "id": "D",
+              "label": "你是哪儿人？"
+            }
+          ],
+          "answer": "C",
+          "explanation": "几口人 pergunta quantas pessoas compõem a família."
+        },
+        {
+          "id": 5,
+          "type": "fill-blank",
+          "prompt": "我有___个妹妹。（duas irmãs mais novas）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "两"
+          ],
+          "explanation": "Em 两个, 两 aparece antes do classificador 个."
+        },
+        {
+          "id": 6,
+          "type": "multiple-choice",
+          "prompt": "Quanto vale 一万三千?",
+          "options": [
+            {
+              "id": "A",
+              "label": "1.300"
+            },
+            {
+              "id": "B",
+              "label": "130.000"
+            },
+            {
+              "id": "C",
+              "label": "10.300"
+            },
+            {
+              "id": "D",
+              "label": "13.000"
+            }
+          ],
+          "answer": "D",
+          "explanation": "一万 vale 10.000 e 三千 vale 3.000."
+        },
+        {
+          "id": 7,
+          "type": "multiple-choice",
+          "prompt": "Qual pergunta combina com a resposta 他二十六岁?",
+          "options": [
+            {
+              "id": "A",
+              "label": "他多大？"
+            },
+            {
+              "id": "B",
+              "label": "他家有几口人？"
+            },
+            {
+              "id": "C",
+              "label": "他去哪儿？"
+            },
+            {
+              "id": "D",
+              "label": "他是哪国人？"
+            }
+          ],
+          "answer": "A",
+          "explanation": "多大 pergunta a idade e 岁 marca a idade em anos."
+        },
+        {
+          "id": 8,
+          "type": "fill-blank",
+          "prompt": "我___有哥哥。（Não tenho irmão mais velho. Digite um caractere.）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "没"
+          ],
+          "explanation": "Para negar 有, use 没有."
+        }
+      ]
+    },
+    {
+      "id": "classificadores",
+      "title": "Classificadores, demonstrativos e permissão",
+      "shortTitle": "Classificadores",
+      "instructions": "Escolha a melhor estrutura ou escreva o classificador que falta.",
+      "questions": [
+        {
+          "id": 9,
+          "type": "fill-blank",
+          "prompt": "这___词典是老师的。（dicionário）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "本"
+          ],
+          "explanation": "本 é o classificador de livros e dicionários."
+        },
+        {
+          "id": 10,
+          "type": "fill-blank",
+          "prompt": "那两___地图是我的。（mapas）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "张"
+          ],
+          "explanation": "张 é o classificador de objetos planos, como mapas."
+        },
+        {
+          "id": 11,
+          "type": "multiple-choice",
+          "prompt": "Qual expressão significa “estas duas canetas”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "那两支笔"
+            },
+            {
+              "id": "B",
+              "label": "这两支笔"
+            },
+            {
+              "id": "C",
+              "label": "这两张笔"
+            },
+            {
+              "id": "D",
+              "label": "哪两支笔"
+            }
+          ],
+          "answer": "B",
+          "explanation": "这 significa “este”. Depois vêm a quantidade 两, o classificador 支 e o substantivo 笔."
+        },
+        {
+          "id": 12,
+          "type": "multiple-choice",
+          "prompt": "Você quer perguntar qual dos dois dicionários a pessoa prefere. Qual palavra completa 你喜欢这本 ___ 那本？",
+          "options": [
+            {
+              "id": "A",
+              "label": "都"
+            },
+            {
+              "id": "B",
+              "label": "也"
+            },
+            {
+              "id": "C",
+              "label": "和"
+            },
+            {
+              "id": "D",
+              "label": "还是"
+            }
+          ],
+          "answer": "D",
+          "explanation": "还是 apresenta opções em perguntas de escolha."
+        },
+        {
+          "id": 13,
+          "type": "multiple-choice",
+          "prompt": "Qual expressão pede permissão para olhar o mapa por um momento?",
+          "options": [
+            {
+              "id": "A",
+              "label": "我不会看这张地图。"
+            },
+            {
+              "id": "B",
+              "label": "我能不能看一下这张地图？"
+            },
+            {
+              "id": "C",
+              "label": "我比较喜欢这张地图。"
+            },
+            {
+              "id": "D",
+              "label": "这张地图是谁的？"
+            }
+          ],
+          "answer": "B",
+          "explanation": "能不能 introduz o pedido de permissão, e 看一下 indica uma olhada breve."
+        }
+      ]
+    },
+    {
+      "id": "hanzi",
+      "title": "Reconhecimento e escrita de caracteres",
+      "shortTitle": "Hanzi",
+      "instructions": "Observe a forma dos caracteres. Nas lacunas, digite o hanzi pedido.",
+      "questions": [
+        {
+          "id": 14,
+          "type": "multiple-choice",
+          "prompt": "Qual caractere significa “mil”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "干"
+            },
+            {
+              "id": "B",
+              "label": "午"
+            },
+            {
+              "id": "C",
+              "label": "千"
+            },
+            {
+              "id": "D",
+              "label": "十"
+            }
+          ],
+          "answer": "C",
+          "explanation": "千 (qiān) significa mil. 干 (gàn), presente em 干什么, tem grafia semelhante."
+        },
+        {
+          "id": 15,
+          "type": "multiple-choice",
+          "prompt": "Qual caractere completa 词___ para formar “dicionário”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "典"
+            },
+            {
+              "id": "B",
+              "label": "电"
+            },
+            {
+              "id": "C",
+              "label": "店"
+            },
+            {
+              "id": "D",
+              "label": "点"
+            }
+          ],
+          "answer": "A",
+          "explanation": "词典 (cídiǎn) é dicionário. O caractere final é 典."
+        },
+        {
+          "id": 16,
+          "type": "multiple-choice",
+          "prompt": "Que componente aparece à esquerda de 词 e 课?",
+          "options": [
+            {
+              "id": "A",
+              "label": "亻"
+            },
+            {
+              "id": "B",
+              "label": "氵"
+            },
+            {
+              "id": "C",
+              "label": "忄"
+            },
+            {
+              "id": "D",
+              "label": "讠"
+            }
+          ],
+          "answer": "D",
+          "explanation": "讠 é a forma simplificada do componente de fala, presente em 词 e 课."
+        },
+        {
+          "id": 17,
+          "type": "fill-blank",
+          "prompt": "Escreva o caractere final de 学___ (xuéxiào, escola).",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "校"
+          ],
+          "explanation": "校 (xiào) completa 学校."
+        },
+        {
+          "id": 18,
+          "type": "fill-blank",
+          "prompt": "Escreva o hanzi de jiā, “família”, em 我___.",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "家"
+          ],
+          "explanation": "家 (jiā) significa casa ou família em 我家."
+        }
+      ]
+    },
+    {
+      "id": "leitura",
+      "title": "Compreensão de texto",
+      "shortTitle": "Leitura",
+      "instructions": "Leia o texto para responder às questões desta seção. 小林家有四口人：爸爸、妈妈、姐姐和小林。姐姐在北京工作。小林有两本词典。一本是中文的，一本是葡萄牙文的。",
+      "questions": [
+        {
+          "id": 19,
+          "type": "multiple-choice",
+          "prompt": "Quem trabalha em Pequim?",
+          "options": [
+            {
+              "id": "A",
+              "label": "O pai"
+            },
+            {
+              "id": "B",
+              "label": "A irmã mais velha"
+            },
+            {
+              "id": "C",
+              "label": "A mãe"
+            },
+            {
+              "id": "D",
+              "label": "Xiao Lin"
+            }
+          ],
+          "answer": "B",
+          "explanation": "姐姐在北京工作 diz que a irmã mais velha trabalha em Pequim."
+        },
+        {
+          "id": 20,
+          "type": "multiple-choice",
+          "prompt": "Quais são os idiomas dos dicionários de Xiao Lin?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Português e inglês"
+            },
+            {
+              "id": "B",
+              "label": "Chinês e inglês"
+            },
+            {
+              "id": "C",
+              "label": "Português e espanhol"
+            },
+            {
+              "id": "D",
+              "label": "Chinês e português"
+            }
+          ],
+          "answer": "D",
+          "explanation": "中文 é chinês escrito e 葡萄牙文 é português escrito."
+        },
+        {
+          "id": 21,
+          "type": "multiple-choice",
+          "prompt": "No texto, a que 一本 se refere?",
+          "options": [
+            {
+              "id": "A",
+              "label": "À escola"
+            },
+            {
+              "id": "B",
+              "label": "À irmã mais velha"
+            },
+            {
+              "id": "C",
+              "label": "A um dos dicionários"
+            },
+            {
+              "id": "D",
+              "label": "À cidade de Pequim"
+            }
+          ],
+          "answer": "C",
+          "explanation": "本 é o classificador do substantivo 词典. 一本 retoma um dos dicionários já mencionados."
+        }
+      ]
+    },
+    {
+      "id": "escrita",
+      "title": "Ordem de palavras e tradução",
+      "shortTitle": "Escrita",
+      "instructions": "Responda em caracteres chineses simplificados. Nas questões de ordem, use todos os blocos. Nas traduções, siga a estrutura indicada quando houver.",
+      "questions": [
+        {
+          "id": 22,
+          "type": "word-order",
+          "prompt": "是 ｜ 这两本词典 ｜ 谁的",
+          "answer": [
+            "这两本词典是谁的"
+          ],
+          "explanation": "O objeto 这两本词典 é o tópico, e 是谁的 pergunta a quem pertence."
+        },
+        {
+          "id": 23,
+          "type": "translation",
+          "prompt": "Nossa escola tem 1.500 alunos. Use 个.",
+          "answer": [
+            "我们学校有一千五百个学生",
+            "我们的学校有一千五百个学生"
+          ],
+          "explanation": "一千五百 expressa 1.500. Depois do número vêm 个 e 学生."
+        },
+        {
+          "id": 24,
+          "type": "translation",
+          "prompt": "Quero ir a Pequim para estudar chinês. Use 想 e 汉语.",
+          "answer": [
+            "我想去北京学习汉语",
+            "我想去北京学汉语"
+          ],
+          "explanation": "去北京 indica o destino, e 学习汉语 expressa o objetivo da ida."
+        }
+      ]
+    }
+  ]
+}

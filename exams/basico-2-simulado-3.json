@@ -1,0 +1,665 @@
+{
+  "id": "basico-2-simulado-3",
+  "title": "Simulado final · Lições 3 a 5",
+  "level": "Chinês Básico 2",
+  "description": "Revisão cumulativa do Básico 2 com compreensão oral, gramática, leitura, hanzi e tradução.",
+  "uiVariant": "written-test",
+  "suggestedTime": "45 min",
+  "sections": [
+    {
+      "id": "escuta",
+      "title": "Compreensão oral",
+      "shortTitle": "Escuta",
+      "instructions": "Ouça o áudio de cada questão e escolha a alternativa correspondente.",
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-choice",
+          "prompt": "Qual é o motivo apresentado para estudar chinês?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Quer comprar um dicionário."
+            },
+            {
+              "id": "B",
+              "label": "Quer trabalhar na China."
+            },
+            {
+              "id": "C",
+              "label": "Tem um professor chinês."
+            },
+            {
+              "id": "D",
+              "label": "Quer visitar o irmão mais velho."
+            }
+          ],
+          "answer": "B",
+          "explanation": "因为 introduz a razão. 去中国工作 significa ir trabalhar na China.",
+          "audioText": "我想学习汉语，因为我想去中国工作。",
+          "audioSrc": "./assets/audio/basico-2-simulado-3-q01.mp3"
+        },
+        {
+          "id": 2,
+          "type": "multiple-choice",
+          "prompt": "De quem é o mapa?",
+          "options": [
+            {
+              "id": "A",
+              "label": "De quem fala"
+            },
+            {
+              "id": "B",
+              "label": "Do irmão mais velho"
+            },
+            {
+              "id": "C",
+              "label": "Da professora"
+            },
+            {
+              "id": "D",
+              "label": "Da irmã mais velha"
+            }
+          ],
+          "answer": "D",
+          "explanation": "我姐姐的 indica que o mapa é da irmã mais velha de quem fala.",
+          "audioText": "这张中文地图是我姐姐的。",
+          "audioSrc": "./assets/audio/basico-2-simulado-3-q02.mp3"
+        },
+        {
+          "id": 3,
+          "type": "multiple-choice",
+          "prompt": "O que a pessoa pergunta?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Se há uma opção um pouco mais barata"
+            },
+            {
+              "id": "B",
+              "label": "Se a loja vende mapas"
+            },
+            {
+              "id": "C",
+              "label": "Se pode pagar em dinheiro"
+            },
+            {
+              "id": "D",
+              "label": "Se há uma opção maior"
+            }
+          ],
+          "answer": "A",
+          "explanation": "有没有 pergunta se há alguma opção. 便宜一点儿的 significa uma um pouco mais barata.",
+          "audioText": "有没有便宜一点儿的？",
+          "audioSrc": "./assets/audio/basico-2-simulado-3-q03.mp3"
+        },
+        {
+          "id": 4,
+          "type": "multiple-choice",
+          "prompt": "O que a pessoa pede?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Uma tigela de sopa"
+            },
+            {
+              "id": "B",
+              "label": "Duas tigelas de arroz"
+            },
+            {
+              "id": "C",
+              "label": "Duas tigelas de sopa"
+            },
+            {
+              "id": "D",
+              "label": "Duas xícaras de chá"
+            }
+          ],
+          "answer": "C",
+          "explanation": "两碗汤 significa duas tigelas de sopa.",
+          "audioText": "请给我们两碗汤。",
+          "audioSrc": "./assets/audio/basico-2-simulado-3-q04.mp3"
+        }
+      ]
+    },
+    {
+      "id": "gramatica",
+      "title": "Vocabulário, gramática e tons",
+      "shortTitle": "Gramática e tons",
+      "instructions": "Escolha a estrutura que corresponde ao sentido indicado ou complete a lacuna.",
+      "questions": [
+        {
+          "id": 5,
+          "type": "multiple-choice",
+          "prompt": "Qual opção representa 23.600?",
+          "options": [
+            {
+              "id": "A",
+              "label": "二万三千六十"
+            },
+            {
+              "id": "B",
+              "label": "两万六千三百"
+            },
+            {
+              "id": "C",
+              "label": "两万三千六百"
+            },
+            {
+              "id": "D",
+              "label": "二千三百六十"
+            }
+          ],
+          "answer": "C",
+          "explanation": "两万 = 20.000, 三千 = 3.000 e 六百 = 600."
+        },
+        {
+          "id": 6,
+          "type": "multiple-choice",
+          "prompt": "Como se pergunta “De onde é a sua mãe?”",
+          "options": [
+            {
+              "id": "A",
+              "label": "你妈妈多大？"
+            },
+            {
+              "id": "B",
+              "label": "你妈妈是什么地方人？"
+            },
+            {
+              "id": "C",
+              "label": "你家有几口人？"
+            },
+            {
+              "id": "D",
+              "label": "你妈妈喜欢什么？"
+            }
+          ],
+          "answer": "B",
+          "explanation": "是 + lugar + 人 indica a origem de alguém. 什么地方 pergunta qual lugar."
+        },
+        {
+          "id": 7,
+          "type": "multiple-choice",
+          "prompt": "Complete de acordo com o sentido “Meu chefe permite que eu vá trabalhar em Xangai”. 我老板 ___ 我去上海工作。",
+          "options": [
+            {
+              "id": "A",
+              "label": "也"
+            },
+            {
+              "id": "B",
+              "label": "和"
+            },
+            {
+              "id": "C",
+              "label": "都"
+            },
+            {
+              "id": "D",
+              "label": "让"
+            }
+          ],
+          "answer": "D",
+          "explanation": "让 + pessoa + ação pode indicar que alguém permite que outra pessoa faça algo."
+        },
+        {
+          "id": 8,
+          "type": "multiple-choice",
+          "prompt": "Qual opção significa “aqueles três mapas”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "那三张地图"
+            },
+            {
+              "id": "B",
+              "label": "这三张地图"
+            },
+            {
+              "id": "C",
+              "label": "哪三张地图"
+            },
+            {
+              "id": "D",
+              "label": "那三本地图"
+            }
+          ],
+          "answer": "A",
+          "explanation": "A ordem é 那 + 三 + 张 + 地图. 张 é o classificador de mapas."
+        },
+        {
+          "id": 9,
+          "type": "fill-blank",
+          "prompt": "我们都吃米饭，他___吃米饭。（Complete com o advérbio de “ele também”.）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "也"
+          ],
+          "explanation": "也 vai antes do verbo 吃 e significa “também”."
+        },
+        {
+          "id": 10,
+          "type": "multiple-choice",
+          "prompt": "Qual ordem forma “um prato muito saboroso”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "一个菜很好吃的"
+            },
+            {
+              "id": "B",
+              "label": "一个很的好吃菜"
+            },
+            {
+              "id": "C",
+              "label": "一个很好吃的菜"
+            },
+            {
+              "id": "D",
+              "label": "一个菜的很好吃"
+            }
+          ],
+          "answer": "C",
+          "explanation": "A expressão 很好吃的 modifica 菜 e vem antes dele."
+        },
+        {
+          "id": 11,
+          "type": "multiple-choice",
+          "prompt": "Qual termo indica uma habilidade aprendida em 她___说一点儿汉语?",
+          "options": [
+            {
+              "id": "A",
+              "label": "会"
+            },
+            {
+              "id": "B",
+              "label": "最"
+            },
+            {
+              "id": "C",
+              "label": "让"
+            },
+            {
+              "id": "D",
+              "label": "和"
+            }
+          ],
+          "answer": "A",
+          "explanation": "会 antes de um verbo pode indicar que a pessoa aprendeu a realizar aquela ação."
+        },
+        {
+          "id": 12,
+          "type": "multiple-choice",
+          "prompt": "Em 一件衬衫, com que tom se pronuncia 一 antes de 件 (jiàn)?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Primeiro tom (yī)"
+            },
+            {
+              "id": "B",
+              "label": "Terceiro tom (yǐ)"
+            },
+            {
+              "id": "C",
+              "label": "Quarto tom (yì)"
+            },
+            {
+              "id": "D",
+              "label": "Segundo tom (yí)"
+            }
+          ],
+          "answer": "D",
+          "explanation": "一 costuma passar ao segundo tom, yí, antes de uma sílaba no quarto tom."
+        }
+      ]
+    },
+    {
+      "id": "hanzi",
+      "title": "Reconhecimento e escrita de caracteres",
+      "shortTitle": "Hanzi",
+      "instructions": "Observe a forma dos caracteres. Nas lacunas, digite o hanzi pedido.",
+      "questions": [
+        {
+          "id": 13,
+          "type": "multiple-choice",
+          "prompt": "Qual caractere significa “dez mil”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "方"
+            },
+            {
+              "id": "B",
+              "label": "万"
+            },
+            {
+              "id": "C",
+              "label": "千"
+            },
+            {
+              "id": "D",
+              "label": "百"
+            }
+          ],
+          "answer": "B",
+          "explanation": "万 (wàn) é a unidade de dez mil. 方 (fāng) tem grafia semelhante."
+        },
+        {
+          "id": 14,
+          "type": "multiple-choice",
+          "prompt": "Qual caractere, lido wèn, significa “perguntar”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "门"
+            },
+            {
+              "id": "B",
+              "label": "间"
+            },
+            {
+              "id": "C",
+              "label": "问"
+            },
+            {
+              "id": "D",
+              "label": "闻"
+            }
+          ],
+          "answer": "C",
+          "explanation": "问 (wèn) significa perguntar e traz 口 dentro de 门."
+        },
+        {
+          "id": 15,
+          "type": "fill-blank",
+          "prompt": "Escreva o hanzi inicial de ___校 (xuéxiào, escola).",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "学"
+          ],
+          "explanation": "学 (xué) aparece também em 学生 e 学习."
+        },
+        {
+          "id": 16,
+          "type": "multiple-choice",
+          "prompt": "Qual caractere, lido diàn, aparece na palavra “loja”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "店"
+            },
+            {
+              "id": "B",
+              "label": "点"
+            },
+            {
+              "id": "C",
+              "label": "电"
+            },
+            {
+              "id": "D",
+              "label": "典"
+            }
+          ],
+          "answer": "A",
+          "explanation": "商店 (shāngdiàn) significa loja. 店 (diàn) e 点 (diǎn) têm tons diferentes."
+        },
+        {
+          "id": 17,
+          "type": "fill-blank",
+          "prompt": "Complete ___肉 (niúròu, carne bovina).",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": [
+            "牛"
+          ],
+          "explanation": "牛 significa boi ou vaca. 牛肉 significa carne bovina."
+        }
+      ]
+    },
+    {
+      "id": "leitura-familia",
+      "title": "Leitura 1 · Família e mapas",
+      "shortTitle": "Leitura 1",
+      "instructions": "Leia o texto para responder às questões desta seção. 小周家有三口人。他喜欢学习汉语，也喜欢看中国地图。他有两张地图。这张是中文的，那张是葡萄牙文的。",
+      "questions": [
+        {
+          "id": 18,
+          "type": "multiple-choice",
+          "prompt": "Quantas pessoas há na família de Xiao Zhou?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Uma"
+            },
+            {
+              "id": "B",
+              "label": "Duas"
+            },
+            {
+              "id": "C",
+              "label": "Quatro"
+            },
+            {
+              "id": "D",
+              "label": "Três"
+            }
+          ],
+          "answer": "D",
+          "explanation": "小周家有三口人 indica uma família de três pessoas."
+        },
+        {
+          "id": 19,
+          "type": "multiple-choice",
+          "prompt": "Em que idioma está o mapa indicado por 那张?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Em português"
+            },
+            {
+              "id": "B",
+              "label": "Em chinês"
+            },
+            {
+              "id": "C",
+              "label": "Em inglês"
+            },
+            {
+              "id": "D",
+              "label": "Em espanhol"
+            }
+          ],
+          "answer": "A",
+          "explanation": "那张是葡萄牙文的 diz que aquele mapa está em português."
+        }
+      ]
+    },
+    {
+      "id": "leitura-restaurante",
+      "title": "Leitura 2 · No restaurante",
+      "shortTitle": "Leitura 2",
+      "instructions": "Leia o texto para responder às questões desta seção. 小周和朋友去饭店吃饭。朋友要牛肉和米饭。小周不吃牛肉，他要鱼，还要一碗汤。鱼二十六块，汤九块。",
+      "questions": [
+        {
+          "id": 20,
+          "type": "multiple-choice",
+          "prompt": "O que o amigo pede?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Peixe e arroz"
+            },
+            {
+              "id": "B",
+              "label": "Carne bovina e arroz"
+            },
+            {
+              "id": "C",
+              "label": "Carne bovina e sopa"
+            },
+            {
+              "id": "D",
+              "label": "Peixe e sopa"
+            }
+          ],
+          "answer": "B",
+          "explanation": "朋友要牛肉和米饭 significa que o amigo pede carne bovina e arroz."
+        },
+        {
+          "id": 21,
+          "type": "multiple-choice",
+          "prompt": "O que sabemos sobre Xiao Zhou e carne bovina?",
+          "options": [
+            {
+              "id": "A",
+              "label": "É a carne preferida dele."
+            },
+            {
+              "id": "B",
+              "label": "Ele pediu duas porções."
+            },
+            {
+              "id": "C",
+              "label": "Ele não come carne bovina."
+            },
+            {
+              "id": "D",
+              "label": "Ele achou o preço alto."
+            }
+          ],
+          "answer": "C",
+          "explanation": "小周不吃牛肉 diz que Xiao Zhou não come carne bovina."
+        },
+        {
+          "id": 22,
+          "type": "multiple-choice",
+          "prompt": "Quanto custam juntos o peixe e a sopa?",
+          "options": [
+            {
+              "id": "A",
+              "label": "35 yuans"
+            },
+            {
+              "id": "B",
+              "label": "26 yuans"
+            },
+            {
+              "id": "C",
+              "label": "17 yuans"
+            },
+            {
+              "id": "D",
+              "label": "39 yuans"
+            }
+          ],
+          "answer": "A",
+          "explanation": "二十六块 + 九块 corresponde a 26 + 9 = 35 yuans."
+        },
+        {
+          "id": 23,
+          "type": "multiple-choice",
+          "prompt": "No trecho 还要一碗汤, o que 还 acrescenta?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Uma comparação de preços"
+            },
+            {
+              "id": "B",
+              "label": "A razão da escolha"
+            },
+            {
+              "id": "C",
+              "label": "Uma negação"
+            },
+            {
+              "id": "D",
+              "label": "Mais um item ao pedido"
+            }
+          ],
+          "answer": "D",
+          "explanation": "还 indica que a sopa é adicionada ao que Xiao Zhou já havia pedido."
+        }
+      ]
+    },
+    {
+      "id": "escrita",
+      "title": "Ordem de palavras e tradução",
+      "shortTitle": "Escrita",
+      "instructions": "Responda em caracteres chineses simplificados. Nas questões de ordem, use todos os blocos. Nas traduções, siga a estrutura indicada quando houver.",
+      "questions": [
+        {
+          "id": 24,
+          "type": "word-order",
+          "prompt": "几口人 ｜ 你家 ｜ 有",
+          "answer": [
+            "你家有几口人"
+          ],
+          "explanation": "你家 é o tópico. 几口人 é a quantidade perguntada e vem depois de 有."
+        },
+        {
+          "id": 25,
+          "type": "word-order",
+          "prompt": "用一下 ｜ 我 ｜ 你的词典 ｜ 能不能",
+          "answer": [
+            "我能不能用一下你的词典"
+          ],
+          "explanation": "能不能 vem antes de 用. 一下 indica uma ação breve."
+        },
+        {
+          "id": 26,
+          "type": "word-order",
+          "prompt": "比较大 ｜ 这家商店 ｜ 也 ｜ 比较漂亮",
+          "answer": [
+            "这家商店比较大也比较漂亮",
+            "这家商店比较漂亮也比较大"
+          ],
+          "explanation": "也 introduz a segunda descrição da loja. As duas ordens dos adjetivos conservam o sentido."
+        },
+        {
+          "id": 27,
+          "type": "translation",
+          "prompt": "Ele tem dois amigos chineses. Use 两 e 个.",
+          "answer": [
+            "他有两个中国朋友"
+          ],
+          "explanation": "两个 vem antes de 中国朋友. 中国 descreve a origem dos amigos."
+        },
+        {
+          "id": 28,
+          "type": "translation",
+          "prompt": "Esta camisa é da minha irmã mais velha. Use 衬衫.",
+          "answer": [
+            "这件衬衫是我姐姐的",
+            "这件衬衫是我的姐姐的"
+          ],
+          "explanation": "件 classifica a peça de roupa, e 是我姐姐的 indica posse."
+        },
+        {
+          "id": 29,
+          "type": "translation",
+          "prompt": "Quanto custa aquela calça? Use 裤子.",
+          "answer": [
+            "那条裤子多少钱",
+            "那条裤子多少块钱",
+            "那条裤子多少元"
+          ],
+          "explanation": "那 indica “aquela”, 条 é o classificador de 裤子, e 多少钱 pergunta o preço."
+        },
+        {
+          "id": 30,
+          "type": "translation",
+          "prompt": "Quero uma tigela de arroz e também quero uma tigela de sopa. Use 还要 e 碗.",
+          "answer": [
+            "我要一碗米饭还要一碗汤",
+            "我想要一碗米饭还要一碗汤",
+            "我想吃一碗米饭还要一碗汤"
+          ],
+          "explanation": "碗 indica uma tigela. 还要 acrescenta o segundo item ao pedido."
+        }
+      ]
+    }
+  ]
+}

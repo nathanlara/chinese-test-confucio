@@ -35,6 +35,33 @@
       "description": "Prova de revisão com vocabulário, diálogos, partículas, X不X, 在/给, ordem de frases e tradução.",
       "questionCount": 53,
       "audioCount": 0
+    },
+    {
+      "id": "basico-2-simulado-1",
+      "title": "Simulado 1 · Família, números e classificadores",
+      "path": "./exams/basico-2-simulado-1.json",
+      "level": "Chinês Básico 2",
+      "description": "Lições 3 e 4. Família, idades, números, mapas, dicionários e pedidos de permissão.",
+      "questionCount": 24,
+      "audioCount": 3
+    },
+    {
+      "id": "basico-2-simulado-2",
+      "title": "Simulado 2 · Compras, preços e restaurante",
+      "path": "./exams/basico-2-simulado-2.json",
+      "level": "Chinês Básico 2",
+      "description": "Lição 5. Roupas, preços, pedidos no restaurante, reduplicação verbal e uso de 的.",
+      "questionCount": 24,
+      "audioCount": 3
+    },
+    {
+      "id": "basico-2-simulado-3",
+      "title": "Simulado final · Lições 3 a 5",
+      "path": "./exams/basico-2-simulado-3.json",
+      "level": "Chinês Básico 2",
+      "description": "Revisão cumulativa do Básico 2 com compreensão oral, gramática, leitura, hanzi e tradução.",
+      "questionCount": 30,
+      "audioCount": 4
     }
   ]
 }

@@ -12,6 +12,7 @@ const examIntro = document.querySelector("#examIntro");
 const homeScreen = document.querySelector("#homeScreen");
 const examScreen = document.querySelector("#examScreen");
 const examCards = document.querySelector("#examCards");
+const examLevelFilter = document.querySelector("#examLevelFilter");
 const examForm = document.querySelector("#examForm");
 const results = document.querySelector("#results");
 const progressText = document.querySelector("#progressText");
@@ -27,8 +28,9 @@ const homeStatus = document.querySelector("#homeStatus");
 const homeExamCount = document.querySelector("#homeExamCount");
 const homeExamList = document.querySelector("#homeExamList");
 
-const APP_VERSION = "2026-09-09-5";
-const APP_VERSION_KEY = "chinese-test:app-version";
+const APP_VERSION = "2026-11-25-2";
+const STORAGE_VERSION = "2026-09-09-5";
+const STORAGE_VERSION_KEY = "chinese-test:app-version";
 const LAST_EXAM_KEY = "chinese-test:last-exam";
 
 let activeExam = null;
@@ -139,14 +141,14 @@ function withVersion(path) {
 }
 
 function syncAppVersion() {
-  const savedVersion = localStorage.getItem(APP_VERSION_KEY);
-  if (savedVersion === APP_VERSION) return;
+  const savedVersion = localStorage.getItem(STORAGE_VERSION_KEY);
+  if (savedVersion === STORAGE_VERSION) return;
 
   Object.keys(localStorage)
-    .filter((key) => key.startsWith("chinese-test:") && key !== APP_VERSION_KEY)
+    .filter((key) => key.startsWith("chinese-test:") && key !== STORAGE_VERSION_KEY)
     .forEach((key) => localStorage.removeItem(key));
 
-  localStorage.setItem(APP_VERSION_KEY, APP_VERSION);
+  localStorage.setItem(STORAGE_VERSION_KEY, STORAGE_VERSION);
 }
 
 function renderImageLike(item, className = "visual-prompt") {
@@ -342,7 +344,15 @@ function formatSectionMeta(section) {
 }
 
 function renderExamCards(index) {
-  examCards.innerHTML = index.exams
+  const levelParam = new URLSearchParams(window.location.search).get("nivel");
+  const level = ["1", "2"].includes(levelParam) ? levelParam : "";
+  const exams = level ? index.exams.filter((exam) => exam.level?.replace(/\+$/, "") === `Chinês Básico ${level}`) : index.exams;
+
+  examLevelFilter.querySelectorAll("[data-exam-level]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.examLevel === level));
+  });
+
+  examCards.innerHTML = exams
     .map((exam, position) => {
       const total = Number(exam.questionCount) || 0;
       const answered = Math.min(readAnswerCount(exam.id), total);
@@ -382,6 +392,18 @@ function renderExamCards(index) {
   examCards.querySelectorAll(".start-exam").forEach((button) => {
     button.addEventListener("click", () => startExam(button.dataset.examPath));
   });
+}
+
+function handleExamLevelChange(event) {
+  const button = event.target.closest("[data-exam-level]");
+  if (!button || button.getAttribute("aria-pressed") === "true") return;
+
+  const url = new URL(window.location.href);
+  const level = button.dataset.examLevel;
+  if (level) url.searchParams.set("nivel", level);
+  else url.searchParams.delete("nivel");
+  window.history.replaceState(window.history.state, "", url);
+  renderExamCards(examIndex);
 }
 
 async function startExam(path, { updateHistory = true } = {}) {
@@ -1433,6 +1455,8 @@ async function boot() {
     syncAppVersion();
     examIndex = await loadExamIndex();
     renderExamCards(examIndex);
+    examLevelFilter.hidden = false;
+    examLevelFilter.addEventListener("click", handleExamLevelChange);
 
     examForm.addEventListener("input", handleAnswerInput);
     examForm.addEventListener("submit", gradeExam);

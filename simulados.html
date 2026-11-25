@@ -4,16 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Revisões · Caderno Confúcio</title>
-    <meta name="description" content="Simulados e revisões do curso Básico 1 do Instituto Confúcio, com correção automática e respostas salvas." />
+    <meta name="description" content="Simulados e revisões dos níveis Básico 1 e 2 do Instituto Confúcio, com correção automática e respostas salvas." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23b3262d'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='32' fill='white' font-family='Arial'%3E习%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./src/styles.css?v=2026-10-17-6" />
+    <link rel="stylesheet" href="./src/styles.css?v=2026-11-25-2" />
   </head>
   <body class="app-body" data-page="exams">
     <header class="site-header">
       <div class="site-header-inner">
         <a class="brand" href="./index.html" aria-label="Caderno Confúcio, ir para o início">
           <span class="brand-seal" aria-hidden="true">孔</span>
-          <span class="brand-text"><strong>Caderno Confúcio</strong><small>Instituto Confúcio · Básico 1</small></span>
+          <span class="brand-text"><strong>Caderno Confúcio</strong><small>Instituto Confúcio</small></span>
         </a>
         <nav class="site-nav" aria-label="Navegação principal">
           <a href="./index.html">Início</a>
@@ -26,7 +26,7 @@
     <main class="app-main">
       <div id="homeScreen">
         <header class="page-head">
-          <p class="eyebrow">Básico 1 · revisões</p>
+          <p class="eyebrow">Básicos 1 e 2 · revisões</p>
           <h1>Revisões</h1>
           <p class="lede">Simulados e revisões para treinar compreensão auditiva, vocabulário, leitura e escrita. Escolha uma revisão, responda e corrija quando quiser.</p>
         </header>
@@ -38,6 +38,11 @@
               <h2 id="libraryTitle">Escolha por onde continuar</h2>
             </div>
             <p class="helper-text">As respostas e a última nota ficam salvas neste navegador.</p>
+          </div>
+          <div id="examLevelFilter" class="exam-level-filter" role="group" aria-label="Filtrar revisões por nível" hidden>
+            <button type="button" data-exam-level="" aria-pressed="true" aria-controls="examCards">Todas</button>
+            <button type="button" data-exam-level="1" aria-pressed="false" aria-controls="examCards">Básico 1</button>
+            <button type="button" data-exam-level="2" aria-pressed="false" aria-controls="examCards">Básico 2</button>
           </div>
           <div id="examCards" class="exam-list" aria-label="Lista de revisões"></div>
         </section>
@@ -72,6 +77,6 @@
       <span>Correção automática · sem enviar nada para a internet.</span>
     </footer>
 
-    <script src="./src/app.js?v=2026-10-17-6" type="module"></script>
+    <script src="./src/app.js?v=2026-11-25-2" type="module"></script>
   </body>
 </html>
