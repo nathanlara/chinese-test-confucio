@@ -1,0 +1,751 @@
+{
+  "id": "basico-2-simulado-4",
+  "title": "Simulado 4 · Reta final do Básico 2",
+  "level": "Chinês Básico 2",
+  "description": "Lições 3 a 5. Treino de classificadores, 几 e 多少, 两 e 二, números, tons de 一, negação e 能/会.",
+  "uiVariant": "written-test",
+  "suggestedTime": "45 min",
+  "sections": [
+    {
+      "id": "escuta",
+      "title": "Compreensão oral",
+      "shortTitle": "Escuta",
+      "instructions": "Ouça cada gravação e escolha a resposta. Preste atenção aos números, aos classificadores e à intenção de quem fala.",
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-choice",
+          "prompt": "Quantos anos tem a irmã mais nova de quem fala?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Três"
+            },
+            {
+              "id": "B",
+              "label": "Cinco"
+            },
+            {
+              "id": "C",
+              "label": "Dois"
+            },
+            {
+              "id": "D",
+              "label": "Doze"
+            }
+          ],
+          "answer": "C",
+          "explanation": "两岁 são dois anos de idade. 三口人 informa o número de pessoas da família.",
+          "audioText": "我家有三口人，我妹妹今年两岁。",
+          "audioSrc": "./assets/audio/basico-2-simulado-4-q01.mp3"
+        },
+        {
+          "id": 2,
+          "type": "multiple-choice",
+          "prompt": "O que a pessoa quer levar?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Aquele dicionário e estes dois mapas"
+            },
+            {
+              "id": "B",
+              "label": "Este dicionário e aqueles dois mapas"
+            },
+            {
+              "id": "C",
+              "label": "Dois dicionários e um mapa"
+            },
+            {
+              "id": "D",
+              "label": "Aquele dicionário e estas duas canetas"
+            }
+          ],
+          "answer": "A",
+          "explanation": "那本词典 aponta para aquele dicionário, e 这两张地图 aponta para estes dois mapas.",
+          "audioText": "我要那本词典和这两张地图。",
+          "audioSrc": "./assets/audio/basico-2-simulado-4-q02.mp3"
+        },
+        {
+          "id": 3,
+          "type": "multiple-choice",
+          "prompt": "Quantos alunos estudam na escola?",
+          "options": [
+            {
+              "id": "A",
+              "label": "305"
+            },
+            {
+              "id": "B",
+              "label": "3.050"
+            },
+            {
+              "id": "C",
+              "label": "3.500"
+            },
+            {
+              "id": "D",
+              "label": "3.005"
+            }
+          ],
+          "answer": "D",
+          "explanation": "三千 vale 3.000. 零 indica que há casas vazias antes de 五, que vale cinco.",
+          "audioText": "我们学校有三千零五个学生。",
+          "audioSrc": "./assets/audio/basico-2-simulado-4-q03.mp3"
+        },
+        {
+          "id": 4,
+          "type": "multiple-choice",
+          "prompt": "O que a pessoa diz e, em seguida, pede?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Diz que sabe francês e pede para ver um mapa."
+            },
+            {
+              "id": "B",
+              "label": "Diz que não sabe falar francês e pede para usar um dicionário."
+            },
+            {
+              "id": "C",
+              "label": "Diz que não sabe chinês e pede aulas de francês."
+            },
+            {
+              "id": "D",
+              "label": "Diz que não tem dicionário e pede para comprar um."
+            }
+          ],
+          "answer": "B",
+          "explanation": "不会说法语 significa que a pessoa não sabe falar francês. 能不能用一下 pergunta se ela pode usar o dicionário por um momento.",
+          "audioText": "我不会说法语，能不能用一下你的词典？",
+          "audioSrc": "./assets/audio/basico-2-simulado-4-q04.mp3"
+        },
+        {
+          "id": 5,
+          "type": "multiple-choice",
+          "prompt": "Qual é o preço da sopa agripicante?",
+          "options": [
+            {
+              "id": "A",
+              "label": "48,00 yuans"
+            },
+            {
+              "id": "B",
+              "label": "12,05 yuans"
+            },
+            {
+              "id": "C",
+              "label": "12,50 yuans"
+            },
+            {
+              "id": "D",
+              "label": "50,12 yuans"
+            }
+          ],
+          "answer": "C",
+          "explanation": "酸辣汤 é a sopa agripicante. 十二块五毛 equivale a 12,50 yuans.",
+          "audioText": "红烧牛肉四十八块，酸辣汤十二块五毛。",
+          "audioSrc": "./assets/audio/basico-2-simulado-4-q05.mp3"
+        }
+      ]
+    },
+    {
+      "id": "classificadores",
+      "title": "Classificadores e perguntas de quantidade",
+      "shortTitle": "Classificadores",
+      "instructions": "Nas lacunas, escreva apenas o hanzi que falta. Nas alternativas, observe a quantidade e o objeto contado.",
+      "questions": [
+        {
+          "id": 6,
+          "type": "fill-blank",
+          "prompt": "我给你三___地图。（três mapas）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": "张",
+          "explanation": "张 classifica objetos planos, como 地图."
+        },
+        {
+          "id": 7,
+          "type": "fill-blank",
+          "prompt": "那两___词典很有用。（aqueles dois dicionários）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": "本",
+          "explanation": "本 é o classificador de volumes, como livros e dicionários."
+        },
+        {
+          "id": 8,
+          "type": "fill-blank",
+          "prompt": "我想买一___红衬衫。（uma camisa vermelha）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": "件",
+          "explanation": "件 é usado para contar peças de roupa como 衬衫."
+        },
+        {
+          "id": 9,
+          "type": "fill-blank",
+          "prompt": "这两___裤子不太贵。（estas duas calças）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": "条",
+          "explanation": "条 é o classificador usado com 裤子."
+        },
+        {
+          "id": 10,
+          "type": "fill-blank",
+          "prompt": "我有两___笔。（duas canetas）",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": "支",
+          "explanation": "支 é usado para contar canetas e outros objetos finos e alongados."
+        },
+        {
+          "id": 11,
+          "type": "multiple-choice",
+          "prompt": "Qual pergunta usa 几 e o classificador específico para contar membros da família?",
+          "options": [
+            {
+              "id": "A",
+              "label": "你家有几人？"
+            },
+            {
+              "id": "B",
+              "label": "你有几个姐姐？"
+            },
+            {
+              "id": "C",
+              "label": "你们学校有几位老师？"
+            },
+            {
+              "id": "D",
+              "label": "你家有几口人？"
+            }
+          ],
+          "answer": "D",
+          "explanation": "No padrão da lição, 几 vem antes do classificador 口 e do substantivo 人."
+        },
+        {
+          "id": 12,
+          "type": "multiple-choice",
+          "prompt": "Como perguntar quantos alunos há numa escola, usando 多少 sem escrever um classificador?",
+          "options": [
+            {
+              "id": "A",
+              "label": "你们学校有多少学生？"
+            },
+            {
+              "id": "B",
+              "label": "你们学校有几学生？"
+            },
+            {
+              "id": "C",
+              "label": "你们学校有多少个学生？"
+            },
+            {
+              "id": "D",
+              "label": "你们学校有多少岁学生？"
+            }
+          ],
+          "answer": "A",
+          "explanation": "多少 pode vir diretamente antes de 学生. 多少个学生 também é gramatical, com o classificador 个."
+        },
+        {
+          "id": 13,
+          "type": "multiple-choice",
+          "prompt": "Qual frase pergunta “Qual dicionário você quer?” na forma curta, com o substantivo omitido?",
+          "options": [
+            {
+              "id": "A",
+              "label": "你要哪本词典？"
+            },
+            {
+              "id": "B",
+              "label": "你要哪本？"
+            },
+            {
+              "id": "C",
+              "label": "你要那本？"
+            },
+            {
+              "id": "D",
+              "label": "你要这本吗？"
+            }
+          ],
+          "answer": "B",
+          "explanation": "哪本 significa “qual exemplar?”. Na forma ensinada, 一 fica implícito. 本 permanece quando 词典 já está claro no contexto."
+        },
+        {
+          "id": 14,
+          "type": "multiple-choice",
+          "prompt": "Como completar 这个孩子___ para dizer que a criança tem dois anos?",
+          "options": [
+            {
+              "id": "A",
+              "label": "两个岁"
+            },
+            {
+              "id": "B",
+              "label": "二十岁"
+            },
+            {
+              "id": "C",
+              "label": "两岁"
+            },
+            {
+              "id": "D",
+              "label": "两口"
+            }
+          ],
+          "answer": "C",
+          "explanation": "岁 indica a idade em anos e vem diretamente depois de 两."
+        }
+      ]
+    },
+    {
+      "id": "numeros-tons",
+      "title": "Números, preços e tom de 一",
+      "shortTitle": "Números e tons",
+      "instructions": "Escreva números por extenso em hanzi. Nas questões de pinyin, marque a pronúncia de 一 no contexto indicado.",
+      "questions": [
+        {
+          "id": 15,
+          "type": "fill-blank",
+          "prompt": "Escreva 101 por extenso em chinês.",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": "一百零一",
+          "explanation": "零 ocupa a posição vazia das dezenas entre 百 e o último 一."
+        },
+        {
+          "id": 16,
+          "type": "fill-blank",
+          "prompt": "Escreva 30.000 por extenso em chinês.",
+          "placeholder": "Digite em caracteres chineses",
+          "answer": "三万",
+          "explanation": "万 equivale a 10.000. Três dezenas de milhar formam 三万."
+        },
+        {
+          "id": 17,
+          "type": "multiple-choice",
+          "prompt": "Qual é o preço expresso por 四百一十八块三毛五分?",
+          "options": [
+            {
+              "id": "A",
+              "label": "418,53 yuans"
+            },
+            {
+              "id": "B",
+              "label": "418,35 yuans"
+            },
+            {
+              "id": "C",
+              "label": "481,35 yuans"
+            },
+            {
+              "id": "D",
+              "label": "418,05 yuans"
+            }
+          ],
+          "answer": "B",
+          "explanation": "四百一十八块 são 418 yuans. 三毛 valem 0,30 e 五分 valem 0,05."
+        },
+        {
+          "id": 18,
+          "type": "multiple-choice",
+          "prompt": "Complete “vinte yuans” e “dois dicionários”. ___十块 ／ ___本词典",
+          "options": [
+            {
+              "id": "A",
+              "label": "两 ／ 二"
+            },
+            {
+              "id": "B",
+              "label": "两 ／ 两"
+            },
+            {
+              "id": "C",
+              "label": "二 ／ 二"
+            },
+            {
+              "id": "D",
+              "label": "二 ／ 两"
+            }
+          ],
+          "answer": "D",
+          "explanation": "Vinte é 二十. Antes do classificador 本, o padrão da lição é 两本."
+        },
+        {
+          "id": 19,
+          "type": "multiple-choice",
+          "prompt": "Como se pronuncia 一 em 一千 (qiān, mil) e 一条 (tiáo, classificador), nessa ordem?",
+          "options": [
+            {
+              "id": "A",
+              "label": "yì ／ yì"
+            },
+            {
+              "id": "B",
+              "label": "yí ／ yì"
+            },
+            {
+              "id": "C",
+              "label": "yì ／ yí"
+            },
+            {
+              "id": "D",
+              "label": "yī ／ yī"
+            }
+          ],
+          "answer": "A",
+          "explanation": "一 passa ao quarto tom antes de uma sílaba no primeiro, segundo ou terceiro tom."
+        },
+        {
+          "id": 20,
+          "type": "multiple-choice",
+          "prompt": "Como se pronuncia 一 em 一百 (百 bǎi) e 一岁 (岁 suì), nessa ordem?",
+          "options": [
+            {
+              "id": "A",
+              "label": "yí ／ yì"
+            },
+            {
+              "id": "B",
+              "label": "yì ／ yì"
+            },
+            {
+              "id": "C",
+              "label": "yì ／ yí"
+            },
+            {
+              "id": "D",
+              "label": "yī ／ yī"
+            }
+          ],
+          "answer": "C",
+          "explanation": "Antes de bǎi, no terceiro tom, 一 é yì. Antes de suì, no quarto tom, é yí."
+        },
+        {
+          "id": 21,
+          "type": "multiple-choice",
+          "prompt": "Como se pronuncia 一 ao dizer o número “um” isoladamente e em 一件 (“uma peça”), nessa ordem?",
+          "options": [
+            {
+              "id": "A",
+              "label": "yì ／ yī"
+            },
+            {
+              "id": "B",
+              "label": "yī ／ yí"
+            },
+            {
+              "id": "C",
+              "label": "yí ／ yì"
+            },
+            {
+              "id": "D",
+              "label": "yī ／ yì"
+            }
+          ],
+          "answer": "B",
+          "explanation": "O número isolado se lê yī. Antes de 件 (jiàn), no quarto tom, lê-se yí."
+        }
+      ]
+    },
+    {
+      "id": "gramatica",
+      "title": "Gramática em contexto",
+      "shortTitle": "Gramática",
+      "instructions": "Escolha a alternativa que expressa o sentido pedido em cada situação.",
+      "questions": [
+        {
+          "id": 22,
+          "type": "multiple-choice",
+          "prompt": "Complete “Não tenho mapa e não vou à loja”. 我___有地图，___去商店。",
+          "options": [
+            {
+              "id": "A",
+              "label": "不 ／ 没"
+            },
+            {
+              "id": "B",
+              "label": "不 ／ 不"
+            },
+            {
+              "id": "C",
+              "label": "没 ／ 没"
+            },
+            {
+              "id": "D",
+              "label": "没 ／ 不"
+            }
+          ],
+          "answer": "D",
+          "explanation": "有 se nega com 没, formando 没有. Para dizer que você não vai à loja, use 不 antes de 去."
+        },
+        {
+          "id": 23,
+          "type": "multiple-choice",
+          "prompt": "Como dizer “Este mapa em chinês é muito útil”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "这张中文地图是非常有用。"
+            },
+            {
+              "id": "B",
+              "label": "这张中文地图非常有用。"
+            },
+            {
+              "id": "C",
+              "label": "这张中文地图没有用。"
+            },
+            {
+              "id": "D",
+              "label": "这张中文地图不太有用。"
+            }
+          ],
+          "answer": "B",
+          "explanation": "非常有用 descreve diretamente o mapa. Nessa estrutura, o adjetivo não precisa de 是."
+        },
+        {
+          "id": 24,
+          "type": "multiple-choice",
+          "prompt": "Complete com o verbo de habilidade aprendida e, em seguida, com o verbo de permissão. 我___说一点儿汉语。我___用一下你的词典吗？",
+          "options": [
+            {
+              "id": "A",
+              "label": "会 ／ 能"
+            },
+            {
+              "id": "B",
+              "label": "能 ／ 会"
+            },
+            {
+              "id": "C",
+              "label": "能 ／ 能"
+            },
+            {
+              "id": "D",
+              "label": "会 ／ 会"
+            }
+          ],
+          "answer": "A",
+          "explanation": "会 apresenta uma habilidade adquirida. 能 ... 吗 formula o pedido de permissão."
+        },
+        {
+          "id": 25,
+          "type": "multiple-choice",
+          "prompt": "Qual alternativa significa “Esta calça é cara demais, mas aquela não é muito cara”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "这条不太贵，但是那条太贵了。"
+            },
+            {
+              "id": "B",
+              "label": "这条和那条都太贵了。"
+            },
+            {
+              "id": "C",
+              "label": "这条太贵了，但是那条不太贵。"
+            },
+            {
+              "id": "D",
+              "label": "这条不贵，那条也不贵。"
+            }
+          ],
+          "answer": "C",
+          "explanation": "太贵了 expressa “caro demais”. 不太贵 significa “não muito caro”."
+        },
+        {
+          "id": 26,
+          "type": "multiple-choice",
+          "prompt": "Complete os três trechos em ordem. “Peço peixe e arroz” 我要鱼___米饭。“Ela também pede peixe” 她___要鱼。“E, além disso, peço sopa” 我___要汤。",
+          "options": [
+            {
+              "id": "A",
+              "label": "也 ／ 还 ／ 和"
+            },
+            {
+              "id": "B",
+              "label": "和 ／ 也 ／ 还"
+            },
+            {
+              "id": "C",
+              "label": "还 ／ 和 ／ 也"
+            },
+            {
+              "id": "D",
+              "label": "和 ／ 还 ／ 也"
+            }
+          ],
+          "answer": "B",
+          "explanation": "和 liga os nomes dos alimentos. 也 marca o pedido em comum. 还 acrescenta um item."
+        },
+        {
+          "id": 27,
+          "type": "multiple-choice",
+          "prompt": "Qual opção usa 红衬衫 para “camisa vermelha” e traz 的 no atributo “muito bonita”?",
+          "options": [
+            {
+              "id": "A",
+              "label": "一件红衬衫 ／ 一件很漂亮衬衫"
+            },
+            {
+              "id": "B",
+              "label": "一件衬衫红 ／ 一件很漂亮的衬衫"
+            },
+            {
+              "id": "C",
+              "label": "一件红的衬衫 ／ 一件衬衫很漂亮"
+            },
+            {
+              "id": "D",
+              "label": "一件红衬衫 ／ 一件很漂亮的衬衫"
+            }
+          ],
+          "answer": "D",
+          "explanation": "O adjetivo curto 红 pode vir direto antes de 衬衫. Em 很漂亮的衬衫, 的 liga a expressão 很漂亮 ao substantivo."
+        },
+        {
+          "id": 28,
+          "type": "multiple-choice",
+          "prompt": "No diálogo 你要哪本词典？— 我要葡萄牙文的。, que palavra está subentendida depois de 的?",
+          "options": [
+            {
+              "id": "A",
+              "label": "词典"
+            },
+            {
+              "id": "B",
+              "label": "饭店"
+            },
+            {
+              "id": "C",
+              "label": "地图"
+            },
+            {
+              "id": "D",
+              "label": "衬衫"
+            }
+          ],
+          "answer": "A",
+          "explanation": "葡萄牙文的 retoma 词典. A pessoa quer o dicionário em português."
+        },
+        {
+          "id": 29,
+          "type": "multiple-choice",
+          "prompt": "Qual é o sentido de 想 em 我想，这本词典很有用 e em 我想买这本词典, respectivamente?",
+          "options": [
+            {
+              "id": "A",
+              "label": "Comprar ／ usar"
+            },
+            {
+              "id": "B",
+              "label": "Querer ／ achar"
+            },
+            {
+              "id": "C",
+              "label": "Achar ／ querer"
+            },
+            {
+              "id": "D",
+              "label": "Deixar ／ precisar"
+            }
+          ],
+          "answer": "C",
+          "explanation": "No primeiro caso, 想 introduz uma opinião. No segundo, precede 买 e indica vontade."
+        },
+        {
+          "id": 30,
+          "type": "multiple-choice",
+          "prompt": "Qual forma respeita a reduplicação ABAB de 学习?",
+          "options": [
+            {
+              "id": "A",
+              "label": "学学学习"
+            },
+            {
+              "id": "B",
+              "label": "学习学习"
+            },
+            {
+              "id": "C",
+              "label": "学习一习"
+            },
+            {
+              "id": "D",
+              "label": "学习习学"
+            }
+          ],
+          "answer": "B",
+          "explanation": "Para um verbo de duas sílabas como 学习, o padrão ABAB repete o verbo inteiro."
+        },
+        {
+          "id": 31,
+          "type": "multiple-choice",
+          "prompt": "Qual frase sugere que a pessoa olhe aquele mapa por um momento?",
+          "options": [
+            {
+              "id": "A",
+              "label": "你看一下那张地图吧。"
+            },
+            {
+              "id": "B",
+              "label": "你不看那张地图。"
+            },
+            {
+              "id": "C",
+              "label": "那张地图是谁的？"
+            },
+            {
+              "id": "D",
+              "label": "那张地图很有用。"
+            }
+          ],
+          "answer": "A",
+          "explanation": "看一下 suaviza a ação de olhar. A partícula 吧 marca a sugestão neste contexto."
+        }
+      ]
+    },
+    {
+      "id": "escrita",
+      "title": "Correção de frases e ordem de palavras",
+      "shortTitle": "Escrita",
+      "instructions": "Nas correções, reescreva a frase inteira em hanzi e faça somente o ajuste pedido. Na última questão, use todos os blocos.",
+      "questions": [
+        {
+          "id": 32,
+          "type": "translation",
+          "prompt": "Corrija apenas a forma de “dois” em 我要二本书。",
+          "answer": "我要两本书",
+          "explanation": "Antes de 本, a quantidade dois se expressa como 两."
+        },
+        {
+          "id": 33,
+          "type": "translation",
+          "prompt": "Complete a pergunta 你家有几人？ acrescentando o classificador de membros da família. Reescreva a frase inteira.",
+          "answer": "你家有几口人",
+          "explanation": "Para contar membros da família, use 口 entre 几 e 人."
+        },
+        {
+          "id": 34,
+          "type": "translation",
+          "prompt": "Corrija apenas a negação em 我不有葡萄牙文的词典。",
+          "answer": "我没有葡萄牙文的词典",
+          "explanation": "有 se nega com 没. As outras palavras da frase ficam na mesma ordem."
+        },
+        {
+          "id": 35,
+          "type": "translation",
+          "prompt": "Corrija apenas o verbo desnecessário em 这家饭店是比较大。",
+          "answer": "这家饭店比较大",
+          "explanation": "比较大 é a descrição direta do restaurante. Remova 是 para formar o predicado adjetival."
+        },
+        {
+          "id": 36,
+          "type": "word-order",
+          "prompt": "Ordene os blocos. 去北京 ｜ 我 ｜ 工作 ｜ 让我 ｜ 老板",
+          "answer": "我老板让我去北京工作",
+          "explanation": "O sujeito é 我老板. 让 introduz a pessoa que vai trabalhar. 去北京 indica o destino, e 工作 indica a finalidade."
+        }
+      ]
+    }
+  ]
+}
