@@ -293,7 +293,7 @@
       "id": "parte-2-lacunas",
       "title": "三、选词填空",
       "shortTitle": "Lacunas",
-      "instructions": "Preencha as lacunas com as palavras abaixo. Você pode responder com a letra ou com a palavra.",
+      "instructions": "Preencha as lacunas usando as opções do banco de palavras.",
       "sharedWordBank": [
         {
           "id": "A",

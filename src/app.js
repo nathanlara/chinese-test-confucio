@@ -28,7 +28,7 @@ const homeStatus = document.querySelector("#homeStatus");
 const homeExamCount = document.querySelector("#homeExamCount");
 const homeExamList = document.querySelector("#homeExamList");
 
-const APP_VERSION = "2026-11-26-3";
+const APP_VERSION = "2026-11-26-4";
 const STORAGE_VERSION = "2026-09-09-5";
 const STORAGE_VERSION_KEY = "chinese-test:app-version";
 const LAST_EXAM_KEY = "chinese-test:last-exam";
@@ -231,16 +231,17 @@ function renderWordBank(question) {
   `;
 }
 
-function renderInput(question, section) {
+function renderInput(question, section, acceptsFullBlankAnswer) {
   const name = fieldName(question);
-  const placeholder = getAnswerPlaceholder(question, section);
+  const placeholder = acceptsFullBlankAnswer ? "Lacuna ou trecho completo" : getAnswerPlaceholder(question, section);
 
   if (question.type === "translation" || question.type === "word-order") {
     return `<textarea name="${name}" autocomplete="off" spellcheck="false" aria-labelledby="q-${question.id}-title" placeholder="${escapeHtml(placeholder)}"></textarea>`;
   }
 
   if (question.type === "fill-blank") {
-    return `<input type="text" name="${name}" autocomplete="off" aria-labelledby="q-${question.id}-title" placeholder="${escapeHtml(placeholder)}" />`;
+    const description = acceptsFullBlankAnswer ? ` aria-describedby="q-${question.id}-format"` : "";
+    return `<input type="text" name="${name}" autocomplete="off" aria-labelledby="q-${question.id}-title"${description} placeholder="${escapeHtml(placeholder)}" />`;
   }
 
   if (question.type === "match") {
@@ -272,6 +273,11 @@ function getAnswerPlaceholder(question, section) {
 
 function renderQuestion(question, section) {
   const prompt = question.displayPrompt || question.prompt;
+  const acceptsFullBlankAnswer = question.type === "fill-blank" && Boolean(getFillBlankTemplate(question));
+  const acceptsBankLetter = Array.isArray(question.answer) && question.answer.some((item) => /^[A-Z]$/.test(item));
+  const blankHint = acceptsBankLetter
+    ? "Digite a letra do banco, o que falta na lacuna ou o trecho completo."
+    : "Digite só o que falta na lacuna ou escreva o trecho completo.";
   return `
     <article class="question" id="q-${question.id}" data-question-id="${question.id}" aria-labelledby="q-${question.id}-title">
       <span class="question-number">${question.id}</span>
@@ -280,13 +286,14 @@ function renderQuestion(question, section) {
           <h3 id="q-${question.id}-title">${escapeHtml(prompt)}</h3>
           ${shouldShowQuestionPinyin(question) ? `<p class="pinyin">${escapeHtml(question.pinyin)}</p>` : ""}
           ${question.help ? `<p>${escapeHtml(question.help)}</p>` : ""}
+          ${acceptsFullBlankAnswer ? `<p id="q-${question.id}-format">${blankHint}</p>` : ""}
         </div>
       </div>
       ${question.image ? renderImageLike(question.image) : ""}
       ${renderPromptAudio(question)}
       ${renderWordBank(question)}
       ${question.matchOptions ? renderMatchOptions(question.matchOptions) : ""}
-      ${renderInput(question, section)}
+      ${renderInput(question, section, acceptsFullBlankAnswer)}
       <div class="feedback" id="feedback-${question.id}"></div>
     </article>
   `;
@@ -826,6 +833,13 @@ function resetGradingState() {
   });
 }
 
+function getFillBlankTemplate(question) {
+  const prompt = (question.displayPrompt || question.prompt || "").replace(/（[^）]*）|\([^)]*\)/g, "");
+  if (prompt.match(/_+/g)?.length !== 1) return "";
+  const template = prompt.match(/[\p{Script=Han}，。？！、；：,.?!;:\s]*_+[\p{Script=Han}，。？！、；：,.?!;:\s]*/u)?.[0] || "";
+  return /\p{Script=Han}/u.test(template) ? template : "";
+}
+
 function isCorrect(question, answer) {
   if (!answer) return false;
   const accepted = Array.isArray(question.answer) ? question.answer : [question.answer];
@@ -837,7 +851,13 @@ function isCorrect(question, answer) {
 
   if (question.type === "fill-blank") {
     const normalizedAnswer = normalizers.text(answer);
-    return accepted.some((item) => normalizers.text(item) === normalizedAnswer);
+    if (accepted.some((item) => normalizers.text(item) === normalizedAnswer)) return true;
+
+    const template = getFillBlankTemplate(question);
+    return Boolean(template) && accepted.some((item) => {
+      const word = normalizers.text(item);
+      return /^\p{Script=Han}+$/u.test(word) && normalizers.text(template.replace(/_+/, word)) === normalizedAnswer;
+    });
   }
 
   return accepted.includes(answer);

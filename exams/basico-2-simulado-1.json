@@ -211,7 +211,7 @@
         {
           "id": 8,
           "type": "fill-blank",
-          "prompt": "我___有哥哥。（Não tenho irmão mais velho. Digite um caractere.）",
+          "prompt": "我___有哥哥。（Não tenho irmão mais velho.）",
           "placeholder": "Digite em caracteres chineses",
           "answer": [
             "没"

@@ -153,7 +153,7 @@
       "id": "classificadores",
       "title": "Classificadores e perguntas de quantidade",
       "shortTitle": "Classificadores",
-      "instructions": "Nas lacunas, escreva apenas o hanzi que falta. Nas alternativas, observe a quantidade e o objeto contado.",
+      "instructions": "Preencha as lacunas. Nas alternativas, observe a quantidade e o objeto contado.",
       "questions": [
         {
           "id": 6,
