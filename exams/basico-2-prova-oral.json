@@ -1,0 +1,130 @@
+{
+  "id": "basico-2-prova-oral",
+  "format": "oral",
+  "title": "Prova oral · Perguntas e respostas",
+  "level": "Chinês Básico 2",
+  "description": "Treine como se estivesse diante do professor. Ouça, responda em voz alta e confira uma resposta possível.",
+  "sections": [
+    {
+      "id": "oral-familia",
+      "title": "Família e estudo",
+      "shortTitle": "Família",
+      "instructions": "Ouça a pergunta e responda em voz alta. Nos dados pessoais, use suas próprias informações. Nos cartões com uma segunda pergunta, use a primeira resposta como contexto.",
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "你家有几口人？",
+          "answer": "我家有四口人。",
+          "audioText": "你家有几口人？",
+          "help": "Apresente o tamanho da sua família.",
+          "followup": "你家有谁？",
+          "followupAnswer": "我家有爸爸、妈妈、妹妹和我。",
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q01.mp3"
+        },
+        {
+          "id": 2,
+          "prompt": "你姐姐多大？",
+          "answer": "我姐姐二十五岁。",
+          "audioText": "你姐姐多大？",
+          "help": "Imagine que sua irmã tem 25 anos.",
+          "followup": "她在哪儿工作？",
+          "followupAnswer": "她在学校工作。",
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q02.mp3"
+        },
+        {
+          "id": 3,
+          "prompt": "你会说汉语吗？",
+          "answer": "我会说一点儿汉语。",
+          "audioText": "你会说汉语吗？",
+          "help": "Diga quanto chinês você consegue falar.",
+          "followup": "你为什么想学汉语？",
+          "followupAnswer": "我想去中国学习。",
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q03.mp3"
+        },
+        {
+          "id": 4,
+          "prompt": "你们学校有多少学生？",
+          "answer": "我们学校有两千零三十个学生。",
+          "audioText": "你们学校有多少学生？",
+          "help": "Use o número 2.030 na resposta.",
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q04.mp3"
+        }
+      ]
+    },
+    {
+      "id": "oral-mapas",
+      "title": "Mapas e dicionários",
+      "shortTitle": "Objetos",
+      "instructions": "Responda como dono dos objetos ou como colega que quer usá-los.",
+      "questions": [
+        {
+          "id": 5,
+          "prompt": "这两本词典是谁的？",
+          "answer": "这两本词典是我的。",
+          "audioText": "这两本词典是谁的？",
+          "help": "Diga a quem pertencem os dicionários.",
+          "followup": "我能不能用一下？",
+          "followupAnswer": "当然可以。",
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q05.mp3"
+        },
+        {
+          "id": 6,
+          "prompt": "你要哪张地图？",
+          "answer": "我要这张中文地图。",
+          "audioText": "你要哪张地图？",
+          "help": "Escolha o mapa em chinês.",
+          "followup": "那张地图是什么文的？",
+          "followupAnswer": "那张地图是葡萄牙文的。",
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q06.mp3"
+        }
+      ]
+    },
+    {
+      "id": "oral-compras",
+      "title": "Compras e restaurante",
+      "shortTitle": "Compras e comida",
+      "instructions": "Faça a conversa em voz alta. Uma pessoa pode assumir o papel de professor e ler as falas seguintes.",
+      "questions": [
+        {
+          "id": 7,
+          "prompt": "您好，您要买什么？",
+          "answer": "我想买一件红衬衫。",
+          "audioText": "您好，您要买什么？",
+          "help": "Você procura uma camisa vermelha.",
+          "followup": "您要试一下吗？",
+          "followupAnswer": "好，我想试一试。",
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q07.mp3"
+        },
+        {
+          "id": 8,
+          "prompt": "这条裤子多少钱？",
+          "answer": "这条裤子一百零八块五毛。",
+          "audioText": "这条裤子多少钱？",
+          "help": "Você atende na loja. Use o preço de 108,50 yuans.",
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q08.mp3"
+        },
+        {
+          "id": 9,
+          "prompt": "您要吃什么？",
+          "answer": "我要鱼和米饭。",
+          "audioText": "您要吃什么？",
+          "help": "Faça o pedido no restaurante.",
+          "followup": "您还要什么？",
+          "followupAnswer": "我还要一碗酸辣汤。",
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q09.mp3"
+        },
+        {
+          "id": 10,
+          "prompt": "这件衬衫怎么样？",
+          "answer": "这件衬衫很漂亮，但是太贵了。",
+          "audioText": "这件衬衫怎么样？",
+          "help": "Diga sua opinião sobre a camisa.",
+          "followup": "您要看看那件吗？",
+          "followupAnswer": "好，我看看那件。",
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q10.mp3"
+        }
+      ]
+    }
+  ],
+  "suggestedTime": "15 min"
+}

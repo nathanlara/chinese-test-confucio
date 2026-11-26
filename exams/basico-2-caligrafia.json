@@ -1,0 +1,123 @@
+{
+  "id": "basico-2-caligrafia",
+  "format": "handwriting",
+  "title": "Folhas de escrita · Pergunta e resposta",
+  "level": "Chinês Básico 2",
+  "description": "Pratique hanzi das lições 3 a 5 com frases-modelo, caracteres para cobrir e espaço para escrever a resposta inteira.",
+  "sections": [
+    {
+      "id": "escrita-familia",
+      "title": "Família e números",
+      "shortTitle": "Família",
+      "instructions": "Leia a pergunta. Cubra os caracteres cinza, repita-os nos espaços vazios e escreva a resposta inteira na linha.",
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "你家有几口人？",
+          "answer": "我家有四口人。",
+          "trace": [
+            "家",
+            "口"
+          ]
+        },
+        {
+          "id": 2,
+          "prompt": "你妹妹多大？",
+          "answer": "我妹妹两岁。",
+          "trace": [
+            "两",
+            "岁"
+          ]
+        },
+        {
+          "id": 3,
+          "prompt": "你们学校有多少学生？",
+          "answer": "我们学校有一千零五个学生。",
+          "trace": [
+            "千",
+            "零"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "escrita-objetos",
+      "title": "Mapas e dicionários",
+      "shortTitle": "Objetos",
+      "instructions": "Observe os classificadores e a ordem das palavras na frase que você vai copiar.",
+      "questions": [
+        {
+          "id": 4,
+          "prompt": "这张地图是谁的？",
+          "answer": "这张地图是我的。",
+          "trace": [
+            "张",
+            "图"
+          ]
+        },
+        {
+          "id": 5,
+          "prompt": "你要哪本词典？",
+          "answer": "我要那本中文词典。",
+          "trace": [
+            "词",
+            "典"
+          ]
+        },
+        {
+          "id": 6,
+          "prompt": "我能不能用一下你的词典？",
+          "answer": "当然可以。",
+          "trace": [
+            "当",
+            "然"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "escrita-compras",
+      "title": "Compras e restaurante",
+      "shortTitle": "Compras e comida",
+      "instructions": "Repita os caracteres e depois escreva toda a resposta de memória.",
+      "questions": [
+        {
+          "id": 7,
+          "prompt": "你要买什么？",
+          "answer": "我要买一件红衬衫。",
+          "trace": [
+            "衬",
+            "衫"
+          ]
+        },
+        {
+          "id": 8,
+          "prompt": "这条裤子多少钱？",
+          "answer": "这条裤子六十八块。",
+          "trace": [
+            "裤",
+            "钱"
+          ]
+        },
+        {
+          "id": 9,
+          "prompt": "您要吃什么？",
+          "answer": "我要牛肉和米饭。",
+          "trace": [
+            "肉",
+            "饭"
+          ]
+        },
+        {
+          "id": 10,
+          "prompt": "您还要什么？",
+          "answer": "我还要一碗汤。",
+          "trace": [
+            "碗",
+            "汤"
+          ]
+        }
+      ]
+    }
+  ]
+}

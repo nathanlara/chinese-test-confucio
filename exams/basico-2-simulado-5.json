@@ -1,0 +1,334 @@
+{
+  "id": "basico-2-simulado-5",
+  "format": "paper",
+  "title": "Simulado 5 · Prova no papel",
+  "level": "Chinês Básico 2",
+  "description": "Lições 3 a 5. Escuta com imagens, diálogos, lacunas, ordem de frases, tradução e números grandes.",
+  "sections": [
+    {
+      "id": "escuta-imagens",
+      "title": "Escuta e associação de imagens",
+      "shortTitle": "Escuta",
+      "instructions": "Use os áudios desta seção. Para cada frase, anote no papel a letra da imagem correspondente. Cada letra é usada uma vez.",
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Ouça e escreva a letra da imagem.",
+          "answer": "D · dois livros",
+          "explanation": "两本书 significa dois livros.",
+          "audioText": "我有两本书。",
+          "audioSrc": "./assets/audio/basico-2-simulado-5-q01.mp3"
+        },
+        {
+          "id": 2,
+          "prompt": "Ouça e escreva a letra da imagem.",
+          "answer": "B · camisa vermelha",
+          "explanation": "件 classifica a camisa, e 红 indica a cor vermelha.",
+          "audioText": "这件红衬衫很漂亮。",
+          "audioSrc": "./assets/audio/basico-2-simulado-5-q02.mp3"
+        },
+        {
+          "id": 3,
+          "prompt": "Ouça e escreva a letra da imagem.",
+          "answer": "A · família de três pessoas",
+          "explanation": "三口人 indica três pessoas da família.",
+          "audioText": "我家有三口人。",
+          "audioSrc": "./assets/audio/basico-2-simulado-5-q03.mp3"
+        },
+        {
+          "id": 4,
+          "prompt": "Ouça e escreva a letra da imagem.",
+          "answer": "E · prato com peixe",
+          "explanation": "一条鱼 é um peixe.",
+          "audioText": "请给我一条鱼。",
+          "audioSrc": "./assets/audio/basico-2-simulado-5-q04.mp3"
+        },
+        {
+          "id": 5,
+          "prompt": "Ouça e escreva a letra da imagem.",
+          "answer": "C · mapa",
+          "explanation": "地图 significa mapa. 张 é o classificador.",
+          "audioText": "我能不能看一下这张地图？",
+          "audioSrc": "./assets/audio/basico-2-simulado-5-q05.mp3"
+        },
+        {
+          "id": 6,
+          "prompt": "Ouça e escreva a letra da imagem.",
+          "answer": "F · computador",
+          "explanation": "一台电脑 significa um computador.",
+          "audioText": "我有一台电脑。",
+          "audioSrc": "./assets/audio/basico-2-simulado-5-q06.mp3"
+        }
+      ],
+      "image": {
+        "src": "./assets/images/basico-2-escuta-imagens.jpg",
+        "alt": "Seis cenas para a atividade de compreensão oral."
+      },
+      "imageLabels": [
+        "Uma família de três pessoas",
+        "Uma camisa vermelha",
+        "Um mapa aberto",
+        "Dois livros empilhados",
+        "Um peixe inteiro num prato",
+        "Um computador de mesa"
+      ]
+    },
+    {
+      "id": "dialogos",
+      "title": "Complete os diálogos",
+      "shortTitle": "Diálogos",
+      "instructions": "Escreva em hanzi a palavra ou o trecho que falta. Use a fala anterior e a indicação entre parênteses.",
+      "questions": [
+        {
+          "id": 7,
+          "prompt": "A：你家有几口人？\nB：我家___五口人。",
+          "answer": "有",
+          "explanation": "有 informa quantas pessoas há."
+        },
+        {
+          "id": 8,
+          "prompt": "A：你有中文词典吗？\nB：我___有中文词典。",
+          "answer": "没",
+          "explanation": "A negação de 有 é 没有."
+        },
+        {
+          "id": 9,
+          "prompt": "A：我能不能用一下你的词典？\nB：当然___。",
+          "answer": "可以",
+          "explanation": "当然可以 concede a permissão."
+        },
+        {
+          "id": 10,
+          "prompt": "A：这本词典是你的吗？\nB：不是，是老师___。",
+          "answer": "的",
+          "explanation": "老师的 significa “do professor” e retoma o dicionário."
+        },
+        {
+          "id": 11,
+          "prompt": "A：你要哪件衬衫？\nB：我___那件红衬衫。（Eu quero…）",
+          "answer": "要",
+          "explanation": "要 introduz o item que a pessoa quer."
+        },
+        {
+          "id": 12,
+          "prompt": "A：您要什么？\nB：我要鱼和米饭，___要一碗汤。（além disso）",
+          "answer": "还",
+          "explanation": "还要 acrescenta a sopa ao pedido."
+        },
+        {
+          "id": 13,
+          "prompt": "A：这条裤子多少钱？\nB：一百六十块。\nA：___贵___！有没有便宜一点儿的？",
+          "answer": "太 ／ 了",
+          "explanation": "太贵了 significa “caro demais”."
+        },
+        {
+          "id": 14,
+          "prompt": "A：你___说汉语吗？（habilidade aprendida）\nB：会说一点儿。",
+          "answer": "会",
+          "explanation": "会说 indica que a pessoa aprendeu a falar."
+        }
+      ]
+    },
+    {
+      "id": "lacunas",
+      "title": "Complete as frases",
+      "shortTitle": "Lacunas",
+      "instructions": "Escreva em hanzi somente o que falta. Nos itens com duas lacunas, respeite a ordem.",
+      "questions": [
+        {
+          "id": 15,
+          "prompt": "我家有四___人。（classificador de membros da família）",
+          "answer": "口",
+          "explanation": "Usa-se 口 para contar os membros da família."
+        },
+        {
+          "id": 16,
+          "prompt": "这是我的两___地图。",
+          "answer": "张",
+          "explanation": "张 classifica mapas e outros objetos planos."
+        },
+        {
+          "id": 17,
+          "prompt": "你有没有两___词典？",
+          "answer": "本",
+          "explanation": "本 classifica livros e dicionários."
+        },
+        {
+          "id": 18,
+          "prompt": "我想买一___红衬衫。",
+          "answer": "件",
+          "explanation": "件 é o classificador da camisa."
+        },
+        {
+          "id": 19,
+          "prompt": "那___裤子不太贵。",
+          "answer": "条",
+          "explanation": "条 é o classificador de 裤子."
+        },
+        {
+          "id": 20,
+          "prompt": "请给我三___笔。",
+          "answer": "支",
+          "explanation": "支 classifica canetas e outros objetos finos e compridos."
+        },
+        {
+          "id": 21,
+          "prompt": "这___电脑比较贵。（classificador de máquinas）",
+          "answer": "台",
+          "explanation": "台 classifica aparelhos como computadores."
+        },
+        {
+          "id": 22,
+          "prompt": "你妹妹___岁？（Quantos anos? Pergunta sobre criança pequena.）",
+          "answer": "几",
+          "explanation": "几岁 pergunta a idade e vem diretamente antes de 岁."
+        },
+        {
+          "id": 23,
+          "prompt": "你们学校有___学生？（Use a palavra para perguntar uma quantidade sem pressupor que é pequena.）",
+          "answer": "多少",
+          "explanation": "多少 pergunta a quantidade em geral."
+        },
+        {
+          "id": 24,
+          "prompt": "我有两本书，他___有两本书。（ele também）",
+          "answer": "也",
+          "explanation": "也 antes de 有 indica a mesma situação."
+        }
+      ]
+    },
+    {
+      "id": "ordem",
+      "title": "Coloque as frases em ordem",
+      "shortTitle": "Ordem",
+      "instructions": "Use todos os blocos e escreva a frase inteira em hanzi.",
+      "questions": [
+        {
+          "id": 25,
+          "prompt": "几口人 ｜ 有 ｜ 你家",
+          "answer": "你家有几口人？",
+          "explanation": "A pergunta segue o padrão família + 有 + quantidade."
+        },
+        {
+          "id": 26,
+          "prompt": "张 ｜ 这 ｜ 是 ｜ 我的 ｜ 地图",
+          "answer": "这张地图是我的。",
+          "explanation": "Demonstrativo + classificador + substantivo. 我的 indica posse."
+        },
+        {
+          "id": 27,
+          "prompt": "我 ｜ 这本词典 ｜ 用一下 ｜ 能不能",
+          "answer": "我能不能用一下这本词典？",
+          "explanation": "能不能 precede a ação. 一下 suaviza o pedido."
+        },
+        {
+          "id": 28,
+          "prompt": "是 ｜ 谁的 ｜ 那两本词典",
+          "answer": "那两本词典是谁的？",
+          "explanation": "谁的 pergunta a quem pertence o objeto."
+        },
+        {
+          "id": 29,
+          "prompt": "我 ｜ 鱼 ｜ 想吃 ｜ 米饭 ｜ 和",
+          "answer": "我想吃鱼和米饭。",
+          "explanation": "想 precede o verbo, e 和 liga os dois alimentos."
+        },
+        {
+          "id": 30,
+          "prompt": "请 ｜ 我 ｜ 看一下 ｜ 这张地图 ｜ 给",
+          "answer": "请给我看一下这张地图。",
+          "explanation": "给我看 significa mostrar para mim."
+        }
+      ]
+    },
+    {
+      "id": "traducao",
+      "title": "Traduza do português para o chinês",
+      "shortTitle": "Tradução",
+      "instructions": "Escreva frases completas em hanzi simplificado. Use a estrutura indicada quando houver.",
+      "questions": [
+        {
+          "id": 31,
+          "prompt": "Minha irmã mais velha tem vinte e dois anos.",
+          "answer": "我姐姐二十二岁。",
+          "explanation": "二十二 é 22 e 岁 marca a idade."
+        },
+        {
+          "id": 32,
+          "prompt": "Não tenho um dicionário de chinês. Use 中文词典.",
+          "answer": "我没有中文词典。",
+          "explanation": "没有 expressa ausência ou falta de posse."
+        },
+        {
+          "id": 33,
+          "prompt": "Estes dois mapas são meus.",
+          "answer": "这两张地图是我的。",
+          "explanation": "这两张 vem antes de 地图."
+        },
+        {
+          "id": 34,
+          "prompt": "Posso experimentar aquela camisa? Use 能不能 e repita 试.",
+          "answer": "我能不能试试那件衬衫？",
+          "explanation": "Também vale 试一试. 那件 indica a peça mais distante."
+        },
+        {
+          "id": 35,
+          "prompt": "Esta calça é muito cara! Use 太…了.",
+          "answer": "这条裤子太贵了！",
+          "explanation": "太 + adjetivo + 了 indica excesso."
+        },
+        {
+          "id": 36,
+          "prompt": "Quero carne bovina e arroz. Também quero uma tigela de sopa. Use 还要.",
+          "answer": "我要牛肉和米饭，还要一碗汤。",
+          "explanation": "和 liga os alimentos e 还要 acrescenta outro item."
+        },
+        {
+          "id": 37,
+          "prompt": "Quero ir à China para estudar chinês. Use 想 e 汉语.",
+          "answer": "我想去中国学习汉语。",
+          "explanation": "Também vale 我想去中国学汉语. A segunda ação dá o propósito da ida."
+        },
+        {
+          "id": 38,
+          "prompt": "Este dicionário é muito útil. Use 很.",
+          "answer": "这本词典很有用。",
+          "explanation": "很有用 funciona como predicado adjetival."
+        }
+      ]
+    },
+    {
+      "id": "numeros-grandes",
+      "title": "Leia os números e escreva em hanzi",
+      "shortTitle": "Números",
+      "instructions": "Leia cada número em voz alta e escreva-o por extenso em chinês no papel.",
+      "questions": [
+        {
+          "id": 39,
+          "prompt": "1.009",
+          "answer": "一千零九",
+          "explanation": "零 assinala o salto até a unidade."
+        },
+        {
+          "id": 40,
+          "prompt": "20.600",
+          "answer": "两万零六百",
+          "explanation": "Separe em 2 万 + 600. A casa dos milhares do bloco final está vazia."
+        },
+        {
+          "id": 41,
+          "prompt": "310.405",
+          "answer": "三十一万零四百零五",
+          "explanation": "Separe em 31 万 + 0405. Há um 零 após 万 e outro antes da unidade."
+        },
+        {
+          "id": 42,
+          "prompt": "2.400.017",
+          "answer": "二百四十万零一十七",
+          "explanation": "Separe em 240 万 + 0017. A forma 二百四十万零十七 também é usada."
+        }
+      ]
+    }
+  ],
+  "suggestedTime": "55 min"
+}

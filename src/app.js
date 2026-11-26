@@ -28,10 +28,15 @@ const homeStatus = document.querySelector("#homeStatus");
 const homeExamCount = document.querySelector("#homeExamCount");
 const homeExamList = document.querySelector("#homeExamList");
 
-const APP_VERSION = "2026-11-25-4";
+const APP_VERSION = "2026-11-26-2";
 const STORAGE_VERSION = "2026-09-09-5";
 const STORAGE_VERSION_KEY = "chinese-test:app-version";
 const LAST_EXAM_KEY = "chinese-test:last-exam";
+const practiceFormats = {
+  paper: "Para fazer no papel",
+  oral: "Prática oral",
+  handwriting: "Para copiar à mão",
+};
 
 let activeExam = null;
 let gradedAnswers = null;
@@ -272,6 +277,124 @@ function renderMatchOptions(options) {
   `;
 }
 
+function renderPracticeImage(section) {
+  const labels = section.imageLabels.map((description, index) => ({
+    letter: String.fromCharCode(65 + index),
+    description,
+  }));
+  const alt = labels.map(({ letter, description }) => `${letter}. ${description}`).join(". ");
+  return `
+    <figure class="practice-images">
+      <img src="${escapeHtml(section.image.src)}" alt="${escapeHtml(alt)}" width="1536" height="1024" />
+      <div class="practice-image-labels" aria-hidden="true">
+        ${labels.map(({ letter }) => `<span>${letter}</span>`).join("")}
+      </div>
+    </figure>
+  `;
+}
+
+function renderTraceRow(character) {
+  const samples = [character, character, character, "", "", ""];
+  return `
+    <div class="trace-row" aria-label="Quadrículas para copiar ${escapeHtml(character)}">
+      ${samples.map((sample) => `<span class="trace-cell" lang="zh-Hans" aria-hidden="true"><span class="trace-guides"></span>${escapeHtml(sample)}</span>`).join("")}
+    </div>
+  `;
+}
+
+function renderPracticeQuestion(question, format) {
+  const number = escapeHtml(question.id);
+  const prompt = escapeHtml(question.prompt);
+  const answer = escapeHtml(question.answer);
+  const heading = format === "oral" ? escapeHtml(question.help) : prompt;
+  const headingLanguage = format === "handwriting" ? ' lang="zh-Hans"' : "";
+  let activity;
+
+  if (format === "handwriting") {
+    activity = `
+      <p class="trace-answer" lang="zh-Hans">${answer}</p>
+      <div class="trace-rows">${question.trace.map(renderTraceRow).join("")}</div>
+      <p class="practice-rule-label">Escreva a resposta inteira</p>
+      <div class="practice-rule" aria-hidden="true"></div>
+    `;
+  } else if (format === "oral") {
+    activity = `
+      ${renderAudio(question)}
+      <p class="oral-print-question" lang="zh-Hans">${prompt}</p>
+      <details class="practice-disclosure oral-transcript">
+        <summary>Ler a pergunta</summary>
+        <p lang="zh-Hans">${prompt}</p>
+      </details>
+      <details class="practice-disclosure">
+        <summary>Ver resposta-modelo</summary>
+        <p lang="zh-Hans">${answer}</p>
+      </details>
+      ${question.followup ? `
+        <p class="oral-print-question" lang="zh-Hans">${escapeHtml(question.followup)}</p>
+        <details class="practice-disclosure">
+          <summary>Próxima pergunta</summary>
+          <p lang="zh-Hans">${escapeHtml(question.followup)}</p>
+          <details class="practice-disclosure">
+            <summary>Ver resposta-modelo</summary>
+            <p lang="zh-Hans">${escapeHtml(question.followupAnswer)}</p>
+          </details>
+        </details>
+      ` : ""}
+    `;
+  } else {
+    activity = `
+      ${question.audioSrc ? renderAudio(question) : ""}
+      <div class="practice-rule" aria-hidden="true"></div>
+    `;
+  }
+
+  return `
+    <article class="question practice-question" id="q-${number}" aria-labelledby="q-${number}-title">
+      <span class="question-number">${number}</span>
+      <h3 id="q-${number}-title"${headingLanguage}>${heading}</h3>
+      ${activity}
+    </article>
+  `;
+}
+
+function renderPracticeReview(review) {
+  if (!review?.length) return "";
+  return `
+    <section class="section practice-review" id="revisao-numeros" aria-labelledby="revisao-numeros-title">
+      <div class="section-heading"><h2 id="revisao-numeros-title">Revisão de números</h2></div>
+      ${review.map((topic) => `
+        <article class="practice-review-topic">
+          <h3>${escapeHtml(topic.title)}</h3>
+          <p>${escapeHtml(topic.text)}</p>
+          <p class="practice-example">${escapeHtml(topic.example)}</p>
+        </article>
+      `).join("")}
+    </section>
+  `;
+}
+
+function renderPracticeKey(sections) {
+  return `
+    <details class="section practice-disclosure practice-answer-key" id="gabarito">
+      <summary>Gabarito comentado</summary>
+      ${sections.map((section) => `
+        <div class="practice-key-section">
+          <h3>${escapeHtml(section.title)}</h3>
+          <ol start="${escapeHtml(section.questions[0].id)}">
+            ${section.questions.map((question) => `
+              <li>
+                <strong>${escapeHtml(question.answer)}</strong>
+                ${question.audioText ? `<p lang="zh-Hans">${escapeHtml(question.audioText)}</p>` : ""}
+                <p>${escapeHtml(question.explanation)}</p>
+              </li>
+            `).join("")}
+          </ol>
+        </div>
+      `).join("")}
+    </details>
+  `;
+}
+
 function renderExam(exam) {
   activeExam = exam;
   gradedAnswers = null;
@@ -283,6 +406,9 @@ function renderExam(exam) {
 
   const questions = exam.sections.flatMap((section) => section.questions);
   const audioCount = questions.filter((question) => question.audioSrc).length;
+  const practiceLabel = practiceFormats[exam.format];
+  examScreen.dataset.format = practiceLabel ? exam.format : "";
+  progressText.closest(".exam-topbar-progress").hidden = Boolean(practiceLabel);
 
   examToolbarTitle.textContent = exam.title;
   examToolbarKicker.textContent = exam.level || "Revisão do Básico 1";
@@ -292,49 +418,72 @@ function renderExam(exam) {
     <h1>${escapeHtml(exam.title)}</h1>
     <p class="lede">${escapeHtml(exam.description)}</p>
     <div class="exam-meta-chips">
-      <span class="meta-chip"><strong>${questions.length}</strong> questões</span>
-      <span class="meta-chip"><strong>${audioCount}</strong> áudios</span>
+      <span class="meta-chip"><strong>${questions.length}</strong> ${exam.format === "handwriting" ? "modelos" : "questões"}</span>
+      ${audioCount || !practiceLabel ? `<span class="meta-chip"><strong>${audioCount}</strong> áudios</span>` : ""}
       <span class="meta-chip"><strong>${exam.sections.length}</strong> seções</span>
       ${exam.suggestedTime ? `<span class="meta-chip"><strong>Tempo sugerido</strong> ${escapeHtml(exam.suggestedTime)}</span>` : ""}
       ${exam.totalPoints ? `<span class="meta-chip"><strong>Total</strong> ${escapeHtml(exam.totalPoints)}</span>` : ""}
     </div>
-    <p class="exam-intro-note">Responda com calma. As respostas ficam salvas e a correção pode ser feita quantas vezes quiser.</p>
+    ${practiceLabel ? `
+      <div class="practice-actions">
+        <button id="printPractice" class="btn secondary" type="button">Imprimir atividade</button>
+        ${exam.format === "paper" ? `<button id="openPracticeKey" class="btn secondary" type="button">Conferir gabarito</button>` : ""}
+      </div>
+      ${exam.format === "paper" ? `<p class="exam-intro-note">Responda no papel. Para imprimir as respostas junto com a atividade, abra o gabarito antes de imprimir. Use esta página para ouvir os áudios.</p>` : ""}
+    ` : `<p class="exam-intro-note">Responda com calma. As respostas ficam salvas e a correção pode ser feita quantas vezes quiser.</p>`}
   `;
 
-  sectionNav.innerHTML = exam.sections
-    .map((section) => `<a href="#${section.id}">${escapeHtml(section.shortTitle || section.title)}</a>`)
+  const navigation = [
+    ...(exam.review?.length ? [{ id: "revisao-numeros", title: "Revisão" }] : []),
+    ...exam.sections,
+    ...(exam.format === "paper" ? [{ id: "gabarito", title: "Gabarito" }] : []),
+  ];
+  sectionNav.innerHTML = navigation
+    .map((section) => `<a href="#${escapeHtml(section.id)}">${escapeHtml(section.shortTitle || section.title)}</a>`)
     .join("");
   setActiveSectionTab(sectionNav.querySelector("a"));
 
   examForm.innerHTML = `
+    ${renderPracticeReview(exam.review)}
     ${exam.sections
       .map(
         (section) => `
-          <section class="section" id="${section.id}" aria-labelledby="${section.id}-title">
+          <section class="section" id="${escapeHtml(section.id)}" aria-labelledby="${escapeHtml(section.id)}-title">
             <div class="section-heading">
               <h2 id="${section.id}-title">${escapeHtml(section.title)}</h2>
-              <span>${escapeHtml(formatSectionMeta(section))}</span>
+              <span>${exam.format === "handwriting" ? `${section.questions.length} modelos` : escapeHtml(formatSectionMeta(section))}</span>
             </div>
             ${section.instructions ? `<p class="prompt-text">${escapeHtml(section.instructions)}</p>` : ""}
             ${section.sharedWordBank ? renderSharedWordBank(section.sharedWordBank) : ""}
             ${section.sharedOptions ? renderSharedOptions(section.sharedOptions) : ""}
-            ${section.questions.map((question) => renderQuestion(question, section)).join("")}
+            ${section.image ? renderPracticeImage(section) : ""}
+            ${section.questions.map((question) => practiceLabel ? renderPracticeQuestion(question, exam.format) : renderQuestion(question, section)).join("")}
           </section>
         `,
       )
       .join("")}
-    <div class="actions">
+    ${exam.format === "paper" ? renderPracticeKey(exam.sections) : ""}
+    ${practiceLabel ? "" : `<div class="actions">
       <p class="actions-note">A correção não apaga as respostas salvas — você pode voltar e ajustar o que quiser.</p>
       <div class="actions-buttons">
         <button class="btn secondary" type="button" id="clearBtn">Limpar respostas</button>
         <button class="btn" type="submit">Corrigir prova</button>
       </div>
-    </div>
+    </div>`}
   `;
 
-  restoreAnswers();
-  document.querySelector("#clearBtn").addEventListener("click", () => clearAnswers({ confirmFirst: true }));
-  updateProgress();
+  if (practiceLabel) {
+    examIntro.querySelector("#printPractice").addEventListener("click", () => window.print());
+    examIntro.querySelector("#openPracticeKey")?.addEventListener("click", () => {
+      const key = examForm.querySelector("#gabarito");
+      key.open = true;
+      key.scrollIntoView({ behavior: scrollBehavior(), block: "start" });
+    });
+  } else {
+    restoreAnswers();
+    examForm.querySelector("#clearBtn").addEventListener("click", () => clearAnswers({ confirmFirst: true }));
+    updateProgress();
+  }
   setupSectionSpy();
 }
 
@@ -359,8 +508,9 @@ function renderExamCards(index) {
       const percent = total ? Math.round((answered / total) * 100) : 0;
       const savedResult = readSavedResult(exam.id);
       const started = answered > 0;
+      const practiceLabel = practiceFormats[exam.format];
       const actionLabel = savedResult ? "Reabrir" : started ? "Continuar" : "Abrir";
-      const statusLabel = savedResult ? "Corrigida" : started ? "Em andamento" : "Não iniciada";
+      const statusLabel = practiceLabel || (savedResult ? "Corrigida" : started ? "Em andamento" : "Não iniciada");
       const statusClass = savedResult ? "is-corrected" : started ? "is-started" : "";
 
       return `
@@ -373,15 +523,15 @@ function renderExamCards(index) {
           <h3>${escapeHtml(exam.title)}</h3>
           <p class="exam-description">${escapeHtml(exam.description || "Revisão com correção automática.")}</p>
           <div class="exam-meta-line">
-            <span>${total} questões</span>
-            <span>${escapeHtml(exam.audioCount || 0)} áudios</span>
+            <span>${total} ${exam.format === "handwriting" ? "modelos" : "questões"}</span>
+            ${exam.audioCount || !practiceLabel ? `<span>${escapeHtml(exam.audioCount || 0)} áudios</span>` : ""}
           </div>
-          <div class="exam-card-progress">
+          ${practiceLabel ? "" : `<div class="exam-card-progress">
             <span class="progress-track" aria-hidden="true"><span class="progress-bar" style="width: ${percent}%"></span></span>
             <span>${started ? `${answered} de ${total} respondidas` : "Ainda não iniciada"}</span>
-          </div>
+          </div>`}
           <div class="exam-card-foot">
-            <span class="exam-score${savedResult ? "" : " is-empty"}">${savedResult ? `Última nota <strong>${savedResult.correct}/${savedResult.total}</strong>` : "Sem correção ainda"}</span>
+            ${practiceLabel ? "" : `<span class="exam-score${savedResult ? "" : " is-empty"}">${savedResult ? `Última nota <strong>${savedResult.correct}/${savedResult.total}</strong>` : "Sem correção ainda"}</span>`}
             <button class="btn start-exam" type="button" data-exam-path="${escapeHtml(exam.path)}">${actionLabel}</button>
           </div>
         </article>
@@ -1497,6 +1647,8 @@ function renderHomeStatus(index) {
   const targetAnswered = target ? Math.min(readAnswerCount(target.id), targetTotal) : 0;
   const targetPercent = targetTotal ? Math.round((targetAnswered / targetTotal) * 100) : 0;
   const targetResult = target ? readSavedResult(target.id) : null;
+  const targetPractice = target ? practiceFormats[target.format] : "";
+  const gradeableCount = index.exams.filter((exam) => !practiceFormats[exam.format]).length;
 
   const continueCard = target
     ? `
@@ -1504,8 +1656,10 @@ function renderHomeStatus(index) {
         <div class="continue-copy">
           <p class="eyebrow">${lastExam ? "Continuar estudando" : "Comece por aqui"}</p>
           <h2>${escapeHtml(target.title)}</h2>
-          <p class="continue-meta">${targetAnswered} de ${targetTotal} questões respondidas${targetResult ? ` · última nota ${targetResult.correct}/${targetResult.total}` : ""}</p>
-          <span class="progress-track" aria-hidden="true"><span class="progress-bar" style="width: ${targetPercent}%"></span></span>
+          ${targetPractice ? `<p class="continue-meta">${targetPractice}</p>` : `
+            <p class="continue-meta">${targetAnswered} de ${targetTotal} questões respondidas${targetResult ? ` · última nota ${targetResult.correct}/${targetResult.total}` : ""}</p>
+            <span class="progress-track" aria-hidden="true"><span class="progress-bar" style="width: ${targetPercent}%"></span></span>
+          `}
         </div>
         <div class="continue-action">
           <span class="tag">${escapeHtml(target.level || "Básico 1")}</span>
@@ -1525,7 +1679,7 @@ function renderHomeStatus(index) {
       </article>
       <article class="stat-card">
         <span class="stat-label">Revisões corrigidas</span>
-        <strong class="stat-value">${graded.length}<span class="stat-sub"> de ${index.exams.length}</span></strong>
+        <strong class="stat-value">${graded.length}<span class="stat-sub"> de ${gradeableCount}</span></strong>
         <span class="stat-sub">${graded.length ? "Continue de onde parou" : "Nenhuma correção ainda"}</span>
       </article>
       <article class="stat-card">
@@ -1547,6 +1701,7 @@ function renderHomeExamList(index) {
       const answered = Math.min(readAnswerCount(exam.id), total);
       const percent = total ? Math.round((answered / total) * 100) : 0;
       const result = readSavedResult(exam.id);
+      const practiceLabel = practiceFormats[exam.format];
 
       return `
         <a class="home-exam" href="./simulados.html?exam=${encodeURIComponent(getExamSlug(exam))}">
@@ -1555,11 +1710,11 @@ function renderHomeExamList(index) {
             ${result ? `<span class="home-exam-score">${result.correct}/${result.total}</span>` : `<span class="home-exam-arrow" aria-hidden="true">→</span>`}
           </span>
           <strong>${escapeHtml(exam.title)}</strong>
-          <span class="home-exam-meta">${total} questões · ${escapeHtml(exam.audioCount || 0)} áudios</span>
-          <span class="home-exam-progress">
+          <span class="home-exam-meta">${total} ${exam.format === "handwriting" ? "modelos" : "questões"}${exam.audioCount || !practiceLabel ? ` · ${escapeHtml(exam.audioCount || 0)} áudios` : ""}</span>
+          ${practiceLabel ? `<span class="home-exam-meta">${practiceLabel}</span>` : `<span class="home-exam-progress">
             <span class="progress-track" aria-hidden="true"><span class="progress-bar" style="width: ${percent}%"></span></span>
             <span>${answered ? `${answered} de ${total}` : "Não iniciada"}</span>
-          </span>
+          </span>`}
         </a>
       `;
     })

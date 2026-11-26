@@ -1,0 +1,221 @@
+{
+  "id": "basico-2-numeros",
+  "format": "paper",
+  "title": "Números · Revisão e simulado",
+  "level": "Chinês Básico 2",
+  "description": "Aprenda a separar os grupos de 万 e pratique números grandes, zeros, medidas, preços e ditado.",
+  "sections": [
+    {
+      "id": "ler-numeros",
+      "title": "Leia em voz alta e escreva em hanzi",
+      "shortTitle": "Ler e escrever",
+      "instructions": "Leia cada número e escreva-o por extenso, sem usar algarismos. Mostre a separação em blocos de quatro quando precisar.",
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "107",
+          "answer": "一百零七",
+          "explanation": "Use 零 para indicar que o sete está na unidade."
+        },
+        {
+          "id": 2,
+          "prompt": "2.020",
+          "answer": "两千零二十",
+          "explanation": "两 pode vir antes de 千. Para vinte, use 二十."
+        },
+        {
+          "id": 3,
+          "prompt": "8.006",
+          "answer": "八千零六",
+          "explanation": "Duas casas vazias consecutivas são representadas por um 零."
+        },
+        {
+          "id": 4,
+          "prompt": "10.010",
+          "answer": "一万零一十",
+          "explanation": "1 万 + 0010. O 零 marca o salto para as dezenas."
+        },
+        {
+          "id": 5,
+          "prompt": "20.300",
+          "answer": "两万零三百",
+          "explanation": "2 万 + 0300. O bloco final começa com uma casa vazia."
+        },
+        {
+          "id": 6,
+          "prompt": "62.040",
+          "answer": "六万两千零四十",
+          "explanation": "6 万 + 2040. Também se pode dizer 六万二千零四十."
+        },
+        {
+          "id": 7,
+          "prompt": "207.060",
+          "answer": "二十万七千零六十",
+          "explanation": "20 万 + 7060. Não há salto após 万. Há salto de 千 para 十."
+        },
+        {
+          "id": 8,
+          "prompt": "1.208.005",
+          "answer": "一百二十万八千零五",
+          "explanation": "120 万 + 8005. 零 liga 千 à unidade."
+        },
+        {
+          "id": 9,
+          "prompt": "5.060.400",
+          "answer": "五百零六万零四百",
+          "explanation": "506 万 + 0400. Há um 零 em cada bloco."
+        },
+        {
+          "id": 10,
+          "prompt": "13.000.000",
+          "answer": "一千三百万",
+          "explanation": "13 milhões = 1.300 grupos de 10.000. As quatro posições finais vazias não são lidas."
+        }
+      ]
+    },
+    {
+      "id": "converter",
+      "title": "Converta de hanzi para algarismos",
+      "shortTitle": "Converter",
+      "instructions": "Anote o número em algarismos. Leia em voz alta para verificar cada unidade.",
+      "questions": [
+        {
+          "id": 11,
+          "prompt": "三百零九",
+          "answer": "309",
+          "explanation": "300 + 9."
+        },
+        {
+          "id": 12,
+          "prompt": "两万零八十",
+          "answer": "20.080",
+          "explanation": "2 × 10.000 + 80."
+        },
+        {
+          "id": 13,
+          "prompt": "十二万六千零七",
+          "answer": "126.007",
+          "explanation": "12 × 10.000 + 6.007."
+        },
+        {
+          "id": 14,
+          "prompt": "四十五万零九百零二",
+          "answer": "450.902",
+          "explanation": "45 × 10.000 + 902."
+        },
+        {
+          "id": 15,
+          "prompt": "八百零五万三千",
+          "answer": "8.053.000",
+          "explanation": "805 × 10.000 + 3.000."
+        },
+        {
+          "id": 16,
+          "prompt": "一千六百万",
+          "answer": "16.000.000",
+          "explanation": "1.600 × 10.000, sem complemento depois de 万."
+        }
+      ]
+    },
+    {
+      "id": "numeros-contexto",
+      "title": "Preços e quantidades",
+      "shortTitle": "Contexto",
+      "instructions": "Escreva a expressão completa em chinês, incluindo a unidade pedida.",
+      "questions": [
+        {
+          "id": 17,
+          "prompt": "22 anos de idade. Use 岁.",
+          "answer": "二十二岁",
+          "explanation": "Na composição de 22, use 二. 岁 marca a idade."
+        },
+        {
+          "id": 18,
+          "prompt": "Dois mapas. Use o classificador de mapas.",
+          "answer": "两张地图",
+          "explanation": "Use 两 para a quantidade antes de 张."
+        },
+        {
+          "id": 19,
+          "prompt": "¥ 8,04. Use 块 e 分.",
+          "answer": "八块零四分",
+          "explanation": "O zero indica a ausência de 毛."
+        },
+        {
+          "id": 20,
+          "prompt": "¥ 128,65. Use 块, 毛 e 分.",
+          "answer": "一百二十八块六毛五分",
+          "explanation": "六毛 = 0,60 e 五分 = 0,05."
+        }
+      ]
+    },
+    {
+      "id": "ditado-numeros",
+      "title": "Ditado de números",
+      "shortTitle": "Ditado",
+      "instructions": "Ouça e escreva em algarismos. Nos preços, use vírgula para separar os centavos.",
+      "questions": [
+        {
+          "id": 21,
+          "prompt": "Ouça e escreva o número.",
+          "answer": "3.002",
+          "explanation": "三千 são 3.000, e 零 indica o salto até 二.",
+          "audioText": "三千零二",
+          "audioSrc": "./assets/audio/basico-2-numeros-q21.mp3"
+        },
+        {
+          "id": 22,
+          "prompt": "Ouça e escreva o número.",
+          "answer": "60.400",
+          "explanation": "6 万 + 400.",
+          "audioText": "六万零四百",
+          "audioSrc": "./assets/audio/basico-2-numeros-q22.mp3"
+        },
+        {
+          "id": 23,
+          "prompt": "Ouça e escreva o número.",
+          "answer": "1.080.050",
+          "explanation": "108 万 + 50.",
+          "audioText": "一百零八万零五十",
+          "audioSrc": "./assets/audio/basico-2-numeros-q23.mp3"
+        },
+        {
+          "id": 24,
+          "prompt": "Ouça e escreva o preço.",
+          "answer": "¥ 78,36",
+          "explanation": "78 yuans + 30 centavos + 6 centavos.",
+          "audioText": "七十八块三毛六分",
+          "audioSrc": "./assets/audio/basico-2-numeros-q24.mp3"
+        }
+      ]
+    }
+  ],
+  "suggestedTime": "35 min",
+  "review": [
+    {
+      "title": "1. Separe os grupos pelo 万",
+      "text": "十 vale 10, 百 vale 100, 千 vale 1.000 e 万 vale 10.000. Conte quatro casas da direita para a esquerda. Leia o bloco da esquerda, diga 万 e depois leia o bloco final.",
+      "example": "17.305 = 1 | 7305 → 一万七千三百零五"
+    },
+    {
+      "title": "2. Use 零 quando pular uma posição",
+      "text": "Leia um 零 ao passar por uma sequência de posições vazias entre valores lidos. Se o bloco depois de 万 não for zero e começar com casas vazias, diga 零 depois de 万. Zeros no fim do número não são lidos.",
+      "example": "105 = 一百零五  ·  10.020 = 一万零二十  ·  40.000 = 四万"
+    },
+    {
+      "title": "3. Pratique 两 e 二",
+      "text": "Use 两 para contar dois itens antes de um classificador. Use 二 nas dezenas, nas unidades de números compostos e para dizer o número dois isolado. Antes de 千 ou 万, 两 é comum.",
+      "example": "两张地图  ·  两岁  ·  二十二  ·  两千  ·  两万"
+    },
+    {
+      "title": "4. Leia o preço por partes",
+      "text": "块 é a unidade de yuan na fala cotidiana. 毛 é um décimo de yuan e 分, um centésimo. Pratique pronunciando a unidade de cada parte.",
+      "example": "418,35 → 四百一十八块三毛五分"
+    },
+    {
+      "title": "5. Confira onde começa a dezena de milhar",
+      "text": "Converta o bloco antes de 万 em algarismos e multiplique por 10.000. Depois some o bloco final. Leia o resultado sem contar os algarismos um a um.",
+      "example": "三十六万零二百零九 = 36 | 0209 = 360.209"
+    }
+  ]
+}

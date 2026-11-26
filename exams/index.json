@@ -71,6 +71,46 @@
       "description": "Lições 3 a 5. Treino de classificadores, 几 e 多少, 两 e 二, números, tons de 一, negação e 能/会.",
       "questionCount": 36,
       "audioCount": 5
+    },
+    {
+      "id": "basico-2-simulado-5",
+      "format": "paper",
+      "title": "Simulado 5 · Prova no papel",
+      "path": "./exams/basico-2-simulado-5.json",
+      "level": "Chinês Básico 2",
+      "description": "Lições 3 a 5. Escuta com imagens, diálogos, lacunas, ordem de frases, tradução e números grandes.",
+      "questionCount": 42,
+      "audioCount": 6
+    },
+    {
+      "id": "basico-2-numeros",
+      "format": "paper",
+      "title": "Números · Revisão e simulado",
+      "path": "./exams/basico-2-numeros.json",
+      "level": "Chinês Básico 2",
+      "description": "Aprenda a separar os grupos de 万 e pratique números grandes, zeros, medidas, preços e ditado.",
+      "questionCount": 24,
+      "audioCount": 4
+    },
+    {
+      "id": "basico-2-prova-oral",
+      "format": "oral",
+      "title": "Prova oral · Perguntas e respostas",
+      "path": "./exams/basico-2-prova-oral.json",
+      "level": "Chinês Básico 2",
+      "description": "Treine como se estivesse diante do professor. Ouça, responda em voz alta e confira uma resposta possível.",
+      "questionCount": 10,
+      "audioCount": 10
+    },
+    {
+      "id": "basico-2-caligrafia",
+      "format": "handwriting",
+      "title": "Folhas de escrita · Pergunta e resposta",
+      "path": "./exams/basico-2-caligrafia.json",
+      "level": "Chinês Básico 2",
+      "description": "Pratique hanzi das lições 3 a 5 com frases-modelo, caracteres para cobrir e espaço para escrever a resposta inteira.",
+      "questionCount": 10,
+      "audioCount": 0
     }
   ]
 }
