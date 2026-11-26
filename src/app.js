@@ -28,7 +28,7 @@ const homeStatus = document.querySelector("#homeStatus");
 const homeExamCount = document.querySelector("#homeExamCount");
 const homeExamList = document.querySelector("#homeExamList");
 
-const APP_VERSION = "2026-11-26-4";
+const APP_VERSION = "2026-11-26-5";
 const STORAGE_VERSION = "2026-09-09-5";
 const STORAGE_VERSION_KEY = "chinese-test:app-version";
 const LAST_EXAM_KEY = "chinese-test:last-exam";
@@ -166,7 +166,7 @@ function renderImageLike(item, className = "visual-prompt") {
 
 function renderAudio(question, label = "Ouvir o áudio") {
   if (question.audioSrc) {
-    return `<div class="audio-row">${renderGameAudio(withVersion(question.audioSrc), label)}</div>`;
+    return `<div class="audio-row">${renderGameAudio(withVersion(question.audioSrc), label, question.audioSegment)}</div>`;
   }
 
   return `
@@ -888,7 +888,7 @@ function gradeExam(event) {
       <div>Gabarito: ${escapeHtml(formatAnswer(question))}</div>
       ${question.answerPinyin ? `<div class="pinyin">${escapeHtml(question.answerPinyin)}</div>` : ""}
       ${question.explanation && question.explanation !== question.answerPinyin ? `<div class="explanation">${escapeHtml(question.explanation)}</div>` : ""}
-      ${question.audioText ? `<div class="explanation">Áudio: ${escapeHtml(question.audioText)}</div>` : ""}
+      ${question.audioText ? `<div class="explanation">Transcrição: <span lang="zh-Hans">${escapeHtml(question.audioText)}</span></div>` : ""}
       ${renderReviewAudio(question)}
     `;
   });

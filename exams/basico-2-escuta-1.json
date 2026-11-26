@@ -1,0 +1,733 @@
+{
+  "id": "basico-2-escuta-1",
+  "title": "Escuta 1 · Frases, imagens e situações do dia a dia",
+  "level": "Chinês Básico 2",
+  "description": "20 questões de compreensão oral sobre família, objetos, compras e restaurante. Ouça e escolha uma alternativa.",
+  "suggestedTime": "25 min",
+  "sections": [
+    {
+      "id": "escuta-imagens",
+      "title": "Associe a frase à imagem",
+      "shortTitle": "Imagens",
+      "instructions": "Observe as imagens de A a F. Ouça cada frase e marque a letra da cena correspondente.",
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-choice",
+          "prompt": "Qual imagem corresponde ao que você ouviu?",
+          "audioText": "桌子上有一台电脑。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Imagem A"
+            },
+            {
+              "id": "B",
+              "label": "Imagem B"
+            },
+            {
+              "id": "C",
+              "label": "Imagem C"
+            },
+            {
+              "id": "D",
+              "label": "Imagem D"
+            },
+            {
+              "id": "E",
+              "label": "Imagem E"
+            },
+            {
+              "id": "F",
+              "label": "Imagem F"
+            }
+          ],
+          "answer": "F",
+          "answerLabel": "F · Um computador de mesa",
+          "explanation": "一台电脑 é um computador. 台 é o classificador usado para aparelhos.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-01.mp3",
+          "audioSegment": {
+            "start": 0.0,
+            "duration": 2.524
+          }
+        },
+        {
+          "id": 2,
+          "type": "multiple-choice",
+          "prompt": "Qual imagem corresponde ao que você ouviu?",
+          "audioText": "这是我爸爸、我妈妈和我。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Imagem A"
+            },
+            {
+              "id": "B",
+              "label": "Imagem B"
+            },
+            {
+              "id": "C",
+              "label": "Imagem C"
+            },
+            {
+              "id": "D",
+              "label": "Imagem D"
+            },
+            {
+              "id": "E",
+              "label": "Imagem E"
+            },
+            {
+              "id": "F",
+              "label": "Imagem F"
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "A · Uma família de três pessoas",
+          "explanation": "爸爸 e 妈妈 são pai e mãe. Quem fala também se inclui com 和我.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-01.mp3",
+          "audioSegment": {
+            "start": 2.644,
+            "duration": 3.628
+          }
+        },
+        {
+          "id": 3,
+          "type": "multiple-choice",
+          "prompt": "Qual imagem corresponde ao que você ouviu?",
+          "audioText": "请给我看看这张地图。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Imagem A"
+            },
+            {
+              "id": "B",
+              "label": "Imagem B"
+            },
+            {
+              "id": "C",
+              "label": "Imagem C"
+            },
+            {
+              "id": "D",
+              "label": "Imagem D"
+            },
+            {
+              "id": "E",
+              "label": "Imagem E"
+            },
+            {
+              "id": "F",
+              "label": "Imagem F"
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "C · Um mapa aberto",
+          "explanation": "这张地图 significa “este mapa”. A pessoa pede para ver o mapa.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-01.mp3",
+          "audioSegment": {
+            "start": 6.392,
+            "duration": 2.836
+          }
+        },
+        {
+          "id": 4,
+          "type": "multiple-choice",
+          "prompt": "Qual imagem corresponde ao que você ouviu?",
+          "audioText": "这两本书是我姐姐的。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Imagem A"
+            },
+            {
+              "id": "B",
+              "label": "Imagem B"
+            },
+            {
+              "id": "C",
+              "label": "Imagem C"
+            },
+            {
+              "id": "D",
+              "label": "Imagem D"
+            },
+            {
+              "id": "E",
+              "label": "Imagem E"
+            },
+            {
+              "id": "F",
+              "label": "Imagem F"
+            }
+          ],
+          "answer": "D",
+          "answerLabel": "D · Dois livros empilhados",
+          "explanation": "这两本书 são estes dois livros. 姐姐的 indica a quem pertencem.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-01.mp3",
+          "audioSegment": {
+            "start": 9.348,
+            "duration": 2.836
+          }
+        },
+        {
+          "id": 5,
+          "type": "multiple-choice",
+          "prompt": "Qual imagem corresponde ao que você ouviu?",
+          "audioText": "我喜欢这件红衬衫。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Imagem A"
+            },
+            {
+              "id": "B",
+              "label": "Imagem B"
+            },
+            {
+              "id": "C",
+              "label": "Imagem C"
+            },
+            {
+              "id": "D",
+              "label": "Imagem D"
+            },
+            {
+              "id": "E",
+              "label": "Imagem E"
+            },
+            {
+              "id": "F",
+              "label": "Imagem F"
+            }
+          ],
+          "answer": "B",
+          "answerLabel": "B · Uma camisa vermelha",
+          "explanation": "红 significa vermelho e 衬衫 é camisa. 件 é o classificador da peça.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-01.mp3",
+          "audioSegment": {
+            "start": 12.304,
+            "duration": 2.836
+          }
+        },
+        {
+          "id": 6,
+          "type": "multiple-choice",
+          "prompt": "Qual imagem corresponde ao que você ouviu?",
+          "audioText": "这条鱼很好吃。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Imagem A"
+            },
+            {
+              "id": "B",
+              "label": "Imagem B"
+            },
+            {
+              "id": "C",
+              "label": "Imagem C"
+            },
+            {
+              "id": "D",
+              "label": "Imagem D"
+            },
+            {
+              "id": "E",
+              "label": "Imagem E"
+            },
+            {
+              "id": "F",
+              "label": "Imagem F"
+            }
+          ],
+          "answer": "E",
+          "answerLabel": "E · Um peixe inteiro num prato",
+          "explanation": "鱼 é peixe, e 很好吃 diz que está muito gostoso.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-01.mp3",
+          "audioSegment": {
+            "start": 15.26,
+            "duration": 2.356
+          }
+        }
+      ],
+      "image": {
+        "src": "./assets/images/basico-2-escuta-imagens.jpg",
+        "alt": "Seis cenas para associar às frases."
+      },
+      "imageLabels": [
+        "Uma família de três pessoas",
+        "Uma camisa vermelha",
+        "Um mapa aberto",
+        "Dois livros empilhados",
+        "Um peixe inteiro num prato",
+        "Um computador de mesa"
+      ]
+    },
+    {
+      "id": "frases-curtas",
+      "title": "Entenda a frase",
+      "shortTitle": "Frases",
+      "instructions": "Identifique a informação solicitada. Preste atenção a quantidades, negações e classificadores.",
+      "questions": [
+        {
+          "id": 7,
+          "type": "multiple-choice",
+          "prompt": "Quem trabalha em Xangai?",
+          "audioText": "我爸爸在上海工作，妈妈在北京工作。",
+          "options": [
+            {
+              "id": "A",
+              "label": "O pai."
+            },
+            {
+              "id": "B",
+              "label": "A mãe."
+            },
+            {
+              "id": "C",
+              "label": "A irmã."
+            },
+            {
+              "id": "D",
+              "label": "O irmão."
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "O pai.",
+          "explanation": "爸爸在上海工作 diz que o pai trabalha em Xangai. A mãe trabalha em Pequim.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-01.mp3",
+          "audioSegment": {
+            "start": 17.736,
+            "duration": 4.516
+          }
+        },
+        {
+          "id": 8,
+          "type": "multiple-choice",
+          "prompt": "Quantos anos tem a irmã mais velha?",
+          "audioText": "我姐姐今年二十八岁。",
+          "options": [
+            {
+              "id": "A",
+              "label": "20 anos."
+            },
+            {
+              "id": "B",
+              "label": "18 anos."
+            },
+            {
+              "id": "C",
+              "label": "28 anos."
+            },
+            {
+              "id": "D",
+              "label": "82 anos."
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "28 anos.",
+          "explanation": "二十八 é vinte e oito. 姐姐 significa irmã mais velha.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-01.mp3",
+          "audioSegment": {
+            "start": 22.372,
+            "duration": 3.076
+          }
+        },
+        {
+          "id": 9,
+          "type": "multiple-choice",
+          "prompt": "Qual dicionário a pessoa tem?",
+          "audioText": "我只有葡萄牙文词典，没有中文词典。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Somente um dicionário de português."
+            },
+            {
+              "id": "B",
+              "label": "Nenhum dicionário."
+            },
+            {
+              "id": "C",
+              "label": "Os dois dicionários."
+            },
+            {
+              "id": "D",
+              "label": "Somente um dicionário de chinês."
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "Somente um dicionário de português.",
+          "explanation": "只有 restringe o que a pessoa tem. 没有 nega a posse do dicionário de chinês.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-01.mp3",
+          "audioSegment": {
+            "start": 25.568,
+            "duration": 4.108
+          }
+        },
+        {
+          "id": 10,
+          "type": "multiple-choice",
+          "prompt": "Que opinião a pessoa dá sobre a camisa?",
+          "audioText": "这件衬衫很好看，可是太贵了。",
+          "options": [
+            {
+              "id": "A",
+              "label": "É bonita, mas cara demais."
+            },
+            {
+              "id": "B",
+              "label": "É barata, mas muito grande."
+            },
+            {
+              "id": "C",
+              "label": "É bonita e barata."
+            },
+            {
+              "id": "D",
+              "label": "É pequena e feia."
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "É bonita, mas cara demais.",
+          "explanation": "很好看 é “bonita”. 可是 introduz a ressalva 太贵了, “cara demais”.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-01.mp3",
+          "audioSegment": {
+            "start": 29.796,
+            "duration": 3.964
+          }
+        },
+        {
+          "id": 11,
+          "type": "multiple-choice",
+          "prompt": "Qual é o pedido?",
+          "audioText": "我要一碗米饭和两碗汤。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Duas tigelas de arroz e duas de sopa."
+            },
+            {
+              "id": "B",
+              "label": "Duas tigelas de arroz e uma de sopa."
+            },
+            {
+              "id": "C",
+              "label": "Uma tigela de arroz e uma de sopa."
+            },
+            {
+              "id": "D",
+              "label": "Uma tigela de arroz e duas de sopa."
+            }
+          ],
+          "answer": "D",
+          "answerLabel": "Uma tigela de arroz e duas de sopa.",
+          "explanation": "一碗米饭 é uma tigela de arroz. 两碗汤 são duas tigelas de sopa.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-02.mp3",
+          "audioSegment": {
+            "start": 0.0,
+            "duration": 3.004
+          }
+        },
+        {
+          "id": 12,
+          "type": "multiple-choice",
+          "prompt": "O que a pessoa pede?",
+          "audioText": "你能不能给我一支笔？",
+          "options": [
+            {
+              "id": "A",
+              "label": "Uma caneta."
+            },
+            {
+              "id": "B",
+              "label": "Uma folha de papel."
+            },
+            {
+              "id": "C",
+              "label": "Um dicionário."
+            },
+            {
+              "id": "D",
+              "label": "Um mapa."
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "Uma caneta.",
+          "explanation": "一支笔 é uma caneta. 支 é o classificador.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-02.mp3",
+          "audioSegment": {
+            "start": 3.124,
+            "duration": 2.764
+          }
+        },
+        {
+          "id": 13,
+          "type": "multiple-choice",
+          "prompt": "Quanto custa a calça preta?",
+          "audioText": "这条黑裤子一百零九块五毛。",
+          "options": [
+            {
+              "id": "A",
+              "label": "119,50 yuans."
+            },
+            {
+              "id": "B",
+              "label": "190,50 yuans."
+            },
+            {
+              "id": "C",
+              "label": "109,05 yuans."
+            },
+            {
+              "id": "D",
+              "label": "109,50 yuans."
+            }
+          ],
+          "answer": "D",
+          "answerLabel": "109,50 yuans.",
+          "explanation": "一百零九块 são 109 yuans. 五毛 equivalem a 0,50 yuan.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-02.mp3",
+          "audioSegment": {
+            "start": 6.008,
+            "duration": 4.036
+          }
+        }
+      ]
+    },
+    {
+      "id": "pedidos-respostas",
+      "title": "Pedidos e respostas",
+      "shortTitle": "Minidiálogos",
+      "instructions": "Ouça até o fim. Identifique o que foi pedido, escolhido ou confirmado na resposta.",
+      "questions": [
+        {
+          "id": 14,
+          "type": "multiple-choice",
+          "prompt": "De quem é o dicionário?",
+          "audioText": "这是谁的词典？是我妹妹的。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Da professora."
+            },
+            {
+              "id": "B",
+              "label": "Da irmã mais nova."
+            },
+            {
+              "id": "C",
+              "label": "Da irmã mais velha."
+            },
+            {
+              "id": "D",
+              "label": "Da mãe."
+            }
+          ],
+          "answer": "B",
+          "answerLabel": "Da irmã mais nova.",
+          "explanation": "我妹妹的 significa “da minha irmã mais nova”. O substantivo 词典 já está claro.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-02.mp3",
+          "audioSegment": {
+            "start": 10.164,
+            "duration": 3.316
+          }
+        },
+        {
+          "id": 15,
+          "type": "multiple-choice",
+          "prompt": "Qual camisa a pessoa escolhe?",
+          "audioText": "您要这件红衬衫吗？不要，我要那件蓝的。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Aquela azul."
+            },
+            {
+              "id": "B",
+              "label": "Aquela vermelha."
+            },
+            {
+              "id": "C",
+              "label": "Esta vermelha."
+            },
+            {
+              "id": "D",
+              "label": "Esta branca."
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "Aquela azul.",
+          "explanation": "不要 rejeita a primeira opção. 那件蓝的 indica aquela azul, com 衬衫 subentendido.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-02.mp3",
+          "audioSegment": {
+            "start": 13.6,
+            "duration": 4.756
+          }
+        },
+        {
+          "id": 16,
+          "type": "multiple-choice",
+          "prompt": "Qual é a resposta ao pedido?",
+          "audioText": "我能不能看一下你的地图？当然可以。",
+          "options": [
+            {
+              "id": "A",
+              "label": "O mapa foi vendido."
+            },
+            {
+              "id": "B",
+              "label": "A pessoa não pode olhar o mapa."
+            },
+            {
+              "id": "C",
+              "label": "A pessoa pode olhar o mapa."
+            },
+            {
+              "id": "D",
+              "label": "A pessoa precisa comprar outro mapa."
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "A pessoa pode olhar o mapa.",
+          "explanation": "当然可以 significa “claro que pode”. 一下 suaviza o pedido.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-02.mp3",
+          "audioSegment": {
+            "start": 18.476,
+            "duration": 4.276
+          }
+        },
+        {
+          "id": 17,
+          "type": "multiple-choice",
+          "prompt": "Quantas pessoas há na família?",
+          "audioText": "你家有几口人？我家有六口人。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Quatro."
+            },
+            {
+              "id": "B",
+              "label": "Cinco."
+            },
+            {
+              "id": "C",
+              "label": "Seis."
+            },
+            {
+              "id": "D",
+              "label": "Oito."
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "Seis.",
+          "explanation": "六口人 são seis pessoas da família.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-02.mp3",
+          "audioSegment": {
+            "start": 22.872,
+            "duration": 3.868
+          }
+        },
+        {
+          "id": 18,
+          "type": "multiple-choice",
+          "prompt": "O que a pessoa quer comer?",
+          "audioText": "你想吃鱼还是牛肉？我想吃牛肉。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Peixe e carne bovina."
+            },
+            {
+              "id": "B",
+              "label": "Arroz."
+            },
+            {
+              "id": "C",
+              "label": "Peixe."
+            },
+            {
+              "id": "D",
+              "label": "Carne bovina."
+            }
+          ],
+          "answer": "D",
+          "answerLabel": "Carne bovina.",
+          "explanation": "还是 apresenta duas opções. A resposta escolhe 牛肉, carne bovina.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-02.mp3",
+          "audioSegment": {
+            "start": 26.86,
+            "duration": 4.756
+          }
+        },
+        {
+          "id": 19,
+          "type": "multiple-choice",
+          "prompt": "Qual idioma a pessoa sabe falar?",
+          "audioText": "你会说法语吗？不会，我会说汉语。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Francês e chinês."
+            },
+            {
+              "id": "B",
+              "label": "Português."
+            },
+            {
+              "id": "C",
+              "label": "Francês."
+            },
+            {
+              "id": "D",
+              "label": "Chinês."
+            }
+          ],
+          "answer": "D",
+          "answerLabel": "Chinês.",
+          "explanation": "不会 responde à pergunta sobre francês. 会说汉语 informa que a pessoa sabe falar chinês.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-03.mp3",
+          "audioSegment": {
+            "start": 0.0,
+            "duration": 4.444
+          }
+        },
+        {
+          "id": 20,
+          "type": "multiple-choice",
+          "prompt": "O que foi acrescentado ao pedido?",
+          "audioText": "我们要两碗汤，对吗？对，还要一碗米饭。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Um prato de peixe."
+            },
+            {
+              "id": "B",
+              "label": "Uma tigela de sopa."
+            },
+            {
+              "id": "C",
+              "label": "Uma tigela de arroz."
+            },
+            {
+              "id": "D",
+              "label": "Duas tigelas de arroz."
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "Uma tigela de arroz.",
+          "explanation": "还要 introduz o acréscimo. 一碗米饭 é uma tigela de arroz.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-1-03.mp3",
+          "audioSegment": {
+            "start": 4.564,
+            "duration": 4.828
+          }
+        }
+      ]
+    }
+  ]
+}

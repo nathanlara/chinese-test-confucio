@@ -1,0 +1,673 @@
+{
+  "id": "basico-2-escuta-2",
+  "title": "Escuta 2 · Diálogos, números grandes e preços",
+  "level": "Chinês Básico 2",
+  "description": "20 questões de compreensão oral com números grandes, preços e conversas das lições 3 a 5.",
+  "suggestedTime": "30 min",
+  "sections": [
+    {
+      "id": "ouvir-numeros",
+      "title": "Ouça os números",
+      "shortTitle": "Números",
+      "instructions": "Marque o valor exato. Escute os zeros internos e separe mentalmente o grupo antes de 万.",
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple-choice",
+          "prompt": "Qual número você ouviu?",
+          "audioText": "七千零八。",
+          "options": [
+            {
+              "id": "A",
+              "label": "7.008"
+            },
+            {
+              "id": "B",
+              "label": "7.800"
+            },
+            {
+              "id": "C",
+              "label": "708"
+            },
+            {
+              "id": "D",
+              "label": "7.080"
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "7.008",
+          "explanation": "七千 vale 7.000. 零 assinala o salto até a unidade 八.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-01.mp3",
+          "audioSegment": {
+            "start": 0.0,
+            "duration": 1.708
+          }
+        },
+        {
+          "id": 2,
+          "type": "multiple-choice",
+          "prompt": "Qual número você ouviu?",
+          "audioText": "四万零九百。",
+          "options": [
+            {
+              "id": "A",
+              "label": "4.900"
+            },
+            {
+              "id": "B",
+              "label": "40.090"
+            },
+            {
+              "id": "C",
+              "label": "49.000"
+            },
+            {
+              "id": "D",
+              "label": "40.900"
+            }
+          ],
+          "answer": "D",
+          "answerLabel": "40.900",
+          "explanation": "四万 equivale a 40.000, e 九百 acrescenta 900.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-01.mp3",
+          "audioSegment": {
+            "start": 1.828,
+            "duration": 2.188
+          }
+        },
+        {
+          "id": 3,
+          "type": "multiple-choice",
+          "prompt": "Qual número você ouviu?",
+          "audioText": "六十万零三百零九。",
+          "options": [
+            {
+              "id": "A",
+              "label": "630.009"
+            },
+            {
+              "id": "B",
+              "label": "600.309"
+            },
+            {
+              "id": "C",
+              "label": "600.390"
+            },
+            {
+              "id": "D",
+              "label": "60.309"
+            }
+          ],
+          "answer": "B",
+          "answerLabel": "600.309",
+          "explanation": "六十万 são 600.000, e 三百零九 acrescenta 309.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-01.mp3",
+          "audioSegment": {
+            "start": 4.136,
+            "duration": 2.668
+          }
+        },
+        {
+          "id": 4,
+          "type": "multiple-choice",
+          "prompt": "Qual número você ouviu?",
+          "audioText": "三百二十四万零四十。",
+          "options": [
+            {
+              "id": "A",
+              "label": "3.240.400"
+            },
+            {
+              "id": "B",
+              "label": "3.204.040"
+            },
+            {
+              "id": "C",
+              "label": "3.240.040"
+            },
+            {
+              "id": "D",
+              "label": "324.040"
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "3.240.040",
+          "explanation": "三百二十四万 é 324 × 10.000. Depois de 万, 四十 acrescenta 40.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-01.mp3",
+          "audioSegment": {
+            "start": 6.924,
+            "duration": 3.316
+          }
+        },
+        {
+          "id": 5,
+          "type": "multiple-choice",
+          "prompt": "Qual número você ouviu?",
+          "audioText": "一千六百万。",
+          "options": [
+            {
+              "id": "A",
+              "label": "16.600.000"
+            },
+            {
+              "id": "B",
+              "label": "1.600.000"
+            },
+            {
+              "id": "C",
+              "label": "16.000.000"
+            },
+            {
+              "id": "D",
+              "label": "10.600.000"
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "16.000.000",
+          "explanation": "一千六百 é 1.600. Multiplique por 10.000 para obter 16 milhões.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-01.mp3",
+          "audioSegment": {
+            "start": 10.36,
+            "duration": 1.876
+          }
+        },
+        {
+          "id": 6,
+          "type": "multiple-choice",
+          "prompt": "Qual número você ouviu?",
+          "audioText": "五万三千零六十五。",
+          "options": [
+            {
+              "id": "A",
+              "label": "53.605"
+            },
+            {
+              "id": "B",
+              "label": "53.065"
+            },
+            {
+              "id": "C",
+              "label": "53.650"
+            },
+            {
+              "id": "D",
+              "label": "50.365"
+            }
+          ],
+          "answer": "B",
+          "answerLabel": "53.065",
+          "explanation": "五万 são 50.000, 三千 são 3.000 e 六十五 são 65.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-01.mp3",
+          "audioSegment": {
+            "start": 12.356,
+            "duration": 2.596
+          }
+        }
+      ]
+    },
+    {
+      "id": "ouvir-compras",
+      "title": "Compras e restaurante",
+      "shortTitle": "Preços",
+      "instructions": "Faça as contas quando necessário. Em preços, 块 é yuan, 毛 é décimo e 分 é centésimo.",
+      "questions": [
+        {
+          "id": 7,
+          "type": "multiple-choice",
+          "prompt": "Quanto custa o livro?",
+          "audioText": "这本书二十六块八毛。",
+          "options": [
+            {
+              "id": "A",
+              "label": "26,08 yuans."
+            },
+            {
+              "id": "B",
+              "label": "26,80 yuans."
+            },
+            {
+              "id": "C",
+              "label": "28,60 yuans."
+            },
+            {
+              "id": "D",
+              "label": "62,80 yuans."
+            }
+          ],
+          "answer": "B",
+          "answerLabel": "26,80 yuans.",
+          "explanation": "二十六块 são 26 yuans. 八毛 são oito décimos de yuan.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-01.mp3",
+          "audioSegment": {
+            "start": 15.072,
+            "duration": 2.908
+          }
+        },
+        {
+          "id": 8,
+          "type": "multiple-choice",
+          "prompt": "Qual é o total?",
+          "audioText": "一共七十二块四毛五分。",
+          "options": [
+            {
+              "id": "A",
+              "label": "72,54 yuans."
+            },
+            {
+              "id": "B",
+              "label": "27,45 yuans."
+            },
+            {
+              "id": "C",
+              "label": "72,45 yuans."
+            },
+            {
+              "id": "D",
+              "label": "72,05 yuans."
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "72,45 yuans.",
+          "explanation": "一共 indica o total. 四毛五分 somam 0,45 yuan.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-01.mp3",
+          "audioSegment": {
+            "start": 18.1,
+            "duration": 3.244
+          }
+        },
+        {
+          "id": 9,
+          "type": "multiple-choice",
+          "prompt": "Qual é a diferença entre os preços?",
+          "audioText": "红衬衫九十块，蓝衬衫七十八块。",
+          "options": [
+            {
+              "id": "A",
+              "label": "22 yuans."
+            },
+            {
+              "id": "B",
+              "label": "28 yuans."
+            },
+            {
+              "id": "C",
+              "label": "12 yuans."
+            },
+            {
+              "id": "D",
+              "label": "18 yuans."
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "12 yuans.",
+          "explanation": "A vermelha custa 九十块, 90. A azul custa 七十八块, 78. A diferença é 12.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-01.mp3",
+          "audioSegment": {
+            "start": 21.464,
+            "duration": 4.108
+          }
+        },
+        {
+          "id": 10,
+          "type": "multiple-choice",
+          "prompt": "Quanto custam as duas tigelas?",
+          "audioText": "一碗汤九块钱。我要两碗。",
+          "options": [
+            {
+              "id": "A",
+              "label": "11 yuans."
+            },
+            {
+              "id": "B",
+              "label": "9 yuans."
+            },
+            {
+              "id": "C",
+              "label": "19 yuans."
+            },
+            {
+              "id": "D",
+              "label": "18 yuans."
+            }
+          ],
+          "answer": "D",
+          "answerLabel": "18 yuans.",
+          "explanation": "Cada tigela custa nove yuans. 两碗 são duas tigelas, então o total é 18.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-01.mp3",
+          "audioSegment": {
+            "start": 25.692,
+            "duration": 3.484
+          }
+        },
+        {
+          "id": 11,
+          "type": "multiple-choice",
+          "prompt": "O que o cliente pede no final?",
+          "audioText": "这条裤子一百五十块。太贵了！有没有便宜一点儿的？",
+          "options": [
+            {
+              "id": "A",
+              "label": "Uma opção um pouco maior."
+            },
+            {
+              "id": "B",
+              "label": "Uma opção mais cara."
+            },
+            {
+              "id": "C",
+              "label": "Duas calças do mesmo preço."
+            },
+            {
+              "id": "D",
+              "label": "Uma opção um pouco mais barata."
+            }
+          ],
+          "answer": "D",
+          "answerLabel": "Uma opção um pouco mais barata.",
+          "explanation": "便宜一点儿的 significa “uma um pouco mais barata”, retomando 裤子.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-02.mp3",
+          "audioSegment": {
+            "start": 0.0,
+            "duration": 5.476
+          }
+        },
+        {
+          "id": 12,
+          "type": "multiple-choice",
+          "prompt": "Qual é o pedido completo?",
+          "audioText": "我要红烧牛肉和米饭。您还要什么？再来一碗汤。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Carne bovina, arroz e uma tigela de sopa."
+            },
+            {
+              "id": "B",
+              "label": "Arroz e uma tigela de sopa, sem carne."
+            },
+            {
+              "id": "C",
+              "label": "Peixe, arroz e uma tigela de sopa."
+            },
+            {
+              "id": "D",
+              "label": "Carne bovina e duas tigelas de sopa."
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "Carne bovina, arroz e uma tigela de sopa.",
+          "explanation": "红烧牛肉 é carne bovina ao molho, 米饭 é arroz e 再来 acrescenta a sopa ao pedido.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-02.mp3",
+          "audioSegment": {
+            "start": 5.596,
+            "duration": 6.196
+          }
+        },
+        {
+          "id": 13,
+          "type": "multiple-choice",
+          "prompt": "Qual caneta custa 8,60 yuans?",
+          "audioText": "这支笔八块零六分，那支笔八块六毛。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Esta."
+            },
+            {
+              "id": "B",
+              "label": "Nenhuma."
+            },
+            {
+              "id": "C",
+              "label": "Aquela."
+            },
+            {
+              "id": "D",
+              "label": "As duas."
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "Aquela.",
+          "explanation": "那支笔 é “aquela caneta”. 八块六毛 vale 8,60, enquanto 八块零六分 vale 8,06.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-02.mp3",
+          "audioSegment": {
+            "start": 11.912,
+            "duration": 4.924
+          }
+        }
+      ]
+    },
+    {
+      "id": "ouvir-dialogos",
+      "title": "Entenda o diálogo",
+      "shortTitle": "Diálogos",
+      "instructions": "Ouça as duas falas. Marque a informação que aparece no diálogo, com atenção aos detalhes.",
+      "questions": [
+        {
+          "id": 14,
+          "type": "multiple-choice",
+          "prompt": "Quantos livros em chinês a pessoa tem?",
+          "audioText": "你有几本中文书？我有两本中文书，还有一本葡萄牙文的。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Dois."
+            },
+            {
+              "id": "B",
+              "label": "Quatro."
+            },
+            {
+              "id": "C",
+              "label": "Três."
+            },
+            {
+              "id": "D",
+              "label": "Um."
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "Dois.",
+          "explanation": "两本中文书 são dois livros em chinês. O livro em português foi mencionado à parte.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-02.mp3",
+          "audioSegment": {
+            "start": 16.956,
+            "duration": 6.364
+          }
+        },
+        {
+          "id": 15,
+          "type": "multiple-choice",
+          "prompt": "Por que a pessoa quer ir a Pequim?",
+          "audioText": "你为什么想去北京？我想去那儿学习汉语。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Para comprar mapas."
+            },
+            {
+              "id": "B",
+              "label": "Para trabalhar num restaurante."
+            },
+            {
+              "id": "C",
+              "label": "Para estudar chinês."
+            },
+            {
+              "id": "D",
+              "label": "Para visitar a irmã."
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "Para estudar chinês.",
+          "explanation": "去那儿学习汉语 significa “ir para lá estudar chinês”.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-02.mp3",
+          "audioSegment": {
+            "start": 23.44,
+            "duration": 4.996
+          }
+        },
+        {
+          "id": 16,
+          "type": "multiple-choice",
+          "prompt": "Em que idioma está o mapa?",
+          "audioText": "这张地图是中文的吗？不是，是葡萄牙文的。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Chinês."
+            },
+            {
+              "id": "B",
+              "label": "Inglês."
+            },
+            {
+              "id": "C",
+              "label": "Português."
+            },
+            {
+              "id": "D",
+              "label": "Francês."
+            }
+          ],
+          "answer": "C",
+          "answerLabel": "Português.",
+          "explanation": "不是 nega a hipótese inicial. 葡萄牙文的 diz que está em português.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-03.mp3",
+          "audioSegment": {
+            "start": 0.0,
+            "duration": 5.548
+          }
+        },
+        {
+          "id": 17,
+          "type": "multiple-choice",
+          "prompt": "Qual irmão ou irmã a pessoa tem?",
+          "audioText": "你有哥哥吗？没有，我有一个姐姐。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Uma irmã mais velha."
+            },
+            {
+              "id": "B",
+              "label": "Uma irmã mais nova."
+            },
+            {
+              "id": "C",
+              "label": "Um irmão mais velho."
+            },
+            {
+              "id": "D",
+              "label": "Um irmão mais novo."
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "Uma irmã mais velha.",
+          "explanation": "没有 nega que tenha 哥哥. 一个姐姐 é uma irmã mais velha.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-03.mp3",
+          "audioSegment": {
+            "start": 5.668,
+            "duration": 4.036
+          }
+        },
+        {
+          "id": 18,
+          "type": "multiple-choice",
+          "prompt": "Qual dicionário a pessoa quer?",
+          "audioText": "这两本词典你要哪本？我要那本便宜一点儿的。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Os dois."
+            },
+            {
+              "id": "B",
+              "label": "O mais caro."
+            },
+            {
+              "id": "C",
+              "label": "O mais antigo."
+            },
+            {
+              "id": "D",
+              "label": "Aquele que é um pouco mais barato."
+            }
+          ],
+          "answer": "D",
+          "answerLabel": "Aquele que é um pouco mais barato.",
+          "explanation": "那本 retoma um dos dicionários, e 便宜一点儿 descreve a opção escolhida.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-03.mp3",
+          "audioSegment": {
+            "start": 9.824,
+            "duration": 5.236
+          }
+        },
+        {
+          "id": 19,
+          "type": "multiple-choice",
+          "prompt": "O que a pessoa diz sobre o inglês?",
+          "audioText": "请问，您会说英语吗？会，但是我只会说一点儿。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Não sabe falar nada."
+            },
+            {
+              "id": "B",
+              "label": "Sabe falar só um pouco."
+            },
+            {
+              "id": "C",
+              "label": "Consegue ler, mas não consegue falar."
+            },
+            {
+              "id": "D",
+              "label": "Fala fluentemente."
+            }
+          ],
+          "answer": "B",
+          "answerLabel": "Sabe falar só um pouco.",
+          "explanation": "会 fala de uma habilidade. 只会说一点儿 limita essa habilidade a um pouco.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-03.mp3",
+          "audioSegment": {
+            "start": 15.18,
+            "duration": 5.956
+          }
+        },
+        {
+          "id": 20,
+          "type": "multiple-choice",
+          "prompt": "Como o vendedor responde?",
+          "audioText": "我能不能试试这件衬衫？可以，您试试吧。",
+          "options": [
+            {
+              "id": "A",
+              "label": "Dá permissão para experimentar a camisa."
+            },
+            {
+              "id": "B",
+              "label": "Oferece uma calça para experimentar."
+            },
+            {
+              "id": "C",
+              "label": "Diz que a loja vai fechar."
+            },
+            {
+              "id": "D",
+              "label": "Pede que o cliente pague primeiro."
+            }
+          ],
+          "answer": "A",
+          "answerLabel": "Dá permissão para experimentar a camisa.",
+          "explanation": "可以 dá permissão. 您试试吧 convida o cliente a experimentar.",
+          "audioSrc": "./assets/audio/estudo/basico-2-escuta-2-03.mp3",
+          "audioSegment": {
+            "start": 21.256,
+            "duration": 4.924
+          }
+        }
+      ]
+    }
+  ]
+}

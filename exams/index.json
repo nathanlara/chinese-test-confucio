@@ -111,6 +111,24 @@
       "description": "Pratique hanzi das lições 3 a 5 com frases-modelo, caracteres para cobrir e espaço para escrever a resposta inteira.",
       "questionCount": 10,
       "audioCount": 10
+    },
+    {
+      "id": "basico-2-escuta-1",
+      "title": "Escuta 1 · Frases, imagens e situações do dia a dia",
+      "path": "./exams/basico-2-escuta-1.json",
+      "level": "Chinês Básico 2",
+      "description": "20 questões de compreensão oral sobre família, objetos, compras e restaurante. Ouça e escolha uma alternativa.",
+      "questionCount": 20,
+      "audioCount": 20
+    },
+    {
+      "id": "basico-2-escuta-2",
+      "title": "Escuta 2 · Diálogos, números grandes e preços",
+      "path": "./exams/basico-2-escuta-2.json",
+      "level": "Chinês Básico 2",
+      "description": "20 questões de compreensão oral com números grandes, preços e conversas das lições 3 a 5.",
+      "questionCount": 20,
+      "audioCount": 20
     }
   ]
 }
