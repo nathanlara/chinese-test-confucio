@@ -341,7 +341,13 @@
             "在"
           ],
           "answerLabel": "A - 在",
-          "explanation": "我在大学学习汉语。"
+          "explanation": "我在大学学习汉语。",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 33.24,
+            "duration": 2.524,
+            "text": "我在大学学习汉语"
+          }
         },
         {
           "id": 12,
@@ -352,7 +358,11 @@
             "给"
           ],
           "answerLabel": "B - 给",
-          "explanation": "你可以给我打电话吗？"
+          "explanation": "你可以给我打电话吗？",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q08.mp3",
+            "text": "你可以给我打电话吗？"
+          }
         },
         {
           "id": 13,
@@ -363,7 +373,13 @@
             "只"
           ],
           "answerLabel": "C - 只",
-          "explanation": "我妈妈只说葡萄牙语。"
+          "explanation": "我妈妈只说葡萄牙语。",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 5.6,
+            "duration": 2.908,
+            "text": "我妈妈只说葡萄牙语"
+          }
         },
         {
           "id": 14,
@@ -374,7 +390,13 @@
             "还是"
           ],
           "answerLabel": "D - 还是",
-          "explanation": "你说汉语还是说法语？"
+          "explanation": "你说汉语还是说法语？",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 8.628,
+            "duration": 3.316,
+            "text": "你说汉语还是说法语？"
+          }
         },
         {
           "id": 15,
@@ -385,7 +407,13 @@
             "哪儿"
           ],
           "answerLabel": "E - 哪儿",
-          "explanation": "你在哪儿工作？"
+          "explanation": "你在哪儿工作？",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 0.0,
+            "duration": 1.876,
+            "text": "你在哪儿工作？"
+          }
         },
         {
           "id": 16,
@@ -396,7 +424,13 @@
             "电话号码"
           ],
           "answerLabel": "G - 电话号码",
-          "explanation": "可以给我你的电话号码吗？"
+          "explanation": "可以给我你的电话号码吗？",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 1.996,
+            "duration": 2.836,
+            "text": "可以给我你的电话号码吗？"
+          }
         },
         {
           "id": 17,
@@ -407,7 +441,11 @@
             "电子邮件"
           ],
           "answerLabel": "F - 电子邮件",
-          "explanation": "我可以给你发电子邮件。"
+          "explanation": "我可以给你发电子邮件。",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q09.mp3",
+            "text": "我可以给你发电子邮件"
+          }
         }
       ]
     },
@@ -515,7 +553,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "Ela estuda na universidade."
+          "explanation": "Ela estuda na universidade.",
+          "promptSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 4.952,
+            "duration": 2.044,
+            "text": "她在大学学习"
+          }
         },
         {
           "id": 19,
@@ -557,7 +601,11 @@
             }
           ],
           "answer": "B",
-          "explanation": "Ele trabalha na empresa."
+          "explanation": "Ele trabalha na empresa.",
+          "promptSpeech": {
+            "src": "./assets/audio/basico-1-q06.mp3",
+            "text": "他在公司工作"
+          }
         },
         {
           "id": 20,
@@ -599,7 +647,11 @@
             }
           ],
           "answer": "C",
-          "explanation": "Eu te ligo."
+          "explanation": "Eu te ligo.",
+          "promptSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q03.mp3",
+            "text": "我给你打电话"
+          }
         },
         {
           "id": 21,
@@ -641,7 +693,11 @@
             }
           ],
           "answer": "D",
-          "explanation": "Ele me envia um e-mail."
+          "explanation": "Ele me envia um e-mail.",
+          "promptSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q04.mp3",
+            "text": "他给我发电子邮件"
+          }
         },
         {
           "id": 22,
@@ -683,7 +739,11 @@
             }
           ],
           "answer": "E",
-          "explanation": "Ela é professora."
+          "explanation": "Ela é professora.",
+          "promptSpeech": {
+            "src": "./assets/audio/basico-1-q03.mp3",
+            "text": "她是老师"
+          }
         },
         {
           "id": 23,
@@ -725,7 +785,11 @@
             }
           ],
           "answer": "F",
-          "explanation": "Elas estão muito felizes."
+          "explanation": "Elas estão muito felizes.",
+          "promptSpeech": {
+            "src": "./assets/audio/basico-1-q05.mp3",
+            "text": "她们很高兴"
+          }
         },
         {
           "id": 24,
@@ -767,7 +831,13 @@
             }
           ],
           "answer": "G",
-          "explanation": "Eu sou brasileiro."
+          "explanation": "Eu sou brasileiro.",
+          "promptSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 7.116,
+            "duration": 1.804,
+            "text": "我是巴西人"
+          }
         },
         {
           "id": 25,
@@ -809,7 +879,11 @@
             }
           ],
           "answer": "H",
-          "explanation": "Ele é chinês."
+          "explanation": "Ele é chinês.",
+          "promptSpeech": {
+            "src": "./assets/audio/basico-1-q10.mp3",
+            "text": "他是中国人"
+          }
         }
       ]
     },
@@ -827,7 +901,13 @@
           "answer": "我在大学学习汉语",
           "answerLabel": "我在大学学习汉语。",
           "answerPinyin": "Wǒ zài dàxué xuéxí Hànyǔ.",
-          "explanation": "Wǒ zài dàxué xuéxí Hànyǔ."
+          "explanation": "Wǒ zài dàxué xuéxí Hànyǔ.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 33.24,
+            "duration": 2.524,
+            "text": "我在大学学习汉语"
+          }
         },
         {
           "id": 27,
@@ -837,7 +917,11 @@
           "answer": "你可以给我打电话吗",
           "answerLabel": "你可以给我打电话吗？",
           "answerPinyin": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?",
-          "explanation": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?"
+          "explanation": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q08.mp3",
+            "text": "你可以给我打电话吗？"
+          }
         },
         {
           "id": 28,
@@ -847,7 +931,11 @@
           "answer": "他给我发电子邮件",
           "answerLabel": "他给我发电子邮件。",
           "answerPinyin": "Tā gěi wǒ fā diànzǐ yóujiàn.",
-          "explanation": "Tā gěi wǒ fā diànzǐ yóujiàn."
+          "explanation": "Tā gěi wǒ fā diànzǐ yóujiàn.",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q04.mp3",
+            "text": "他给我发电子邮件"
+          }
         },
         {
           "id": 29,
@@ -860,7 +948,13 @@
           ],
           "answerLabel": "你在哪里工作？",
           "answerPinyin": "Nǐ zài nǎlǐ gōngzuò?",
-          "explanation": "Nǐ zài nǎlǐ gōngzuò?"
+          "explanation": "Nǐ zài nǎlǐ gōngzuò?",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 9.04,
+            "duration": 2.116,
+            "text": "你在哪里工作？"
+          }
         },
         {
           "id": 30,
@@ -870,7 +964,13 @@
           "answer": "我妈妈只说葡萄牙语",
           "answerLabel": "我妈妈只说葡萄牙语。",
           "answerPinyin": "Wǒ māma zhǐ shuō Pútáoyáyǔ.",
-          "explanation": "Wǒ māma zhǐ shuō Pútáoyáyǔ."
+          "explanation": "Wǒ māma zhǐ shuō Pútáoyáyǔ.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 5.6,
+            "duration": 2.908,
+            "text": "我妈妈只说葡萄牙语"
+          }
         },
         {
           "id": 31,
@@ -880,7 +980,13 @@
           "answer": "他在进出口公司工作",
           "answerLabel": "他在进出口公司工作。",
           "answerPinyin": "Tā zài jìnchūkǒu gōngsī gōngzuò.",
-          "explanation": "Tā zài jìnchūkǒu gōngsī gōngzuò."
+          "explanation": "Tā zài jìnchūkǒu gōngsī gōngzuò.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 11.276,
+            "duration": 2.908,
+            "text": "他在进出口公司工作"
+          }
         },
         {
           "id": 32,
@@ -890,7 +996,13 @@
           "answer": "可以给我你的电话号码吗",
           "answerLabel": "可以给我你的电话号码吗？",
           "answerPinyin": "Kěyǐ gěi wǒ nǐ de diànhuà hàomǎ ma?",
-          "explanation": "Kěyǐ gěi wǒ nǐ de diànhuà hàomǎ ma?"
+          "explanation": "Kěyǐ gěi wǒ nǐ de diànhuà hàomǎ ma?",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 1.996,
+            "duration": 2.836,
+            "text": "可以给我你的电话号码吗？"
+          }
         }
       ]
     },
@@ -907,7 +1019,13 @@
           "answer": "我在大学学习汉语",
           "answerLabel": "我在大学学习汉语。",
           "answerPinyin": "Wǒ zài dàxué xuéxí Hànyǔ.",
-          "explanation": "Wǒ zài dàxué xuéxí Hànyǔ."
+          "explanation": "Wǒ zài dàxué xuéxí Hànyǔ.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 33.24,
+            "duration": 2.524,
+            "text": "我在大学学习汉语"
+          }
         },
         {
           "id": 34,
@@ -916,7 +1034,13 @@
           "answer": "他在进出口公司工作",
           "answerLabel": "他在进出口公司工作。",
           "answerPinyin": "Tā zài jìnchūkǒu gōngsī gōngzuò.",
-          "explanation": "Tā zài jìnchūkǒu gōngsī gōngzuò."
+          "explanation": "Tā zài jìnchūkǒu gōngsī gōngzuò.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 11.276,
+            "duration": 2.908,
+            "text": "他在进出口公司工作"
+          }
         },
         {
           "id": 35,
@@ -925,7 +1049,11 @@
           "answer": "你可以给我打电话吗",
           "answerLabel": "你可以给我打电话吗？",
           "answerPinyin": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?",
-          "explanation": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?"
+          "explanation": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q08.mp3",
+            "text": "你可以给我打电话吗？"
+          }
         },
         {
           "id": 36,
@@ -934,7 +1062,13 @@
           "answer": "我可以给你发电子邮件吗",
           "answerLabel": "我可以给你发电子邮件吗？",
           "answerPinyin": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?",
-          "explanation": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?"
+          "explanation": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 29.972,
+            "duration": 3.148,
+            "text": "我可以给你发电子邮件吗？"
+          }
         },
         {
           "id": 37,
@@ -946,7 +1080,13 @@
           ],
           "answerLabel": "你在哪儿学习汉语？",
           "answerPinyin": "Nǐ zài nǎr xuéxí Hànyǔ?",
-          "explanation": "Nǐ zài nǎr xuéxí Hànyǔ?"
+          "explanation": "Nǐ zài nǎr xuéxí Hànyǔ?",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 14.304,
+            "duration": 2.356,
+            "text": "你在哪儿学习汉语？"
+          }
         },
         {
           "id": 38,
@@ -955,7 +1095,13 @@
           "answer": "我妈妈只说葡萄牙语",
           "answerLabel": "我妈妈只说葡萄牙语。",
           "answerPinyin": "Wǒ māma zhǐ shuō Pútáoyáyǔ.",
-          "explanation": "Wǒ māma zhǐ shuō Pútáoyáyǔ."
+          "explanation": "Wǒ māma zhǐ shuō Pútáoyáyǔ.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 5.6,
+            "duration": 2.908,
+            "text": "我妈妈只说葡萄牙语"
+          }
         },
         {
           "id": 39,
@@ -964,7 +1110,13 @@
           "answer": "她是巴西人还是中国人",
           "answerLabel": "她是巴西人还是中国人？",
           "answerPinyin": "Tā shì Bāxī rén háishi Zhōngguó rén?",
-          "explanation": "Tā shì Bāxī rén háishi Zhōngguó rén?"
+          "explanation": "Tā shì Bāxī rén háishi Zhōngguó rén?",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 16.78,
+            "duration": 3.076,
+            "text": "她是巴西人还是中国人？"
+          }
         },
         {
           "id": 40,
@@ -973,7 +1125,13 @@
           "answer": "请给我你的电话号码",
           "answerLabel": "请给我你的电话号码。",
           "answerPinyin": "Qǐng gěi wǒ nǐ de diànhuà hàomǎ.",
-          "explanation": "Qǐng gěi wǒ nǐ de diànhuà hàomǎ."
+          "explanation": "Qǐng gěi wǒ nǐ de diànhuà hàomǎ.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-02.mp3",
+            "start": 19.976,
+            "duration": 2.524,
+            "text": "请给我你的电话号码"
+          }
         }
       ]
     }

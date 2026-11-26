@@ -2554,12 +2554,6 @@ button {
   border-bottom: 1px solid var(--border-strong);
 }
 
-.practice-rule-label {
-  margin-bottom: -8px;
-  color: var(--muted);
-  font-size: 12px;
-}
-
 .practice-images {
   position: relative;
   max-width: 580px;
@@ -2638,8 +2632,7 @@ button {
 }
 
 .practice-disclosure p[lang="zh-Hans"],
-.oral-print-question,
-.trace-answer {
+.oral-print-question {
   margin-top: 3px;
   font-size: 19px;
 }
@@ -2667,21 +2660,26 @@ button {
   padding-left: 24px;
 }
 
-.trace-answer {
-  padding-left: 9px;
-  border-left: 2px solid var(--accent);
-  color: var(--ink);
+.practice-audio-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+
+.speech-transcript {
+  margin: 4px 0;
+  font-size: 16px;
 }
 
 .trace-rows {
   display: grid;
   gap: 5px;
+  width: min(100%, calc(var(--trace-columns) * 46px));
 }
 
 .trace-row {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  width: min(100%, 330px);
+  grid-template-columns: repeat(var(--trace-columns), minmax(0, 1fr));
   border-left: 1px solid #8b8883;
 }
 
@@ -2694,12 +2692,11 @@ button {
   aspect-ratio: 1;
   border: 1px solid #8b8883;
   border-left: 0;
-  font: 400 clamp(16px, 4vw, 33px) / 1 "Kaiti SC", KaiTi, "Noto Serif SC", "PingFang SC", serif;
+  font: 400 clamp(13px, 3.4vw, 30px) / 1 "Kaiti SC", KaiTi, "Noto Serif SC", "PingFang SC", serif;
 }
 
-.trace-cell:nth-child(2),
-.trace-cell:nth-child(3) {
-  color: #adaba7;
+.trace-model {
+  color: #96928e;
 }
 
 .trace-cell::before,
@@ -2742,7 +2739,7 @@ button {
   }
 
   body:has(.exam-screen[data-format]:not([data-format=""]):not([hidden])) :is(.site-header, .site-footer),
-  .exam-screen[data-format]:not([data-format=""]) :is(.exam-sticky, .practice-actions, .audio-row, .oral-transcript),
+  .exam-screen[data-format]:not([data-format=""]) :is(.exam-sticky, .practice-actions, .audio-row, .practice-audio-pair, .oral-transcript),
   .practice-answer-key:not([open]) {
     display: none !important;
   }
@@ -2798,11 +2795,6 @@ button {
     border-color: #a7a4a0;
   }
 
-  .practice-rule-label {
-    margin: 1mm 0 0;
-    font-size: 8pt;
-  }
-
   .practice-images {
     max-width: 115mm;
     break-inside: avoid;
@@ -2831,7 +2823,7 @@ button {
   }
 
   .trace-rows {
-    width: 77mm;
+    width: min(100%, calc(var(--trace-columns) * 11mm));
     gap: 1mm;
     margin: 2mm 0;
   }

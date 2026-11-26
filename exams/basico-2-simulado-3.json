@@ -151,7 +151,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "两万 = 20.000, 三千 = 3.000 e 六百 = 600."
+          "explanation": "两万 = 20.000, 三千 = 3.000 e 六百 = 600.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 7.764,
+            "duration": 2.188,
+            "text": "两万三千六百"
+          }
         },
         {
           "id": 6,
@@ -176,7 +182,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "是 + lugar + 人 indica a origem de alguém. 什么地方 pergunta qual lugar."
+          "explanation": "是 + lugar + 人 indica a origem de alguém. 什么地方 pergunta qual lugar.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 10.072,
+            "duration": 2.596,
+            "text": "你妈妈是什么地方人？"
+          }
         },
         {
           "id": 7,
@@ -201,7 +213,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "让 + pessoa + ação pode indicar que alguém permite que outra pessoa faça algo."
+          "explanation": "让 + pessoa + ação pode indicar que alguém permite que outra pessoa faça algo.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 12.788,
+            "duration": 3.244,
+            "text": "我老板让我去上海工作"
+          }
         },
         {
           "id": 8,
@@ -226,7 +244,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "A ordem é 那 + 三 + 张 + 地图. 张 é o classificador de mapas."
+          "explanation": "A ordem é 那 + 三 + 张 + 地图. 张 é o classificador de mapas.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 16.152,
+            "duration": 1.948,
+            "text": "那三张地图"
+          }
         },
         {
           "id": 9,
@@ -236,7 +260,13 @@
           "answer": [
             "也"
           ],
-          "explanation": "也 vai antes do verbo 吃 e significa “também”."
+          "explanation": "也 vai antes do verbo 吃 e significa “também”.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 18.22,
+            "duration": 3.004,
+            "text": "我们都吃米饭，他也吃米饭"
+          }
         },
         {
           "id": 10,
@@ -261,7 +291,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "A expressão 很好吃的 modifica 菜 e vem antes dele."
+          "explanation": "A expressão 很好吃的 modifica 菜 e vem antes dele.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 21.344,
+            "duration": 2.284,
+            "text": "一个很好吃的菜"
+          }
         },
         {
           "id": 11,
@@ -286,7 +322,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "会 antes de um verbo pode indicar que a pessoa aprendeu a realizar aquela ação."
+          "explanation": "会 antes de um verbo pode indicar que a pessoa aprendeu a realizar aquela ação.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 23.748,
+            "duration": 2.764,
+            "text": "她会说一点儿汉语。"
+          }
         },
         {
           "id": 12,
@@ -311,7 +353,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "一 costuma passar ao segundo tom, yí, antes de uma sílaba no quarto tom."
+          "explanation": "一 costuma passar ao segundo tom, yí, antes de uma sílaba no quarto tom.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 26.632,
+            "duration": 1.876,
+            "text": "一件衬衫。"
+          }
         }
       ]
     },
@@ -344,7 +392,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "万 (wàn) é a unidade de dez mil. 方 (fāng) tem grafia semelhante."
+          "explanation": "万 (wàn) é a unidade de dez mil. 方 (fāng) tem grafia semelhante.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 28.628,
+            "duration": 1.156,
+            "text": "万"
+          }
         },
         {
           "id": 14,
@@ -369,7 +423,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "问 (wèn) significa perguntar e traz 口 dentro de 门."
+          "explanation": "问 (wèn) significa perguntar e traz 口 dentro de 门.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 29.904,
+            "duration": 1.156,
+            "text": "问"
+          }
         },
         {
           "id": 15,
@@ -379,7 +439,13 @@
           "answer": [
             "学"
           ],
-          "explanation": "学 (xué) aparece também em 学生 e 学习."
+          "explanation": "学 (xué) aparece também em 学生 e 学习.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-07.mp3",
+            "start": 11.084,
+            "duration": 1.468,
+            "text": "学校。"
+          }
         },
         {
           "id": 16,
@@ -404,7 +470,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "商店 (shāngdiàn) significa loja. 店 (diàn) e 点 (diǎn) têm tons diferentes."
+          "explanation": "商店 (shāngdiàn) significa loja. 店 (diàn) e 点 (diǎn) têm tons diferentes.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 31.18,
+            "duration": 1.468,
+            "text": "商店。"
+          }
         },
         {
           "id": 17,
@@ -414,7 +486,13 @@
           "answer": [
             "牛"
           ],
-          "explanation": "牛 significa boi ou vaca. 牛肉 significa carne bovina."
+          "explanation": "牛 significa boi ou vaca. 牛肉 significa carne bovina.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 32.768,
+            "duration": 1.396,
+            "text": "牛肉。"
+          }
         }
       ]
     },
@@ -447,7 +525,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "小周家有三口人 indica uma família de três pessoas."
+          "explanation": "小周家有三口人 indica uma família de três pessoas.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-11.mp3",
+            "start": 13.756,
+            "duration": 2.836,
+            "text": "小周家有三口人。"
+          }
         },
         {
           "id": 19,
@@ -472,9 +556,21 @@
             }
           ],
           "answer": "A",
-          "explanation": "那张是葡萄牙文的 diz que aquele mapa está em português."
+          "explanation": "那张是葡萄牙文的 diz que aquele mapa está em português.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-11.mp3",
+            "start": 16.712,
+            "duration": 2.524,
+            "text": "那张是葡萄牙文的。"
+          }
         }
-      ]
+      ],
+      "promptSpeech": {
+        "src": "./assets/audio/estudo/mandarim-11.mp3",
+        "start": 0.0,
+        "duration": 13.636,
+        "text": "小周家有三口人。他喜欢学习汉语，也喜欢看中国地图。他有两张地图。这张是中文的，那张是葡萄牙文的。"
+      }
     },
     {
       "id": "leitura-restaurante",
@@ -505,7 +601,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "朋友要牛肉和米饭 significa que o amigo pede carne bovina e arroz."
+          "explanation": "朋友要牛肉和米饭 significa que o amigo pede carne bovina e arroz.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 0.0,
+            "duration": 2.836,
+            "text": "朋友要牛肉和米饭。"
+          }
         },
         {
           "id": 21,
@@ -530,7 +632,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "小周不吃牛肉 diz que Xiao Zhou não come carne bovina."
+          "explanation": "小周不吃牛肉 diz que Xiao Zhou não come carne bovina.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 2.956,
+            "duration": 2.116,
+            "text": "小周不吃牛肉。"
+          }
         },
         {
           "id": 22,
@@ -555,7 +663,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "二十六块 + 九块 corresponde a 26 + 9 = 35 yuans."
+          "explanation": "二十六块 + 九块 corresponde a 26 + 9 = 35 yuans.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 5.192,
+            "duration": 3.004,
+            "text": "鱼和汤一共三十五块。"
+          }
         },
         {
           "id": 23,
@@ -580,9 +694,21 @@
             }
           ],
           "answer": "D",
-          "explanation": "还 indica que a sopa é adicionada ao que Xiao Zhou já havia pedido."
+          "explanation": "还 indica que a sopa é adicionada ao que Xiao Zhou já havia pedido.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 8.316,
+            "duration": 2.908,
+            "text": "他要鱼，还要一碗汤。"
+          }
         }
-      ]
+      ],
+      "promptSpeech": {
+        "src": "./assets/audio/estudo/mandarim-11.mp3",
+        "start": 19.356,
+        "duration": 13.948,
+        "text": "小周和朋友去饭店吃饭。朋友要牛肉和米饭。小周不吃牛肉，他要鱼，还要一碗汤。鱼二十六块，汤九块。"
+      }
     },
     {
       "id": "escrita",
@@ -597,7 +723,13 @@
           "answer": [
             "你家有几口人"
           ],
-          "explanation": "你家 é o tópico. 几口人 é a quantidade perguntada e vem depois de 有."
+          "explanation": "你家 é o tópico. 几口人 é a quantidade perguntada e vem depois de 有.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 11.344,
+            "duration": 2.188,
+            "text": "你家有几口人"
+          }
         },
         {
           "id": 25,
@@ -606,7 +738,13 @@
           "answer": [
             "我能不能用一下你的词典"
           ],
-          "explanation": "能不能 vem antes de 用. 一下 indica uma ação breve."
+          "explanation": "能不能 vem antes de 用. 一下 indica uma ação breve.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 13.652,
+            "duration": 2.764,
+            "text": "我能不能用一下你的词典"
+          }
         },
         {
           "id": 26,
@@ -616,7 +754,13 @@
             "这家商店比较大也比较漂亮",
             "这家商店比较漂亮也比较大"
           ],
-          "explanation": "也 introduz a segunda descrição da loja. As duas ordens dos adjetivos conservam o sentido."
+          "explanation": "也 introduz a segunda descrição da loja. As duas ordens dos adjetivos conservam o sentido.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 16.536,
+            "duration": 3.724,
+            "text": "这家商店比较大也比较漂亮"
+          }
         },
         {
           "id": 27,
@@ -625,7 +769,13 @@
           "answer": [
             "他有两个中国朋友"
           ],
-          "explanation": "两个 vem antes de 中国朋友. 中国 descreve a origem dos amigos."
+          "explanation": "两个 vem antes de 中国朋友. 中国 descreve a origem dos amigos.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 20.38,
+            "duration": 2.356,
+            "text": "他有两个中国朋友"
+          }
         },
         {
           "id": 28,
@@ -635,7 +785,13 @@
             "这件衬衫是我姐姐的",
             "这件衬衫是我的姐姐的"
           ],
-          "explanation": "件 classifica a peça de roupa, e 是我姐姐的 indica posse."
+          "explanation": "件 classifica a peça de roupa, e 是我姐姐的 indica posse.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 22.856,
+            "duration": 2.908,
+            "text": "这件衬衫是我姐姐的"
+          }
         },
         {
           "id": 29,
@@ -646,7 +802,13 @@
             "那条裤子多少块钱",
             "那条裤子多少元"
           ],
-          "explanation": "那 indica “aquela”, 条 é o classificador de 裤子, e 多少钱 pergunta o preço."
+          "explanation": "那 indica “aquela”, 条 é o classificador de 裤子, e 多少钱 pergunta o preço.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 25.884,
+            "duration": 2.668,
+            "text": "那条裤子多少钱"
+          }
         },
         {
           "id": 30,
@@ -657,7 +819,13 @@
             "我想要一碗米饭还要一碗汤",
             "我想吃一碗米饭还要一碗汤"
           ],
-          "explanation": "碗 indica uma tigela. 还要 acrescenta o segundo item ao pedido."
+          "explanation": "碗 indica uma tigela. 还要 acrescenta o segundo item ao pedido.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 28.672,
+            "duration": 3.484,
+            "text": "我要一碗米饭还要一碗汤"
+          }
         }
       ]
     }

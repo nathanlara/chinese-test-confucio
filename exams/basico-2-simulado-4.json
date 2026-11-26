@@ -161,7 +161,13 @@
           "prompt": "我给你三___地图。（três mapas）",
           "placeholder": "Digite em caracteres chineses",
           "answer": "张",
-          "explanation": "张 classifica objetos planos, como 地图."
+          "explanation": "张 classifica objetos planos, como 地图.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 32.276,
+            "duration": 2.356,
+            "text": "我给你三张地图"
+          }
         },
         {
           "id": 7,
@@ -169,7 +175,13 @@
           "prompt": "那两___词典很有用。（aqueles dois dicionários）",
           "placeholder": "Digite em caracteres chineses",
           "answer": "本",
-          "explanation": "本 é o classificador de volumes, como livros e dicionários."
+          "explanation": "本 é o classificador de volumes, como livros e dicionários.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 0.0,
+            "duration": 2.428,
+            "text": "那两本词典很有用"
+          }
         },
         {
           "id": 8,
@@ -177,7 +189,13 @@
           "prompt": "我想买一___红衬衫。（uma camisa vermelha）",
           "placeholder": "Digite em caracteres chineses",
           "answer": "件",
-          "explanation": "件 é usado para contar peças de roupa como 衬衫."
+          "explanation": "件 é usado para contar peças de roupa como 衬衫.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 2.548,
+            "duration": 2.596,
+            "text": "我想买一件红衬衫"
+          }
         },
         {
           "id": 9,
@@ -185,7 +203,13 @@
           "prompt": "这两___裤子不太贵。（estas duas calças）",
           "placeholder": "Digite em caracteres chineses",
           "answer": "条",
-          "explanation": "条 é o classificador usado com 裤子."
+          "explanation": "条 é o classificador usado com 裤子.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 5.264,
+            "duration": 2.764,
+            "text": "这两条裤子不太贵"
+          }
         },
         {
           "id": 10,
@@ -193,7 +217,13 @@
           "prompt": "我有两___笔。（duas canetas）",
           "placeholder": "Digite em caracteres chineses",
           "answer": "支",
-          "explanation": "支 é usado para contar canetas e outros objetos finos e alongados."
+          "explanation": "支 é usado para contar canetas e outros objetos finos e alongados.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 8.148,
+            "duration": 1.948,
+            "text": "我有两支笔"
+          }
         },
         {
           "id": 11,
@@ -218,7 +248,11 @@
             }
           ],
           "answer": "D",
-          "explanation": "No padrão da lição, 几 vem antes do classificador 口 e do substantivo 人."
+          "explanation": "No padrão da lição, 几 vem antes do classificador 口 e do substantivo 人.",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-2-prova-oral-q01.mp3",
+            "text": "你家有几口人？"
+          }
         },
         {
           "id": 12,
@@ -243,7 +277,11 @@
             }
           ],
           "answer": "A",
-          "explanation": "多少 pode vir diretamente antes de 学生. 多少个学生 também é gramatical, com o classificador 个."
+          "explanation": "多少 pode vir diretamente antes de 学生. 多少个学生 também é gramatical, com o classificador 个.",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-2-prova-oral-q04.mp3",
+            "text": "你们学校有多少学生？"
+          }
         },
         {
           "id": 13,
@@ -268,7 +306,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "哪本 significa “qual exemplar?”. Na forma ensinada, 一 fica implícito. 本 permanece quando 词典 já está claro no contexto."
+          "explanation": "哪本 significa “qual exemplar?”. Na forma ensinada, 一 fica implícito. 本 permanece quando 词典 já está claro no contexto.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 10.216,
+            "duration": 1.708,
+            "text": "你要哪本？"
+          }
         },
         {
           "id": 14,
@@ -293,7 +337,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "岁 indica a idade em anos e vem diretamente depois de 两."
+          "explanation": "岁 indica a idade em anos e vem diretamente depois de 两.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 12.044,
+            "duration": 2.284,
+            "text": "这个孩子两岁"
+          }
         }
       ]
     },
@@ -309,7 +359,13 @@
           "prompt": "Escreva 101 por extenso em chinês.",
           "placeholder": "Digite em caracteres chineses",
           "answer": "一百零一",
-          "explanation": "零 ocupa a posição vazia das dezenas entre 百 e o último 一."
+          "explanation": "零 ocupa a posição vazia das dezenas entre 百 e o último 一.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 14.448,
+            "duration": 1.636,
+            "text": "一百零一"
+          }
         },
         {
           "id": 16,
@@ -317,7 +373,13 @@
           "prompt": "Escreva 30.000 por extenso em chinês.",
           "placeholder": "Digite em caracteres chineses",
           "answer": "三万",
-          "explanation": "万 equivale a 10.000. Três dezenas de milhar formam 三万."
+          "explanation": "万 equivale a 10.000. Três dezenas de milhar formam 三万.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 16.204,
+            "duration": 1.468,
+            "text": "三万"
+          }
         },
         {
           "id": 17,
@@ -342,7 +404,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "四百一十八块 são 418 yuans. 三毛 valem 0,30 e 五分 valem 0,05."
+          "explanation": "四百一十八块 são 418 yuans. 三毛 valem 0,30 e 五分 valem 0,05.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 17.792,
+            "duration": 3.076,
+            "text": "四百一十八块三毛五分。"
+          }
         },
         {
           "id": 18,
@@ -367,7 +435,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "Vinte é 二十. Antes do classificador 本, o padrão da lição é 两本."
+          "explanation": "Vinte é 二十. Antes do classificador 本, o padrão da lição é 两本.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 20.988,
+            "duration": 2.668,
+            "text": "二十块。两本词典。"
+          }
         },
         {
           "id": 19,
@@ -392,7 +466,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "一 passa ao quarto tom antes de uma sílaba no primeiro, segundo ou terceiro tom."
+          "explanation": "一 passa ao quarto tom antes de uma sílaba no primeiro, segundo ou terceiro tom.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 23.776,
+            "duration": 2.188,
+            "text": "一千。一条。"
+          }
         },
         {
           "id": 20,
@@ -417,7 +497,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "Antes de bǎi, no terceiro tom, 一 é yì. Antes de suì, no quarto tom, é yí."
+          "explanation": "Antes de bǎi, no terceiro tom, 一 é yì. Antes de suì, no quarto tom, é yí.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 26.084,
+            "duration": 2.428,
+            "text": "一百。一岁。"
+          }
         },
         {
           "id": 21,
@@ -442,7 +528,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "O número isolado se lê yī. Antes de 件 (jiàn), no quarto tom, lê-se yí."
+          "explanation": "O número isolado se lê yī. Antes de 件 (jiàn), no quarto tom, lê-se yí.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 28.632,
+            "duration": 2.116,
+            "text": "一。一件。"
+          }
         }
       ]
     },
@@ -475,7 +567,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "有 se nega com 没, formando 没有. Para dizer que você não vai à loja, use 不 antes de 去."
+          "explanation": "有 se nega com 没, formando 没有. Para dizer que você não vai à loja, use 不 antes de 去.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 30.868,
+            "duration": 2.668,
+            "text": "我没有地图，不去商店。"
+          }
         },
         {
           "id": 23,
@@ -500,7 +598,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "非常有用 descreve diretamente o mapa. Nessa estrutura, o adjetivo não precisa de 是."
+          "explanation": "非常有用 descreve diretamente o mapa. Nessa estrutura, o adjetivo não precisa de 是.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-14.mp3",
+            "start": 0.0,
+            "duration": 3.148,
+            "text": "这张中文地图非常有用"
+          }
         },
         {
           "id": 24,
@@ -525,7 +629,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "会 apresenta uma habilidade adquirida. 能 ... 吗 formula o pedido de permissão."
+          "explanation": "会 apresenta uma habilidade adquirida. 能 ... 吗 formula o pedido de permissão.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-14.mp3",
+            "start": 3.268,
+            "duration": 4.756,
+            "text": "我会说一点儿汉语。我能用一下你的词典吗？"
+          }
         },
         {
           "id": 25,
@@ -550,7 +660,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "太贵了 expressa “caro demais”. 不太贵 significa “não muito caro”."
+          "explanation": "太贵了 expressa “caro demais”. 不太贵 significa “não muito caro”.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-14.mp3",
+            "start": 8.144,
+            "duration": 4.444,
+            "text": "这条太贵了，但是那条不太贵"
+          }
         },
         {
           "id": 26,
@@ -575,7 +691,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "和 liga os nomes dos alimentos. 也 marca o pedido em comum. 还 acrescenta um item."
+          "explanation": "和 liga os nomes dos alimentos. 也 marca o pedido em comum. 还 acrescenta um item.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-14.mp3",
+            "start": 12.708,
+            "duration": 4.684,
+            "text": "我要鱼和米饭。她也要鱼。我还要汤。"
+          }
         },
         {
           "id": 27,
@@ -600,7 +722,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "O adjetivo curto 红 pode vir direto antes de 衬衫. Em 很漂亮的衬衫, 的 liga a expressão 很漂亮 ao substantivo."
+          "explanation": "O adjetivo curto 红 pode vir direto antes de 衬衫. Em 很漂亮的衬衫, 的 liga a expressão 很漂亮 ao substantivo.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-14.mp3",
+            "start": 17.512,
+            "duration": 4.516,
+            "text": "一件红衬衫。一件很漂亮的衬衫。"
+          }
         },
         {
           "id": 28,
@@ -625,7 +753,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "葡萄牙文的 retoma 词典. A pessoa quer o dicionário em português."
+          "explanation": "葡萄牙文的 retoma 词典. A pessoa quer o dicionário em português.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-14.mp3",
+            "start": 22.148,
+            "duration": 3.796,
+            "text": "你要哪本词典？我要葡萄牙文的。"
+          }
         },
         {
           "id": 29,
@@ -650,7 +784,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "No primeiro caso, 想 introduz uma opinião. No segundo, precede 买 e indica vontade."
+          "explanation": "No primeiro caso, 想 introduz uma opinião. No segundo, precede 买 e indica vontade.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-14.mp3",
+            "start": 26.064,
+            "duration": 5.548,
+            "text": "我想，这本词典很有用。我想买这本词典。"
+          }
         },
         {
           "id": 30,
@@ -675,7 +815,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "Para um verbo de duas sílabas como 学习, o padrão ABAB repete o verbo inteiro."
+          "explanation": "Para um verbo de duas sílabas como 学习, o padrão ABAB repete o verbo inteiro.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-14.mp3",
+            "start": 31.732,
+            "duration": 1.876,
+            "text": "学习学习"
+          }
         },
         {
           "id": 31,
@@ -700,7 +846,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "看一下 suaviza a ação de olhar. A partícula 吧 marca a sugestão neste contexto."
+          "explanation": "看一下 suaviza a ação de olhar. A partícula 吧 marca a sugestão neste contexto.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-15.mp3",
+            "start": 0.0,
+            "duration": 2.284,
+            "text": "你看一下那张地图吧"
+          }
         }
       ]
     },
@@ -715,35 +867,65 @@
           "type": "translation",
           "prompt": "Corrija apenas a forma de “dois” em 我要二本书。",
           "answer": "我要两本书",
-          "explanation": "Antes de 本, a quantidade dois se expressa como 两."
+          "explanation": "Antes de 本, a quantidade dois se expressa como 两.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-15.mp3",
+            "start": 2.404,
+            "duration": 1.948,
+            "text": "我要两本书"
+          }
         },
         {
           "id": 33,
           "type": "translation",
           "prompt": "Complete a pergunta 你家有几人？ acrescentando o classificador de membros da família. Reescreva a frase inteira.",
           "answer": "你家有几口人",
-          "explanation": "Para contar membros da família, use 口 entre 几 e 人."
+          "explanation": "Para contar membros da família, use 口 entre 几 e 人.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-12.mp3",
+            "start": 11.344,
+            "duration": 2.188,
+            "text": "你家有几口人"
+          }
         },
         {
           "id": 34,
           "type": "translation",
           "prompt": "Corrija apenas a negação em 我不有葡萄牙文的词典。",
           "answer": "我没有葡萄牙文的词典",
-          "explanation": "有 se nega com 没. As outras palavras da frase ficam na mesma ordem."
+          "explanation": "有 se nega com 没. As outras palavras da frase ficam na mesma ordem.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-15.mp3",
+            "start": 4.472,
+            "duration": 2.764,
+            "text": "我没有葡萄牙文的词典"
+          }
         },
         {
           "id": 35,
           "type": "translation",
           "prompt": "Corrija apenas o verbo desnecessário em 这家饭店是比较大。",
           "answer": "这家饭店比较大",
-          "explanation": "比较大 é a descrição direta do restaurante. Remova 是 para formar o predicado adjetival."
+          "explanation": "比较大 é a descrição direta do restaurante. Remova 是 para formar o predicado adjetival.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-15.mp3",
+            "start": 7.356,
+            "duration": 2.428,
+            "text": "这家饭店比较大"
+          }
         },
         {
           "id": 36,
           "type": "word-order",
           "prompt": "Ordene os blocos. 去北京 ｜ 我 ｜ 工作 ｜ 让我 ｜ 老板",
           "answer": "我老板让我去北京工作",
-          "explanation": "O sujeito é 我老板. 让 introduz a pessoa que vai trabalhar. 去北京 indica o destino, e 工作 indica a finalidade."
+          "explanation": "O sujeito é 我老板. 让 introduz a pessoa que vai trabalhar. 去北京 indica o destino, e 工作 indica a finalidade.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-15.mp3",
+            "start": 9.904,
+            "duration": 3.004,
+            "text": "我老板让我去北京工作"
+          }
         }
       ]
     }

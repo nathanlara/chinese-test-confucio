@@ -7,7 +7,7 @@
       "level": "Chinês Básico 1",
       "description": "Revisão com áudio, lacunas, relação imagem-frase, ordem correta e tradução.",
       "questionCount": 30,
-      "audioCount": 10
+      "audioCount": 30
     },
     {
       "id": "basico-1-simulado-2",
@@ -16,7 +16,7 @@
       "level": "Chinês Básico 1+",
       "description": "Versão mais difícil com foco em 在 e 给, frases compostas e tradução.",
       "questionCount": 40,
-      "audioCount": 10
+      "audioCount": 40
     },
     {
       "id": "basico-1-simulado-3",
@@ -25,7 +25,7 @@
       "level": "Chinês Básico 1+",
       "description": "Profissões, saudações, horários, números, nacionalidades e tradução.",
       "questionCount": 30,
-      "audioCount": 10
+      "audioCount": 30
     },
     {
       "id": "basico-1-revisao-3-aula-16",
@@ -34,7 +34,7 @@
       "level": "Chinês Básico 1",
       "description": "Prova de revisão com vocabulário, diálogos, partículas, X不X, 在/给, ordem de frases e tradução.",
       "questionCount": 53,
-      "audioCount": 0
+      "audioCount": 53
     },
     {
       "id": "basico-2-simulado-1",
@@ -43,7 +43,7 @@
       "level": "Chinês Básico 2",
       "description": "Lições 3 e 4. Família, idades, números, mapas, dicionários e pedidos de permissão.",
       "questionCount": 24,
-      "audioCount": 3
+      "audioCount": 24
     },
     {
       "id": "basico-2-simulado-2",
@@ -52,7 +52,7 @@
       "level": "Chinês Básico 2",
       "description": "Lição 5. Roupas, preços, pedidos no restaurante, reduplicação verbal e uso de 的.",
       "questionCount": 24,
-      "audioCount": 3
+      "audioCount": 24
     },
     {
       "id": "basico-2-simulado-3",
@@ -61,7 +61,7 @@
       "level": "Chinês Básico 2",
       "description": "Revisão cumulativa do Básico 2 com compreensão oral, gramática, leitura, hanzi e tradução.",
       "questionCount": 30,
-      "audioCount": 4
+      "audioCount": 30
     },
     {
       "id": "basico-2-simulado-4",
@@ -70,7 +70,7 @@
       "level": "Chinês Básico 2",
       "description": "Lições 3 a 5. Treino de classificadores, 几 e 多少, 两 e 二, números, tons de 一, negação e 能/会.",
       "questionCount": 36,
-      "audioCount": 5
+      "audioCount": 36
     },
     {
       "id": "basico-2-simulado-5",
@@ -80,7 +80,7 @@
       "level": "Chinês Básico 2",
       "description": "Lições 3 a 5. Escuta com imagens, diálogos, lacunas, ordem de frases, tradução e números grandes.",
       "questionCount": 42,
-      "audioCount": 6
+      "audioCount": 42
     },
     {
       "id": "basico-2-numeros",
@@ -90,7 +90,7 @@
       "level": "Chinês Básico 2",
       "description": "Aprenda a separar os grupos de 万 e pratique números grandes, zeros, medidas, preços e ditado.",
       "questionCount": 24,
-      "audioCount": 4
+      "audioCount": 24
     },
     {
       "id": "basico-2-prova-oral",
@@ -110,7 +110,7 @@
       "level": "Chinês Básico 2",
       "description": "Pratique hanzi das lições 3 a 5 com frases-modelo, caracteres para cobrir e espaço para escrever a resposta inteira.",
       "questionCount": 10,
-      "audioCount": 0
+      "audioCount": 10
     }
   ]
 }

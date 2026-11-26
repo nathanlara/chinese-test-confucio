@@ -83,49 +83,97 @@
           "id": 7,
           "prompt": "A：你家有几口人？\nB：我家___五口人。",
           "answer": "有",
-          "explanation": "有 informa quantas pessoas há."
+          "explanation": "有 informa quantas pessoas há.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-15.mp3",
+            "start": 13.028,
+            "duration": 4.204,
+            "text": "你家有几口人？我家有五口人。"
+          }
         },
         {
           "id": 8,
           "prompt": "A：你有中文词典吗？\nB：我___有中文词典。",
           "answer": "没",
-          "explanation": "A negação de 有 é 没有."
+          "explanation": "A negação de 有 é 没有.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-15.mp3",
+            "start": 17.352,
+            "duration": 4.108,
+            "text": "你有中文词典吗？我没有中文词典。"
+          }
         },
         {
           "id": 9,
           "prompt": "A：我能不能用一下你的词典？\nB：当然___。",
           "answer": "可以",
-          "explanation": "当然可以 concede a permissão."
+          "explanation": "当然可以 concede a permissão.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-15.mp3",
+            "start": 21.58,
+            "duration": 4.276,
+            "text": "我能不能用一下你的词典？当然可以。"
+          }
         },
         {
           "id": 10,
           "prompt": "A：这本词典是你的吗？\nB：不是，是老师___。",
           "answer": "的",
-          "explanation": "老师的 significa “do professor” e retoma o dicionário."
+          "explanation": "老师的 significa “do professor” e retoma o dicionário.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-15.mp3",
+            "start": 25.976,
+            "duration": 4.684,
+            "text": "这本词典是你的吗？不是，是老师的。"
+          }
         },
         {
           "id": 11,
           "prompt": "A：你要哪件衬衫？\nB：我___那件红衬衫。（Eu quero…）",
           "answer": "要",
-          "explanation": "要 introduz o item que a pessoa quer."
+          "explanation": "要 introduz o item que a pessoa quer.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-15.mp3",
+            "start": 30.78,
+            "duration": 4.204,
+            "text": "你要哪件衬衫？我要那件红衬衫。"
+          }
         },
         {
           "id": 12,
           "prompt": "A：您要什么？\nB：我要鱼和米饭，___要一碗汤。（além disso）",
           "answer": "还",
-          "explanation": "还要 acrescenta a sopa ao pedido."
+          "explanation": "还要 acrescenta a sopa ao pedido.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 0.0,
+            "duration": 4.996,
+            "text": "您要什么？我要鱼和米饭，还要一碗汤。"
+          }
         },
         {
           "id": 13,
           "prompt": "A：这条裤子多少钱？\nB：一百六十块。\nA：___贵___！有没有便宜一点儿的？",
           "answer": "太 ／ 了",
-          "explanation": "太贵了 significa “caro demais”."
+          "explanation": "太贵了 significa “caro demais”.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 5.116,
+            "duration": 7.708,
+            "text": "这条裤子多少钱？一百六十块。太贵了！有没有便宜一点儿的？"
+          }
         },
         {
           "id": 14,
           "prompt": "A：你___说汉语吗？（habilidade aprendida）\nB：会说一点儿。",
           "answer": "会",
-          "explanation": "会说 indica que a pessoa aprendeu a falar."
+          "explanation": "会说 indica que a pessoa aprendeu a falar.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 12.944,
+            "duration": 3.316,
+            "text": "你会说汉语吗？会说一点儿。"
+          }
         }
       ]
     },
@@ -139,61 +187,119 @@
           "id": 15,
           "prompt": "我家有四___人。（classificador de membros da família）",
           "answer": "口",
-          "explanation": "Usa-se 口 para contar os membros da família."
+          "explanation": "Usa-se 口 para contar os membros da família.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 16.38,
+            "duration": 2.044,
+            "text": "我家有四口人"
+          }
         },
         {
           "id": 16,
           "prompt": "这是我的两___地图。",
           "answer": "张",
-          "explanation": "张 classifica mapas e outros objetos planos."
+          "explanation": "张 classifica mapas e outros objetos planos.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 18.544,
+            "duration": 2.668,
+            "text": "这是我的两张地图"
+          }
         },
         {
           "id": 17,
           "prompt": "你有没有两___词典？",
           "answer": "本",
-          "explanation": "本 classifica livros e dicionários."
+          "explanation": "本 classifica livros e dicionários.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 21.332,
+            "duration": 2.356,
+            "text": "你有没有两本词典？"
+          }
         },
         {
           "id": 18,
           "prompt": "我想买一___红衬衫。",
           "answer": "件",
-          "explanation": "件 é o classificador da camisa."
+          "explanation": "件 é o classificador da camisa.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 2.548,
+            "duration": 2.596,
+            "text": "我想买一件红衬衫"
+          }
         },
         {
           "id": 19,
           "prompt": "那___裤子不太贵。",
           "answer": "条",
-          "explanation": "条 é o classificador de 裤子."
+          "explanation": "条 é o classificador de 裤子.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 23.808,
+            "duration": 2.356,
+            "text": "那条裤子不太贵"
+          }
         },
         {
           "id": 20,
           "prompt": "请给我三___笔。",
           "answer": "支",
-          "explanation": "支 classifica canetas e outros objetos finos e compridos."
+          "explanation": "支 classifica canetas e outros objetos finos e compridos.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 26.284,
+            "duration": 2.116,
+            "text": "请给我三支笔"
+          }
         },
         {
           "id": 21,
           "prompt": "这___电脑比较贵。（classificador de máquinas）",
           "answer": "台",
-          "explanation": "台 classifica aparelhos como computadores."
+          "explanation": "台 classifica aparelhos como computadores.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 28.52,
+            "duration": 2.284,
+            "text": "这台电脑比较贵"
+          }
         },
         {
           "id": 22,
           "prompt": "你妹妹___岁？（Quantos anos? Pergunta sobre criança pequena.）",
           "answer": "几",
-          "explanation": "几岁 pergunta a idade e vem diretamente antes de 岁."
+          "explanation": "几岁 pergunta a idade e vem diretamente antes de 岁.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 30.924,
+            "duration": 1.708,
+            "text": "你妹妹几岁？"
+          }
         },
         {
           "id": 23,
           "prompt": "你们学校有___学生？（Use a palavra para perguntar uma quantidade sem pressupor que é pequena.）",
           "answer": "多少",
-          "explanation": "多少 pergunta a quantidade em geral."
+          "explanation": "多少 pergunta a quantidade em geral.",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-2-prova-oral-q04.mp3",
+            "text": "你们学校有多少学生？"
+          }
         },
         {
           "id": 24,
           "prompt": "我有两本书，他___有两本书。（ele também）",
           "answer": "也",
-          "explanation": "也 antes de 有 indica a mesma situação."
+          "explanation": "也 antes de 有 indica a mesma situação.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 0.0,
+            "duration": 3.316,
+            "text": "我有两本书，他也有两本书"
+          }
         }
       ]
     },
@@ -207,37 +313,71 @@
           "id": 25,
           "prompt": "几口人 ｜ 有 ｜ 你家",
           "answer": "你家有几口人？",
-          "explanation": "A pergunta segue o padrão família + 有 + quantidade."
+          "explanation": "A pergunta segue o padrão família + 有 + quantidade.",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-2-prova-oral-q01.mp3",
+            "text": "你家有几口人？"
+          }
         },
         {
           "id": 26,
           "prompt": "张 ｜ 这 ｜ 是 ｜ 我的 ｜ 地图",
           "answer": "这张地图是我的。",
-          "explanation": "Demonstrativo + classificador + substantivo. 我的 indica posse."
+          "explanation": "Demonstrativo + classificador + substantivo. 我的 indica posse.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 3.436,
+            "duration": 2.284,
+            "text": "这张地图是我的"
+          }
         },
         {
           "id": 27,
           "prompt": "我 ｜ 这本词典 ｜ 用一下 ｜ 能不能",
           "answer": "我能不能用一下这本词典？",
-          "explanation": "能不能 precede a ação. 一下 suaviza o pedido."
+          "explanation": "能不能 precede a ação. 一下 suaviza o pedido.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 5.84,
+            "duration": 3.004,
+            "text": "我能不能用一下这本词典？"
+          }
         },
         {
           "id": 28,
           "prompt": "是 ｜ 谁的 ｜ 那两本词典",
           "answer": "那两本词典是谁的？",
-          "explanation": "谁的 pergunta a quem pertence o objeto."
+          "explanation": "谁的 pergunta a quem pertence o objeto.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 8.964,
+            "duration": 2.284,
+            "text": "那两本词典是谁的？"
+          }
         },
         {
           "id": 29,
           "prompt": "我 ｜ 鱼 ｜ 想吃 ｜ 米饭 ｜ 和",
           "answer": "我想吃鱼和米饭。",
-          "explanation": "想 precede o verbo, e 和 liga os dois alimentos."
+          "explanation": "想 precede o verbo, e 和 liga os dois alimentos.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 16.08,
+            "duration": 2.668,
+            "text": "我想吃鱼和米饭"
+          }
         },
         {
           "id": 30,
           "prompt": "请 ｜ 我 ｜ 看一下 ｜ 这张地图 ｜ 给",
           "answer": "请给我看一下这张地图。",
-          "explanation": "给我看 significa mostrar para mim."
+          "explanation": "给我看 significa mostrar para mim.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 11.368,
+            "duration": 2.836,
+            "text": "请给我看一下这张地图"
+          }
         }
       ]
     },
@@ -251,49 +391,97 @@
           "id": 31,
           "prompt": "Minha irmã mais velha tem vinte e dois anos.",
           "answer": "我姐姐二十二岁。",
-          "explanation": "二十二 é 22 e 岁 marca a idade."
+          "explanation": "二十二 é 22 e 岁 marca a idade.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 14.324,
+            "duration": 2.284,
+            "text": "我姐姐二十二岁"
+          }
         },
         {
           "id": 32,
           "prompt": "Não tenho um dicionário de chinês. Use 中文词典.",
           "answer": "我没有中文词典。",
-          "explanation": "没有 expressa ausência ou falta de posse."
+          "explanation": "没有 expressa ausência ou falta de posse.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 16.728,
+            "duration": 2.116,
+            "text": "我没有中文词典"
+          }
         },
         {
           "id": 33,
           "prompt": "Estes dois mapas são meus.",
           "answer": "这两张地图是我的。",
-          "explanation": "这两张 vem antes de 地图."
+          "explanation": "这两张 vem antes de 地图.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 18.964,
+            "duration": 2.668,
+            "text": "这两张地图是我的"
+          }
         },
         {
           "id": 34,
           "prompt": "Posso experimentar aquela camisa? Use 能不能 e repita 试.",
           "answer": "我能不能试试那件衬衫？",
-          "explanation": "Também vale 试一试. 那件 indica a peça mais distante."
+          "explanation": "Também vale 试一试. 那件 indica a peça mais distante.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 21.752,
+            "duration": 2.836,
+            "text": "我能不能试试那件衬衫？"
+          }
         },
         {
           "id": 35,
           "prompt": "Esta calça é muito cara! Use 太…了.",
           "answer": "这条裤子太贵了！",
-          "explanation": "太 + adjetivo + 了 indica excesso."
+          "explanation": "太 + adjetivo + 了 indica excesso.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 24.708,
+            "duration": 2.668,
+            "text": "这条裤子太贵了！"
+          }
         },
         {
           "id": 36,
           "prompt": "Quero carne bovina e arroz. Também quero uma tigela de sopa. Use 还要.",
           "answer": "我要牛肉和米饭，还要一碗汤。",
-          "explanation": "和 liga os alimentos e 还要 acrescenta outro item."
+          "explanation": "和 liga os alimentos e 还要 acrescenta outro item.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 27.496,
+            "duration": 3.628,
+            "text": "我要牛肉和米饭，还要一碗汤"
+          }
         },
         {
           "id": 37,
           "prompt": "Quero ir à China para estudar chinês. Use 想 e 汉语.",
           "answer": "我想去中国学习汉语。",
-          "explanation": "Também vale 我想去中国学汉语. A segunda ação dá o propósito da ida."
+          "explanation": "Também vale 我想去中国学汉语. A segunda ação dá o propósito da ida.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 31.244,
+            "duration": 2.908,
+            "text": "我想去中国学习汉语"
+          }
         },
         {
           "id": 38,
           "prompt": "Este dicionário é muito útil. Use 很.",
           "answer": "这本词典很有用。",
-          "explanation": "很有用 funciona como predicado adjetival."
+          "explanation": "很有用 funciona como predicado adjetival.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-18.mp3",
+            "start": 0.0,
+            "duration": 2.188,
+            "text": "这本词典很有用"
+          }
         }
       ]
     },
@@ -307,25 +495,49 @@
           "id": 39,
           "prompt": "1.009",
           "answer": "一千零九",
-          "explanation": "零 assinala o salto até a unidade."
+          "explanation": "零 assinala o salto até a unidade.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-18.mp3",
+            "start": 2.308,
+            "duration": 1.708,
+            "text": "一千零九"
+          }
         },
         {
           "id": 40,
           "prompt": "20.600",
           "answer": "两万零六百",
-          "explanation": "Separe em 2 万 + 600. A casa dos milhares do bloco final está vazia."
+          "explanation": "Separe em 2 万 + 600. A casa dos milhares do bloco final está vazia.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-18.mp3",
+            "start": 4.136,
+            "duration": 1.948,
+            "text": "两万零六百"
+          }
         },
         {
           "id": 41,
           "prompt": "310.405",
           "answer": "三十一万零四百零五",
-          "explanation": "Separe em 31 万 + 0405. Há um 零 após 万 e outro antes da unidade."
+          "explanation": "Separe em 31 万 + 0405. Há um 零 após 万 e outro antes da unidade.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-18.mp3",
+            "start": 6.204,
+            "duration": 3.076,
+            "text": "三十一万零四百零五"
+          }
         },
         {
           "id": 42,
           "prompt": "2.400.017",
           "answer": "二百四十万零一十七",
-          "explanation": "Separe em 240 万 + 0017. A forma 二百四十万零十七 também é usada."
+          "explanation": "Separe em 240 万 + 0017. A forma 二百四十万零十七 também é usada.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-18.mp3",
+            "start": 9.4,
+            "duration": 2.908,
+            "text": "二百四十万零一十七"
+          }
         }
       ]
     }

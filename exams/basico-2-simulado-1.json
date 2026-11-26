@@ -124,7 +124,11 @@
             }
           ],
           "answer": "C",
-          "explanation": "几口人 pergunta quantas pessoas compõem a família."
+          "explanation": "几口人 pergunta quantas pessoas compõem a família.",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-2-prova-oral-q01.mp3",
+            "text": "你家有几口人？"
+          }
         },
         {
           "id": 5,
@@ -134,7 +138,13 @@
           "answer": [
             "两"
           ],
-          "explanation": "Em 两个, 两 aparece antes do classificador 个."
+          "explanation": "Em 两个, 两 aparece antes do classificador 个.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-06.mp3",
+            "start": 21.732,
+            "duration": 2.284,
+            "text": "我有两个妹妹"
+          }
         },
         {
           "id": 6,
@@ -159,7 +169,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "一万 vale 10.000 e 三千 vale 3.000."
+          "explanation": "一万 vale 10.000 e 三千 vale 3.000.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-06.mp3",
+            "start": 24.136,
+            "duration": 1.804,
+            "text": "一万三千？"
+          }
         },
         {
           "id": 7,
@@ -184,7 +200,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "多大 pergunta a idade e 岁 marca a idade em anos."
+          "explanation": "多大 pergunta a idade e 岁 marca a idade em anos.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-06.mp3",
+            "start": 26.06,
+            "duration": 1.564,
+            "text": "他多大？"
+          }
         },
         {
           "id": 8,
@@ -194,7 +216,13 @@
           "answer": [
             "没"
           ],
-          "explanation": "Para negar 有, use 没有."
+          "explanation": "Para negar 有, use 没有.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-06.mp3",
+            "start": 27.744,
+            "duration": 1.708,
+            "text": "我没有哥哥"
+          }
         }
       ]
     },
@@ -212,7 +240,13 @@
           "answer": [
             "本"
           ],
-          "explanation": "本 é o classificador de livros e dicionários."
+          "explanation": "本 é o classificador de livros e dicionários.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-06.mp3",
+            "start": 29.572,
+            "duration": 2.596,
+            "text": "这本词典是老师的"
+          }
         },
         {
           "id": 10,
@@ -222,7 +256,13 @@
           "answer": [
             "张"
           ],
-          "explanation": "张 é o classificador de objetos planos, como mapas."
+          "explanation": "张 é o classificador de objetos planos, como mapas.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-06.mp3",
+            "start": 32.288,
+            "duration": 2.908,
+            "text": "那两张地图是我的"
+          }
         },
         {
           "id": 11,
@@ -247,7 +287,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "这 significa “este”. Depois vêm a quantidade 两, o classificador 支 e o substantivo 笔."
+          "explanation": "这 significa “este”. Depois vêm a quantidade 两, o classificador 支 e o substantivo 笔.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-07.mp3",
+            "start": 0.0,
+            "duration": 1.708,
+            "text": "这两支笔"
+          }
         },
         {
           "id": 12,
@@ -272,7 +318,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "还是 apresenta opções em perguntas de escolha."
+          "explanation": "还是 apresenta opções em perguntas de escolha.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-07.mp3",
+            "start": 1.828,
+            "duration": 2.836,
+            "text": "你喜欢这本还是那本？"
+          }
         },
         {
           "id": 13,
@@ -297,7 +349,11 @@
             }
           ],
           "answer": "B",
-          "explanation": "能不能 introduz o pedido de permissão, e 看一下 indica uma olhada breve."
+          "explanation": "能不能 introduz o pedido de permissão, e 看一下 indica uma olhada breve.",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-2-simulado-5-q05.mp3",
+            "text": "我能不能看一下这张地图？"
+          }
         }
       ]
     },
@@ -330,7 +386,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "千 (qiān) significa mil. 干 (gàn), presente em 干什么, tem grafia semelhante."
+          "explanation": "千 (qiān) significa mil. 干 (gàn), presente em 干什么, tem grafia semelhante.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-07.mp3",
+            "start": 4.784,
+            "duration": 1.228,
+            "text": "千"
+          }
         },
         {
           "id": 15,
@@ -355,7 +417,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "词典 (cídiǎn) é dicionário. O caractere final é 典."
+          "explanation": "词典 (cídiǎn) é dicionário. O caractere final é 典.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-07.mp3",
+            "start": 6.132,
+            "duration": 1.468,
+            "text": "词典。"
+          }
         },
         {
           "id": 16,
@@ -380,7 +448,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "讠 é a forma simplificada do componente de fala, presente em 词 e 课."
+          "explanation": "讠 é a forma simplificada do componente de fala, presente em 词 e 课.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-07.mp3",
+            "start": 7.72,
+            "duration": 3.244,
+            "text": "言字旁。词、课。"
+          }
         },
         {
           "id": 17,
@@ -390,7 +464,13 @@
           "answer": [
             "校"
           ],
-          "explanation": "校 (xiào) completa 学校."
+          "explanation": "校 (xiào) completa 学校.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-07.mp3",
+            "start": 11.084,
+            "duration": 1.468,
+            "text": "学校。"
+          }
         },
         {
           "id": 18,
@@ -400,7 +480,13 @@
           "answer": [
             "家"
           ],
-          "explanation": "家 (jiā) significa casa ou família em 我家."
+          "explanation": "家 (jiā) significa casa ou família em 我家.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-07.mp3",
+            "start": 12.672,
+            "duration": 1.396,
+            "text": "我家。"
+          }
         }
       ]
     },
@@ -433,7 +519,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "姐姐在北京工作 diz que a irmã mais velha trabalha em Pequim."
+          "explanation": "姐姐在北京工作 diz que a irmã mais velha trabalha em Pequim.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-07.mp3",
+            "start": 27.536,
+            "duration": 3.076,
+            "text": "小林的姐姐在北京工作。"
+          }
         },
         {
           "id": 20,
@@ -458,7 +550,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "中文 é chinês escrito e 葡萄牙文 é português escrito."
+          "explanation": "中文 é chinês escrito e 葡萄牙文 é português escrito.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-07.mp3",
+            "start": 30.732,
+            "duration": 4.108,
+            "text": "一本是中文的，一本是葡萄牙文的。"
+          }
         },
         {
           "id": 21,
@@ -483,9 +581,21 @@
             }
           ],
           "answer": "C",
-          "explanation": "本 é o classificador do substantivo 词典. 一本 retoma um dos dicionários já mencionados."
+          "explanation": "本 é o classificador do substantivo 词典. 一本 retoma um dos dicionários já mencionados.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 0.0,
+            "duration": 1.804,
+            "text": "一本词典。"
+          }
         }
-      ]
+      ],
+      "promptSpeech": {
+        "src": "./assets/audio/estudo/mandarim-07.mp3",
+        "start": 14.188,
+        "duration": 13.228,
+        "text": "小林家有四口人：爸爸、妈妈、姐姐和小林。姐姐在北京工作。小林有两本词典。一本是中文的，一本是葡萄牙文的。"
+      }
     },
     {
       "id": "escrita",
@@ -500,7 +610,13 @@
           "answer": [
             "这两本词典是谁的"
           ],
-          "explanation": "O objeto 这两本词典 é o tópico, e 是谁的 pergunta a quem pertence."
+          "explanation": "O objeto 这两本词典 é o tópico, e 是谁的 pergunta a quem pertence.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 1.924,
+            "duration": 2.596,
+            "text": "这两本词典是谁的"
+          }
         },
         {
           "id": 23,
@@ -510,7 +626,13 @@
             "我们学校有一千五百个学生",
             "我们的学校有一千五百个学生"
           ],
-          "explanation": "一千五百 expressa 1.500. Depois do número vêm 个 e 学生."
+          "explanation": "一千五百 expressa 1.500. Depois do número vêm 个 e 学生.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 4.64,
+            "duration": 3.556,
+            "text": "我们学校有一千五百个学生"
+          }
         },
         {
           "id": 24,
@@ -520,7 +642,13 @@
             "我想去北京学习汉语",
             "我想去北京学汉语"
           ],
-          "explanation": "去北京 indica o destino, e 学习汉语 expressa o objetivo da ida."
+          "explanation": "去北京 indica o destino, e 学习汉语 expressa o objetivo da ida.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 8.316,
+            "duration": 2.836,
+            "text": "我想去北京学习汉语"
+          }
         }
       ]
     }

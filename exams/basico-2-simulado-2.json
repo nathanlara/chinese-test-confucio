@@ -124,7 +124,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "多少钱 pergunta o preço de um produto."
+          "explanation": "多少钱 pergunta o preço de um produto.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 11.272,
+            "duration": 2.524,
+            "text": "这件衬衫多少钱？"
+          }
         },
         {
           "id": 5,
@@ -149,7 +155,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "十八块 são 18 yuans e 五毛 são cinco décimos de yuan."
+          "explanation": "十八块 são 18 yuans e 五毛 são cinco décimos de yuan.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 13.916,
+            "duration": 2.044,
+            "text": "十八块五毛"
+          }
         },
         {
           "id": 6,
@@ -159,7 +171,13 @@
           "answer": [
             "和"
           ],
-          "explanation": "和 liga os dois substantivos, 鱼 e 米饭."
+          "explanation": "和 liga os dois substantivos, 鱼 e 米饭.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 16.08,
+            "duration": 2.668,
+            "text": "我想吃鱼和米饭"
+          }
         },
         {
           "id": 7,
@@ -184,7 +202,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "还要 acrescenta algo ao pedido. 和 liga substantivos."
+          "explanation": "还要 acrescenta algo ao pedido. 和 liga substantivos.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 18.868,
+            "duration": 3.244,
+            "text": "我要一碗汤，还要一碗米饭"
+          }
         },
         {
           "id": 8,
@@ -209,7 +233,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "试一试 segue o padrão verbo + 一 + verbo. 能不能 formula o pedido de permissão."
+          "explanation": "试一试 segue o padrão verbo + 一 + verbo. 能不能 formula o pedido de permissão.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 22.232,
+            "duration": 3.076,
+            "text": "我能不能试一试这件衬衫？"
+          }
         },
         {
           "id": 9,
@@ -234,7 +264,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "比较大的 vem antes de 商店. O adjetivo modificado por 比较 pede 的 nessa função."
+          "explanation": "比较大的 vem antes de 商店. O adjetivo modificado por 比较 pede 的 nessa função.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 25.428,
+            "duration": 2.284,
+            "text": "一个比较大的商店"
+          }
         },
         {
           "id": 10,
@@ -259,7 +295,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "最 modifica 好吃. A expressão 最好吃的 vem antes de 菜."
+          "explanation": "最 modifica 好吃. A expressão 最好吃的 vem antes de 菜.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 27.832,
+            "duration": 1.948,
+            "text": "最好吃的菜"
+          }
         },
         {
           "id": 11,
@@ -284,7 +326,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "吧 no fim da frase marca uma sugestão nesse contexto."
+          "explanation": "吧 no fim da frase marca uma sugestão nesse contexto.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 29.9,
+            "duration": 2.428,
+            "text": "您试试这条裤子吧"
+          }
         }
       ]
     },
@@ -317,7 +365,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "买 (mǎi) é comprar. 卖 (mài) é vender."
+          "explanation": "买 (mǎi) é comprar. 卖 (mài) é vender.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 32.448,
+            "duration": 1.324,
+            "text": "买"
+          }
         },
         {
           "id": 13,
@@ -342,7 +396,13 @@
             }
           ],
           "answer": "A",
-          "explanation": "喝 e 吃 têm 口 à esquerda, componente associado à boca."
+          "explanation": "喝 e 吃 têm 口 à esquerda, componente associado à boca.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 33.892,
+            "duration": 1.804,
+            "text": "喝、吃"
+          }
         },
         {
           "id": 14,
@@ -352,7 +412,13 @@
           "answer": [
             "宜"
           ],
-          "explanation": "便宜 (piányi) significa barato. O segundo caractere é 宜."
+          "explanation": "便宜 (piányi) significa barato. O segundo caractere é 宜.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-09.mp3",
+            "start": 0.0,
+            "duration": 1.396,
+            "text": "便宜"
+          }
         },
         {
           "id": 15,
@@ -377,7 +443,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "米饭 (mǐfàn) é arroz cozido. 饭 tem o componente 饣, ligado à comida."
+          "explanation": "米饭 (mǐfàn) é arroz cozido. 饭 tem o componente 饣, ligado à comida.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-09.mp3",
+            "start": 1.516,
+            "duration": 1.396,
+            "text": "米饭"
+          }
         },
         {
           "id": 16,
@@ -387,7 +459,13 @@
           "answer": [
             "钱"
           ],
-          "explanation": "钱 (qián) significa dinheiro. A expressão 多少钱 pergunta quanto custa."
+          "explanation": "钱 (qián) significa dinheiro. A expressão 多少钱 pergunta quanto custa.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-09.mp3",
+            "start": 3.032,
+            "duration": 1.564,
+            "text": "多少钱？"
+          }
         }
       ]
     },
@@ -420,7 +498,13 @@
             }
           ],
           "answer": "B",
-          "explanation": "她喜欢红衬衫，但是觉得太贵了 indica que ela gostou da vermelha, mas a achou muito cara."
+          "explanation": "她喜欢红衬衫，但是觉得太贵了 indica que ela gostou da vermelha, mas a achou muito cara.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-09.mp3",
+            "start": 20.944,
+            "duration": 2.836,
+            "text": "她觉得红衬衫太贵了。"
+          }
         },
         {
           "id": 18,
@@ -445,7 +529,13 @@
             }
           ],
           "answer": "D",
-          "explanation": "A vermelha custa 80 e a branca custa 60. A diferença é de 20 yuans."
+          "explanation": "A vermelha custa 80 e a branca custa 60. A diferença é de 20 yuans.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-09.mp3",
+            "start": 23.9,
+            "duration": 4.036,
+            "text": "红衬衫比白衬衫贵二十块。"
+          }
         },
         {
           "id": 19,
@@ -470,7 +560,13 @@
             }
           ],
           "answer": "C",
-          "explanation": "她试了试白衬衫 indica que ela experimentou a camisa branca."
+          "explanation": "她试了试白衬衫 indica que ela experimentou a camisa branca.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-09.mp3",
+            "start": 28.056,
+            "duration": 2.284,
+            "text": "她试了试白衬衫。"
+          }
         },
         {
           "id": 20,
@@ -495,9 +591,21 @@
             }
           ],
           "answer": "A",
-          "explanation": "觉得也很漂亮 significa achar que ela também é bonita."
+          "explanation": "觉得也很漂亮 significa achar que ela também é bonita.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-09.mp3",
+            "start": 30.46,
+            "duration": 3.148,
+            "text": "她觉得白衬衫也很漂亮。"
+          }
         }
-      ]
+      ],
+      "promptSpeech": {
+        "src": "./assets/audio/estudo/mandarim-09.mp3",
+        "start": 4.716,
+        "duration": 16.108,
+        "text": "林小姐去商店买衣服。红衬衫八十块，白衬衫六十块。她喜欢红衬衫，但是觉得太贵了。她试了试白衬衫，觉得也很漂亮，就买了白衬衫。"
+      }
     },
     {
       "id": "escrita",
@@ -512,7 +620,13 @@
           "answer": [
             "我要买一件红衬衫"
           ],
-          "explanation": "要 vem antes de 买. 一件红衬衫 é o objeto, com 红 antes de 衬衫."
+          "explanation": "要 vem antes de 买. 一件红衬衫 é o objeto, com 红 antes de 衬衫.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 0.0,
+            "duration": 2.524,
+            "text": "我要买一件红衬衫"
+          }
         },
         {
           "id": 22,
@@ -521,7 +635,13 @@
           "answer": [
             "这个菜太贵了"
           ],
-          "explanation": "太 + adjetivo + 了 expressa que algo é demais."
+          "explanation": "太 + adjetivo + 了 expressa que algo é demais.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 2.644,
+            "duration": 2.284,
+            "text": "这个菜太贵了"
+          }
         },
         {
           "id": 23,
@@ -533,7 +653,13 @@
             "能不能试试这条裤子",
             "能不能试一试这条裤子"
           ],
-          "explanation": "能不能 pede permissão. 试试 e 试一试 são duas formas de reduplicar 试, e 条 classifica 裤子."
+          "explanation": "能不能 pede permissão. 试试 e 试一试 são duas formas de reduplicar 试, e 条 classifica 裤子.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 5.048,
+            "duration": 2.596,
+            "text": "我能不能试试这条裤子"
+          }
         },
         {
           "id": 24,
@@ -543,7 +669,13 @@
             "我想吃鱼和米饭",
             "我要吃鱼和米饭"
           ],
-          "explanation": "和 liga os substantivos 鱼 e 米饭 depois do verbo 吃."
+          "explanation": "和 liga os substantivos 鱼 e 米饭 depois do verbo 吃.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-08.mp3",
+            "start": 16.08,
+            "duration": 2.668,
+            "text": "我想吃鱼和米饭"
+          }
         }
       ]
     }

@@ -19,7 +19,25 @@
           "help": "Apresente o tamanho da sua família.",
           "followup": "你家有谁？",
           "followupAnswer": "我家有爸爸、妈妈、妹妹和我。",
-          "audioSrc": "./assets/audio/basico-2-prova-oral-q01.mp3"
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q01.mp3",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 16.38,
+            "duration": 2.044,
+            "text": "我家有四口人。"
+          },
+          "followupAnswerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 6.972,
+            "duration": 4.276,
+            "text": "我家有爸爸、妈妈、妹妹和我。"
+          },
+          "followupSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 5.288,
+            "duration": 1.564,
+            "text": "你家有谁？"
+          }
         },
         {
           "id": 2,
@@ -29,7 +47,25 @@
           "help": "Imagine que sua irmã tem 25 anos.",
           "followup": "她在哪儿工作？",
           "followupAnswer": "她在学校工作。",
-          "audioSrc": "./assets/audio/basico-2-prova-oral-q02.mp3"
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q02.mp3",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 11.368,
+            "duration": 2.188,
+            "text": "我姐姐二十五岁。"
+          },
+          "followupAnswerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 15.744,
+            "duration": 2.284,
+            "text": "她在学校工作。"
+          },
+          "followupSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 13.676,
+            "duration": 1.948,
+            "text": "她在哪儿工作？"
+          }
         },
         {
           "id": 3,
@@ -39,7 +75,25 @@
           "help": "Diga quanto chinês você consegue falar.",
           "followup": "你为什么想学汉语？",
           "followupAnswer": "我想去中国学习。",
-          "audioSrc": "./assets/audio/basico-2-prova-oral-q03.mp3"
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q03.mp3",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 18.148,
+            "duration": 2.356,
+            "text": "我会说一点儿汉语。"
+          },
+          "followupAnswerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 23.028,
+            "duration": 2.356,
+            "text": "我想去中国学习。"
+          },
+          "followupSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 20.624,
+            "duration": 2.284,
+            "text": "你为什么想学汉语？"
+          }
         },
         {
           "id": 4,
@@ -47,7 +101,13 @@
           "answer": "我们学校有两千零三十个学生。",
           "audioText": "你们学校有多少学生？",
           "help": "Use o número 2.030 na resposta.",
-          "audioSrc": "./assets/audio/basico-2-prova-oral-q04.mp3"
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q04.mp3",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 25.504,
+            "duration": 3.868,
+            "text": "我们学校有两千零三十个学生。"
+          }
         }
       ]
     },
@@ -65,7 +125,25 @@
           "help": "Diga a quem pertencem os dicionários.",
           "followup": "我能不能用一下？",
           "followupAnswer": "当然可以。",
-          "audioSrc": "./assets/audio/basico-2-prova-oral-q05.mp3"
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q05.mp3",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 29.492,
+            "duration": 2.908,
+            "text": "这两本词典是我的。"
+          },
+          "followupAnswerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 0.0,
+            "duration": 1.636,
+            "text": "当然可以。"
+          },
+          "followupSpeech": {
+            "src": "./assets/audio/estudo/mandarim-20.mp3",
+            "start": 32.52,
+            "duration": 1.948,
+            "text": "我能不能用一下？"
+          }
         },
         {
           "id": 6,
@@ -75,7 +153,25 @@
           "help": "Escolha o mapa em chinês.",
           "followup": "那张地图是什么文的？",
           "followupAnswer": "那张地图是葡萄牙文的。",
-          "audioSrc": "./assets/audio/basico-2-prova-oral-q06.mp3"
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q06.mp3",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 1.756,
+            "duration": 2.596,
+            "text": "我要这张中文地图。"
+          },
+          "followupAnswerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 7.116,
+            "duration": 3.484,
+            "text": "那张地图是葡萄牙文的。"
+          },
+          "followupSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 4.472,
+            "duration": 2.524,
+            "text": "那张地图是什么文的？"
+          }
         }
       ]
     },
@@ -93,7 +189,25 @@
           "help": "Você procura uma camisa vermelha.",
           "followup": "您要试一下吗？",
           "followupAnswer": "好，我想试一试。",
-          "audioSrc": "./assets/audio/basico-2-prova-oral-q07.mp3"
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q07.mp3",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-13.mp3",
+            "start": 2.548,
+            "duration": 2.596,
+            "text": "我想买一件红衬衫。"
+          },
+          "followupAnswerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 12.956,
+            "duration": 2.356,
+            "text": "好，我想试一试。"
+          },
+          "followupSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 10.72,
+            "duration": 2.116,
+            "text": "您要试一下吗？"
+          }
         },
         {
           "id": 8,
@@ -101,7 +215,13 @@
           "answer": "这条裤子一百零八块五毛。",
           "audioText": "这条裤子多少钱？",
           "help": "Você atende na loja. Use o preço de 108,50 yuans.",
-          "audioSrc": "./assets/audio/basico-2-prova-oral-q08.mp3"
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q08.mp3",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 15.432,
+            "duration": 3.388,
+            "text": "这条裤子一百零八块五毛。"
+          }
         },
         {
           "id": 9,
@@ -111,7 +231,25 @@
           "help": "Faça o pedido no restaurante.",
           "followup": "您还要什么？",
           "followupAnswer": "我还要一碗酸辣汤。",
-          "audioSrc": "./assets/audio/basico-2-prova-oral-q09.mp3"
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q09.mp3",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 18.94,
+            "duration": 2.044,
+            "text": "我要鱼和米饭。"
+          },
+          "followupAnswerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 22.932,
+            "duration": 2.524,
+            "text": "我还要一碗酸辣汤。"
+          },
+          "followupSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 21.104,
+            "duration": 1.708,
+            "text": "您还要什么？"
+          }
         },
         {
           "id": 10,
@@ -121,7 +259,25 @@
           "help": "Diga sua opinião sobre a camisa.",
           "followup": "您要看看那件吗？",
           "followupAnswer": "好，我看看那件。",
-          "audioSrc": "./assets/audio/basico-2-prova-oral-q10.mp3"
+          "audioSrc": "./assets/audio/basico-2-prova-oral-q10.mp3",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 25.576,
+            "duration": 4.204,
+            "text": "这件衬衫很漂亮，但是太贵了。"
+          },
+          "followupAnswerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 32.064,
+            "duration": 2.188,
+            "text": "好，我看看那件。"
+          },
+          "followupSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 29.9,
+            "duration": 2.044,
+            "text": "您要看看那件吗？"
+          }
         }
       ]
     }

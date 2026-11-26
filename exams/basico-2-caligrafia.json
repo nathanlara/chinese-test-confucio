@@ -9,34 +9,54 @@
       "id": "escrita-familia",
       "title": "Família e números",
       "shortTitle": "Família",
-      "instructions": "Leia a pergunta. Cubra os caracteres cinza, repita-os nos espaços vazios e escreva a resposta inteira na linha.",
+      "instructions": "Leia a pergunta. Passe por cima da resposta inteira em cinza e repita a frase nas quadrículas vazias da linha de baixo.",
       "questions": [
         {
           "id": 1,
           "prompt": "你家有几口人？",
           "answer": "我家有四口人。",
-          "trace": [
-            "家",
-            "口"
-          ]
+          "promptSpeech": {
+            "src": "./assets/audio/basico-2-prova-oral-q01.mp3",
+            "text": "你家有几口人？"
+          },
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-16.mp3",
+            "start": 16.38,
+            "duration": 2.044,
+            "text": "我家有四口人。"
+          }
         },
         {
           "id": 2,
           "prompt": "你妹妹多大？",
           "answer": "我妹妹两岁。",
-          "trace": [
-            "两",
-            "岁"
-          ]
+          "promptSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 0.0,
+            "duration": 1.636,
+            "text": "你妹妹多大？"
+          },
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 1.756,
+            "duration": 1.876,
+            "text": "我妹妹两岁。"
+          }
         },
         {
           "id": 3,
           "prompt": "你们学校有多少学生？",
           "answer": "我们学校有一千零五个学生。",
-          "trace": [
-            "千",
-            "零"
-          ]
+          "promptSpeech": {
+            "src": "./assets/audio/basico-2-prova-oral-q04.mp3",
+            "text": "你们学校有多少学生？"
+          },
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 3.752,
+            "duration": 3.316,
+            "text": "我们学校有一千零五个学生。"
+          }
         }
       ]
     },
@@ -44,34 +64,58 @@
       "id": "escrita-objetos",
       "title": "Mapas e dicionários",
       "shortTitle": "Objetos",
-      "instructions": "Observe os classificadores e a ordem das palavras na frase que você vai copiar.",
+      "instructions": "Leia a pergunta. Passe por cima da resposta inteira em cinza e repita a frase nas quadrículas vazias da linha de baixo.",
       "questions": [
         {
           "id": 4,
           "prompt": "这张地图是谁的？",
           "answer": "这张地图是我的。",
-          "trace": [
-            "张",
-            "图"
-          ]
+          "promptSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 7.188,
+            "duration": 2.596,
+            "text": "这张地图是谁的？"
+          },
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-17.mp3",
+            "start": 3.436,
+            "duration": 2.284,
+            "text": "这张地图是我的。"
+          }
         },
         {
           "id": 5,
           "prompt": "你要哪本词典？",
           "answer": "我要那本中文词典。",
-          "trace": [
-            "词",
-            "典"
-          ]
+          "promptSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 9.904,
+            "duration": 1.948,
+            "text": "你要哪本词典？"
+          },
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 11.972,
+            "duration": 2.428,
+            "text": "我要那本中文词典。"
+          }
         },
         {
           "id": 6,
           "prompt": "我能不能用一下你的词典？",
           "answer": "当然可以。",
-          "trace": [
-            "当",
-            "然"
-          ]
+          "promptSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 14.52,
+            "duration": 3.244,
+            "text": "我能不能用一下你的词典？"
+          },
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 0.0,
+            "duration": 1.636,
+            "text": "当然可以。"
+          }
         }
       ]
     },
@@ -79,43 +123,71 @@
       "id": "escrita-compras",
       "title": "Compras e restaurante",
       "shortTitle": "Compras e comida",
-      "instructions": "Repita os caracteres e depois escreva toda a resposta de memória.",
+      "instructions": "Leia a pergunta. Passe por cima da resposta inteira em cinza e repita a frase nas quadrículas vazias da linha de baixo.",
       "questions": [
         {
           "id": 7,
           "prompt": "你要买什么？",
           "answer": "我要买一件红衬衫。",
-          "trace": [
-            "衬",
-            "衫"
-          ]
+          "promptSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 17.884,
+            "duration": 1.876,
+            "text": "你要买什么？"
+          },
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-10.mp3",
+            "start": 0.0,
+            "duration": 2.524,
+            "text": "我要买一件红衬衫。"
+          }
         },
         {
           "id": 8,
           "prompt": "这条裤子多少钱？",
           "answer": "这条裤子六十八块。",
-          "trace": [
-            "裤",
-            "钱"
-          ]
+          "promptSpeech": {
+            "src": "./assets/audio/basico-2-prova-oral-q08.mp3",
+            "text": "这条裤子多少钱？"
+          },
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 19.88,
+            "duration": 2.908,
+            "text": "这条裤子六十八块。"
+          }
         },
         {
           "id": 9,
           "prompt": "您要吃什么？",
           "answer": "我要牛肉和米饭。",
-          "trace": [
-            "肉",
-            "饭"
-          ]
+          "promptSpeech": {
+            "src": "./assets/audio/basico-2-prova-oral-q09.mp3",
+            "text": "您要吃什么？"
+          },
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 22.908,
+            "duration": 2.284,
+            "text": "我要牛肉和米饭。"
+          }
         },
         {
           "id": 10,
           "prompt": "您还要什么？",
           "answer": "我还要一碗汤。",
-          "trace": [
-            "碗",
-            "汤"
-          ]
+          "promptSpeech": {
+            "src": "./assets/audio/estudo/mandarim-21.mp3",
+            "start": 21.104,
+            "duration": 1.708,
+            "text": "您还要什么？"
+          },
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-22.mp3",
+            "start": 25.312,
+            "duration": 1.948,
+            "text": "我还要一碗汤。"
+          }
         }
       ]
     }

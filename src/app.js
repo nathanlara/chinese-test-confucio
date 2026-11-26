@@ -28,7 +28,7 @@ const homeStatus = document.querySelector("#homeStatus");
 const homeExamCount = document.querySelector("#homeExamCount");
 const homeExamList = document.querySelector("#homeExamList");
 
-const APP_VERSION = "2026-11-26-2";
+const APP_VERSION = "2026-11-26-3";
 const STORAGE_VERSION = "2026-09-09-5";
 const STORAGE_VERSION_KEY = "chinese-test:app-version";
 const LAST_EXAM_KEY = "chinese-test:last-exam";
@@ -48,9 +48,9 @@ let quickGameState = { index: 0, score: 0, answered: false };
 let orderGameState = { index: 0, selected: [], score: 0, answered: false, tokens: [] };
 let translateGameState = { index: 0, score: 0, answered: false };
 let truthGameState = { index: 0, score: 0, answered: false };
-let activeGameAudio = null;
-let activeAudioButton = null;
-let activeAudioButtonLabel = "";
+let activePlayback = null;
+let speechContext = null;
+let cachedSpeech = null;
 
 pairGameState = createPairGameState();
 prepareQuestionDeck(fillGameQuestions, true);
@@ -164,9 +164,9 @@ function renderImageLike(item, className = "visual-prompt") {
   return `<div class="${className}">${escapeHtml(item.label || item.description || item)}</div>`;
 }
 
-function renderAudio(question) {
+function renderAudio(question, label = "Ouvir o áudio") {
   if (question.audioSrc) {
-    return `<div class="audio-row">${renderGameAudio(withVersion(question.audioSrc), "Ouvir o áudio")}</div>`;
+    return `<div class="audio-row">${renderGameAudio(withVersion(question.audioSrc), label)}</div>`;
   }
 
   return `
@@ -174,6 +174,29 @@ function renderAudio(question) {
       <span class="audio-missing">Áudio ainda não adicionado.</span>
     </div>
   `;
+}
+
+function renderSpeech(clip, label) {
+  if (!clip) return "";
+  return `<div class="audio-row">${renderGameAudio(withVersion(clip.src), label, clip)}</div>`;
+}
+
+function renderPromptAudio(question) {
+  if (question.audioSrc || question.audioText) return renderAudio(question);
+  return renderSpeech(question.promptSpeech, "Ouvir enunciado");
+}
+
+function renderReviewAudio(question) {
+  const speech = question.answerSpeech;
+  if (speech) {
+    const visibleAnswer = formatAnswer(question);
+    const transcript = normalizers.text(visibleAnswer) === normalizers.text(speech.text)
+      ? ""
+      : `<p class="speech-transcript" lang="zh-Hans">${escapeHtml(speech.text)}</p>`;
+    return `${transcript}${renderSpeech(speech, "Ouvir resposta")}`;
+  }
+  if (question.audioSrc) return renderAudio(question, "Ouvir novamente");
+  return renderSpeech(question.promptSpeech, "Ouvir enunciado");
 }
 
 function renderChoices(question) {
@@ -260,7 +283,7 @@ function renderQuestion(question, section) {
         </div>
       </div>
       ${question.image ? renderImageLike(question.image) : ""}
-      ${question.audioSrc || question.audioText ? renderAudio(question) : ""}
+      ${renderPromptAudio(question)}
       ${renderWordBank(question)}
       ${question.matchOptions ? renderMatchOptions(question.matchOptions) : ""}
       ${renderInput(question, section)}
@@ -293,13 +316,16 @@ function renderPracticeImage(section) {
   `;
 }
 
-function renderTraceRow(character) {
-  const samples = [character, character, character, "", "", ""];
+function renderTraceRows(answer) {
+  const characters = Array.from(answer.replace(/\s/g, ""));
+  const cells = (samples) => samples.map((sample) =>
+    `<span class="trace-cell"><span class="trace-guides"></span>${escapeHtml(sample)}</span>`,
+  ).join("");
   return `
-    <div class="trace-row" aria-label="Quadrículas para copiar ${escapeHtml(character)}">
-      ${samples.map((sample) => `<span class="trace-cell" lang="zh-Hans" aria-hidden="true"><span class="trace-guides"></span>${escapeHtml(sample)}</span>`).join("")}
-    </div>
-  `;
+    <div class="trace-rows" lang="zh-Hans" role="group" aria-label="${escapeHtml(answer)}" style="--trace-columns: ${characters.length}">
+      <div class="trace-row trace-model" aria-hidden="true">${cells(characters)}</div>
+      <div class="trace-row" aria-hidden="true">${cells(characters.map(() => ""))}</div>
+    </div>`;
 }
 
 function renderPracticeQuestion(question, format) {
@@ -312,10 +338,11 @@ function renderPracticeQuestion(question, format) {
 
   if (format === "handwriting") {
     activity = `
-      <p class="trace-answer" lang="zh-Hans">${answer}</p>
-      <div class="trace-rows">${question.trace.map(renderTraceRow).join("")}</div>
-      <p class="practice-rule-label">Escreva a resposta inteira</p>
-      <div class="practice-rule" aria-hidden="true"></div>
+      <div class="practice-audio-pair">
+        ${renderSpeech(question.promptSpeech, "Ouvir pergunta")}
+        ${renderSpeech(question.answerSpeech, "Ouvir resposta")}
+      </div>
+      ${renderTraceRows(question.answer)}
     `;
   } else if (format === "oral") {
     activity = `
@@ -328,22 +355,25 @@ function renderPracticeQuestion(question, format) {
       <details class="practice-disclosure">
         <summary>Ver resposta-modelo</summary>
         <p lang="zh-Hans">${answer}</p>
+        ${renderSpeech(question.answerSpeech, "Ouvir resposta")}
       </details>
       ${question.followup ? `
         <p class="oral-print-question" lang="zh-Hans">${escapeHtml(question.followup)}</p>
         <details class="practice-disclosure">
           <summary>Próxima pergunta</summary>
           <p lang="zh-Hans">${escapeHtml(question.followup)}</p>
+          ${renderSpeech(question.followupSpeech, "Ouvir pergunta")}
           <details class="practice-disclosure">
             <summary>Ver resposta-modelo</summary>
             <p lang="zh-Hans">${escapeHtml(question.followupAnswer)}</p>
+            ${renderSpeech(question.followupAnswerSpeech, "Ouvir resposta")}
           </details>
         </details>
       ` : ""}
     `;
   } else {
     activity = `
-      ${question.audioSrc ? renderAudio(question) : ""}
+      ${renderPromptAudio(question)}
       <div class="practice-rule" aria-hidden="true"></div>
     `;
   }
@@ -367,6 +397,7 @@ function renderPracticeReview(review) {
           <h3>${escapeHtml(topic.title)}</h3>
           <p>${escapeHtml(topic.text)}</p>
           <p class="practice-example">${escapeHtml(topic.example)}</p>
+          ${renderSpeech(topic.sampleSpeech, "Ouvir exemplos em mandarim")}
         </article>
       `).join("")}
     </section>
@@ -386,6 +417,7 @@ function renderPracticeKey(sections) {
                 <strong>${escapeHtml(question.answer)}</strong>
                 ${question.audioText ? `<p lang="zh-Hans">${escapeHtml(question.audioText)}</p>` : ""}
                 <p>${escapeHtml(question.explanation)}</p>
+                ${renderReviewAudio(question)}
               </li>
             `).join("")}
           </ol>
@@ -396,6 +428,7 @@ function renderPracticeKey(sections) {
 }
 
 function renderExam(exam) {
+  stopPlayback();
   activeExam = exam;
   gradedAnswers = null;
   results.hidden = true;
@@ -405,7 +438,8 @@ function renderExam(exam) {
   examForm.className = `exam-form${exam.uiVariant ? ` ${exam.uiVariant}` : ""}`;
 
   const questions = exam.sections.flatMap((section) => section.questions);
-  const audioCount = questions.filter((question) => question.audioSrc).length;
+  const audioCount = questions.filter((question) => question.audioSrc || question.promptSpeech || question.answerSpeech).length;
+  const audioLabel = exam.format === "handwriting" ? "modelos com áudio" : "questões com áudio";
   const practiceLabel = practiceFormats[exam.format];
   examScreen.dataset.format = practiceLabel ? exam.format : "";
   progressText.closest(".exam-topbar-progress").hidden = Boolean(practiceLabel);
@@ -419,7 +453,7 @@ function renderExam(exam) {
     <p class="lede">${escapeHtml(exam.description)}</p>
     <div class="exam-meta-chips">
       <span class="meta-chip"><strong>${questions.length}</strong> ${exam.format === "handwriting" ? "modelos" : "questões"}</span>
-      ${audioCount || !practiceLabel ? `<span class="meta-chip"><strong>${audioCount}</strong> áudios</span>` : ""}
+      ${audioCount ? `<span class="meta-chip"><strong>${audioCount}</strong> ${audioLabel}</span>` : ""}
       <span class="meta-chip"><strong>${exam.sections.length}</strong> seções</span>
       ${exam.suggestedTime ? `<span class="meta-chip"><strong>Tempo sugerido</strong> ${escapeHtml(exam.suggestedTime)}</span>` : ""}
       ${exam.totalPoints ? `<span class="meta-chip"><strong>Total</strong> ${escapeHtml(exam.totalPoints)}</span>` : ""}
@@ -429,8 +463,8 @@ function renderExam(exam) {
         <button id="printPractice" class="btn secondary" type="button">Imprimir atividade</button>
         ${exam.format === "paper" ? `<button id="openPracticeKey" class="btn secondary" type="button">Conferir gabarito</button>` : ""}
       </div>
-      ${exam.format === "paper" ? `<p class="exam-intro-note">Responda no papel. Para imprimir as respostas junto com a atividade, abra o gabarito antes de imprimir. Use esta página para ouvir os áudios.</p>` : ""}
-    ` : `<p class="exam-intro-note">Responda com calma. As respostas ficam salvas e a correção pode ser feita quantas vezes quiser.</p>`}
+      ${exam.format === "paper" ? `<p class="exam-intro-note">Responda no papel. Use esta página para ouvir a escuta e, após responder, abra o gabarito para ouvir as respostas. Abra o gabarito antes de imprimir se quiser incluir as respostas.</p>` : ""}
+    ` : `<p class="exam-intro-note">Suas respostas ficam salvas. Depois de corrigir, você pode ouvir as respostas em mandarim.</p>`}
   `;
 
   const navigation = [
@@ -454,6 +488,7 @@ function renderExam(exam) {
               <span>${exam.format === "handwriting" ? `${section.questions.length} modelos` : escapeHtml(formatSectionMeta(section))}</span>
             </div>
             ${section.instructions ? `<p class="prompt-text">${escapeHtml(section.instructions)}</p>` : ""}
+            ${renderSpeech(section.promptSpeech, "Ouvir texto em mandarim")}
             ${section.sharedWordBank ? renderSharedWordBank(section.sharedWordBank) : ""}
             ${section.sharedOptions ? renderSharedOptions(section.sharedOptions) : ""}
             ${section.image ? renderPracticeImage(section) : ""}
@@ -524,7 +559,7 @@ function renderExamCards(index) {
           <p class="exam-description">${escapeHtml(exam.description || "Revisão com correção automática.")}</p>
           <div class="exam-meta-line">
             <span>${total} ${exam.format === "handwriting" ? "modelos" : "questões"}</span>
-            ${exam.audioCount || !practiceLabel ? `<span>${escapeHtml(exam.audioCount || 0)} áudios</span>` : ""}
+            ${exam.audioCount ? `<span>${escapeHtml(exam.audioCount)} com áudio</span>` : ""}
           </div>
           ${practiceLabel ? "" : `<div class="exam-card-progress">
             <span class="progress-track" aria-hidden="true"><span class="progress-bar" style="width: ${percent}%"></span></span>
@@ -605,6 +640,7 @@ function scrollToSectionFromHash() {
 }
 
 function showExamIndex({ updateHistory = true } = {}) {
+  stopPlayback();
   activeExam = null;
   document.title = "Revisões · Caderno Confúcio";
   examScreen.hidden = true;
@@ -809,6 +845,7 @@ function isCorrect(question, answer) {
 
 function gradeExam(event) {
   event.preventDefault();
+  stopPlayback();
   const questions = getAllQuestions();
   gradedAnswers = questions.map((question) => {
     const answer = getAnswer(question);
@@ -832,6 +869,7 @@ function gradeExam(event) {
       ${question.answerPinyin ? `<div class="pinyin">${escapeHtml(question.answerPinyin)}</div>` : ""}
       ${question.explanation && question.explanation !== question.answerPinyin ? `<div class="explanation">${escapeHtml(question.explanation)}</div>` : ""}
       ${question.audioText ? `<div class="explanation">Áudio: ${escapeHtml(question.audioText)}</div>` : ""}
+      ${renderReviewAudio(question)}
     `;
   });
 
@@ -1545,49 +1583,89 @@ function resetTruthGame() {
   focusFirst("[data-truth-answer]");
 }
 
-function renderGameAudio(src, label) {
+function renderGameAudio(src, label, clip) {
   if (!src) return "";
-  return `<button class="audio-button" type="button" data-game-audio="${escapeHtml(src)}"><span aria-hidden="true">▶</span>${escapeHtml(label)}</button>`;
+  const segment = clip?.duration
+    ? ` data-audio-start="${escapeHtml(clip.start)}" data-audio-duration="${escapeHtml(clip.duration)}"`
+    : "";
+  return `<button class="audio-button" type="button" data-game-audio="${escapeHtml(src)}"${segment}><span aria-hidden="true">▶</span>${escapeHtml(label)}</button>`;
 }
 
-function restoreAudioButton(button, label) {
-  if (!button) return;
-  button.classList.remove("is-playing");
-  button.innerHTML = label;
+function stopPlayback() {
+  const playback = activePlayback;
+  if (!playback) return;
+  activePlayback = null;
+  playback.stop?.();
+  playback.button.classList.remove("is-playing");
+  playback.button.innerHTML = playback.label;
 }
 
-function handleGameAudioClick(event) {
+function loadSpeechBuffer(url) {
+  if (cachedSpeech?.url === url) return cachedSpeech.promise;
+  const record = {
+    url,
+    promise: fetch(url).then((response) => {
+      if (!response.ok) throw new Error("Áudio indisponível");
+      return response.arrayBuffer();
+    }).then((data) => speechContext.decodeAudioData(data)),
+  };
+  cachedSpeech = record;
+  record.promise.catch(() => {
+    if (cachedSpeech === record) cachedSpeech = null;
+  });
+  return record.promise;
+}
+
+async function handleGameAudioClick(event) {
   const button = event.target.closest("[data-game-audio]");
   if (!button) return;
+  const sameButton = activePlayback?.button === button;
+  stopPlayback();
+  if (sameButton) return;
 
-  if (activeGameAudio) activeGameAudio.pause();
-  if (activeAudioButton) {
-    restoreAudioButton(activeAudioButton, activeAudioButtonLabel);
-    activeAudioButton = null;
-    activeAudioButtonLabel = "";
-  }
-
-  activeGameAudio = new Audio(button.dataset.gameAudio);
-  const originalLabel = button.innerHTML;
-  activeAudioButton = button;
-  activeAudioButtonLabel = originalLabel;
+  const { gameAudio, audioStart, audioDuration } = button.dataset;
+  const playback = { button, label: button.dataset.audioOriginalLabel || button.innerHTML };
+  activePlayback = playback;
   button.classList.add("is-playing");
-  button.innerHTML = `<span aria-hidden="true">■</span> Tocando…`;
-
-  const restoreCurrent = () => {
-    if (activeAudioButton === button) {
-      activeAudioButton = null;
-      activeAudioButtonLabel = "";
-    }
-    restoreAudioButton(button, originalLabel);
+  const ended = () => {
+    if (activePlayback === playback) stopPlayback();
+  };
+  const failed = () => {
+    if (activePlayback !== playback) return;
+    stopPlayback();
+    button.dataset.audioOriginalLabel = playback.label;
+    button.innerHTML = `<span aria-hidden="true">!</span> Tentar áudio novamente`;
   };
 
-  activeGameAudio.addEventListener("ended", restoreCurrent, { once: true });
-  activeGameAudio.addEventListener("error", () => {
-    restoreCurrent();
-    button.innerHTML = `<span aria-hidden="true">!</span> Áudio indisponível`;
-  }, { once: true });
-  activeGameAudio.play().catch(restoreCurrent);
+  try {
+    if (audioDuration) {
+      button.innerHTML = `<span aria-hidden="true">■</span> Carregando…`;
+      const SpeechContext = window.AudioContext || window.webkitAudioContext;
+      speechContext ||= new SpeechContext();
+      const [buffer] = await Promise.all([loadSpeechBuffer(gameAudio), speechContext.resume()]);
+      if (activePlayback !== playback) return;
+      const source = speechContext.createBufferSource();
+      source.buffer = buffer;
+      source.connect(speechContext.destination);
+      source.addEventListener("ended", () => {
+        source.disconnect();
+        playback.stop = null;
+        ended();
+      }, { once: true });
+      source.start(0, Number(audioStart), Number(audioDuration));
+      playback.stop = () => source.stop();
+      button.innerHTML = `<span aria-hidden="true">■</span> Tocando…`;
+    } else {
+      const audio = new Audio(gameAudio);
+      playback.stop = () => audio.pause();
+      audio.addEventListener("ended", ended, { once: true });
+      audio.addEventListener("error", failed, { once: true });
+      button.innerHTML = `<span aria-hidden="true">■</span> Tocando…`;
+      await audio.play();
+    }
+  } catch (error) {
+    failed();
+  }
 }
 
 function findExamByQuery(index) {
@@ -1710,7 +1788,7 @@ function renderHomeExamList(index) {
             ${result ? `<span class="home-exam-score">${result.correct}/${result.total}</span>` : `<span class="home-exam-arrow" aria-hidden="true">→</span>`}
           </span>
           <strong>${escapeHtml(exam.title)}</strong>
-          <span class="home-exam-meta">${total} ${exam.format === "handwriting" ? "modelos" : "questões"}${exam.audioCount || !practiceLabel ? ` · ${escapeHtml(exam.audioCount || 0)} áudios` : ""}</span>
+          <span class="home-exam-meta">${total} ${exam.format === "handwriting" ? "modelos" : "questões"}${exam.audioCount ? ` · ${escapeHtml(exam.audioCount)} com áudio` : ""}</span>
           ${practiceLabel ? `<span class="home-exam-meta">${practiceLabel}</span>` : `<span class="home-exam-progress">
             <span class="progress-track" aria-hidden="true"><span class="progress-bar" style="width: ${percent}%"></span></span>
             <span>${answered ? `${answered} de ${total}` : "Não iniciada"}</span>

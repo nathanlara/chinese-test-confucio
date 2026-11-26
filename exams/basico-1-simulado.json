@@ -331,7 +331,13 @@
             "漂亮"
           ],
           "answerLabel": "A - 漂亮",
-          "explanation": "东方学院很大，也很漂亮。"
+          "explanation": "东方学院很大，也很漂亮。",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 0.0,
+            "duration": 3.244,
+            "text": "东方学院很大，也很漂亮"
+          }
         },
         {
           "id": 12,
@@ -342,7 +348,11 @@
             "公司"
           ],
           "answerLabel": "B - 公司",
-          "explanation": "我在进出口公司工作。"
+          "explanation": "我在进出口公司工作。",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q06.mp3",
+            "text": "我在进出口公司工作"
+          }
         },
         {
           "id": 13,
@@ -353,7 +363,13 @@
             "汉语"
           ],
           "answerLabel": "C - 汉语",
-          "explanation": "我学习汉语。"
+          "explanation": "我学习汉语。",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 3.364,
+            "duration": 2.116,
+            "text": "我学习汉语"
+          }
         },
         {
           "id": 14,
@@ -364,7 +380,13 @@
             "只"
           ],
           "answerLabel": "D - 只",
-          "explanation": "我妈妈只说葡萄牙语。"
+          "explanation": "我妈妈只说葡萄牙语。",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 5.6,
+            "duration": 2.908,
+            "text": "我妈妈只说葡萄牙语"
+          }
         },
         {
           "id": 15,
@@ -375,7 +397,13 @@
             "还是"
           ],
           "answerLabel": "E - 还是",
-          "explanation": "你说汉语还是说法语？"
+          "explanation": "你说汉语还是说法语？",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 8.628,
+            "duration": 3.316,
+            "text": "你说汉语还是说法语？"
+          }
         }
       ]
     },
@@ -450,7 +478,13 @@
           ],
           "answer": "E",
           "explanation": "Nós estamos muito felizes.",
-          "pinyin": "Wǒmen hěn gāoxìng."
+          "pinyin": "Wǒmen hěn gāoxìng.",
+          "promptSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 12.064,
+            "duration": 1.876,
+            "text": "我们很高兴"
+          }
         },
         {
           "id": 17,
@@ -480,7 +514,11 @@
           ],
           "answer": "C",
           "explanation": "Ele trabalha na empresa.",
-          "pinyin": "Tā zài gōngsī gōngzuò."
+          "pinyin": "Tā zài gōngsī gōngzuò.",
+          "promptSpeech": {
+            "src": "./assets/audio/basico-1-q06.mp3",
+            "text": "他在公司工作"
+          }
         },
         {
           "id": 18,
@@ -510,7 +548,11 @@
           ],
           "answer": "D",
           "explanation": "Você pode me ligar?",
-          "pinyin": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?"
+          "pinyin": "Nǐ kěyǐ gěi wǒ dǎ diànhuà ma?",
+          "promptSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q08.mp3",
+            "text": "你可以给我打电话吗？"
+          }
         },
         {
           "id": 19,
@@ -540,7 +582,11 @@
           ],
           "answer": "B",
           "explanation": "Nossa universidade é grande e também bonita.",
-          "pinyin": "Wǒmen dàxué hěn dà, yě hěn piàoliang."
+          "pinyin": "Wǒmen dàxué hěn dà, yě hěn piàoliang.",
+          "promptSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q07.mp3",
+            "text": "我们大学很大，也很漂亮"
+          }
         },
         {
           "id": 20,
@@ -570,7 +616,11 @@
           ],
           "answer": "A",
           "explanation": "Prazer em te conhecer.",
-          "pinyin": "Rènshi nǐ hěn gāoxìng."
+          "pinyin": "Rènshi nǐ hěn gāoxìng.",
+          "promptSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q10.mp3",
+            "text": "认识你很高兴"
+          }
         }
       ]
     },
@@ -588,7 +638,13 @@
           "answerLabel": "你是巴西人吗？",
           "explanation": "Nǐ shì Bāxī rén ma?",
           "answerPinyin": "Nǐ shì Bāxī rén ma?",
-          "pinyin": "Bāxī rén / shì / nǐ / ma"
+          "pinyin": "Bāxī rén / shì / nǐ / ma",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 14.06,
+            "duration": 1.876,
+            "text": "你是巴西人吗？"
+          }
         },
         {
           "id": 22,
@@ -598,7 +654,13 @@
           "answerLabel": "她在中国学习汉语。",
           "explanation": "Tā zài Zhōngguó xuéxí Hànyǔ.",
           "answerPinyin": "Tā zài Zhōngguó xuéxí Hànyǔ.",
-          "pinyin": "tā / Hànyǔ / xuéxí / zài Zhōngguó"
+          "pinyin": "tā / Hànyǔ / xuéxí / zài Zhōngguó",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 16.056,
+            "duration": 3.004,
+            "text": "她在中国学习汉语"
+          }
         },
         {
           "id": 23,
@@ -608,7 +670,13 @@
           "answerLabel": "我只说葡萄牙语。",
           "explanation": "Wǒ zhǐ shuō Pútáoyáyǔ.",
           "answerPinyin": "Wǒ zhǐ shuō Pútáoyáyǔ.",
-          "pinyin": "shuō / zhǐ / wǒ / Pútáoyáyǔ"
+          "pinyin": "shuō / zhǐ / wǒ / Pútáoyáyǔ",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 19.18,
+            "duration": 2.188,
+            "text": "我只说葡萄牙语"
+          }
         },
         {
           "id": 24,
@@ -618,7 +686,11 @@
           "answerLabel": "他在公司工作。",
           "explanation": "Tā zài gōngsī gōngzuò.",
           "answerPinyin": "Tā zài gōngsī gōngzuò.",
-          "pinyin": "gōngsī / gōngzuò / tā / zài"
+          "pinyin": "gōngsī / gōngzuò / tā / zài",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-1-q06.mp3",
+            "text": "他在公司工作"
+          }
         },
         {
           "id": 25,
@@ -628,7 +700,13 @@
           "answerLabel": "你的大学怎么样？",
           "explanation": "Nǐ de dàxué zěnmeyàng?",
           "answerPinyin": "Nǐ de dàxué zěnmeyàng?",
-          "pinyin": "nǐ de / zěnmeyàng / dàxué"
+          "pinyin": "nǐ de / zěnmeyàng / dàxué",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 21.488,
+            "duration": 2.044,
+            "text": "你的大学怎么样？"
+          }
         }
       ]
     },
@@ -645,7 +723,13 @@
           "answer": "我妈妈只说葡萄牙语",
           "answerLabel": "我妈妈只说葡萄牙语。",
           "explanation": "Wǒ māma zhǐ shuō Pútáoyáyǔ.",
-          "answerPinyin": "Wǒ māma zhǐ shuō Pútáoyáyǔ."
+          "answerPinyin": "Wǒ māma zhǐ shuō Pútáoyáyǔ.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 5.6,
+            "duration": 2.908,
+            "text": "我妈妈只说葡萄牙语"
+          }
         },
         {
           "id": 27,
@@ -654,7 +738,13 @@
           "answer": "她们在巴西学习汉语",
           "answerLabel": "她们在巴西学习汉语。",
           "explanation": "Tāmen zài Bāxī xuéxí Hànyǔ.",
-          "answerPinyin": "Tāmen zài Bāxī xuéxí Hànyǔ."
+          "answerPinyin": "Tāmen zài Bāxī xuéxí Hànyǔ.",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 23.652,
+            "duration": 2.836,
+            "text": "她们在巴西学习汉语"
+          }
         },
         {
           "id": 28,
@@ -663,7 +753,13 @@
           "answer": "你是巴西人还是加拿大人",
           "answerLabel": "你是巴西人还是加拿大人？",
           "explanation": "Nǐ shì Bāxī rén háishi Jiānádà rén?",
-          "answerPinyin": "Nǐ shì Bāxī rén háishi Jiānádà rén?"
+          "answerPinyin": "Nǐ shì Bāxī rén háishi Jiānádà rén?",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 26.608,
+            "duration": 3.244,
+            "text": "你是巴西人还是加拿大人？"
+          }
         },
         {
           "id": 29,
@@ -675,7 +771,11 @@
           ],
           "answerLabel": "我们大学很大，也很漂亮。",
           "explanation": "Wǒmen dàxué hěn dà, yě hěn piàoliang.",
-          "answerPinyin": "Wǒmen dàxué hěn dà, yě hěn piàoliang."
+          "answerPinyin": "Wǒmen dàxué hěn dà, yě hěn piàoliang.",
+          "answerSpeech": {
+            "src": "./assets/audio/basico-1-simulado-2-q07.mp3",
+            "text": "我们大学很大，也很漂亮"
+          }
         },
         {
           "id": 30,
@@ -684,7 +784,13 @@
           "answer": "我可以给你发电子邮件吗",
           "answerLabel": "我可以给你发电子邮件吗？",
           "explanation": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?",
-          "answerPinyin": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?"
+          "answerPinyin": "Wǒ kěyǐ gěi nǐ fā diànzǐ yóujiàn ma?",
+          "answerSpeech": {
+            "src": "./assets/audio/estudo/mandarim-01.mp3",
+            "start": 29.972,
+            "duration": 3.148,
+            "text": "我可以给你发电子邮件吗？"
+          }
         }
       ]
     }
