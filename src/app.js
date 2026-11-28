@@ -28,7 +28,7 @@ const homeStatus = document.querySelector("#homeStatus");
 const homeExamCount = document.querySelector("#homeExamCount");
 const homeExamList = document.querySelector("#homeExamList");
 
-const APP_VERSION = "2026-11-26-5";
+const APP_VERSION = "2026-11-28-1";
 const STORAGE_VERSION = "2026-09-09-5";
 const STORAGE_VERSION_KEY = "chinese-test:app-version";
 const LAST_EXAM_KEY = "chinese-test:last-exam";

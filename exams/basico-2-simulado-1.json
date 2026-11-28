@@ -591,9 +591,7 @@
         }
       ],
       "promptSpeech": {
-        "src": "./assets/audio/estudo/mandarim-07.mp3",
-        "start": 14.188,
-        "duration": 13.228,
+        "src": "./assets/audio/basico-2-simulado-1-leitura.mp3",
         "text": "小林家有四口人：爸爸、妈妈、姐姐和小林。姐姐在北京工作。小林有两本词典。一本是中文的，一本是葡萄牙文的。"
       }
     },
